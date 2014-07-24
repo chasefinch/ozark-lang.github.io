@@ -1,1 +1,22 @@
-header { margin-top:3em; margin-bottom:3em; }
+body { font-family:'Raleway'; font-weight:400; color:#444; }
+
+h1, h2, h3, h4, h5, h6 { color:#111; font-family:'Raleway'; font-weight:300; margin-bottom:20px; line-height:1.3; }
+p { margin-bottom:20px; }
+
+header { margin-top:4em; margin-bottom:3em; }
+
+#logo { width:225px; height:50px; }
+
+.navbar-default { border:none; background-color:transparent; }
+	.navbar-default .navbar-collapse, .navbar-default .navbar-form { border:none; }
+.navbar-brand { padding:0; }
+.navbar-toggle { margin-right:0; }
+
+h1.heading { font-size:30px; }
+
+section.blue { background-color:#25aae1; color:#fff; }
+	section.blue h1, section.blue h2, section.blue h3, section.blue h4, section.blue h5, section.blue h6 { color:#fff; } 
+
+section.white { padding:20px 0; }
+
+div.portal .glyphicon { float:right; color:#25aae1; }
