@@ -74,53 +74,6 @@
         <div class='row'>
           <div class='col-md-10 col-md-offset-1'>
             <div class='row'>
-              <div class='col-sm-4'>
-                <div class='download'>
-                  <div class='callout'>
-                    <p>The Ozark language is still in early development. The compiler is not yet available, and contributors are needed (especially those with compiler expertise.)</p>
-                    <p>Ozark is open source. It is hosted and developed on GitHub.</p>
-                  </div>
-                  <a href='https://github.com/ozark-lang/ozark' class='btn btn-primary btn-lg'>View the GitHub project</a>
-                </div>
-              </div>
-              <div class='col-sm-8'>
-                <h4>EXAMPLE</h4>
-                <pre class='pre-scrollable'>Person Mountaineer
-
-  Boots boots
-  Hat hat
-  Map map
-  Location location
-
-  prepare
-    Boots boots initialize
-    Hat hat initialize
-    .boots &lt; boots
-    .hat &lt; hat
-
-  follow trail:Trail &gt; success:Bit
-    trail findNextWaypoint &gt; waypoint:next
-    .location trailTo waypoint:next &gt; trail:newTrail
-    . follow trail:newTrail &gt; success:result
-    success &lt; result
-
-  climb mountain:Mountain
-    . prepare
-    map findTrail &gt; trail:Trail
-    . follow trail:trail &gt; success:result
-    - if result
-      . shout "Hello, world!"</pre>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class='white'>
-      <div class='container'>
-        <div class='row'>
-          <div class='col-md-10 col-md-offset-1'>
-            <div class='row'>
               <div class='col-sm-6'>
                 <div class='portal'>
                   <h3>Clean &amp; Concise<span class='glyphicon glyphicon-align-left'></span></h3>
@@ -146,6 +99,54 @@
                   <h3>Smart<span class='glyphicon glyphicon-refresh'></span></h3>
                   <p>Ozark combines object-oriented, functional, dataflow, and procedural programming methods naturally, with innovative new approaches to take advantage of each type of computing.</p> 
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <hr />
+    <section class='white'>
+      <div class='container'>
+        <div class='row'>
+          <div class='col-md-10 col-md-offset-1'>
+            <div class='row'>
+              <div class='col-sm-4'>
+                <div class='download'>
+                  <a href='https://github.com/ozark-lang/ozark' class='btn btn-primary btn-lg'>View the GitHub project</a>
+                  <div class='callout'>
+                    <p>Ozark is open source. It is hosted and developed on GitHub.</p>
+                    <p>The Ozark language is still in early development. The compiler is not yet available, and contributors are needed (especially those with compiler expertise.)</p>
+                  </div>
+                </div>
+              </div>
+              <div class='col-sm-8'>
+                <h4>EXAMPLE: Hello, world! (with style)</h4>
+                <pre><span class='class'>Person</span> <span class='class'>Mountaineer</span>
+
+  <span class='class'>Boots</span> <span class='variable'>boots</span>
+  <span class='class'>Hat</span> <span class='variable'>hat</span>
+  <span class='class'>Map</span> <span class='variable'>map</span>
+  <span class='class'>Location</span> <span class='variable'>location</span>
+
+  <span class='method'>prepare</span>
+    <span class='class'>Boots</span> <span class='variable'>boots</span> <span class='method'>initialize</span>
+    <span class='class'>Hat</span> <span class='variable'>hat</span> <span class='method'>initialize</span>
+    <span class='self'>.boots</span> <span class='control'>&lt;</span> <span class='variable'>boots</span>
+    <span class='self'>.hat</span> <span class='control'>&lt;</span> <span class='variable'>hat</span>
+
+  <span class='method'>follow</span> <span class='argument'>trail:</span><span class='class'>Trail</span> <span class='control'>&gt;</span> <span class='argument'>success:</span><span class='class'>Bit</span>
+    <span class='variable'>trail</span> <span class='method'>findNextWaypoint</span> <span class='control'>&gt;</span> <span class='argument'>waypoint:</span><span class='variable'>next</span>
+    <span class='self'>.location</span> <span class='method'>trailTo</span> <span class='argument'>waypoint:</span><span class='variable'>next</span> <span class='control'>&gt;</span> <span class='argument'>trail:</span><span class='variable'>newTrail</span>
+    <span class='self'>.</span> <span class='method'>follow</span> <span class='argument'>trail:</span><span class='variable'>newTrail</span> <span class='control'>&gt;</span> <span class='argument'>success:</span><span class='variable'>result</span>
+    <span class='variable'>success</span> <span class='control'>&lt;</span> <span class='variable'>result</span>
+
+  <span class='method'>climb</span> <span class='argument'>mountain:</span><span class='class'>Mountain</span>
+    <span class='self'>.</span> <span class='method'>prepare</span>
+    <span class='variable'>map</span> <span class='method'>findTrail</span> <span class='control'>&gt;</span> <span class='argument'>trail:</span><span class='class'>nextTrail</span>
+    <span class='self'>.</span> <span class='method'>follow</span> <span class='argument'>trail:</span><span class='variable'>nextTrail</span> <span class='control'>&gt;</span> <span class='argument'>success:</span><span class='variable'>result</span>
+    - <span class='method'>if</span> <span class='variable'>result</span>
+      <span class='self'>.</span> <span class='method'>shout</span> <span class='literal'>"Hello, world!"</span></pre>
               </div>
             </div>
           </div>
