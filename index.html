@@ -60,7 +60,11 @@
       <div class='container'>
         <div class='row'>
           <div class='col-md-10 col-md-offset-1'>
-            <h1 class='heading'>Ozark is an elegant, open-source programming language. Through strict code standards, Ozark enables new tools for generating software.</h1>
+            <div class='row'>
+              <div class='col-lg-10'>
+                <h1 class='heading'>Ozark is an elegant, open-source programming language. Through strict code standards, Ozark enables new tools for generating software.</h1>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -70,14 +74,42 @@
         <div class='row'>
           <div class='col-md-10 col-md-offset-1'>
             <div class='row'>
-              <div class='col-sm-9'>
-                <h4>EXAMPLE</h4>
-                <code>shoot target:Target > casing:BulletCasing smoke:Smoke<br />&nbsp;&nbsp;&nbsp;&nbsp;.bullets pop > bullet:bullet<br />&nbsp;&nbsp;&nbsp;&nbsp;.gun fire bullet:bullet target:target > casing:casing smoke:smoke<br />&nbsp;&nbsp;&nbsp;&nbsp;. showOffForTheCrowd</code>
-              </div>
-              <div class='col-sm-3'>
+              <div class='col-sm-4'>
                 <div class='download'>
-                  <a href='#' class='btn btn-primary btn-lg'>Download <small>v</small>0.0.1</a>
+                  <div class='callout'>
+                    <p>The Ozark language is still in early development. The compiler is not yet available, and contributors are needed (especially those with compiler expertise.)</p>
+                    <p>Ozark is open source. It is hosted and developed on GitHub.</p>
+                  </div>
+                  <a href='https://github.com/ozark-lang/ozark' class='btn btn-primary btn-lg'>View the GitHub project</a>
                 </div>
+              </div>
+              <div class='col-sm-8'>
+                <h4>EXAMPLE</h4>
+                <pre class='pre-scrollable'>Person Mountaineer
+
+  Boots boots
+  Hat hat
+  Map map
+  Location location
+
+  prepare
+    Boots boots initialize
+    Hat hat initialize
+    .boots &lt; boots
+    .hat &lt; hat
+
+  follow trail:Trail &gt; success:Bit
+    trail findNextWaypoint &gt; waypoint:next
+    .location trailTo waypoint:next &gt; trail:newTrail
+    . follow trail:newTrail &gt; success:result
+    success &lt; result
+
+  climb mountain:Mountain
+    . prepare
+    map findTrail &gt; trail:Trail
+    . follow trail:trail &gt; success:result
+    - if result
+      . shout "Hello, world!"</pre>
               </div>
             </div>
           </div>
@@ -92,7 +124,7 @@
               <div class='col-sm-6'>
                 <div class='portal'>
                   <h3>Clean &amp; Concise<span class='glyphicon glyphicon-align-left'></span></h3>
-                  <p>Ozark code follows a strict methodology and narrow formatting rules. This makes it easy to learn, and ensures that developers at all levels write standardized, readable code.</p>
+                  <p>Ozark code follows a strict methodology and narrow formatting rules, with no reserved words. This makes it easy to learn, and ensures that developers at all levels write standardized, readable code.</p>
                 </div>
               </div>
               <div class='col-sm-6'>
@@ -112,7 +144,7 @@
               <div class='col-sm-6'>
                 <div class='portal'>
                   <h3>Smart<span class='glyphicon glyphicon-refresh'></span></h3>
-                  <p>Ozark combines object-oriented, functional, and procedural programming methods naturally, with innovative new approaches to take advantage of each type of computing.</p> 
+                  <p>Ozark combines object-oriented, functional, dataflow, and procedural programming methods naturally, with innovative new approaches to take advantage of each type of computing.</p> 
                 </div>
               </div>
             </div>
