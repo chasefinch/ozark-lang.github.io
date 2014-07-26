@@ -1,4 +1,5 @@
 body { font-family:'Raleway'; font-weight:400; color:#444; }
+hr { border-color:#ccc; }
 
 h1, h2, h3, h4, h5, h6 { color:#111; font-family:'Raleway'; font-weight:300; margin-bottom:20px; line-height:1.3; }
 p { margin-bottom:20px; }
@@ -6,7 +7,7 @@ p { margin-bottom:20px; }
 header { padding-top:4em; padding-bottom:2.4em; }
 footer { margin-top:3em; padding-top:3em; padding-bottom:3em; background-color:#25aae1; color:#fff; }
 
-pre { background-color:#fff; padding-left:0; padding-right:0; border:none; border-top:1px solid #25aae1; border-bottom:1px solid #25aae1; border-radius:0; }
+pre.mountaineer { background:#fff url(../img/mountaineer.png) left top no-repeat; padding:65px 15px 20px 15px; border:none; border-radius:2px; box-shadow:0 0 8px #ccc; }
 
 #logo { width:225px; height:50px; position:relative; top:-6px; left:-8px; }
 
@@ -22,9 +23,23 @@ section.blue { background-color:#25aae1; color:#fff; }
 
 section.white { padding:20px 0; }
 
-.callout { font-size:0.9em; margin-top:20px; }
-.download { float:right; padding:10px 0; }
-	.download .btn { position:relative; left:-4px; }
+.footer-nav { float:right; }
+	.footer-nav ul { margin:0; padding:0; }
+		.footer-nav ul li { margin:0; padding:0 0 0 2em; list-style-type:none; display:inline-block; }
+			.footer-nav ul li a { color:#fff; text-decoration:none; display:block; }
+				.footer-nav ul li.active a { border-bottom:2px solid #fff; }
+				.footer-nav ul li a:hover { border-bottom:4px solid #fff; }
+
+.continue { text-align:right; margin:1em 0 2em 0; }
+.documentation { margin:3em 0 0 0; }
+	.documentation .btn { position:relative; left:-4px; }
+
+.callout { font-size:0.9em; margin-top:2em; }
+.github { padding:0 0; }
+	.github .btn { position:relative; left:-4px; }
+
+.btn-default { border-color:#25aae1; color:#fff; background-color:#25aae1; }
+	.btn-default:hover { border-color:#258ac1; color:#fff; background-color:#258ac1; }
 
 .btn-primary { border-color:#D6491A; color:#fff; background-color:#D6491A; }
 	.btn-primary:hover { border-color:#B6391A; color:#fff; background-color:#B6391A; }
