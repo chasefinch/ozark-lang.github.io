@@ -121,29 +121,29 @@
               <div class='col-sm-7'>
                 <pre class='mountaineer'><span class='class'>Person</span> <span class='class'>Mountaineer</span>
 
-  <span class='class'>Boots</span> <span class='variable'>boots</span>
-  <span class='class'>Hat</span> <span class='variable'>hat</span>
-  <span class='class'>Map</span> <span class='variable'>map</span>
-  <span class='class'>Location</span> <span class='variable'>location</span>
+  <span class='class'>Boots</span>&nbsp;<span class='variable'>boots</span>
+  <span class='class'>Hat</span>&nbsp;<span class='variable'>hat</span>
+  <span class='class'>Map</span>&nbsp;<span class='variable'>map</span>
+  <span class='class'>Location</span>&nbsp;<span class='variable'>location</span>
 
   <span class='method'>prepare</span>
-    <span class='class'>Boots</span> <span class='variable'>boots</span> <span class='method'>initialize</span>
-    <span class='class'>Hat</span> <span class='variable'>hat</span> <span class='method'>initialize</span>
-    <span class='self'>.boots</span> <span class='control'>&lt;</span> <span class='variable'>boots</span>
-    <span class='self'>.hat</span> <span class='control'>&lt;</span> <span class='variable'>hat</span>
+    <span class='class'>Boots</span>&nbsp;<span class='variable'>boots</span>&nbsp;<span class='method'>initialize</span>
+    <span class='class'>Hat</span>&nbsp;<span class='variable'>hat</span>&nbsp;<span class='method'>initialize</span>
+    <span class='self'>.boots</span>&nbsp;<span class='control'>&lt;</span>&nbsp;<span class='variable'>boots</span>
+    <span class='self'>.hat</span>&nbsp;<span class='control'>&lt;</span>&nbsp;<span class='variable'>hat</span>
 
-  <span class='method'>follow</span> <span class='argument'>trail:</span><span class='class'>Trail</span> <span class='control'>&gt;</span> <span class='argument'>success:</span><span class='class'>Bit</span>
-    <span class='variable'>trail</span> <span class='method'>findNextWaypoint</span> <span class='control'>&gt;</span> <span class='argument'>waypoint:</span><span class='variable'>next</span>
-    <span class='self'>.location</span> <span class='method'>trailTo</span> <span class='argument'>waypoint:</span><span class='variable'>next</span> <span class='control'>&gt;</span> <span class='argument'>trail:</span><span class='variable'>newTrail</span>
-    <span class='self'>.</span> <span class='method'>follow</span> <span class='argument'>trail:</span><span class='variable'>newTrail</span> <span class='control'>&gt;</span> <span class='argument'>success:</span><span class='variable'>result</span>
-    <span class='variable'>success</span> <span class='control'>&lt;</span> <span class='variable'>result</span>
+  <span class='method'>follow</span>&nbsp;<span class='argument'>trail:</span><span class='class'>Trail</span>&nbsp;<span class='control'>&gt;</span>&nbsp;<span class='argument'>success:</span><span class='class'>Bit</span>
+    <span class='variable'>trail</span>&nbsp;<span class='method'>findNextWaypoint</span>&nbsp;<span class='control'>&gt;</span>&nbsp;<span class='argument'>waypoint:</span><span class='variable'>next</span>
+    <span class='self'>.location</span>&nbsp;<span class='method'>trailTo</span>&nbsp;<span class='argument'>waypoint:</span><span class='variable'>next</span>&nbsp;<span class='control'>&gt;</span>&nbsp;<span class='argument'>trail:</span><span class='variable'>newTrail</span>
+    <span class='self'>.</span>&nbsp;<span class='method'>follow</span>&nbsp;<span class='argument'>trail:</span><span class='variable'>newTrail</span>&nbsp;<span class='control'>&gt;</span>&nbsp;<span class='argument'>success:</span><span class='variable'>result</span>
+    <span class='variable'>success</span>&nbsp;<span class='control'>&lt;</span>&nbsp;<span class='variable'>result</span>
 
-  <span class='method'>climb</span> <span class='argument'>mountain:</span><span class='class'>Mountain</span>
-    <span class='self'>.</span> <span class='method'>prepare</span>
-    <span class='variable'>map</span> <span class='method'>findTrail</span> <span class='control'>&gt;</span> <span class='argument'>trail:</span><span class='class'>nextTrail</span>
-    <span class='self'>.</span> <span class='method'>follow</span> <span class='argument'>trail:</span><span class='variable'>nextTrail</span> <span class='control'>&gt;</span> <span class='argument'>success:</span><span class='variable'>result</span>
-    - <span class='method'>if</span> <span class='variable'>result</span>
-      <span class='self'>.</span> <span class='method'>shout</span> <span class='literal'>"Hello, world!"</span></pre>
+  <span class='method'>climb</span>&nbsp;<span class='argument'>mountain:</span><span class='class'>Mountain</span>
+    <span class='self'>.</span>&nbsp;<span class='method'>prepare</span>
+    <span class='variable'>map</span>&nbsp;<span class='method'>findTrail</span>&nbsp;<span class='control'>&gt;</span>&nbsp;<span class='argument'>trail:</span><span class='class'>nextTrail</span>
+    <span class='self'>.</span>&nbsp;<span class='method'>follow</span>&nbsp;<span class='argument'>trail:</span><span class='variable'>nextTrail</span>&nbsp;<span class='control'>&gt;</span>&nbsp;<span class='argument'>success:</span><span class='variable'>result</span>
+    -&nbsp;<span class='method'>if</span>&nbsp;<span class='variable'>result</span>
+      <span class='self'>.</span>&nbsp;<span class='method'>shout</span>&nbsp;<span class='literal'>"Hello, world!"</span></pre>
                 <div class='documentation'><p>Want more?</p><a class='btn btn-default btn-lg' href='/documentation'>Read the documentation &nbsp; <span class='glyphicon glyphicon-chevron-right'></span></a></div>
               </div>
               <div class='col-sm-4 col-sm-offset-1'>
