@@ -29,6 +29,8 @@ pre.mountaineer { background:#fff url(../img/mountaineer.png) left top no-repeat
 }
 
 h1.heading { font-size:30px; }
+h2.subheading, h3.subheading { margin-bottom:2em; }
+	.subheading strong { font-weight:300; font-size:0.6em; text-transform:uppercase; color:#25aae1; }
 
 section.blue { background-color:#25aae1; color:#fff; }
 	section.blue h1, section.blue h2, section.blue h3, section.blue h4, section.blue h5, section.blue h6 { color:#fff; } 
@@ -42,7 +44,7 @@ section.white { padding:20px 0; }
 				.footer-nav ul li.active a { border-bottom:3px solid #fff; }
 				.footer-nav ul li a:hover { border-bottom:3px solid #fff; }
 
-.continue { text-align:right; margin:1em 0 2em 0; }
+.continue { text-align:right; margin:1em 0 0em 0; }
 .documentation { margin:3em 0 0 0; }
 	.documentation .btn { position:relative; left:-4px; }
 
