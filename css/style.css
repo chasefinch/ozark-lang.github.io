@@ -6,6 +6,8 @@ p { margin-bottom:20px; }
 
 header { padding-top:4em; padding-bottom:2.4em; }
 footer { margin-top:3em; padding-top:3em; padding-bottom:3em; background-color:#25aae1; color:#fff; }
+	footer a { color:#fff; text-decoration:underline; }
+	footer a:hover { color:#fff; text-decoration:none; }
 
 pre.mountaineer { background:#fff url(../img/mountaineer.png) left top no-repeat; padding:65px 15px 20px 15px; border:none; border-radius:2px; box-shadow:0 0 8px #ccc; overflow-x:scroll; word-wrap:normal; }
 
@@ -35,10 +37,10 @@ section.white { padding:20px 0; }
 
 .footer-nav { float:right; }
 	.footer-nav ul { margin:0; padding:0; }
-		.footer-nav ul li { margin:0; padding:0 0 0 2em; list-style-type:none; display:inline-block; }
-			.footer-nav ul li a { color:#fff; text-decoration:none; display:block; }
-				.footer-nav ul li.active a { border-bottom:2px solid #fff; }
-				.footer-nav ul li a:hover { border-bottom:4px solid #fff; }
+		.footer-nav ul li { margin:0; padding:0 0 0 1.5em; list-style-type:none; display:inline-block; }
+			.footer-nav ul li a { color:#fff; text-decoration:none; border-bottom:none; display:block; }
+				.footer-nav ul li.active a { border-bottom:3px solid #fff; }
+				.footer-nav ul li a:hover { border-bottom:3px solid #fff; }
 
 .continue { text-align:right; margin:1em 0 2em 0; }
 .documentation { margin:3em 0 0 0; }
