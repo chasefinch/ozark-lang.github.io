@@ -28,10 +28,8 @@ pre.mountaineer { background:#fff url(../img/mountaineer.png) left top no-repeat
 
 #nav-links { position:relative; top:25px; font-size:1.2em; }
 
-.affix { top:30px; }
-
-.subnav { margin-top:69px; }
-.subnav .nav > li > a { color:#777; padding:5px 15px; border-left:5px solid transparent; }
+.subnav { margin-top:12px; }
+.subnav .nav > li > a { color:#777; padding:3px 15px; border-left:5px solid transparent; }
 .subnav .nav > li > a:hover { color:#333; background-color:transparent; }
 .subnav .nav > li.active > a { color:#000; border-color:#25aae1; font-weight:bold; }
 
@@ -53,7 +51,7 @@ section.white { padding:20px 0; }
 .footer-nav { float:right; }
 	.footer-nav ul { margin:0; padding:0; }
 		.footer-nav ul li { margin:0; padding:0 0 0 1.5em; list-style-type:none; display:inline-block; }
-			.footer-nav ul li a { color:#fff; text-decoration:none; border-bottom:none; display:block; }
+			.footer-nav ul li a { color:#fff; text-decoration:none; border-bottom:3px solid transparent; display:block; }
 				.footer-nav ul li.active a { border-bottom:3px solid #fff; }
 				.footer-nav ul li a:hover { border-bottom:3px solid #fff; }
 
