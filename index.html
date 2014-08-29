@@ -89,14 +89,14 @@
             <div class='row'>
               <div class='col-sm-6'>
                 <div class='portal'>
-                  <h3>Clean &amp; Concise<span class='glyphicon glyphicon-align-left'></span></h3>
-                  <p>Ozark code follows a strict methodology and narrow formatting rules, with no reserved words. This makes it easy to learn, and ensures that developers at all levels write standardized, readable code.</p>
+                  <h3>Concise<span class='glyphicon glyphicon-align-left'></span></h3>
+                  <p>In Ozark, code follows narrow formatting rules and a strict object-oriented methodology. With a carefully curated instruction set, there is generally a single 'correct' way to accomplish just about everything.</p>
                 </div>
               </div>
               <div class='col-sm-6'>
                 <div class='portal'>
                   <h3>Authoritative<span class='glyphicon glyphicon-ok'></span></h3>
-                  <p>Ozark is both a programming language and a file storage format for applications that generate code. This makes it well suited to development with visual programming tools or by Artificial Intelligence.</p>
+                  <p>Ozark is both a programming language and a file storage format for applications that generate code. This makes it well-suited to development with visual programming tools or by Artificial Intelligence.</p>
                 </div>
               </div>
             </div>
@@ -104,13 +104,13 @@
               <div class='col-sm-6'>
                 <div class='portal'>
                   <h3>Concurrent<span class='glyphicon glyphicon-tasks'></span></h3>
-                  <p>Ozark automatically executes code in parallel, based on the inherent safety of the built-in language rules. As the availablility of multi-core processors increases, software written in Ozark will implicitly take advantage.</p>
+                  <p>Ozark automatically executes code in parallel, based on the inherent safety of the language rules. As the availablility of multi-core processors goes up, software written in Ozark will implicitly take advantage.</p>
                 </div>
               </div>
               <div class='col-sm-6'>
                 <div class='portal'>
                   <h3>Smart<span class='glyphicon glyphicon-refresh'></span></h3>
-                  <p>Ozark combines object-oriented, functional, dataflow, and procedural programming methods naturally, with innovative new approaches to take advantage of each type of computing.</p> 
+                  <p>Ozark differs from other languages in several innovative ways that address key conceptual problems, and is intented to be the "human logic" layer in tomorrow's technology stack.</p>
                 </div>
               </div>
             </div>
@@ -125,7 +125,6 @@
         </div>
       </div>
     </section>
-    <hr />
     <section class='white'>
       <div class='container'>
         <div class='row'>
@@ -145,8 +144,8 @@
   <span class='declaration'>method</span> <span class='method'>prepare</span>
     <span class='class'>Outfit</span> <span class='variable'>outfit</span> <span class='method'>initialize</span>
     <span class='class'>Hat</span> <span class='variable'>hat</span> <span class='method'>initialize</span>
-    <span class='property'>.outfit</span> <span class='operator'>&lt;</span> <span class='variable'>outfit</span>
-    <span class='property'>.hat</span> <span class='operator'>&lt;</span> <span class='variable'>hat</span>
+    <span class='property'>@outfit</span> <span class='operator'>&lt;</span> <span class='variable'>outfit</span>
+    <span class='property'>@hat</span> <span class='operator'>&lt;</span> <span class='variable'>hat</span>
 
   <span class='declaration'>method</span> <span class='method'>followTrail</span> <span class='argument'>trail:</span><span class='class'>Trail</span> <span class='operator'>&gt;</span> <span class='argument'>success:</span><span class='class'>Boolean</span>
     <span class='variable'>trail</span> <span class='method'>findNextWaypoint</span> <span class='operator'>&gt;</span> <span class='argument'>waypoint:</span><span class='variable'>next</span>
@@ -161,13 +160,12 @@
 
   <span class='declaration'>method</span> <span class='method'>climbMountain</span> <span class='argument'>mountain:</span><span class='class'>Mountain</span>
     <span class='self'>self</span> <span class='method'>prepare</span>
-    <span class='property'>.map</span> <span class='method'>findTrail</span> <span class='operator'>&gt;</span> <span class='argument'>trail:</span><span class='variable'>trail</span>
+    <span class='property'>@map</span> <span class='method'>findTrail</span> <span class='operator'>&gt;</span> <span class='argument'>trail:</span><span class='variable'>trail</span>
     <span class='self'>self</span> <span class='method'>followTrail</span> <span class='argument'>trail:</span><span class='variable'>trail</span> <span class='operator'>&gt;</span> <span class='argument'>success:</span><span class='variable'>result</span>
     <span class='control'>if</span> <span class='variable'>result</span>
       <span class='self'>self</span> <span class='method'>shout</span> <span class='argument'>message:</span><span class='string'>"Hello, world!"</span></pre>
-                <div class='documentation'><p>Ready to learn Ozark?</p><a class='btn btn-default btn-lg' href='/documentation'>Read the documentation &nbsp; <span class='glyphicon glyphicon-chevron-right'></span></a></div>
               </div>
-              <div class='col-sm-4 col-sm-offset-1'>
+              <div class='col-sm-4'>
                 <div class='github'>
                   <h3>Contribute</h3>
                   <a target="_blank" href='https://github.com/ozark-lang/ozark' class='btn btn-primary btn-lg'>View the GitHub project &nbsp; <span class='glyphicon glyphicon-new-window'></span></a>
@@ -175,6 +173,10 @@
                     <p>Ozark is open source. It is hosted and developed on GitHub.</p>
                     <p>The Ozark language is still in early development. The compiler is not yet available, and contributors are needed (especially those with compiler expertise.)</p>
                   </div>
+                </div>
+                <div class='documentation'>
+                  <h3>Learn Ozark!</h3>
+                  <a class='btn btn-default btn-lg' href='/documentation'>Read the documentation &nbsp; <span class='glyphicon glyphicon-chevron-right'></span></a>
                 </div>
               </div>
             </div>

@@ -9,7 +9,7 @@ footer { margin-top:3em; padding-top:3em; padding-bottom:3em; background-color:#
 	footer a { color:#fff; text-decoration:underline; }
 	footer a:hover { color:#fff; text-decoration:none; }
 
-pre.mountaineer { background:#fff url(../img/mountaineer.png) left top no-repeat; padding:65px 15px 20px 15px; border:none; border-radius:2px; box-shadow:0 0 8px #ccc; overflow-x:scroll; word-wrap:normal; }
+pre.mountaineer { background:#fff url(../img/mountaineer.png) left top no-repeat; padding:65px 15px 20px 15px; margin-right:20px; border:none; border-radius:2px; box-shadow:0 0 8px #ccc; overflow-x:scroll; word-wrap:normal; }
 
 #logo { width:225px; height:50px; position:relative; top:-6px; left:-8px; }
 
@@ -55,7 +55,8 @@ section.white { padding:20px 0; }
 				.footer-nav ul li.active a { border-bottom:3px solid #fff; }
 				.footer-nav ul li a:hover { border-bottom:3px solid #fff; }
 
-.continue { text-align:right; margin:1em 0 0em 0; }
+.continue { text-align:right; margin:1em 0 1em 0; }
+
 .documentation { margin:3em 0 0 0; }
 	.documentation .btn { position:relative; left:-4px; }
 
@@ -65,6 +66,10 @@ section.white { padding:20px 0; }
 
 .btn-default { border-color:#25aae1; color:#fff; background-color:#25aae1; }
 	.btn-default:hover { border-color:#258ac1; color:#fff; background-color:#258ac1; }
+
+	section.blue .btn-default { border-color:#fff; color:#000; background-color:#fff; }
+		section.blue .btn-default:hover { background-color:#eee; }
+
 
 .btn-primary { border-color:#D6491A; color:#fff; background-color:#D6491A; }
 	.btn-primary:hover { border-color:#B6391A; color:#fff; background-color:#B6391A; }
