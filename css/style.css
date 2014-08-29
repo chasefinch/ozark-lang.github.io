@@ -76,16 +76,15 @@ section.white { padding:20px 0; }
 
 .declaration { color:#0000FF; }
 .argument { color:#496FB1; font-style:italic; }
-.variable { color:#000; }
+.noun { color:#666; }
 .method { color:#000; }
-.control { color:#0000FF; }
-.self { color:#28527C; }
+.control { color:#C343A8; }
+.implicit { color:#28527C; font-weight:bold; }
 .comment { color:#05A74F; }
 .string { color:#D73939; }
-.literal { color:#C343A8; }
+.literal { color:#B63521; }
 .property { color:#000; font-weight:bold; }
 .class { color:#25aae1; }
-.operator { color:#28527C; }
 
 .nothing { color:#FD9632; color:#E92C31; }
 
