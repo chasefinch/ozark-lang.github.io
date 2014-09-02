@@ -154,14 +154,13 @@
     <span class='property'>@hat</span> <span class='control'>&lt;</span> <span class='noun'>hat</span>
 
   <span class='declaration'>method</span> <span class='method'>climbMountain</span> <span class='implicit'>input</span><span class='argument'>:</span><span class='class'>Mountain</span>
-    <span class='declaration'>instance</span> <span class='property'>@map</span>
-      <span class='property'>@map</span> <span class='method'>findTrail</span> <span class='argument'>mountain:</span><span class='implicit'>input</span> <span class='control'>&gt;</span> <span class='noun'>trail</span>
-      <span class='property'>@hiker</span> <span class='method'>followTrail</span> <span class='noun'>trail</span> <span class='control'>&gt;</span> <span class='argument'>success:</span><span class='noun'>result</span>
-      <span class='declaration'>if</span> <span class='noun'>result</span>
-        <span class='property'>@speaker</span> <span class='method'>shout</span> <span class='literal'>"Hello, world!"</span>
-    <span class='declaration'>else</span>
-      <span class='class'>Exception</span> <span class='noun'>e</span> <span class='method'>initialize</span> <span class='argument'>message:</span><span class='literal'>"I'm lost."</span>
-      <span class='declaration'>alert</span> <span class='noun'>e</span></pre>
+    <span class='property'>@map!</span> <span class='method'>findTrail</span> <span class='argument'>mountain:</span><span class='implicit'>input</span> <span class='control'>&gt;</span> <span class='noun'>trail</span> * <span class='class'>DoesNotExist</span> <span class='noun'>exception1</span>
+      <span class='noun'>exception1</span> <span class='method'>setMessage</span> <span class='literal'>"I'm lost."</span>
+      <span class='declaration'>raise</span> <span class='noun'>exception1</span>
+
+    <span class='property'>@hiker</span> <span class='method'>followTrail</span> <span class='noun'>trail</span> <span class='control'>&gt;</span> <span class='argument'>success:</span><span class='noun'>result</span>
+    <span class='declaration'>if</span> <span class='noun'>result</span>
+      <span class='property'>@speaker</span> <span class='method'>shout</span> <span class='literal'>"Hello, world!"</span>
               </div>
               <div class='col-sm-4'>
                 <div class='github'>
