@@ -55,7 +55,7 @@ section.blue { padding:20px 0; background-color:#25aae1; color:#fff; }
 	section.blue.short { padding:0 0; }
 	section.blue h1, section.blue h2, section.blue h3, section.blue h4, section.blue h5, section.blue h6 { color:#fff; }
 	section.blue p { color:#def; } 
-		section.blue p.lead { color:#fff; } 
+
 	section.blue a.download { color:#fff; }
 
 section.white { padding:20px 0; }
