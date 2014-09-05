@@ -63,9 +63,9 @@ section.white { padding:20px 0; }
 .footer-nav { float:right; }
 	.footer-nav ul { margin:0; padding:0; }
 		.footer-nav ul li { margin:0; padding:0 0 0 1.5em; list-style-type:none; display:inline-block; }
-			.footer-nav ul li a { color:#fff; text-decoration:none; border-bottom:3px solid transparent; display:block; }
-				.footer-nav ul li.active a { border-bottom:3px solid #fff; }
-				.footer-nav ul li a:hover { border-bottom:3px solid #fff; }
+			.footer-nav ul li a { color:#def; text-decoration:none; display:block; }
+				.footer-nav ul li.active a { color:#fff; font-weight:bold; }
+				.footer-nav ul li a:hover { color:#fff; }
 
 .continue { text-align:right; margin:1em 0 1em 0; }
 
