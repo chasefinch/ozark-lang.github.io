@@ -30,7 +30,7 @@ pre.mountaineer { background:#fff url(../img/mountaineer.png) left top no-repeat
 	.navbar-default .navbar-toggle.collapsed .icon-bar { background-color:#bbb; }
 		.navbar-default .navbar-toggle:hover .icon-bar { background-color:#333; }
 
-.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus { background-color:#25aae1; color:#fff; border-radius:6px; }
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus { background-color:transparent; color:#000; font-weight:bold; }
 
 #nav-links { position:relative; top:25px; font-size:1.2em; }
 
