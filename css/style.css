@@ -33,6 +33,8 @@ pre.mountaineer { background:#fff url(../img/mountaineer.png) left top no-repeat
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus { background-color:transparent; color:#000; font-weight:bold; }
 
 #nav-links { position:relative; top:25px; font-size:1.2em; }
+	#nav-links li:last-child a { padding-right:0; }
+
 
 .subnav { margin-top:12px; }
 .subnav .nav > li > a { color:#777; padding:3px 15px; border-left:5px solid transparent; }
@@ -60,12 +62,21 @@ section.blue { padding:20px 0; background-color:#25aae1; color:#fff; }
 
 section.white { padding:20px 0; }
 
-.footer-nav { float:right; }
+.footer-nav { font-size:1.2em; }
 	.footer-nav ul { margin:0; padding:0; }
-		.footer-nav ul li { margin:0; padding:0 0 0 1.5em; list-style-type:none; display:inline-block; }
+		.footer-nav ul li { margin:0; padding:0 0 1em 0; list-style-type:none; display:block; }
 			.footer-nav ul li a { color:#def; text-decoration:none; display:block; }
 				.footer-nav ul li.active a { color:#fff; font-weight:bold; }
 				.footer-nav ul li a:hover { color:#fff; }
+
+.copyright { margin-top:1em; }
+
+@media (min-width:768px) {
+	.footer-nav { float:right; font-size:1.0em; }
+		.footer-nav ul li { display:inline-block; padding:0 0 0 1.5em; }
+
+	.copyright { margin-top:0; }
+}
 
 .continue { text-align:right; margin:1em 0 1em 0; }
 
@@ -81,6 +92,9 @@ section.white { padding:20px 0; }
 .community .btn { position:relative; left:-4px; }
 
 .code .links { padding-top:5em; }
+
+.to-top { text-align:right; }
+	.to-top .link-to-top:hover { text-decoration:none; }
 
 .btn { margin-bottom:1em; }
 
