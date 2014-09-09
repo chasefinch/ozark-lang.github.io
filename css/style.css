@@ -36,10 +36,13 @@ pre.mountaineer { background:#fff url(../img/mountaineer.png) left top no-repeat
 	#nav-links li:last-child a { padding-right:0; }
 
 
-.subnav { margin-top:12px; }
+.subnav { margin-top:70px; }
 .subnav .nav > li > a { color:#777; padding:3px 15px; border-left:5px solid transparent; }
 .subnav .nav > li > a:hover { color:#333; background-color:transparent; }
 .subnav .nav > li.active > a { color:#000; border-color:#25aae1; font-weight:bold; }
+
+.subnav.affix { top:25px; margin-top:0; }
+.subnav.affix-bottom { position:absolute; margin-top:0; }
 
 @media (min-width:768px) {
 	#nav-links { top:0px; font-size:inherit; }
@@ -49,7 +52,7 @@ h1.heading { font-size:30px; }
 h2.subheading, h3.subheading { margin-bottom:2em; }
 	.subheading strong { font-weight:300; font-size:0.6em; text-transform:uppercase; color:#25aae1; }
 
-h1.main-heading { margin-top:0; }
+h1.main-heading { margin-top:0; padding-top:0; }
 
 a.download { font-weight:bold; text-decoration:none; }
 
