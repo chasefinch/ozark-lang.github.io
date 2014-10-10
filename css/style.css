@@ -116,17 +116,17 @@ section.white { padding:20px 0; }
 	.btn-disabled:active { box-shadow:none; }
 
 .declaration { color:#5e4ed7; }
-.argument { color:#496FB1; font-style:italic; }
+.argument { color:#496fb1; font-style:italic; }
 .noun { color:#000; }
-.method { color:#18525C; }
-.implicit { color:#28527C; font-weight:bold; }
-.comment { color:#05A74F; }
-.string { color:#FF2E2D; }
-.literal { color:#B63521; }
+.method { color:#18525c; }
+.implicit { color:#28527c; font-weight:bold; }
+.comment { color:#05a74f; }
+.string { color:#ff2e2d; }
+.literal { color:#b63521; }
 .property { color:#000; }
-.class { color:#25AAE1; }
+.class { color:#25aae1; }
 .symbol { color:#222;}
 
-.nothing { color:#FD9632; color:#E92C31; }
+.nothing { color:#fd9632; color:#e92c31; }
 
 div.portal .glyphicon { float:right; margin-right:15px; color:#25aae1; }
