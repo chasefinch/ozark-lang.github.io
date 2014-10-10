@@ -115,16 +115,16 @@ section.white { padding:20px 0; }
 	.btn-disabled:hover { color:#bbb; }
 	.btn-disabled:active { box-shadow:none; }
 
-.declaration { color:#0000FF; }
+.declaration { color:#5e4ed7; }
 .argument { color:#496FB1; font-style:italic; }
 .noun { color:#000; }
 .method { color:#18525C; }
 .implicit { color:#28527C; font-weight:bold; }
 .comment { color:#05A74F; }
-.string { color:#D73939; }
+.string { color:#FF2E2D; }
 .literal { color:#B63521; }
 .property { color:#000; }
-.class { color:#25aae1; }
+.class { color:#25AAE1; }
 .symbol { color:#222;}
 
 .nothing { color:#FD9632; color:#E92C31; }
