@@ -1,4 +1,4 @@
-ozark-lang.github.io
+Ozark Language Website & Documentation
 ====================
 
 This is the public website & documentation for the Ozark programming language. This repository powers the live website at http://ozark.cc.
