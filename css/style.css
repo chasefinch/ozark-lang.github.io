@@ -86,7 +86,7 @@ section.white { padding:20px 0; }
 .documentation { margin:3em 0 0 0; }
 	.documentation .btn { position:relative; left:-4px; }
 
-.callout { font-size:0.9em; margin-top:2em; }
+.callout { font-size:0.9em; margin-top:0em; }
 .github { padding:0 0; }
 	.github .btn { position:relative; left:-4px; }
 
