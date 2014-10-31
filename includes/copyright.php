@@ -1,0 +1,1 @@
+<div class='copyright'>&copy; 2014 Chase Finch | <a rel="author" target="_blank" href="https://plus.google.com/+ChaseFinch/?rel=author">Authorship</a></div>
