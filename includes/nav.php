@@ -9,7 +9,7 @@
         <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand" href="/">
-        <img id="logo" src='img/ozark.png' alt='ozark'>
+        <img id="logo" src='/img/ozark.png' alt='ozark'>
       </a>
     </div>
     <!-- Collect the nav links, forms, and other content for toggling -->

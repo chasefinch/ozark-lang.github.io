@@ -1,10 +1,10 @@
-<?php $title = "Ozark Language - Documentation"; $description = "Ozark is an elegant, open-source programming language. Through strict code standards, Ozark enables new tools for generating software."; require('includes/header.php'); ?>
+<?php $title = "Ozark Language - Documentation"; $description = "Ozark is an elegant, open-source programming language. Through strict code standards, Ozark enables new tools for generating software."; require('../includes/header.php'); ?>
   <body>
   	<header>
 	  	<div class='container'>
         <div class='row'>
           <div class='col-md-10 col-md-offset-1'>
-            <?php $active = 'documentation'; require('includes/nav.php'); ?>
+            <?php $active = 'documentation'; require('../includes/nav.php'); ?>
           </div>
         </div>
 	    </div>
@@ -16,16 +16,7 @@
           <div class='col-md-10 col-md-offset-1'>
             <div class='row'>
               <div class='col-sm-3 hidden-xs'>
-                <div class="subnav">
-                  <ul class="nav bs-docs-sidenav">
-                    <li class="active"><a href="/documentation.html">Overview</a></li>
-                    <li><a href="/documentation.html">Overview</a></li>
-                    <li><a href="/documentation.html">Overview</a></li>
-                    <li><a href="/documentation.html">Overview</a></li>
-                    <li><a href="/documentation.html">Overview</a></li>
-                    <li><a href="/documentation.html">Overview</a></li>
-                  </ul>
-                </div>
+                <?php $subpage = 'index'; require('../includes/documentation-nav.php'); ?>
               </div>
               <div class='col-sm-9'>
                 <h1 class='main-heading' id="overview">Overview</h1>
@@ -58,11 +49,11 @@
       <div class='container'>
         <div class='row'>
           <div class='col-md-10 col-md-offset-1'>
-            <?php require('includes/footer-nav.php'); ?>
-            <?php require('includes/copyright.php'); ?>
+            <?php require('../includes/footer-nav.php'); ?>
+            <?php require('../includes/copyright.php'); ?>
           </div>
       </div>
     </footer>
-    <?php require('includes/scripts.php'); ?>
+    <?php require('../includes/scripts.php'); ?>
   </body>
 </html>

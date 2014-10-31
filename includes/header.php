@@ -8,10 +8,10 @@
     <meta name="description" content="<?php echo $description; ?>">
 
     <link href='http://fonts.googleapis.com/css?family=Raleway:300,400' rel='stylesheet' type='text/css'>
-    <link href="ico/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link href="/ico/favicon.ico" rel="shortcut icon" type="image/x-icon">
     <!-- Bootstrap -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
