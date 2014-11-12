@@ -1,5 +1,14 @@
 <?php $title = "Ozark Language - Contribute"; $description = "Ozark is an elegant, open-source programming language. Through strict code standards, Ozark enables new tools for generating software."; require('includes/header.php'); ?>
   <body>
+    <section class="ribbon">
+      <div class='container'>
+        <div class='row'>
+          <div class='col-md-10 col-md-offset-1'>
+            <?php $site = 'ozark'; require('includes/site-nav.php'); ?>
+          </div>
+        </div>
+      </div>
+    </section>
   	<header>
 	  	<div class='container'>
         <div class='row'>
@@ -18,7 +27,7 @@
               <div class='row'>
                 <div class='col-sm-7'>
                   <h1>Open-Source Code</h1>
-                  <p class='lead'>Ozark is maintained and developed on Github, including all code &amp; documentation source, the sample apps, the full language specification, and the roadmap for future language development.</p>
+                  <p class='lead'>Ozark is maintained and developed on GitHub, including all code &amp; documentation source, the sample apps, the full language specification, and the roadmap for future language development.</p>
                 </div>
                 <div class='col-sm-4 col-sm-offset-1'>
                   <div class='links'>

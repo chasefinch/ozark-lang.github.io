@@ -1,5 +1,14 @@
 <?php $title = "Ozark Language - About"; $description = "Ozark is an elegant, open-source programming language. Through strict code standards, Ozark enables new tools for generating software."; require('includes/header.php'); ?>
   <body>
+    <section class="ribbon">
+      <div class='container'>
+        <div class='row'>
+          <div class='col-md-10 col-md-offset-1'>
+            <?php $site = 'ozark'; require('includes/site-nav.php'); ?>
+          </div>
+        </div>
+      </div>
+    </section>
   	<header>
 	  	<div class='container'>
         <div class='row'>
@@ -9,7 +18,6 @@
         </div>
 	    </div>
   	</header>
-    <section class='offset'></section>
     <section class='blue airplane'>
       <div class='container'>
         <div class='row'>
@@ -17,8 +25,8 @@
             <div class='row'>
               <div class='col-sm-7'>
                 <h1>Fall in love with Ozark.</h1>
-                <p class='lead'>Ozark code is beautiful, straightforward, and future-proof. You can easily see the purpose of each method &ndash; And so can your IDE.</p>
-                <p class='lead'>This makes software development faster, more enjoyable, and easier to learn. It also welcomes a new generation of smart software development tools.</p>
+                <p class='lead'>Ozark code is a joy to write; Beautiful, straightforward, and future-proof. You can easily see the purpose of each method &ndash; And so can your IDE.</p>
+                <p class='lead'>This makes software development faster and easier to learn. It also welcomes a new generation of smart software development tools.</p>
                 <div style='clear:both;'></div>
               </div>
               <div class='col-sm-4 col-sm-offset-1'>
@@ -42,7 +50,7 @@
             <div class='row'>
               <div class='col-sm-9'>
                 <h1>Core Concepts</h1>
-                <p class='lead'>High-level programming languages allow software development to be an expression of logic, and less of a complex instruction list. Each higher-level language limits the programmer's implementation options in favor of readibility, reusability, and standardization.</p>
+                <p class='lead'>In high-level programming languages, software development is an expression of logic. Each higher-level language limits the programmer's implementation options in favor of readibility, reusability, and standardization.</p>
                 <p class='lead'>Ozark is designed to be the highest level programming language of sequential declarations, serving as the only layer between machine language and the abstract software development tools of tomorrow.</p>
               </div>
             </div>

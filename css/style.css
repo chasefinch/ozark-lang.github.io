@@ -17,8 +17,6 @@ h1.main-heading { margin-top:0; padding-top:0; }
 
 a.download { font-weight:bold; text-decoration:none; }
 
-.bg-pad { padding-bottom:40px; }
-
 .btn { margin-bottom:1em; }
 
 .btn-default { border-color:#25aae1; color:#fff; background-color:#25aae1; }
@@ -49,20 +47,28 @@ a.download { font-weight:bold; text-decoration:none; }
 
 .nothing { color:#fd9632; color:#e92c31; }
 
-#newsletter { position:absolute; top:0; right:0; padding:3px 5px; color:#fff; background-color:#25aae1; text-decoration:none; }
+/*---*/
+
+.site-nav { font-size:0.9em; display:inline-block; float:right; margin-top:-4px; }
+	.site-nav ul { margin:0; padding:0 5px; border-bottom-right-radius:2px; border-bottom-left-radius:2px; background-color:#25aae1; }
+		.site-nav ul li { margin:0 0.4em 0 0.4em; padding:0 0 0 0; list-style-type:none; display:inline-block; }
+			.site-nav ul li a { color:#d5eaff; padding:6px 0 2px 0; text-decoration:none; display:block; }
+				.site-nav ul li a:hover { color:#fff; }
+				.site-nav ul li.active a { color:#fff; font-weight:bold; padding-top:2px; border-top:4px solid #fff; }
 
 /*---*/
 
-header { padding-top:4em; padding-bottom:2.4em; }
+header { padding-top:3em; padding-bottom:2em; }
 
-#logo { width:225px; height:50px; position:relative; top:-6px; left:-8px; }
+#logo { width:225px; height:50px; position:relative; top:-15px; left:8px; }
 
 .navbar-header { z-index:100; position:relative; }
 
 .navbar-default { border:none; background-color:transparent; z-index:1; position:relative; }
 	.navbar-default .navbar-collapse, .navbar-default .navbar-form { border:none; }
+	.navbar-default .container-fluid { padding:0; }
 .navbar-brand { padding:0; }
-.navbar-default .navbar-toggle { margin-right:0; background-color:transparent; border-color:transparent; }
+.navbar-default .navbar-toggle { background-color:transparent; border-color:transparent; }
 	.navbar-default .navbar-toggle:hover { background-color:transparent; border-color:transparent; }
 	.navbar-default .navbar-toggle .icon-bar { background-color:#333; }
 	.navbar-default .navbar-toggle.collapsed .icon-bar { background-color:#bbb; }
@@ -98,7 +104,11 @@ section.blue { padding:20px 0; min-height:360px; background:#25aae1; color:#fff;
 
 section.white { padding:20px 0; }
 
+section.ribbon { text-align:center; border-top:4px solid #25aae1; }
+
 div.portal .glyphicon { float:right; margin-right:15px; color:#25aae1; }
+
+.bg-pad { padding-bottom:40px; }
 
 .continue { text-align:right; margin:1em 0 1em 0; }
 
@@ -116,7 +126,7 @@ div.portal .glyphicon { float:right; margin-right:15px; color:#25aae1; }
 .code .links { padding-top:5em; }
 
 .code-sample-header { background-color:#25aae1; border:1px solid #258ac1; border-top:5px solid #258ac1; padding:5px 15px; color:#fff; margin-right:20px; border-top-right-radius:3px; border-top-left-radius:3px; }
-.code-sample { border:1px solid #bbb; border-top:none; padding:15px; margin-right:20px; overflow-x:scroll; word-wrap:normal; }
+.code-sample { border:1px solid #bbb; border-top:none; padding:15px; margin-right:20px; overflow-x:scroll; word-wrap:normal; border-bottom-right-radius:3px; border-bottom-left-radius:3px; }
 	.code-sample pre { border:none !important; background:transparent !important; margin:0; padding:0; }
 
 
