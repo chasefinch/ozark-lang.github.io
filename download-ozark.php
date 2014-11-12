@@ -17,7 +17,7 @@
             <div class='row'>
               <div class='col-sm-8'>
                 <h1>Downloads</h1>
-                <p class='lead'>The Ozark language is still in early development. The compiler is not yet complete, and contributors are needed (especially those with compiler expertise.) If the Ozark project seems valuable to you, please consider <a href='/contribute-to-ozark.html'>getting involved</a>.</p>
+                <p class='lead'>The Ozark language is still in early development. The compiler is not yet complete, and contributors are needed (especially those with compiler expertise.) If the Ozark project seems valuable to you, please consider <a href='/contribute-to-ozark'>getting involved</a>.</p>
               </div>
             </div>
           </div>

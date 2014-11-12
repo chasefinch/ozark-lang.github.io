@@ -22,8 +22,8 @@
             <hr />
             <div class='row'>
               <div class='col-sm-6'>
-                <h4>Q. What's up?</h4>
-                <p><strong>A.</strong> Not much. Donec semper quam scelerisque tortor dictum gravida. In hac habitasse platea dictumst. Nam pulvinar, odio.</p>
+                <h4>Q. Why strict programming?</h4>
+                <p><strong>A.</strong> Limiting stylistic choices in programming makes for more powerful, more reliable, and more future-proof code libraries. This makes strict code even more powerful, as it gains readability and ease of collaboration, without sacrificing capability.</p>
                 <h4>Q. What's up?</h4>
                 <p><strong>A.</strong> Not much. Donec semper quam scelerisque tortor dictum gravida. In hac habitasse platea dictumst. Nam pulvinar, odio.</p>
                 <h4>Q. What's up?</h4>

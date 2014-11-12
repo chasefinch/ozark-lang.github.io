@@ -17,6 +17,8 @@ h1.main-heading { margin-top:0; padding-top:0; }
 
 a.download { font-weight:bold; text-decoration:none; }
 
+.bg-pad { padding-bottom:40px; }
+
 .btn { margin-bottom:1em; }
 
 .btn-default { border-color:#25aae1; color:#fff; background-color:#25aae1; }
@@ -72,9 +74,10 @@ header { padding-top:4em; padding-bottom:2.4em; }
 	#nav-links li:last-child a { padding-right:0; }
 
 .subnav { margin-top:70px; }
-.subnav .nav > li > a { color:#777; padding:3px 15px; border-left:5px solid transparent; }
+.subnav .nav > li > a { color:#777; margin-top:10px; padding:0px 15px; border-left:5px solid transparent; }
 .subnav .nav > li > a:hover { color:#333; background-color:transparent; }
 .subnav .nav > li.active > a { color:#000; border-color:#25aae1; font-weight:bold; }
+	.subnav .nav > li.tier > a { margin-top:0px; padding-left:30px; }
 
 .subnav.affix { top:25px; margin-top:0; }
 .subnav.affix-bottom { position:absolute; margin-top:0; }
@@ -85,8 +88,9 @@ header { padding-top:4em; padding-bottom:2.4em; }
 
 /* --- */
 
-section.blue { padding:20px 0; background-color:#25aae1; color:#fff; }
-	section.blue.short { padding:0 0; }
+section.blue { padding:20px 0; min-height:360px; background:#25aae1; color:#fff; }
+	section.blue.airplane { background:#25aae1 url(../img/bg-airplane.png?v=3) center bottom no-repeat; }
+	section.blue.thinker { background:#25aae1 url(../img/bg-thinker.png?v=3) center bottom no-repeat; }
 	section.blue h1, section.blue h2, section.blue h3, section.blue h4, section.blue h5, section.blue h6 { color:#fff; }
 	section.blue p { color:#def; } 
 
@@ -102,7 +106,7 @@ div.portal .glyphicon { float:right; margin-right:15px; color:#25aae1; }
 	.documentation .btn { position:relative; left:-4px; }
 
 .callout { font-size:0.9em; margin-top:0em; }
-.github { padding:0 0; }
+.github { padding:20px 0 0 0; }
 	.github .btn { position:relative; left:-4px; }
 
 .downloads .btn { position:relative; left:-4px; }
@@ -111,7 +115,9 @@ div.portal .glyphicon { float:right; margin-right:15px; color:#25aae1; }
 
 .code .links { padding-top:5em; }
 
-pre.mountaineer { background:#fff url(../img/mountaineer.png) left top no-repeat; padding:65px 15px 20px 15px; margin-right:20px; border:none; border-radius:2px; box-shadow:0 0 8px #ccc; overflow-x:scroll; word-wrap:normal; }
+.code-sample-header { background-color:#25aae1; border:1px solid #258ac1; border-top:5px solid #258ac1; padding:5px 15px; color:#fff; margin-right:20px; border-top-right-radius:3px; border-top-left-radius:3px; }
+.code-sample { border:1px solid #bbb; border-top:none; padding:15px; margin-right:20px; overflow-x:scroll; word-wrap:normal; }
+	.code-sample pre { border:none !important; background:transparent !important; margin:0; padding:0; }
 
 
 /* --- */

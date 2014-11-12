@@ -11,12 +11,12 @@
       <div style='clear:both'></div>
   	</header>
     <section class='offset'></section>
-    <section class='blue short'>
+    <section class='blue thinker'>
       <div class='container'>
         <div class='row'>
           <div class='col-md-10 col-md-offset-1'>
             <div class='row'>
-              <div class='col-lg-10'>
+              <div class='col-md-7 col-sm-8 col-xs-9'>
                 <h1 class='heading'>Ozark is an elegant, open-source programming language. Through strict code standards, Ozark enables new tools for generating software.</h1>
               </div>
             </div>
@@ -63,17 +63,11 @@
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class='white'>
-      <div class='container'>
-        <div class='row'>
-          <div class='col-md-10 col-md-offset-1'>
             <div class='row'>
               <div class='col-sm-7'>
-                <pre class='mountaineer'><span class='declaration'>class</span> <span class='class'>Mountaineer</span> <span class='argument'>superclass:</span><span class='literal'>"Person"</span>
+                <div class='code-sample-header'>Mountaineer.ozark</div>
+                <div class='code-sample'>
+                  <pre><span class='declaration'>class</span> <span class='class'>Mountaineer</span> <span class='argument'>superclass:</span><span class='literal'>"Person"</span>
 
   <span class='declaration'>requirement</span> <span class='literal'>"HikeAbility"</span>
   <span class='declaration'>requirement</span> <span class='literal'>"Mountain"</span>
@@ -105,20 +99,21 @@
     
     <span class='declaration'>if</span> <span class='noun'>result</span>
       <span class='property'>@speaker</span> <span class='method'>shout</span> <span class='literal'>"Hello, world!"</span>
+                </pre>
               </div>
-              <div class='col-sm-4'>
-                <div class='github'>
-                  <h3>Contribute</h3>
-                  <a target="_blank" href='https://github.com/ozark-lang/ozark' class='btn btn-primary btn-lg'>View the GitHub project &nbsp; <span class='glyphicon glyphicon-new-window'></span></a>
-                  <div class='callout'>
-                    <p>Ozark is open source under the <a target="_blank" href='https://github.com/ozark-lang/ozark/blob/master/LICENSE'>GPL v3 license</a>. It is hosted and developed on GitHub.</p>
-                    <p>The Ozark language is still in early development. The compiler is not yet available, and contributors are needed (especially those with compiler expertise.)</p>
-                  </div>
+            </div>
+            <div class='col-sm-4'>
+              <div class='github'>
+                <h3>Contribute</h3>
+                <a target="_blank" href='https://github.com/ozark-lang/ozark' class='btn btn-primary btn-lg'>View the GitHub project &nbsp; <span class='glyphicon glyphicon-new-window'></span></a>
+                <div class='callout'>
+                  <p>Ozark is open source under the <a target="_blank" href='https://github.com/ozark-lang/ozark/blob/master/LICENSE'>GPL v3 license</a>. It is hosted and developed on GitHub.</p>
+                  <p>The Ozark language is still in early development. The compiler is not yet available, and contributors are needed (especially those with compiler expertise.)</p>
                 </div>
-                <div class='documentation'>
-                  <h3>Learn Ozark!</h3>
-                  <a class='btn btn-default btn-lg' href='/language-documentation'>Read the documentation &nbsp; <span class='glyphicon glyphicon-chevron-right'></span></a>
-                </div>
+              </div>
+              <div class='documentation'>
+                <h3>Learn Ozark!</h3>
+                <a class='btn btn-default btn-lg' href='/language-documentation'>Read the documentation &nbsp; <span class='glyphicon glyphicon-chevron-right'></span></a>
               </div>
             </div>
           </div>
