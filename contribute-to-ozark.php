@@ -18,7 +18,6 @@
         </div>
 	    </div>
   	</header>
-    <section class='offset'></section>
     <section class='white'>
       <div class='container'>
         <div class='row'>

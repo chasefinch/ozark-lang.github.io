@@ -80,7 +80,7 @@ header { padding-top:3em; padding-bottom:2em; }
 #nav-links { position:relative; top:25px; font-size:1.2em; }
 	#nav-links li:last-child a { padding-right:0; }
 
-.subnav { margin-top:70px; }
+.subnav { margin-top:60px; }
 .subnav .nav > li > a { color:#777; margin-top:10px; padding:0px 15px; border-left:5px solid transparent; }
 .subnav .nav > li > a:hover { color:#333; background-color:transparent; }
 .subnav .nav > li.active > a { color:#000; border-color:#25aae1; font-weight:bold; }
@@ -104,6 +104,7 @@ section.blue { padding:20px 0; min-height:360px; background:#25aae1; color:#fff;
 	section.blue a.download { color:#fff; }
 
 section.white { padding:20px 0; }
+	section.white.short { padding:0 0 20px 0; }
 
 section.ribbon { text-align:center; margin-top:0.5em; }
 

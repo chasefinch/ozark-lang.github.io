@@ -19,7 +19,6 @@
 	    </div>
       <div style='clear:both'></div>
   	</header>
-    <section class='offset'></section>
     <section class='blue thinker'>
       <div class='container'>
         <div class='row'>
