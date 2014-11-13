@@ -61,7 +61,7 @@ a.download { font-weight:bold; text-decoration:none; }
 
 header { padding-top:3em; padding-bottom:2em; }
 
-#logo { width:225px; height:50px; position:relative; top:-18px; left:8px; }
+#logo { width:225px; height:50px; position:relative; top:-16px; left:8px; }
 
 .navbar-header { z-index:100; position:relative; }
 
@@ -96,8 +96,8 @@ header { padding-top:3em; padding-bottom:2em; }
 /* --- */
 
 section.blue { padding:20px 0; min-height:360px; background:#25aae1; color:#fff; }
-	section.blue.airplane { background:#25aae1 url(../img/bg-airplane.png?v=3) center bottom no-repeat; }
-	section.blue.thinker { background:#25aae1 url(../img/bg-thinker.png?v=3) center bottom no-repeat; }
+	section.blue.airplane { background:#25aae1 url(../img/bg-airplane.png?v=4) center bottom no-repeat; }
+	section.blue.thinker { background:#25aae1 url(../img/bg-thinker.png?v=4) center bottom no-repeat; }
 	section.blue h1, section.blue h2, section.blue h3, section.blue h4, section.blue h5, section.blue h6 { color:#fff; }
 	section.blue p { color:#def; } 
 
@@ -110,7 +110,7 @@ section.ribbon { text-align:center; margin-top:0.5em; }
 
 div.portal .glyphicon { float:right; margin-right:15px; color:#25aae1; }
 
-.bg-pad { padding-bottom:40px; }
+.bg-pad { /* padding-bottom:40px; */ }
 
 .continue { text-align:right; margin:1em 0 1em 0; }
 
@@ -128,9 +128,14 @@ div.portal .glyphicon { float:right; margin-right:15px; color:#25aae1; }
 .code .links { padding-top:5em; }
 
 .code-sample-header { position:relative; left:-16px; background-color:#25aae1; border:1px solid #258ac1; border-top:5px solid #258ac1; padding:5px 15px; color:#fff; border-top-right-radius:3px; border-top-left-radius:3px; }
-.code-sample { position:relative; left:-16px; border:1px solid #bbb; border-top:none; padding:15px; overflow-x:scroll; word-wrap:normal; border-bottom-right-radius:3px; border-bottom-left-radius:3px; }
-	.code-sample pre { border:none !important; background:transparent !important; margin:0; padding:0; }
+.code-sample { position:relative; left:-16px; border:1px solid #bbb; border-top:none; padding:15px; word-wrap:normal; border-bottom-right-radius:3px; border-bottom-left-radius:3px; }
+	.code-sample pre { border:none !important; background:transparent !important; overflow-x:scroll; margin:0; padding:0; }
 
+@media (max-width:768px) {
+	section.blue { min-height:0; }
+		section.blue.airplane { background-image:none; }
+		section.blue.thinker { background-image:none; }
+}
 
 /* --- */
 

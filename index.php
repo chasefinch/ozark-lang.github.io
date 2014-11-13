@@ -24,7 +24,7 @@
         <div class='row'>
           <div class='col-md-10 col-md-offset-1'>
             <div class='row'>
-              <div class='col-md-7 col-sm-8 col-xs-9'>
+              <div class='col-sm-7'>
                 <h1 class='heading'>Ozark is an elegant, open-source programming language. Through strict code standards, Ozark enables new tools for generating software.</h1>
               </div>
             </div>
