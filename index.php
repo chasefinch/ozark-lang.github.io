@@ -26,6 +26,23 @@
             <div class='row'>
               <div class='col-sm-7'>
                 <h1 class='heading'>Ozark is an elegant, open-source programming language. Through strict code standards, Ozark enables new tools for generating software.</h1>
+                <div class='call-to-action'>
+                  <!-- Begin MailChimp Signup Form -->
+                  <div id="mc_embed_signup">
+                    <form action="//ozark.us9.list-manage.com/subscribe/post?u=db19e11de3ec47da1da91149f&amp;id=13de2cb1c6" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate form-inline" target="_blank" novalidate>
+                      <div class='form-group'>
+                        <label for="mce-EMAIL">Enter your email address for regular updates!</label>
+                        <div class='input-group'>
+                          <input type="email" value="" name="EMAIL" class="email form-control input-lg" id="mce-EMAIL" placeholder="email address..." required /><div class='input-group-addon'><input type="submit" value="Go" name="subscribe" id="mc-embedded-subscribe" /></div>
+                        </div>
+                      </div>
+                      <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                      <div style="position: absolute; left: -5000px;"><input type="text" name="b_db19e11de3ec47da1da91149f_13de2cb1c6" tabindex="-1" value=""></div>
+                    </form>
+                  </div>
+
+                  <!--End mc_embed_signup-->
+                </div>
               </div>
             </div>
           </div>

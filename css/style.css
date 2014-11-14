@@ -6,6 +6,8 @@ h4, h5, h6 { font-weight:bold; }
 p { margin-bottom:20px; }
 	p.lead { font-size:1.4em; }
 
+label { font-weight:normal; }
+
 ul.clean { padding-left:0; }
 	ul.clean li { list-style-type:none; padding-bottom:0.4em; }
 
@@ -17,13 +19,30 @@ h1.main-heading { margin-top:0; padding-top:0; }
 
 a.download { font-weight:bold; text-decoration:none; }
 
+.form-inline { margin-bottom:1em; }
+	.form-inline .input-group>.form-control { min-width:260px; }
+
+	.input-group > .input-group-addon { background-color:#fff; }
+	.input-group > .input-group-addon > input { background:transparent; border:none; color:#25aae1; }
+
+	section.blue input { border:2px solid #fff; box-shadow:none !important; background-color:transparent; }
+		section.blue input:focus { border:2px solid #fff; }
+		section.blue .input-group > .input-group-addon { border:none; }
+
+	section.blue input[type=email] { color:#fff; }
+
+	section.blue ::-webkit-input-placeholder { color:#a5daff; }
+	section.blue  :-moz-placeholder { color:#a5daff; }
+	section.blue  ::-moz-placeholder { color:#a5daff; }
+	section.blue  :-ms-input-placeholder { color:#a5daff; }
+
 .btn { margin-bottom:1em; }
 
 .btn-default { border-color:#25aae1; color:#fff; background-color:#25aae1; }
 	.btn-default:hover { border-color:#258ac1; color:#fff; background-color:#258ac1; }
 
-	section.blue .btn-default { border-color:#fff; color:#000; background-color:#fff; }
-		section.blue .btn-default:hover { background-color:#eee; }
+	section.blue .btn { border-color:#fff; color:#25aae1; background-color:#fff; }
+		section.blue .btn-default:hover { color:#258ac1; }
 
 
 .btn-primary { border-color:#D6491A; color:#fff; background-color:#D6491A; }
@@ -46,6 +65,10 @@ a.download { font-weight:bold; text-decoration:none; }
 .symbol { color:#222;}
 
 .nothing { color:#fd9632; color:#e92c31; }
+
+@media (max-width:768px) {
+	.form-inline .btn { display:block; width:100%; }
+}
 
 /*---*/
 
@@ -95,7 +118,7 @@ header { padding-top:3em; padding-bottom:2em; }
 
 /* --- */
 
-section.blue { padding:20px 0; min-height:360px; background:#25aae1; color:#fff; }
+section.blue { padding:20px 0 20px; min-height:360px; background:#25aae1; color:#fff; }
 	section.blue.airplane { background:#25aae1 url(../img/bg-airplane.png?v=4) center bottom no-repeat; }
 	section.blue.thinker { background:#25aae1 url(../img/bg-thinker.png?v=4) center bottom no-repeat; }
 	section.blue h1, section.blue h2, section.blue h3, section.blue h4, section.blue h5, section.blue h6 { color:#fff; }
@@ -111,6 +134,8 @@ section.ribbon { text-align:center; margin-top:0.5em; }
 div.portal .glyphicon { float:right; margin-right:15px; color:#25aae1; }
 
 .bg-pad { /* padding-bottom:40px; */ }
+
+.call-to-action { margin:2em 0 0 0; }
 
 .continue { text-align:right; margin:1em 0 1em 0; }
 
