@@ -6,7 +6,8 @@ h4, h5, h6 { font-weight:bold; }
 p { margin-bottom:20px; }
 	p.lead { font-size:1.4em; }
 
-label { font-weight:normal; }
+label { font-weight:normal; margin:1em 0 1em 0; }
+.input-block { position:relative; left:-4px; }
 
 ul.clean { padding-left:0; }
 	ul.clean li { list-style-type:none; padding-bottom:0.4em; }
@@ -19,11 +20,9 @@ h1.main-heading { margin-top:0; padding-top:0; }
 
 a.download { font-weight:bold; text-decoration:none; }
 
-.form-inline { margin-bottom:1em; }
-	.form-inline .input-group>.form-control { min-width:260px; }
-
-	.input-group > .input-group-addon { background-color:#fff; }
-	.input-group > .input-group-addon > input { background:transparent; border:none; color:#25aae1; }
+	.input-group > .input-group-addon { background-color:#fff; padding:0 0 0 0; }
+	.input-group > .input-group-addon > input[type=submit] { background:transparent; border:none; color:#25aae1; padding:1em; }
+		.input-group > .input-group-addon > input[type=submit]:hover { color:#258ac1; }
 
 	section.blue input { border:2px solid #fff; box-shadow:none !important; background-color:transparent; }
 		section.blue input:focus { border:2px solid #fff; }
@@ -80,7 +79,7 @@ a.download { font-weight:bold; text-decoration:none; }
 
 header { padding-top:3em; padding-bottom:2em; }
 
-#logo { width:225px; height:50px; position:relative; left:8px; }
+#logo { width:225px; height:50px; position:relative; top:-8px; left:8px; }
 
 .navbar-header { z-index:100; position:relative; }
 
@@ -132,8 +131,6 @@ div.portal .glyphicon { float:right; margin-right:15px; color:#25aae1; }
 
 .bg-pad { /* padding-bottom:40px; */ }
 
-.call-to-action { margin:2em 0 0 0; }
-
 .continue { text-align:right; margin:1em 0 1em 0; }
 
 .documentation { margin:3em 0 0 0; }
@@ -150,8 +147,8 @@ div.portal .glyphicon { float:right; margin-right:15px; color:#25aae1; }
 .code .links { padding-top:5em; }
 
 .code-sample-header { position:relative; left:-16px; background-color:#25aae1; border:1px solid #258ac1; border-top:5px solid #258ac1; padding:5px 15px; color:#fff; border-top-right-radius:3px; border-top-left-radius:3px; }
-.code-sample { position:relative; left:-16px; border:1px solid #bbb; border-top:none; padding:15px; word-wrap:normal; border-bottom-right-radius:3px; border-bottom-left-radius:3px; }
-	.code-sample pre { border:none !important; background:transparent !important; overflow-x:scroll; margin:0; padding:0; }
+.code-sample { position:relative; left:-16px; border:1px solid #bbb; border-top:none; padding:15px; overflow-x:scroll; border-bottom-right-radius:3px; border-bottom-left-radius:3px; }
+	.code-sample pre { border:none !important; background:transparent !important; word-wrap:normal; margin:0; padding:0; }
 
 @media (min-width:768px) {
 	section.blue { min-height:360px; }
