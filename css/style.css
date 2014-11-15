@@ -143,6 +143,9 @@ div.portal .glyphicon { float:right; margin-right:15px; color:#25aae1; }
 .downloads .btn { position:relative; left:-4px; }
 .code .btn { position:relative; left:-4px; }
 .community .btn { position:relative; left:-4px; }
+.prompt { text-align:center; margin-bottom:4em; }
+
+.prompt-section { display:none; }
 
 .code .links { padding-top:5em; }
 
