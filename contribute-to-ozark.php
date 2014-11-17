@@ -85,7 +85,16 @@
                 </div>
                 <div class='col-sm-4'>
                     <h4>Newsletter</h4>
-                    <p><a target="_blank" href='http://eepurl.com/56iVb'>Sign up</a> to receive email updates about Ozark happenings.</p>
+                    <p>Sign up to receive email updates about Ozark happenings.</p>
+                    <form action="//ozark.us9.list-manage.com/subscribe/post?u=db19e11de3ec47da1da91149f&amp;id=13de2cb1c6" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                      <div class='form-group'>
+                        <div class='input-group'>
+                          <input type="email" value="" name="EMAIL" class="email form-control input-md" id="mce-EMAIL" placeholder="email address..." required /><div class='input-group-addon'><input type="submit" value="Go" name="subscribe" id="mc-embedded-subscribe" /></div>
+                        </div>
+                      </div>
+                      <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                      <div style="position: absolute; left: -5000px;"><input type="text" name="b_db19e11de3ec47da1da91149f_13de2cb1c6" tabindex="-1" value=""></div>
+                    </form>
                 </div>
               </div>
               <div class='row'>

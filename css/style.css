@@ -21,13 +21,15 @@ h1.main-heading { margin-top:0; padding-top:0; }
 a.download { font-weight:bold; text-decoration:none; }
 
 	.input-group > .input-group-addon { background-color:#fff; padding:0 0 0 0; }
-	.input-group > .input-group-addon > input[type=submit] { background:transparent; border:none; color:#25aae1; padding:1em; }
+	.input-group > .input-group-addon > input[type=submit] { background:transparent; border:none; color:#25aae1; }
+		.input-group.input-group-large > .input-group-addon > input[type=submit] { padding:1em; }
 		.input-group > .input-group-addon > input[type=submit]:hover { color:#258ac1; }
 
 	section.blue input { border:2px solid #fff; box-shadow:none !important; background-color:transparent; }
 		section.blue input:focus { border:2px solid #fff; }
 		section.blue .input-group > .input-group-addon { border:none; }
 
+	input[type=email] { color:#000; }
 	section.blue input[type=email] { color:#fff; }
 
 	section.blue ::-webkit-input-placeholder { color:#a5daff; }
@@ -146,6 +148,7 @@ div.portal .glyphicon { float:right; margin-right:15px; color:#25aae1; }
 .prompt { text-align:center; margin-bottom:4em; }
 
 .prompt-section { display:none; }
+.prompt-dismiss:hover { text-decoration:none; }
 
 .code .links { padding-top:5em; }
 
@@ -157,6 +160,9 @@ div.portal .glyphicon { float:right; margin-right:15px; color:#25aae1; }
 	section.blue { min-height:360px; }
 		section.blue.airplane { background:#25aae1 url(../img/bg-airplane.png?v=4) center bottom no-repeat }
 		section.blue.thinker { background:#25aae1 url(../img/bg-thinker.png?v=4) center bottom no-repeat; }
+
+	section.white.blueprint { background:url(../img/blueprint.png?v=13) 22% 240px no-repeat; }
+
 }
 
 /* --- */

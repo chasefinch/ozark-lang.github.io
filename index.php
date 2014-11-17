@@ -33,7 +33,7 @@
                           <label for="mce-EMAIL">Enter your email address for regular updates!</label>
                           <div class='row'>
                             <div class='col-sm-10'>
-                              <div class='input-group input-block'>
+                              <div class='input-group input-block input-group-large'>
                                 <input type="email" value="" name="EMAIL" class="email form-control input-lg" id="mce-EMAIL" placeholder="email address..." required /><div class='input-group-addon'><input type="submit" value="Go" name="subscribe" id="mc-embedded-subscribe" /></div>
                               </div>
                             </div>

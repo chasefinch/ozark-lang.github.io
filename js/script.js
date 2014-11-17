@@ -6,11 +6,11 @@ $(document).ready(function() {
         return false;
     });
     if(typeof(Storage)!=='undefined') {
-        if(!localStorage.prompt_111414_2_status) localStorage.prompt_111414_2_status = 1;
-        if(localStorage.prompt_111414_2_status == 1) $('.prompt-section').show();
+        if(!localStorage.prompt_111414_5_status) localStorage.prompt_111414_5_status = 1;
+        if(localStorage.prompt_111414_5_status == 1) $('.prompt-section').show();
     }
     $('.prompt-dismiss').click(function() {
-        localStorage.prompt_111414_2_status = 2;
+        localStorage.prompt_111414_5_status = 2;
         $('.prompt-section').animate({"opacity":0.0}, 600).slideUp(600);
     });
 });
