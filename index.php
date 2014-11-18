@@ -30,7 +30,7 @@
                     <div class='col-sm-10'>
                       <form action="//ozark.us9.list-manage.com/subscribe/post?u=db19e11de3ec47da1da91149f&amp;id=13de2cb1c6" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
                         <div class='form-group'>
-                          <label for="mce-EMAIL">Enter your email address for regular updates!</label>
+                          <label for="mce-EMAIL">Enter your email address for regular updates!<br />(We never pass on your details to anyone else.)</label>
                           <div class='row'>
                             <div class='col-sm-10'>
                               <div class='input-group input-block input-group-large'>

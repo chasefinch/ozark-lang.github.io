@@ -27,7 +27,22 @@
                 <?php $subpage = 'index'; require('../includes/documentation-nav.php'); ?>
               </div>
               <div class='col-sm-9'>
-                <h1 class='main-heading' id="overview">Overview</h1>
+                <div class='row'>
+                  <div class='col-sm-8'>
+                    <h1 class='main-heading' id="overview">Overview</h1>
+                  </div>
+                  <div class='col-sm-4'>
+                    <div class='documentation-search'>
+                      <form action="/language-documentation" method="get">
+                        <div class='form-group'>
+                          <div class='input-group'>
+                            <input type="search" value="" name="q" class="form-control input-md" id="q" placeholder="search documentation..." required /><div class='input-group-addon'><input type="submit" value="Go" /></div>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
                 <p>Ozark is a purely object-oriented programming language designed to build software with maximum modularity, inherent clarity of purpose, and a long lifespan. Where other languages rush to add features, Ozark provides simple, yet high-performance implementations of core concepts in ways that let the code speak for itself.</p>
                 <p>This brings about many benefits. For one, code is readable. Methods are short and have descriptive names, clear inputs, and clear outputs. Variables exist only to connect the inputs and outputs of functions and as properties of objects. Everything is object-oriented, and the small scopes are strictly enforced.</p>
                 <p>Another benefit is collaborative. Multiple developers of varying skill levels may work on a project using different tools, yet will produce the same code line-for-line.</p>

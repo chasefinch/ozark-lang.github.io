@@ -85,7 +85,7 @@
                 </div>
                 <div class='col-sm-4'>
                     <h4>Newsletter</h4>
-                    <p>Sign up to receive email updates about Ozark happenings.</p>
+                    <p>Sign up to receive email updates about Ozark happenings. We never pass your information to anyone else.</p>
                     <form action="//ozark.us9.list-manage.com/subscribe/post?u=db19e11de3ec47da1da91149f&amp;id=13de2cb1c6" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
                       <div class='form-group'>
                         <div class='input-group'>

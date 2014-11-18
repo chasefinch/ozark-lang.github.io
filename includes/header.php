@@ -7,7 +7,7 @@
     <title><?php echo $title; ?></title>
     <meta name="description" content="<?php echo $description; ?>">
 
-    <link href='http://fonts.googleapis.com/css?family=Raleway:300,400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:300,400,700' rel='stylesheet' type='text/css'>
     <link href="/ico/favicon.ico" rel="shortcut icon" type="image/x-icon">
     <!-- Bootstrap -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
@@ -26,6 +26,7 @@
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
       ga('create', 'UA-53701958-1', 'auto');
+      ga('require', 'displayfeatures');
       ga('send', 'pageview');
 
     </script>

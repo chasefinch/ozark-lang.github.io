@@ -100,11 +100,13 @@ header { padding-top:3em; padding-bottom:2em; }
 #nav-links { position:relative; top:25px; font-size:1.2em; }
 	#nav-links li:last-child a { padding-right:0; }
 
-.subnav { margin-top:60px; }
+.subnav { margin-top:1.3em; }
 .subnav .nav > li > a { color:#777; margin-top:10px; padding:0px 15px; border-left:5px solid transparent; }
 .subnav .nav > li > a:hover { color:#333; background-color:transparent; }
 .subnav .nav > li.active > a { color:#000; border-color:#25aae1; font-weight:bold; }
 	.subnav .nav > li.tier > a { margin-top:0px; padding-left:30px; }
+
+	.subnav h4 { margin:0.5em 0; }
 
 .subnav.affix { top:25px; margin-top:0; }
 .subnav.affix-bottom { position:absolute; margin-top:0; }
@@ -142,6 +144,15 @@ div.portal .glyphicon { float:right; margin-right:15px; color:#25aae1; }
 .github { padding:20px 0 0 0; }
 	.github .btn { position:relative; left:-4px; }
 
+.ornament { text-align:center; margin-top:6em; }
+	.ornament a { color:#25aae1; }
+		.ornament a:hover { text-decoration:none; }
+
+		.ornament.disabled a { color:#ddd; }
+		.ornament.disabled a:hover { color:#ddd; }
+
+		.ornament a .glyphicon { font-size:6em; text-align:center; }
+
 .downloads .btn { position:relative; left:-4px; }
 .code .btn { position:relative; left:-4px; }
 .community .btn { position:relative; left:-4px; }
@@ -156,13 +167,24 @@ div.portal .glyphicon { float:right; margin-right:15px; color:#25aae1; }
 .code-sample { position:relative; left:-16px; border:1px solid #bbb; border-top:none; padding:15px; overflow-x:scroll; border-bottom-right-radius:3px; border-bottom-left-radius:3px; }
 	.code-sample pre { border:none !important; background:transparent !important; word-wrap:normal; margin:0; padding:0; }
 
-@media (min-width:768px) {
+@media screen and (min-width:768px) {
+
 	section.blue { min-height:360px; }
-		section.blue.airplane { background:#25aae1 url(../img/bg-airplane.png?v=4) center bottom no-repeat }
-		section.blue.thinker { background:#25aae1 url(../img/bg-thinker.png?v=4) center bottom no-repeat; }
+		section.blue.airplane { background:#25aae1 url(../img/bg-airplane.png) center bottom no-repeat }
+		section.blue.thinker { background:#25aae1 url(../img/bg-thinker.png) center bottom no-repeat; }
 
 	section.white.blueprint { background:url(../img/blueprint.png?v=13) 22% 240px no-repeat; }
 
+}
+
+@media screen and (min-width:768px) and (-webkit-min-device-pixel-ratio: 1.5),
+    screen and (min-width:768px) and (-o-min-device-pixel-ratio: 3/2),
+    screen and (min-width:768px) and (min--moz-device-pixel-ratio: 1.5),
+    screen and (min-width:768px) and (min-device-pixel-ratio: 1.5) {
+
+	section.blue.thinker { background-image:url(../img/bg-thinker@2x.png); background-size:1020px; }
+	section.blue.airplane { background-image:url(../img/bg-airplane@2x.png); background-size:1020px; }
+	
 }
 
 /* --- */
