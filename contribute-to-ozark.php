@@ -30,7 +30,7 @@
                       <h1>There is much to be done.</h1>
                       <p class='lead'>Software development is today's wild west. It easier than ever to build something new, but hard to build something that lasts. Version control and application frameworks are awesome... But still, code coaxes us to make more of a mess with every commit.</p>
                       <p class='lead'>Ozark is the next step; A clean language totally inseparable from an app's logic. A lot of care has gone into the language design to make it enjoyable, clear, and optimized. However, we're still in the early stages, and if you're a talented coder, we could use your help.</p>
-                      <br /><a href='mailto:jchasefinch@gmail.com?subject=Ozark Founding Contributor' class='btn btn-lg btn-default'>Become Founding Developer #3</a><br />
+                      <br /><a href='mailto:jchasefinch@gmail.com?subject=Ozark Founding Contributor' class='btn btn-lg btn-default'>Become Founding Developer #4</a><br />
                       <a class='prompt-dismiss' href='javascript:void(0);'><span class='glyphicon glyphicon-remove'></span> Dismiss</a>
                     </div>
                   </div>
@@ -104,6 +104,7 @@
                     <ul>
                       <li>Rob Campbell <a target="_blank" href='https://github.com/rwcee'>rwcee</a></li>
                       <li>Chase Finch <a target="_blank" href='https://github.com/chasefinch'>chasefinch</a></li>
+                      <li>Ben Guerrette</li>
                     </ul>
                 </div>
                 <div class='col-sm-4'>

@@ -46,8 +46,8 @@ a.download { font-weight:bold; text-decoration:none; }
 		section.blue .btn-default:hover { color:#258ac1; }
 
 
-.btn-primary { border-color:#D6491A; color:#fff; background-color:#D6491A; }
-	.btn-primary:hover { border-color:#B6391A; color:#fff; background-color:#B6391A; }
+.btn-primary { border-color:#ff2e2d; color:#fff; background-color:#ff2e2d; }
+	.btn-primary:hover { border-color:#df1e1d; color:#fff; background-color:#df1e1d; }
 
 .btn-disabled { border-color:#eee; background-color:#eee; color:#bbb; }
 	.btn-disabled:hover { color:#bbb; }
@@ -60,7 +60,7 @@ a.download { font-weight:bold; text-decoration:none; }
 .implicit { color:#28527c; font-weight:bold; }
 .comment { color:#05a74f; }
 .string { color:#ff2e2d; }
-.literal { color:#b63521; }
+.literal { color:#ff2e2d; }
 .property { color:#000; }
 .class { color:#25aae1; }
 .symbol { color:#222;}
