@@ -13,4 +13,9 @@ $(document).ready(function() {
         localStorage.prompt_111414_5_status = 2;
         $('.prompt-section').animate({"opacity":0.0}, 600).slideUp(600);
     });
+
+    $('.subnav-open').click(function() {
+        $('.subnav').slideDown(600);
+        $(this).animate({"opacity":0.0}, 600);
+    }).show().css("display", "block");
 });

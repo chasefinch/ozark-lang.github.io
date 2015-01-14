@@ -76,44 +76,55 @@
               </div>
               <div class='row'>
                 <div class='col-sm-4'>
-                    <h4>Google Group</h4>
-                    <p>The <a target="_blank" href='https://groups.google.com/forum/?fromgroups#!forum/ozark-lang'>Ozark Google Group</a> is the official forum &amp; message board. It is the primary place for announcements and discussion regarding the development and usage of the Ozark language.</p>
-                </div>
-                <div class='col-sm-4'>
-                    <h4>IRC</h4>
-                    <p>Join <a href='http://webchat.freenode.net/?channels=#ozark'>#ozark</a> on irc.freenode.net for informal conversation, help and commit notifications.</p>
-                </div>
-                <div class='col-sm-4'>
-                    <h4>Newsletter</h4>
-                    <p>Sign up to receive email updates about Ozark happenings. We never pass your information to anyone else.</p>
-                    <form action="//ozark.us9.list-manage.com/subscribe/post?u=db19e11de3ec47da1da91149f&amp;id=13de2cb1c6" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                      <div class='form-group'>
-                        <div class='input-group'>
-                          <input type="email" value="" name="EMAIL" class="email form-control input-md" id="mce-EMAIL" placeholder="email address..." required /><div class='input-group-addon'><input type="submit" value="Go" name="subscribe" id="mc-embedded-subscribe" /></div>
-                        </div>
+                  <h4>Newsletter</h4>
+                  <p>Sign up to receive email updates about Ozark happenings. We never pass your information to anyone else.</p>
+                  <form action="//ozark.us9.list-manage.com/subscribe/post?u=db19e11de3ec47da1da91149f&amp;id=13de2cb1c6" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                    <div class='form-group'>
+                      <div class='input-group input-block'>
+                        <input type="email" value="" name="EMAIL" class="email form-control input-md" id="mce-EMAIL" placeholder="email address..." required /><div class='input-group-addon'><input type="submit" value="Go" name="subscribe" id="mc-embedded-subscribe" /></div>
                       </div>
-                      <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                      <div style="position: absolute; left: -5000px;"><input type="text" name="b_db19e11de3ec47da1da91149f_13de2cb1c6" tabindex="-1" value=""></div>
-                    </form>
+                    </div>
+                    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                    <div style="position: absolute; left: -5000px;"><input type="text" name="b_db19e11de3ec47da1da91149f_13de2cb1c6" tabindex="-1" value=""></div>
+                  </form>
+                  <p>Other than the public newsletter, we publish a separate email for less frequent official language announcements. Sign up for that <a target="_blank" href='http://eepurl.com/55-Vz'>here</a>.</p>
+                </div>
+                <div class='col-sm-4'>
+                  <h4>Google Group</h4>
+                  <p>The <a target="_blank" href='https://groups.google.com/forum/?fromgroups#!forum/ozark-lang'>Ozark Google Group</a> is the official forum &amp; message board. It is the primary place for announcements and discussion regarding the development and usage of the Ozark language.</p>
+                </div>
+                <div class='col-sm-4'>
+                  <h4>IRC</h4>
+                  <p>Join <a href='http://webchat.freenode.net/?channels=#ozark'>#ozark</a> on irc.freenode.net for informal conversation, help and commit notifications.</p>
                 </div>
               </div>
               <div class='row'>
                 <div class='col-sm-4'>
-                    <h4>Contributors</h4>
-                    <p>Thanks to those who continually contribute effort to the Ozark project. Our Founding Developers (people who have submitted commits or other effort before the initial release) are listed here. <a href='mailto:jchasefinch@gmail.com?subject=Ozark Founding Contributor'>Become one</a>.</p>
-                    <ul>
-                      <li>Rob Campbell <a target="_blank" href='https://github.com/rwcee'>rwcee</a></li>
-                      <li>Chase Finch <a target="_blank" href='https://github.com/chasefinch'>chasefinch</a></li>
-                      <li>Ben Guerrette</li>
-                    </ul>
+                  <h4>Contributors</h4>
+                  <p>Thanks to those who continually contribute effort to the Ozark project. Our Founding Developers (people who have submitted commits or other effort before the initial release) are listed here. <a href='mailto:jchasefinch@gmail.com?subject=Ozark Founding Contributor'>Become one</a>.</p>
+                  <ul class='contributors'>
+                    <li>Rob Campbell <a target="_blank" href='https://github.com/rwcee'>rwcee</a></li>
+                    <li>Chase Finch <a target="_blank" href='https://github.com/chasefinch'>chasefinch</a></li>
+                    <li>Ben Guerrette <a target="_blank" href='https://twitter.com/benguerrette'>@benguerrette</a></li>
+                  </ul>
                 </div>
+                <!--
                 <div class='col-sm-4'>
-                    <h4>Announcements</h4>
-                    <p>In addition to the public newsletter, we publish a separate email for less frequent official language announcements. You may sign up for that <a target="_blank" href='http://eepurl.com/55-Vz'>here</a>.</p>
+                  <h4>Donate</h4>
+                  <p>Ozark has needs. Give some love!</p>
+                  <a href='#'>Donate $100</a><br />
+                  <a href='#'>Donate $50</a><br />
+                  <a href='#'>Donate $10</a><br />
+                  <a href='#'>Donate $5</a><br />
+                  <a href='#'>Donate $1</a><br />
+                  <a href='#'>Donate anything</a><br /><br />
+                  <div class="cb-tip-button" data-content-location="http://ozark.cc" data-href="//www.coinbase.com/tip_buttons/show_tip" data-to-user-id="530981c9eaad7b987000026a"></div>
+                  <script>!function(d,s,id) {var js,cjs=d.getElementsByTagName(s)[0],e=d.getElementById(id);if(e){return;}js=d.createElement(s);js.id=id;js.src="https://www.coinbase.com/assets/tips.js";cjs.parentNode.insertBefore(js,cjs);}(document, 'script', 'coinbase-tips');</script>
                 </div>
+                -->
                 <div class='col-sm-4'>
-                    <h4>Founder</h4>
-                    <p>Ozark was founded in San Diego, California by Chase Finch, primarily in support of a venture to build visual software development tools. Find him on Twitter as <a target="_blank" href='https://twitter.com/jchasefinch'>@jchasefinch</a>, GitHub as <a target="_blank" href='https://github.com/chasefinch'>chasefinch</a>, or by email at <a href='mailto:jchasefinch@gmail.com'>jchasefinch@gmail.com</a>.</p>
+                  <h4>Founder</h4>
+                  <p>Ozark was founded in San Diego, California by Chase Finch, primarily in support of a venture to build visual software development tools. Find him on Twitter as <a target="_blank" href='https://twitter.com/jchasefinch'>@jchasefinch</a>, GitHub as <a target="_blank" href='https://github.com/chasefinch'>chasefinch</a>, or by email at <a href='mailto:jchasefinch@gmail.com'>jchasefinch@gmail.com</a>.</p>
                 </div>
               </div>
             </div>
@@ -139,6 +150,7 @@
             <?php require('includes/footer-nav.php'); ?>
             <?php require('includes/copyright.php'); ?>
           </div>
+        </div>
       </div>
     </footer>
     <?php require('includes/scripts.php'); ?>

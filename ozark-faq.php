@@ -71,6 +71,7 @@
             <?php require('includes/footer-nav.php'); ?>
             <?php require('includes/copyright.php'); ?>
           </div>
+        </div>
       </div>
     </footer>
     <?php require('includes/scripts.php'); ?>
