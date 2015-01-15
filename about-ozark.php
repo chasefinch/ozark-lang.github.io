@@ -1,4 +1,10 @@
-<?php $title = "Ozark Language - About"; $description = "Ozark is an elegant, open-source programming language. Through strict code standards, Ozark enables new tools for generating software."; require('includes/header.php'); ?>
+<!DOCTYPE html>
+<html lang="en">
+  <?php
+    $title = "Ozark Language - About";
+    $description = "Ozark is designed to be the highest level programming language of sequential declarations, serving as the only layer between machine language and the abstract software development tools of tomorrow.";
+    require('includes/header.php');
+  ?>
   <body>
     <section class="ribbon">
       <div class='container'>
@@ -18,7 +24,7 @@
         </div>
 	    </div>
   	</header>
-    <section class='blue airplane'>
+    <section class='blue'>
       <div class='container'>
         <div class='row'>
           <div class='col-md-10 col-md-offset-1'>
@@ -31,7 +37,7 @@
               </div>
               <div class='col-sm-4 col-sm-offset-1'>
                 <div class='bg-pad'>
-                  <h3>See for yourself</h3>
+                  <h6>Examples</h6>
                   <p>The best way to get a feel for Ozark is to explore it yourself. Download a sample app to get started.</p>
                   <ul class='clean'><li><a href='https://github.com/ozark-lang/demo-rifle-range/archive/master.zip' class='download'><span class="glyphicon glyphicon-file"></span>&nbsp;&nbsp;Rifle Range</a></li></ul>
                 </div>
@@ -43,7 +49,7 @@
         </div>
       </div>
     </section>
-    <section class='white blueprint'>
+    <section class='white'>
       <div class='container'>
         <div class='row'>
           <div class='col-md-10 col-md-offset-1'>

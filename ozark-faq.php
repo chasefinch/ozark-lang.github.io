@@ -1,4 +1,10 @@
-<?php $title = "Ozark Language - Frequently Asked Questions"; $description = "Ozark is an elegant, open-source programming language. Through strict code standards, Ozark enables new tools for generating software."; require('includes/header.php'); ?>
+<!DOCTYPE html>
+<html lang="en">
+  <?php
+    $title = "Ozark Language - Frequently Asked Questions";
+    $description = "Frequently asked questions about the Ozark language";
+    require('includes/header.php');
+  ?>
   <body>
     <section class="ribbon">
       <div class='container'>
