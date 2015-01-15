@@ -136,6 +136,9 @@ section.white { padding:20px 0; }
 
 section.ribbon { text-align:center; margin-top:0.5em; }
 
+section.news { padding:1em 0; border-bottom:1px solid #ddd; }
+	.news strong.category { color:#25aae1; font-weight:bold; text-transform:uppercase; font-size:0.8em; margin-right:1em; }
+
 div.portal .glyphicon { float:right; margin-right:15px; color:#25aae1; }
 
 .bg-pad { /* padding-bottom:40px; */ }

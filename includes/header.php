@@ -7,6 +7,16 @@
     <title><?php echo $title; ?></title>
     <meta name="description" content="<?php echo $description; ?>">
 
+    <meta property="og:site_name" content="Ozark, The Next-Generation Programming Language" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:description" content="Ozark is an elegant, open-source programming language. Through strict code standards, Ozark enables new tools for generating software." />
+    <meta property="og:image" content="http://ozark.cc/img/laptop.jpg" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Ozark, The Next-Generation Programming Language" />
+    <meta name="twitter:description" content="Ozark is an elegant, open-source programming language. Through strict code standards, Ozark enables new tools for generating software." />
+    <meta name="twitter:image" content="http://ozark.cc/img/laptop.jpg" />
+
     <link href='http://fonts.googleapis.com/css?family=Raleway:300,400,700' rel='stylesheet' type='text/css'>
     <link href="/ico/favicon.ico" rel="shortcut icon" type="image/x-icon">
     <!-- Bootstrap -->

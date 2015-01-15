@@ -26,27 +26,35 @@
             <div class='row'>
               <div class='col-sm-7'>
                 <h1 class='heading'>Ozark is an elegant, open-source programming language. Through strict code standards, Ozark enables new tools for generating software.</h1>
-                  <div class='row'>
-                    <div class='col-sm-10'>
-                      <form action="//ozark.us9.list-manage.com/subscribe/post?u=db19e11de3ec47da1da91149f&amp;id=13de2cb1c6" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                        <div class='form-group'>
-                          <label for="mce-EMAIL">Enter your email address for regular updates!<br />(We never pass on your details to anyone else.)</label>
-                          <div class='row'>
-                            <div class='col-sm-10'>
-                              <div class='input-group input-block input-group-large'>
-                                <input type="email" value="" name="EMAIL" class="email form-control input-lg" id="mce-EMAIL" placeholder="email address..." required /><div class='input-group-addon'><input type="submit" value="Go" name="subscribe" id="mc-embedded-subscribe" /></div>
-                              </div>
+                <div class='row'>
+                  <div class='col-sm-10'>
+                    <form action="//ozark.us9.list-manage.com/subscribe/post?u=db19e11de3ec47da1da91149f&amp;id=13de2cb1c6" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                      <div class='form-group'>
+                        <label for="mce-EMAIL">Enter your email address for regular updates!<br />(We never pass on your details to anyone else.)</label>
+                        <div class='row'>
+                          <div class='col-sm-10'>
+                            <div class='input-group input-block input-group-large'>
+                              <input type="email" value="" name="EMAIL" class="email form-control input-lg" id="mce-EMAIL" placeholder="email address..." required /><div class='input-group-addon'><input type="submit" value="Go" name="subscribe" id="mc-embedded-subscribe" /></div>
                             </div>
                           </div>
                         </div>
-                        <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                        <div style="position: absolute; left: -5000px;"><input type="text" name="b_db19e11de3ec47da1da91149f_13de2cb1c6" tabindex="-1" value=""></div>
-                      </form>
-                    </div>
+                      </div>
+                      <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                      <div style="position: absolute; left: -5000px;"><input type="text" name="b_db19e11de3ec47da1da91149f_13de2cb1c6" tabindex="-1" value=""></div>
+                    </form>
                   </div>
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class='news'>
+      <div class='container'>
+        <div class='row'>
+          <div class='col-md-10 col-md-offset-1'>
+            <strong class='category'>Latest News</strong> Sample app for version 0.1.1 of the Ozark specification <a href='https://groups.google.com/d/msg/ozark-lang/tFwTHLWo2po/ABcBipw6FbsJ'>See Announcement &rarr;</a>
           </div>
         </div>
       </div>
@@ -104,11 +112,7 @@
   <span class='class'>HikeAbility</span> <span class='noun'>@hiker</span>
   <span class='class'>Hat?</span> <span class='noun'>@hat</span>
   <span class='class'>Map?</span> <span class='noun'>@map</span>
-  <span class='class'>Mountain.Location</span> <span class='noun'>@location</span><!--
-
-  <span class='declaration'>continuation</span> <span class='method'>initialize</span>
-    <span class='noun'>map</span> <span class='symbol'>&lt;</span>
-    <span class='noun'>hat</span> <span class='symbol'>&lt;</span>-->
+  <span class='class'>Mountain.Location</span> <span class='noun'>@location</span>
 
   <span class='declaration'>method</span> <span class='method'>prepare</span>
     <span class='class'>Map</span> <span class='noun'>map</span> <span class='method'>initialize</span>
