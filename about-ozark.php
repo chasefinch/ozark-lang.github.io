@@ -24,28 +24,43 @@
         </div>
 	    </div>
   	</header>
-    <section class='blue'>
+    <section class='blue chop'>
       <div class='container'>
         <div class='row'>
-          <div class='col-md-10 col-md-offset-1'>
-            <div class='row'>
-              <div class='col-sm-7'>
-                <h1>Fall in love with Ozark.</h1>
-                <p class='lead'>Ozark code is a joy to write; Beautiful, straightforward, and future-proof. You can easily see the purpose of each method &ndash; And so can your IDE.</p>
-                <p class='lead'>This makes software development faster and easier to learn. It also welcomes a new generation of smart software development tools.</p>
-                <div style='clear:both;'></div>
-              </div>
-              <div class='col-sm-4 col-sm-offset-1'>
-                <div class='bg-pad'>
+          <div class='col-sm-6 col-md-5 col-md-offset-1'>
+            <h1>Fall in love with Ozark.</h1>
+            <p class='lead'>Ozark code is a joy to write; Beautiful, straightforward, and future-proof. You can easily see the purpose of each method &ndash; And so can your IDE.</p>
+            <p class='lead'>This makes software development faster and easier to learn. It also welcomes a new generation of smart software development tools.</p>
+            <div style='clear:both;'></div>
+          </div>
+          <div class='col-sm-5 col-sm-offset-1'>
+            <div class='bg-pad'>
+              <div class='row'>
+                <div class='col-md-9'>
                   <h6>Examples</h6>
                   <p>The best way to get a feel for Ozark is to explore it yourself. Download a sample app to get started.</p>
                   <ul class='clean'><li><a href='https://github.com/ozark-lang/demo-rifle-range/archive/master.zip' class='download'><span class="glyphicon glyphicon-file"></span>&nbsp;&nbsp;Rifle Range</a></li></ul>
                 </div>
-                <div style='clear:both;'></div>
               </div>
-              <div style='clear:both;'></div>
+              <div class='code-sample-header'>Mountaineer.ozark</div>
+              <div class='code-sample'>
+                <pre><span class='declaration'>class</span> <span class='class'>Mountaineer</span> <span class='argument'>superclass:</span><span class='literal'>"Person"</span>
+
+<span class='declaration'>requirement</span> <span class='literal'>"HikeAbility"</span>
+<span class='declaration'>requirement</span> <span class='literal'>"Mountain"</span>
+<span class='declaration'>requirement</span> <span class='literal'>"Hat"</span>
+<span class='declaration'>requirement</span> <span class='literal'>"Map"</span>
+
+<span class='class'>HikeAbility</span> <span class='noun'>@hiker</span>
+<span class='class'>Hat?</span> <span class='noun'>@hat</span>
+<span class='class'>Map?</span> <span class='noun'>@map</span>
+<span class='class'>Dog?</span> <span class='noun'>@dog</span>
+                </pre>
+              </div>
             </div>
+            <div style='clear:both;'></div>
           </div>
+          <div style='clear:both;'></div>
         </div>
       </div>
     </section>
