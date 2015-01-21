@@ -65,7 +65,7 @@
         </div>
       </div>
     </section>
-    <section class='white'>
+    <section class='white pull'>
       <div class='container'>
         <div class='row'>
           <div class='col-md-10 col-md-offset-1'>
@@ -73,13 +73,13 @@
               <div class='col-sm-6'>
                 <div class='portal'>
                   <h3>Concise<span class='glyphicon glyphicon-align-left'></span></h3>
-                  <p>In Ozark, code follows narrow formatting rules and a strict object-oriented methodology. With a carefully curated instruction set, there is generally a single 'correct' way to accomplish just about everything.</p>
+                  <p>In Ozark, code has tight formatting rules and is strictly object oriented. It has a narrow instruction set, so there's a single 'correct' way to accomplish just about everything.</p>
                 </div>
               </div>
               <div class='col-sm-6'>
                 <div class='portal'>
                   <h3>Authoritative<span class='glyphicon glyphicon-ok'></span></h3>
-                  <p>Ozark is both a programming language and a file storage format for applications that generate code. This makes it well-suited to development with visual programming tools or by Artificial Intelligence.</p>
+                  <p>Ozark is both a programming language and a file-storage format for applications that write code. That makes it great for development with visual programming tools or by Artificial Intelligence.</p>
                 </div>
               </div>
             </div>
@@ -87,13 +87,13 @@
               <div class='col-sm-6'>
                 <div class='portal'>
                   <h3>Concurrent<span class='glyphicon glyphicon-tasks'></span></h3>
-                  <p>Ozark automatically executes code in parallel, based on the inherent safety of the language rules. As the availablility of multi-core processors goes up, software written in Ozark will implicitly take advantage.</p>
+                  <p>Ozark automatically runs code in parallel whenever possible. Thanks to the built-in safety of the language rules, software written in Ozark will take full advantage of the multi-core processors in modern computers.</p>
                 </div>
               </div>
               <div class='col-sm-6'>
                 <div class='portal'>
                   <h3>Smart<span class='glyphicon glyphicon-refresh'></span></h3>
-                  <p>Ozark differs from other languages in several innovative ways that address key conceptual problems, and is intented to be the "human logic" layer in tomorrow's technology stack.</p>
+                  <p>Ozark is different from other languages in ways that tackle key conceptual problems, and is ready to be the "human logic" layer of tomorrow's technology stack.</p>
                 </div>
               </div>
             </div>
@@ -108,17 +108,18 @@
               <div class='col-sm-7'>
                 <div class='code-sample-header'>Mountaineer.ozark</div>
                 <div class='code-sample'>
-                  <pre><span class='declaration'>class</span> <span class='class'>Mountaineer</span> <span class='argument'>superclass:</span><span class='literal'>"Person"</span>
+                  <pre><span class='declaration'>class</span> <span class='class'>Mountaineer</span>
+  <span class='declaration'>inheritance</span> <span class='class'>Person</span> <span class='argument'>source:</span><span class='literal'>"Person"</span>
 
-  <span class='declaration'>requirement</span> <span class='literal'>"HikeAbility"</span>
-  <span class='declaration'>requirement</span> <span class='literal'>"Mountain"</span>
-  <span class='declaration'>requirement</span> <span class='literal'>"Hat"</span>
-  <span class='declaration'>requirement</span> <span class='literal'>"Map"</span>
+  <span class='declaration'>requirement</span> <span class='class'>HikeAbility</span> <span class='argument'>source:</span><span class='literal'>"HikeAbility"</span>
+  <span class='declaration'>requirement</span> <span class='class'>Mountain</span> <span class='argument'>source:</span><span class='literal'>"Mountain"</span>
+  <span class='declaration'>requirement</span> <span class='class'>Hat</span> <span class='argument'>source:</span><span class='literal'>"Hat"</span>
+  <span class='declaration'>requirement</span> <span class='class'>Map</span> <span class='argument'>source:</span><span class='literal'>"Map"</span>
 
-  <span class='class'>HikeAbility</span> <span class='noun'>@hiker</span>
-  <span class='class'>Hat?</span> <span class='noun'>@hat</span>
-  <span class='class'>Map?</span> <span class='noun'>@map</span>
-  <span class='class'>Mountain.Location</span> <span class='noun'>@location</span>
+  <span class='class'>HikeAbility</span> <span class='property'>@hiker</span>
+  <span class='class'>Hat?</span> <span class='property'>@hat</span>
+  <span class='class'>Map?</span> <span class='property'>@map</span>
+  <span class='class'>Mountain.Location</span> <span class='property'>@location</span>
 
   <span class='declaration'>method</span> <span class='method'>prepare</span>
     <span class='class'>Map</span> <span class='noun'>map</span> <span class='method'>initialize</span>
@@ -127,7 +128,7 @@
     <span class='property'>@hat</span> <span class='symbol'>=</span> <span class='noun'>hat</span>
 
   <span class='declaration'>method</span> <span class='method'>climbMountain</span> <span class='implicit'>input:</span><span class='class'>Mountain</span>
-    <span class='declaration'>mandate</span> <span class='property'>@map</span> * <span class='class'>DoesNotExist</span> <span class='noun'>exception1</span>
+    <span class='declaration'>assert</span> <span class='property'>@map</span> <span class='symbol'>\</span> <span class='class'>DoesNotExist</span> <span class='noun'>exception1</span>
       <span class='noun'>exception1</span> <span class='method'>setMessage</span> <span class='literal'>"I'm lost."</span>
       <span class='declaration'>raise</span> <span class='noun'>exception1</span>
     
@@ -144,8 +145,8 @@
                 <h3>Contribute</h3>
                 <a target="_blank" href='https://github.com/ozark-lang/ozark' class='btn btn-primary btn-lg'>View the GitHub project &nbsp; <span class='glyphicon glyphicon-new-window'></span></a>
                 <div class='callout'>
-                  <p>Ozark is open source under the <a target="_blank" href='https://github.com/ozark-lang/ozark/blob/master/LICENSE'>GPL v3 license</a>. It is hosted and developed on GitHub.</p>
-                  <p>The Ozark language is still in early development. The compiler is not yet available, and contributors are needed (especially those with compiler expertise.)</p>
+                  <p>Ozark is open source under the <a target="_blank" href='https://github.com/ozark-lang/ozark/blob/master/LICENSE'>GPL v3 license</a>. It's hosted and developed on GitHub.</p>
+                  <p>The Ozark language is still in early development. The compiler isn't available yet, and contributors are needed (especially people with compiler expertise).</p>
                 </div>
               </div>
               <div class='documentation'>

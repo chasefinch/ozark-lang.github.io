@@ -34,10 +34,10 @@
               </div>
               <div class='col-sm-9'>
                 <div class='row'>
-                  <div class='col-sm-8'>
+                  <div class='col-sm-7'>
                     <h1 class='main-heading' id="overview">Overview</h1>
                   </div>
-                  <div class='col-sm-4'>
+                  <div class='col-sm-5'>
                     <?php require('../includes/documentation-search.php'); ?> 
                   </div>
                 </div>

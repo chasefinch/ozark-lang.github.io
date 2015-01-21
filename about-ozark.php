@@ -42,19 +42,20 @@
                   <ul class='clean'><li><a href='https://github.com/ozark-lang/demo-rifle-range/archive/master.zip' class='download'><span class="glyphicon glyphicon-file"></span>&nbsp;&nbsp;Rifle Range</a></li></ul>
                 </div>
               </div>
-              <div class='code-sample-header'>Mountaineer.ozark</div>
+              <div class='code-sample-header'>Rifleman.ozark</div>
               <div class='code-sample'>
-                <pre><span class='declaration'>class</span> <span class='class'>Mountaineer</span> <span class='argument'>superclass:</span><span class='literal'>"Person"</span>
+                <pre><span class='declaration'>class</span> <span class='class'>Rifleman</span>
+  <span class='declaration'>inheritance</span> <span class='class'>Person</span> <span class='argument'>source:</span><span class='literal'>"Person"</span>
 
-<span class='declaration'>requirement</span> <span class='literal'>"HikeAbility"</span>
-<span class='declaration'>requirement</span> <span class='literal'>"Mountain"</span>
-<span class='declaration'>requirement</span> <span class='literal'>"Hat"</span>
-<span class='declaration'>requirement</span> <span class='literal'>"Map"</span>
+  <span class='declaration'>requirement</span> <span class='class'>StandardIO</span> <span class='argument'>reference:</span><span class='literal'>"StandardIO"</span>
+  <span class='declaration'>requirement</span> <span class='class'>Location</span> <span class='argument'>reference:</span><span class='literal'>"Location"</span>
+  <span class='declaration'>requirement</span> <span class='class'>Rifle</span> <span class='argument'>source:</span><span class='literal'>"Rifle"</span>
+  <span class='declaration'>requirement</span> <span class='class'>Boot</span> <span class='argument'>source:</span><span class='literal'>"Boot"</span>
 
-<span class='class'>HikeAbility</span> <span class='noun'>@hiker</span>
-<span class='class'>Hat?</span> <span class='noun'>@hat</span>
-<span class='class'>Map?</span> <span class='noun'>@map</span>
-<span class='class'>Dog?</span> <span class='noun'>@dog</span>
+  <span class='class'>StandardIO</span> <span class='property'>@io</span>
+  <span class='class'>Location</span> <span class='property'>@location</span>
+  <span class='class'>Boot</span> <span class='property'>@leftBoot</span>
+  <span class='class'>Boot</span> <span class='property'>@rightBoot</span>
                 </pre>
               </div>
             </div>
@@ -71,8 +72,8 @@
             <div class='row'>
               <div class='col-sm-9'>
                 <h1>Core Concepts</h1>
-                <p class='lead'>In high-level programming languages, software development is an expression of logic. Each higher-level language limits the programmer's implementation options in favor of readibility, reusability, and standardization.</p>
-                <p class='lead'>Ozark is designed to be the highest level programming language of sequential declarations, serving as the only layer between machine language and the abstract software development tools of tomorrow.</p>
+                <p class='lead'>In high-level programming languages, code is an expression of logic. Each higher-level language limits the programmer's options in exchange for readibility, reusability, and standardization.</p>
+                <p class='lead'>Ozark is designed to be the highest-level programming language of sequential declarations, serving as the only layer between machine language and the abstract software development tools of tomorrow.</p>
               </div>
             </div>
             <hr />
@@ -82,23 +83,23 @@
                 <p>Lines of code don't have a value to be computed behind the scenes. Instead, you clearly see and define what steps the processor will take during execution.</p>
                 <p>Code is verbose and clear, and each line has only one instruction.</p>
                 <h4>Declarative, not imperitive</h4>
-                <p>Other object-oriented programming languages start imperitively. An Ozark program interprets the classes first, and begins with an instance method. It's object oriented, all the way down.</p>
-                <p>Everything is a declaration, and the only instructions are declared inside of methods. All methods are public instance methods. All properties are private. Only properties and outputs are mutable. Literals are objects, there is no reference to self or super, and all method calls use Smalltalk-style message passing.</p>
+                <p>Other object-oriented programming languages start imperitively. An Ozark program reads the classes first, and begins with an instance method. It's objects and message passing, all the way down.</p>
+                <p>Everything is a declaration, and instructions are found only inside of methods. All methods are public instance methods. All properties are private. Only properties and outputs are mutable. Literals are objects, there is no reference to self or super, and all method calls use Smalltalk-style message passing.</p>
                 <h4>Small scopes</h4>
-                <p>Every non-control line of a method is a call to another method. As a result, a method is often only a few straightforward sequential instructions, and the inheritance tree becomes tall and verbose.</p>
-                <p>There are no global variables. The only mutable variables are object properties and function outputs. This means the entire scope of available data is small, and could be seen visually during the development process.</p>
+                <p>Every non-control line of a method is a call to another method; So, a method is often only a few straightforward instructions, and the inheritance tree becomes tall and verbose.</p>
+                <p>There are no global variables. In fact, the only mutable variables are object properties and function outputs. This means the entire scope of available data is small, and could be seen visually during development.</p>
               </div>
               <div class='col-sm-6'>
                 <h4>Parallelism is automatic</h4>
-                <p>Modern machines include multi-core processors, and Ozark code takes advantage implicitly. The strict scopes and decoupling allow clear separation of concerns, and the compiler is able to automatically run code in parallel.</p>
+                <p>Ozark apps use multi-core processors automatically. The strict scopes and decoupling give clear separation of concerns, so the compiler is able to run code in parallel.</p>
                 <h4>Clean &amp; strict formatting rules</h4>
-                <p>Ozark is strongly typed and explicit about code structure, which leads to complete code consistency and one-to-one correspondence between code and a visual graph.</p>
-                <p>The instruction set is minimal, leaving almost all tasks to instance methods.</p>
+                <p>Ozark is strongly typed and explicit about code structure; So, Ozark apps have code consistency and one-to-one correspondence with a visual graph.</p>
+                <p>The instruction set is small, leaving almost all tasks to instance methods.</p>
                 <h4>No return types, just inputs and outputs</h4>
-                <p>Rather than evaluating like an expression, a method is an action by a given object with any number of inputs and/or outputs.</p>
+                <p>Rather than evaluating like an expression, a method is an action by an object, and has any number of inputs and/or outputs.</p>
                 <h4>One way to do everything</h4>
-                <p>Whether written by an expert, by an amateur, or generated by software, code is correct the first time. This means that program logic can be deduced directly from examining the code.</p>
-                <p>Because of the principles of Ozark, entire categories of potential errors have been removed, and completed software needs no refactoring.</p>
+                <p>Whether written by an expert, an amateur, or generated by software: Code is correct the first time, and logic can be figured out by looking at the code.</p>
+                <p>Because of the principles of Ozark, entire categories of potential errors have been removed, and software doesn't need refactoring.</p>
               </div>
             </div>
           </div>

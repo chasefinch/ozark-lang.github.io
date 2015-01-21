@@ -36,7 +36,7 @@
                       <h1>There is much to be done.</h1>
                       <p class='lead'>Software development is today's wild west. It easier than ever to build something new, but hard to build something that lasts. Version control and application frameworks are awesome... But still, code coaxes us to make more of a mess with every commit.</p>
                       <p class='lead'>Ozark is the next step; A clean language totally inseparable from an app's logic. A lot of care has gone into the language design to make it enjoyable, clear, and optimized. However, we're still in the early stages, and if you're a talented coder, we could use your help.</p>
-                      <br /><a href='mailto:jchasefinch@gmail.com?subject=Ozark Founding Contributor' class='btn btn-lg btn-default'>Become Founding Developer #4</a><br />
+                      <br /><a href='mailto:jchasefinch@gmail.com?subject=Ozark Founding Contributor' class='btn btn-lg btn-default'>Become Founding Developer #6</a><br />
                       <a class='prompt-dismiss' href='javascript:void(0);'><span class='glyphicon glyphicon-remove'></span> Dismiss</a>
                     </div>
                   </div>
@@ -56,7 +56,7 @@
               <div class='row'>
                 <div class='col-sm-7'>
                   <h1>Open-Source Code</h1>
-                  <p class='lead'>Ozark is maintained and developed on GitHub, including all code &amp; documentation source, the sample apps, the full language specification, and the roadmap for future language development.</p>
+                  <p class='lead'>Ozark is maintained and developed on GitHub, including all code &amp; documentation source, the sample apps, the full language spec, and the roadmap for future language development.</p>
                 </div>
                 <div class='col-sm-4 col-sm-offset-1'>
                   <div class='links'>
@@ -93,11 +93,11 @@
                     <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
                     <div style="position: absolute; left: -5000px;"><input type="text" name="b_db19e11de3ec47da1da91149f_13de2cb1c6" tabindex="-1" value=""></div>
                   </form>
-                  <p>Other than the public newsletter, we publish a separate email for less frequent official language announcements. Sign up for that <a target="_blank" href='http://eepurl.com/55-Vz'>here</a>.</p>
+                  <p>Other than the public newsletter, we have a separate email for less frequent official language announcements. Sign up for that <a target="_blank" href='http://eepurl.com/55-Vz'>here</a>.</p>
                 </div>
                 <div class='col-sm-4'>
                   <h4>Google Group</h4>
-                  <p>The <a target="_blank" href='https://groups.google.com/forum/?fromgroups#!forum/ozark-lang'>Ozark Google Group</a> is the official forum &amp; message board. It is the primary place for announcements and discussion regarding the development and usage of the Ozark language.</p>
+                  <p>The <a target="_blank" href='https://groups.google.com/forum/?fromgroups#!forum/ozark-lang'>Ozark Google Group</a> is the official forum &amp; message board. It's the main place for announcements and discussion regarding the development and use of the Ozark language.</p>
                 </div>
                 <div class='col-sm-4'>
                   <h4>IRC</h4>
@@ -112,6 +112,8 @@
                     <li>Rob Campbell <a target="_blank" href='https://github.com/rwcee'>rwcee</a></li>
                     <li>Chase Finch <a target="_blank" href='https://github.com/chasefinch'>chasefinch</a></li>
                     <li>Ben Guerrette <a target="_blank" href='https://twitter.com/benguerrette'>@benguerrette</a></li>
+                    <li>Jaime Nacach <a target="_blank" href='https://twitter.com/bloominari'>@bloominari</a></li>
+                    <li>Devin Smith <a target="_blank" href='https://twitter.com/devinwsmith'>@devinwsmith</a></li>
                   </ul>
                 </div>
                 <!--
