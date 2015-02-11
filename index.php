@@ -112,14 +112,13 @@
   <span class='declaration'>inheritance</span> <span class='class'>Person</span> <span class='argument'>source:</span><span class='literal'>"Person"</span>
 
   <span class='declaration'>requirement</span> <span class='class'>HikeAbility</span> <span class='argument'>source:</span><span class='literal'>"HikeAbility"</span>
-  <span class='declaration'>requirement</span> <span class='class'>Mountain</span> <span class='argument'>source:</span><span class='literal'>"Mountain"</span>
   <span class='declaration'>requirement</span> <span class='class'>Hat</span> <span class='argument'>source:</span><span class='literal'>"Hat"</span>
   <span class='declaration'>requirement</span> <span class='class'>Map</span> <span class='argument'>source:</span><span class='literal'>"Map"</span>
+  <span class='declaration'>requirement</span> <span class='class'>Mountain</span> <span class='argument'>source:</span><span class='literal'>"Mountain"</span>
 
   <span class='class'>HikeAbility</span> <span class='property'>@hiker</span>
   <span class='class'>Hat?</span> <span class='property'>@hat</span>
   <span class='class'>Map?</span> <span class='property'>@map</span>
-  <span class='class'>Mountain.Location</span> <span class='property'>@location</span>
 
   <span class='declaration'>method</span> <span class='method'>prepare</span>
     <span class='class'>Map</span> <span class='noun'>map</span> <span class='method'>initialize</span>
@@ -128,11 +127,11 @@
     <span class='property'>@hat</span> <span class='symbol'>=</span> <span class='noun'>hat</span>
 
   <span class='declaration'>method</span> <span class='method'>climbMountain</span> <span class='implicit'>input:</span><span class='class'>Mountain</span>
-    <span class='declaration'>assert</span> <span class='property'>@map</span> <span class='symbol'>\</span> <span class='class'>DoesNotExist</span> <span class='noun'>exception1</span>
-      <span class='noun'>exception1</span> <span class='method'>setMessage</span> <span class='literal'>"I'm lost."</span>
-      <span class='declaration'>raise</span> <span class='noun'>exception1</span>
-    
-    <span class='property'>@map</span> <span class='method'>findTrail</span> <span class='argument'>mountain:</span><span class='implicit'>input</span> <span class='symbol'>-&gt;</span> <span class='noun'>trail</span>
+    <span class='property'>@map</span> <span class='method'>findTrail</span> <span class='argument'>mountain:</span><span class='implicit'>input</span> <span class='symbol'>-&gt;</span> <span class='noun'>trail</span> <span class='symbol'>\</span>
+      <span class='declaration'>catch <span class='argument'>e:</span><span class='class'>UnpackedEmptyOptionalException</span>
+        <span class='noun'>e</span> <span class='method'>setMessage</span> <span class='literal'>"I'm lost."</span>
+        <span class='declaration'>throw</span> <span class='noun'>e</span>
+
     <span class='property'>@hiker</span> <span class='method'>followTrail</span> <span class='noun'>trail</span> <span class='symbol'>-&gt;</span> <span class='argument'>success:</span><span class='noun'>result</span>
     
     <span class='declaration'>if</span> <span class='noun'>result</span>
