@@ -42,6 +42,11 @@
                   </div>
                 </div>
                 <p><em>This article is incomplete.</em></p>
+                <div class='code-sample-header code-sample-header-inline'></div>
+                <div class='code-sample code-sample-inline'>
+                  <pre>method divideBy input:Integer -> output:Integer
+    x notEqualTo 0 -> a</pre>
+                </div>
               </div>
             </div>
           </div>

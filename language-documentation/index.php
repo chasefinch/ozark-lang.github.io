@@ -43,6 +43,11 @@
                 </div>
                 <p>Ozark is a purely object-oriented programming language designed to build software with maximum modularity, inherent clarity of purpose, and a long lifespan. Where other languages add features, Ozark provides simple, high-performance implementations of core concepts in ways that let the code speak for itself.</p>
                 <p>This has many benefits. First, code is readable. Methods are short and have descriptive names, clear inputs, and clear outputs. Variables exist only to connect the inputs and outputs of functions and as properties of objects. Everything is object-oriented, and the small scopes are strictly enforced.</p>
+                <div class='code-sample-header code-sample-header-inline'></div>
+                <div class='code-sample code-sample-inline'>
+                  <pre>method divideBy input:Integer -> output:Integer
+    x notEqualTo 0 -> a</pre>
+                </div>
                 <p>Another benefit is collaborative. Multiple developers of varying skill levels may work on a project using different tools, yet will produce the same code line-for-line.</p>
                 <p>Similarly, Ozark files are a suitable save format for applications that generate code. This means that AI software or visual development tools not only produce correct Ozark code, but can parse existing code into a working model.</p>
                 <h1>Object-Oriented</h1>

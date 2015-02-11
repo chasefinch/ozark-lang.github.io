@@ -82,6 +82,11 @@
                 <h4>No expressions, just instructions</h4>
                 <p>Lines of code don't have a value to be computed behind the scenes. Instead, you clearly see and define what steps the processor will take during execution.</p>
                 <p>Code is verbose and clear, and each line has only one instruction.</p>
+                <div class='code-sample-header code-sample-header-inline'></div>
+                <div class='code-sample code-sample-inline'>
+                  <pre>method divideBy input:Integer -> output:Integer
+    x notEqualTo 0 -> a</pre>
+                </div>
                 <h4>Declarative, not imperitive</h4>
                 <p>Other object-oriented programming languages start imperitively. An Ozark program reads the classes first, and begins with an instance method. It's objects and message passing, all the way down.</p>
                 <p>Everything is a declaration, and instructions are found only inside of methods. All methods are public instance methods. All properties are private. Only properties and outputs are mutable. Literals are objects, there is no reference to self or super, and all method calls use Smalltalk-style message passing.</p>
@@ -95,6 +100,11 @@
                 <h4>Clean &amp; strict formatting rules</h4>
                 <p>Ozark is strongly typed and explicit about code structure; So, Ozark apps have code consistency and one-to-one correspondence with a visual graph.</p>
                 <p>The instruction set is small, leaving almost all tasks to instance methods.</p>
+                <div class='code-sample-header code-sample-header-inline'></div>
+                <div class='code-sample code-sample-inline'>
+                  <pre>method divideBy input:Integer -> output:Integer
+    x notEqualTo 0 -> a</pre>
+                </div>
                 <h4>No return types, just inputs and outputs</h4>
                 <p>Rather than evaluating like an expression, a method is an action by an object, and has any number of inputs and/or outputs.</p>
                 <h4>One way to do everything</h4>

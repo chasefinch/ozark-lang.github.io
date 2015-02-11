@@ -132,7 +132,7 @@
                 -->
                 <div class='col-sm-4'>
                   <h4>Founder</h4>
-                  <p>Ozark was founded in San Diego, California by Chase Finch, primarily in support of a venture to build visual software development tools. Find him on Twitter as <a target="_blank" href='https://twitter.com/jchasefinch'>@jchasefinch</a>, GitHub as <a target="_blank" href='https://github.com/chasefinch'>chasefinch</a>, or by email at <a href='mailto:jchasefinch@gmail.com'>jchasefinch@gmail.com</a>.</p>
+                  <p>Ozark was founded in San Diego, California by Chase Finch, primarily in support of a venture to build visual software development tools. Find him on Twitter as <a target="_blank" href='https://twitter.com/______chase'>@______chase</a>, GitHub as <a target="_blank" href='https://github.com/chasefinch'>chasefinch</a>, or by email at <a href='mailto:info@ozark.cc'>info@ozark.cc</a>.</p>
                 </div>
               </div>
             </div>
