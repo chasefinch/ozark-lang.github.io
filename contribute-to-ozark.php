@@ -36,7 +36,7 @@
                       <h1>There is much to be done.</h1>
                       <p class='lead'>Software development is today's wild west. It easier than ever to build something new, but hard to build something that lasts. Version control and application frameworks are awesome... But still, code coaxes us to make more of a mess with every commit.</p>
                       <p class='lead'>Ozark is the next step; A clean language totally inseparable from an app's logic. A lot of care has gone into the language design to make it enjoyable, clear, and optimized. However, we're still in the early stages, and if you're a talented coder, we could use your help.</p>
-                      <br /><a href='mailto:jchasefinch@gmail.com?subject=Ozark Founding Contributor' class='btn btn-lg btn-default'>Become Founding Developer #6</a><br />
+                      <br /><a href='mailto:jchasefinch@gmail.com?subject=Ozark%20Founding%20Contributor' class='btn btn-lg btn-default'>Become Founding Developer #6</a><br />
                       <a class='prompt-dismiss' href='javascript:void(0);'><span class='glyphicon glyphicon-remove'></span> Dismiss</a>
                     </div>
                   </div>
@@ -84,16 +84,16 @@
                 <div class='col-sm-4'>
                   <h4>Newsletter</h4>
                   <p>Sign up to receive email updates about Ozark happenings. We never pass your information to anyone else.</p>
-                  <form action="//ozark.us9.list-manage.com/subscribe/post?u=db19e11de3ec47da1da91149f&amp;id=13de2cb1c6" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                  <form action="//ozark.us9.list-manage.com/subscribe/post?u=db19e11de3ec47da1da91149f&amp;id=13de2cb1c6" method="post" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
                     <div class='form-group'>
                       <div class='input-group input-block'>
-                        <input type="email" value="" name="EMAIL" class="email form-control input-md" id="mce-EMAIL" placeholder="email address..." required /><div class='input-group-addon'><input type="submit" value="Go" name="subscribe" id="mc-embedded-subscribe" /></div>
+                        <input type="email" value="" name="EMAIL" class="email form-control input-md" id="mce-EMAIL" placeholder="email address..." required /><div class='input-group-addon'><input type="submit" value="Go" name="subscribe" /></div>
                       </div>
                     </div>
                     <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
                     <div style="position: absolute; left: -5000px;"><input type="text" name="b_db19e11de3ec47da1da91149f_13de2cb1c6" tabindex="-1" value=""></div>
                   </form>
-                  <p>Other than the public newsletter, we have a separate email for less frequent official language announcements. Sign up for that <a target="_blank" href='http://eepurl.com/55-Vz'>here</a>.</p>
+                  <p>Alongside public newsletter, there is a separate email for less frequent official language announcements. Sign up for that <a target="_blank" href='http://eepurl.com/55-Vz'>here</a>.</p>
                 </div>
                 <div class='col-sm-4'>
                   <h4>Google Group</h4>
@@ -107,7 +107,7 @@
               <div class='row'>
                 <div class='col-sm-4'>
                   <h4>Contributors</h4>
-                  <p>Thanks to those who continually contribute effort to the Ozark project. Our Founding Developers (people who have submitted commits or other effort before the initial release) are listed here. <a href='mailto:jchasefinch@gmail.com?subject=Ozark Founding Contributor'>Become one</a>.</p>
+                  <p>Thanks to those who continually contribute effort to the Ozark project. Our Founding Developers (people who have submitted commits or other effort before the initial release) are listed here. <a href='mailto:jchasefinch@gmail.com?subject=Ozark%20Founding%20Contributor'>Become one</a>.</p>
                   <ul class='contributors'>
                     <li>Rob Campbell <a target="_blank" href='https://github.com/rwcee'>rwcee</a></li>
                     <li>Chase Finch <a target="_blank" href='https://github.com/chasefinch'>chasefinch</a></li>

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <?php
-    $title = "Ozark - A strict programming language";
-    $description = "Ozark is an elegant, open-source programming language. Through strict code standards, Ozark enables new tools for generating software.";
+    $title = "Ozark - A readable programming language";
+    $description = "Ozark is a readable open-source programming language. Through strict code standards, Ozark enables new tools for building software.";
     require('includes/header.php');
   ?>
   <body>
@@ -31,16 +31,16 @@
           <div class='col-md-10 col-md-offset-1'>
             <div class='row'>
               <div class='col-sm-7'>
-                <h1 class='heading'>Ozark is an elegant, open-source programming language. Through strict code standards, Ozark enables new tools for generating software.</h1>
+                <h1 class='heading'>Ozark is a readable open-source programming language. Through strict code standards, Ozark enables new tools for building software.</h1>
                 <div class='row'>
                   <div class='col-sm-10'>
-                    <form action="//ozark.us9.list-manage.com/subscribe/post?u=db19e11de3ec47da1da91149f&amp;id=13de2cb1c6" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                    <form action="//ozark.us9.list-manage.com/subscribe/post?u=db19e11de3ec47da1da91149f&amp;id=13de2cb1c6" method="post" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
                       <div class='form-group'>
-                        <label for="mce-EMAIL">Enter your email address for regular updates!<br />(We never pass on your details to anyone else.)</label>
+                        <label for="mce-EMAIL">Enter your email address for regular updates<br />(We won't give it to anyone else.)</label>
                         <div class='row'>
                           <div class='col-sm-10'>
                             <div class='input-group input-block input-group-large'>
-                              <input type="email" value="" name="EMAIL" class="email form-control input-lg" id="mce-EMAIL" placeholder="email address..." required /><div class='input-group-addon'><input type="submit" value="Go" name="subscribe" id="mc-embedded-subscribe" /></div>
+                              <input type="email" id="mce-EMAIL" value="" name="EMAIL" class="email form-control input-lg" placeholder="email address..." required /><div class='input-group-addon'><input type="submit" value="Go" name="subscribe" /></div>
                             </div>
                           </div>
                         </div>
@@ -128,7 +128,7 @@
 
   <span class='declaration'>method</span> <span class='method'>climbMountain</span> <span class='implicit'>input:</span><span class='class'>Mountain</span>
     <span class='property'>@map</span> <span class='method'>findTrail</span> <span class='argument'>mountain:</span><span class='implicit'>input</span> <span class='symbol'>-&gt;</span> <span class='noun'>trail</span> <span class='symbol'>\</span>
-      <span class='declaration'>catch <span class='argument'>e:</span><span class='class'>UnpackedEmptyOptionalException</span>
+      <span class='declaration'>catch</span> <span class='argument'>e:</span><span class='class'>UnpackedEmptyOptionalException</span>
         <span class='noun'>e</span> <span class='method'>setMessage</span> <span class='literal'>"I'm lost."</span>
         <span class='declaration'>throw</span> <span class='noun'>e</span>
 
@@ -136,21 +136,22 @@
     
     <span class='declaration'>if</span> <span class='noun'>result</span>
       <span class='property'>@speaker</span> <span class='method'>shout</span> <span class='literal'>"Hello, world!"</span>
-                </pre>
-              </div>
-            </div>
-            <div class='col-sm-4'>
-              <div class='github'>
-                <h3>Contribute</h3>
-                <a target="_blank" href='https://github.com/ozark-lang/ozark' class='btn btn-primary btn-lg'>View the GitHub project &nbsp; <span class='glyphicon glyphicon-new-window'></span></a>
-                <div class='callout'>
-                  <p>Ozark is open source under the <a target="_blank" href='https://github.com/ozark-lang/ozark/blob/master/LICENSE'>GPL v3 license</a>. It's hosted and developed on GitHub.</p>
-                  <p>The Ozark language is still in early development. The compiler isn't available yet, and contributors are needed (especially people with compiler expertise).</p>
+                  </pre>
                 </div>
               </div>
-              <div class='documentation'>
-                <h3>Learn Ozark!</h3>
-                <a class='btn btn-default btn-lg' href='/language-documentation'>Read the documentation &nbsp; <span class='glyphicon glyphicon-chevron-right'></span></a>
+              <div class='col-sm-4'>
+                <div class='github'>
+                  <h3>Contribute</h3>
+                  <a target="_blank" href='https://github.com/ozark-lang/ozark' class='btn btn-primary btn-lg'>View the GitHub project &nbsp; <span class='glyphicon glyphicon-new-window'></span></a>
+                  <div class='callout'>
+                    <p>Ozark is open source under the <a target="_blank" href='https://github.com/ozark-lang/ozark/blob/master/LICENSE'>GPL v3 license</a>. It's hosted and developed on GitHub.</p>
+                    <p>The Ozark language is still in early development. The compiler isn't available yet, and contributors are needed (especially people with compiler expertise).</p>
+                  </div>
+                </div>
+                <div class='documentation'>
+                  <h3>Learn Ozark!</h3>
+                  <a class='btn btn-default btn-lg' href='/language-documentation'>Read the documentation &nbsp; <span class='glyphicon glyphicon-chevron-right'></span></a>
+                </div>
               </div>
             </div>
           </div>

@@ -83,10 +83,12 @@ a.download { font-weight:bold; text-decoration:none; }
 /*---*/
 
 .site-nav { font-size:0.8em; display:inline-block; float:right; }
-	.site-nav ul { margin:0; padding:0; }
-		.site-nav ul li { margin:0; padding:0; list-style-type:none; display:inline-block; }
-			.site-nav ul li a { color:#25aae1; padding:4px 8px 4px 8px; text-decoration:none; display:block; }
-				.site-nav ul li:last-child a { padding-right:0; }
+	.site-nav ul { margin:0; padding:4px 0; }
+		.site-nav ul li { margin:0; margin:0; list-style-type:none; display:inline-block; border-right:1px solid #ccc; }
+			.site-nav ul li a { color:#25aae1; padding:0px 8px 0px 8px; text-decoration:none; display:block; }
+				.site-nav ul li:last-child { border-right:none; }
+					.site-nav ul li:last-child a { padding-right:0; }
+
 				.site-nav ul li a:hover { color:#258ac1; }
 				.site-nav ul li.active a { color:#000; font-weight:bold; }
 

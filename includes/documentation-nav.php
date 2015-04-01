@@ -13,7 +13,6 @@
     <li<?php if($subpage == 'methods') echo " class='active'"; ?>><a href="/language-documentation/methods">Methods</a></li>
     <li<?php if($subpage == 'data-types' || $submenu == 'data-types') echo " class='active'"; ?>><a href="/language-documentation/data-types/">Data Types</a></li>
     <li class='tier<?php if($subpage == 'classes') echo " active"; ?>'><a href="/language-documentation/data-types/classes">Classes</a></li>
-    <li class='tier<?php if($subpage == 'structures') echo " active"; ?>'><a href="/language-documentation/data-types/structures">Structures</a></li>
     <li class='tier<?php if($subpage == 'enumerations') echo " active"; ?>'><a href="/language-documentation/data-types/enumerations">Enumerations</a></li>
     <li class='tier<?php if($subpage == 'nesting') echo " active"; ?>'><a href="/language-documentation/data-types/nesting">Nesting</a></li>
   </ul>

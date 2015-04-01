@@ -42,7 +42,7 @@
                 <p><strong>A.</strong> Development tools can generate code in other languages, but that code can't be read back in for further development. Ozark is different; Because of the strict formatting rules, handwritten code can be interpreted and extended by development tools, and vice versa.</p>
                 <p>A set of Ozark files serves as both a codebase and a save format for advanced IDEs.
                 <h4>Q. How does Ozark get rid of refactoring and technical debt?</h4>
-                <p><strong>A.</strong></strong> Ozark enforces organizational principles the first time around. Because there is only one way of doing just about everything, you can be sure that no one (even your past self) left any sloppy work to be redone.</p>
+                <p><strong>A.</strong> Ozark enforces organizational principles the first time around. Because there is only one way of doing just about everything, you can be sure that no one (even your past self) left any sloppy work to be redone.</p>
               </div>
               <div class='col-sm-6'>
                 <h4>Q. Why can't an object call its own methods?</h4>

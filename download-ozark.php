@@ -76,11 +76,10 @@
       <div class='container'>
         <div class='row'>
           <div class='col-md-10 col-md-offset-1'>
-              <div class='row'>
-                <div class='col-sm-8'>
-                  <h3>Licensing</h3>
-                  <p>Ozark is released for public use under the GPL v3 license, which means "copyleft" status for the Ozark project and any derivatives. Please see the <a href='https://github.com/ozark-lang/ozark/blob/master/LICENSE'>full text</a> for more information.</p>
-                </div>
+            <div class='row'>
+              <div class='col-sm-8'>
+                <h3>Licensing</h3>
+                <p>Ozark is released for public use under the GPL v3 license, which means "copyleft" status for the Ozark project and any derivatives. Please see the <a href='https://github.com/ozark-lang/ozark/blob/master/LICENSE'>full text</a> for more information.</p>
               </div>
             </div>
           </div>

@@ -41,19 +41,29 @@
                     <?php require('../includes/documentation-search.php'); ?> 
                   </div>
                 </div>
-                <p>Ozark is a purely object-oriented programming language designed to build software with maximum modularity, inherent clarity of purpose, and a long lifespan. Where other languages add features, Ozark provides simple, high-performance implementations of core concepts in ways that let the code speak for itself.</p>
-                <p>This has many benefits. First, code is readable. Methods are short and have descriptive names, clear inputs, and clear outputs. Variables exist only to connect the inputs and outputs of functions and as properties of objects. Everything is object-oriented, and the small scopes are strictly enforced.</p>
+                <p>Ozark is a purely object-oriented programming language designed for software that's readable and reusable. Where other languages add features, Ozark provides simple, high-performance implementations of core concepts in ways that let code speak for itself.</p>
+                <p>Methods are short and have descriptive names, clear inputs, and clear outputs. Variables exist only to connect the inputs and outputs of functions and as properties of objects. Everything is object-oriented, and the small scopes are strictly enforced.</p>
                 <div class='code-sample-header code-sample-header-inline'></div>
                 <div class='code-sample code-sample-inline'>
                   <pre>method divideBy input:Integer -> output:Integer
     x notEqualTo 0 -> a</pre>
                 </div>
-                <p>Another benefit is collaborative. Multiple developers of varying skill levels may work on a project using different tools, yet will produce the same code line-for-line.</p>
-                <p>Similarly, Ozark files are a suitable save format for applications that generate code. This means that AI software or visual development tools not only produce correct Ozark code, but can parse existing code into a working model.</p>
+                <p>One benefit is collaborative. Multiple developers of varying skill levels may work on a project using different tools, yet will produce the same code line-for-line.</p>
+                <p>Similarly, Ozark files are a suitable save format for applications that generate code. This means that artificial intelligence or visual development tools produce correct Ozark and can parse existing code into a working model.</p>
                 <h1>Object-Oriented</h1>
-                <p>Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere. Praesent id metus massa.</p>
+                <p>Starting with the program execution, everything in Ozark is an object. Running a program in Ozark consists of creating an instance of a class, and then calling a method on that instance.</p>
+                <div class='code-sample-header code-sample-header-inline'></div>
+                <div class='code-sample code-sample-inline'>
+                  <pre>method divideBy input:Integer -> output:Integer
+    x notEqualTo 0 -> a</pre>
+                </div>
                 <h1>Declarative</h1>
-                <p>Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere. Praesent id metus massa.</p>
+                <p>Many object-oriented languages define their classes through a set of imperitive statements. In Ozark, the only imperitive statements you'll find are inside of a method; Everything else is written as a declaration.</p>
+                <div class='code-sample-header code-sample-header-inline'></div>
+                <div class='code-sample code-sample-inline'>
+                  <pre>method divideBy input:Integer -> output:Integer
+    x notEqualTo 0 -> a</pre>
+                </div>
               </div>
             </div>
           </div>
