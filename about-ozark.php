@@ -84,10 +84,10 @@
                 <p>Code is verbose and clear, and each line has only one instruction.</p>
                 <div class='code-sample-header code-sample-header-inline'></div>
                 <div class='code-sample code-sample-inline'>
-                  <pre><span class='declaration'>method</span> <span class='method'>processScene</span> <span class='implicit'>input:</span><span class='class'>Layer</span>
-    <span class='property'>@scene</span> <span class='method'>evaluateActions</span> <span class='argument'>layer:</span><span class='implicit'>input</span>
-    <span class='property'>@scene</span> <span class='method'>simulatePhysics</span> <span class='argument'>layer:</span><span class='implicit'>input</span>
-    <span class='property'>@scene</span> <span class='method'>update</span> <span class='argument'>layer:</span><span class='implicit'>input</span></pre>
+                  <pre><span class='declaration'>method</span> <span class='method'>processScene</span>
+    <span class='property'>@scene</span> <span class='method'>evaluateActions</span>
+    <span class='property'>@scene</span> <span class='method'>simulatePhysics</span>
+    <span class='property'>@scene</span> <span class='method'>update</span></pre>
                 </div>
                 <h4>Declarative, not imperitive</h4>
                 <p>Other object-oriented programming languages start imperitively. An Ozark program reads the classes first, and begins with an instance method. It's objects and message passing, all the way down.</p>
@@ -106,7 +106,7 @@
                 <div class='code-sample code-sample-inline'>
                   <pre><span class='declaration'>iterate</span> <span class='noun'>oddItems1</span>
     <span class='noun'>shooter</span> <span class='method'>shootAtTarget</span> <span class='implicit'>item</span> <span class='symbol'>-&gt;</span> <span class='argument'>result:</span><span class='noun'>success</span>
-    <span class='noun'>successes <span class='argument'>push:</span><span class='noun'>success</span></pre>
+    <span class='noun'>successes <span class='method'>push</span> <span class='noun'>success</span></pre>
                 </div>
                 <h4>No return types, just inputs and outputs</h4>
                 <p>Rather than evaluating like an expression, a method is an action by an object, and has any number of inputs and/or outputs.</p>

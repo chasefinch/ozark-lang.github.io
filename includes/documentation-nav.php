@@ -3,8 +3,7 @@
   <ul class="nav">
     <li<?php if($subpage == 'index') echo " class='active'"; ?>><a href="/language-documentation">Overview</a></li>
     <li<?php if($subpage == 'object-oriented') echo " class='active'"; ?>><a href="/language-documentation/object-oriented">Object Orientation</a></li>
-    <li<?php if($subpage == 'literals' || $submenu == 'literals') echo " class='active'"; ?>><a href="/language-documentation/literals/">Literals</a></li>
-    <li class='tier<?php if($subpage == 'types') echo " active"; ?>'><a href="/language-documentation/literals/types">Types</a></li>
+    <li<?php if($subpage == 'literals') echo " class='active'"; ?>><a href="/language-documentation/literals">Literals</a></li>
     <li<?php if($subpage == 'variables' || $submenu == 'variables') echo " class='active'"; ?>><a href="/language-documentation/variables/">Variables</a></li>
     <li class='tier<?php if($subpage == 'objects') echo " active"; ?>'><a href="/language-documentation/variables/objects">Objects</a></li>
     <li class='tier<?php if($subpage == 'optionals') echo " active"; ?>'><a href="/language-documentation/variables/optionals">Optionals</a></li>

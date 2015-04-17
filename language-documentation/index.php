@@ -48,7 +48,7 @@
                   <pre>method divideBy input:Integer -> output:Integer
     x notEqualTo 0 -> a</pre>
                 </div>
-                <p>One benefit is collaborative. Multiple developers of varying skill levels may work on a project using different tools, yet will produce the same code line-for-line.</p>
+                <p>Ozark's strength is collaboration. Multiple developers of varying skill levels may work on a project using different tools, yet will produce the same code line-for-line.</p>
                 <p>Similarly, Ozark files are a suitable save format for applications that generate code. This means that artificial intelligence or visual development tools produce correct Ozark and can parse existing code into a working model.</p>
                 <h1>Object-Oriented</h1>
                 <p>Starting with the program execution, everything in Ozark is an object. Running a program in Ozark consists of creating an instance of a class, and then calling a method on that instance.</p>
