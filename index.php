@@ -60,7 +60,7 @@
       <div class='container'>
         <div class='row'>
           <div class='col-md-10 col-md-offset-1'>
-            <strong class='category'>Latest News</strong> Sample app for version 0.1.3 of the Ozark specification <a href='https://groups.google.com/d/msg/ozark-lang/mXeKMmS76YU/HjVSnuvc6-EJ'>See&nbsp;Announcement&nbsp;&rarr;</a>
+            <strong class='category'>Latest News</strong> Sample app for version 0.2.0 of the Ozark specification <a href='https://groups.google.com/d/msg/ozark-lang/TINK6zXMMNI/w_-c1TZjc1MJ'>See&nbsp;Announcement&nbsp;&rarr;</a>
           </div>
         </div>
       </div>
