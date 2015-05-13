@@ -67,18 +67,20 @@ a.download { font-weight:bold; text-decoration:none; }
 	.btn-disabled:active { box-shadow:none; }
 
 .declaration { color:#5e4ed7; }
-.argument { color:#496fb1; font-style:italic; }
+.argument { color:#000; }
 .noun { color:#000; }
-.method { color:#18525c; }
-.implicit { color:#28527c; font-weight:bold; }
+.method { color:#000; }
+.implicit { color:#28527c; }
 .comment { color:#05a74f; }
 .string { color:#ff2e2d; }
 .literal { color:#ff2e2d; }
-.property { color:#27527c; font-weight:bold; }
+.property { color:#28527c; }
 .class { color:#25aae1; }
-.symbol { color:#28527c; font-weight:bold; }
+.symbol { color:#5e4ed7; font-weight:bold; }
 
-.nothing { color:#fd9632; color:#e92c31; }
+.nothing { color:#e92c31; }
+
+/* color:#fd9632; color:#18525c; color:#496fb1; */
 
 /*---*/
 

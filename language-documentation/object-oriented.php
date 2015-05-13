@@ -44,19 +44,11 @@
                 <p>Ozark is a purely object-oriented and declarative programming language. It is, in many ways, special because of what
                     it leaves out. Within Ozark code, imperitive statements can't exist outside of a method, a method can't exist
                     outside of a class, and a variable can only exist within a method or as a property of a class.</p>
-                <div class='code-sample-header code-sample-header-inline'></div>
-                <div class='code-sample code-sample-inline'>
-                  <pre>method divideBy input:Integer -> output:Integer
-    x notEqualTo 0 -> a</pre>
-                </div>
+                <p><em>Code example coming soon.</em></p>
                 <p>Thus, all methods are instance methods, and there are no global variables. The object-oriented philosophy suggests
                     that state be tightly integrated with functionality and stored within objects, and within Ozark, that is always the
                     case.</p>
-                <div class='code-sample-header code-sample-header-inline'></div>
-                <div class='code-sample code-sample-inline'>
-                  <pre>method divideBy input:Integer -> output:Integer
-    x notEqualTo 0 -> a</pre>
-                </div>
+                <p><em>Code example coming soon.</em></p>
                 <p>This constraint is uniquely valuable to Ozark. Developers who inherit legacy code often find that the underlying
                     object-oriented structure was abandonded in certain places for convenience, maybe with a global variable or
                     misuse of the singleton pattern. When you inherit Ozark code, you can be sure that's not the case. This is one of
@@ -64,10 +56,7 @@
                 <p>Ozark also abandons techniques that are often considered to be object-oriented, but don't truly adhere to the
                     principles that govern OO development. Static methods are one example of such a technique. Another is an object's
                     ability to call its own functions with a <code>self</code> reference.</p>
-                <div class='code-sample-header code-sample-header-inline'></div>
-                <div class='code-sample code-sample-inline'>
-                  <pre>method divideBy input:Integer -> output:Integer
-    x notEqualTo 0 -> a</pre>
+                <p><em>Code example coming soon.</em></p>
                 </div>
               </div>
             </div>

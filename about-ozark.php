@@ -30,7 +30,7 @@
           <div class='col-sm-6 col-md-5 col-md-offset-1'>
             <h1>Fall in love with Ozark.</h1>
             <p class='lead'>Ozark code is a joy to write; Beautiful, straightforward, and future-proof. You can easily see the purpose of each method &ndash; And so can your IDE.</p>
-            <p class='lead'>This makes software development faster and easier to learn. It also welcomes a new generation of smart software development tools.</p>
+            <p class='lead'>This makes software development faster and easier to learn. It also welcomes a new generation of smart software-writing tools.</p>
             <div style='clear:both;'></div>
           </div>
           <div class='col-sm-5 col-sm-offset-1'>
@@ -38,7 +38,7 @@
               <div class='row'>
                 <div class='col-md-9'>
                   <h6>Examples</h6>
-                  <p>The best way to get a feel for Ozark is to explore it yourself. Download a sample app to get started.</p>
+                  <p>Get a feel for Ozark. Download a sample app to get started.</p>
                   <ul class='clean'><li><a href='https://github.com/ozark-lang/demo-rifle-range/archive/master.zip' class='download'><span class="glyphicon glyphicon-file"></span>&nbsp;&nbsp;Rifle Range</a></li></ul>
                 </div>
               </div>
@@ -52,10 +52,10 @@
   <span class='declaration'>requirement</span> <span class='class'>Rifle</span> <span class='argument'>source:</span><span class='literal'>"Rifle"</span>
   <span class='declaration'>requirement</span> <span class='class'>Boot</span> <span class='argument'>source:</span><span class='literal'>"Boot"</span>
 
-  <span class='class'>StandardIO</span> <span class='property'>@io</span>
-  <span class='class'>Location</span> <span class='property'>@location</span>
-  <span class='class'>Boot</span> <span class='property'>@leftBoot</span>
-  <span class='class'>Boot</span> <span class='property'>@rightBoot</span>
+  <span class='declaration'>member</span> <span class='property'>io:</span><span class='class'>StandardIO</span>
+  <span class='declaration'>member</span> <span class='property'>location:</span><span class='class'>Location</span>
+  <span class='declaration'>member</span> <span class='property'>leftBoot:</span><span class='class'>Boot</span> 
+  <span class='declaration'>member</span> <span class='property'>rightBoot:</span><span class='class'>Boot</span>
                 </pre>
               </div>
             </div>
@@ -85,9 +85,9 @@
                 <div class='code-sample-header code-sample-header-inline'></div>
                 <div class='code-sample code-sample-inline'>
                   <pre><span class='declaration'>method</span> <span class='method'>processScene</span>
-    <span class='property'>@scene</span> <span class='method'>evaluateActions</span>
-    <span class='property'>@scene</span> <span class='method'>simulatePhysics</span>
-    <span class='property'>@scene</span> <span class='method'>update</span></pre>
+    <span class='property'>scene</span> <span class='method'>evaluateActions</span>
+    <span class='property'>scene</span> <span class='method'>simulatePhysics</span>
+    <span class='property'>scene</span> <span class='method'>update</span></pre>
                 </div>
                 <h4>Declarative, not imperitive</h4>
                 <p>Other object-oriented programming languages start imperitively. An Ozark program reads the classes first, and begins with an instance method. It's objects and message passing, all the way down.</p>
@@ -104,9 +104,9 @@
                 <p>The instruction set is small, leaving almost all tasks to instance methods.</p>
                 <div class='code-sample-header code-sample-header-inline'></div>
                 <div class='code-sample code-sample-inline'>
-                  <pre><span class='declaration'>iterate</span> <span class='noun'>oddItems1</span>
-    <span class='noun'>shooter</span> <span class='method'>shootAtTarget</span> <span class='implicit'>item</span> <span class='symbol'>-&gt;</span> <span class='argument'>result:</span><span class='noun'>success</span>
-    <span class='noun'>successes <span class='method'>push</span> <span class='noun'>success</span></pre>
+                  <pre><span class='declaration'>each</span> <span class='noun'>range(1, foo)</span> <span class='declaration'>as</span> <span class='noun'>f</span>
+    <span class='declaration'>each</span> <span class='noun'>bar</span> <span class='declaration'>as</span> <span class='noun'>b</span>
+        <span class='noun'>print</span> <span class='noun'>f</span> + <span class='noun'>b</span>
                 </div>
                 <h4>No return types, just inputs and outputs</h4>
                 <p>Rather than evaluating like an expression, a method is an action by an object, and has any number of inputs and/or outputs.</p>

@@ -43,27 +43,15 @@
                 </div>
                 <p>Ozark is a purely object-oriented programming language designed for software that's readable and reusable. Where other languages add features, Ozark provides simple, high-performance implementations of core concepts in ways that let code speak for itself.</p>
                 <p>Methods are short and have descriptive names, clear inputs, and clear outputs. Variables exist only to connect the inputs and outputs of functions and as properties of objects. Everything is object-oriented, and the small scopes are strictly enforced.</p>
-                <div class='code-sample-header code-sample-header-inline'></div>
-                <div class='code-sample code-sample-inline'>
-                  <pre>method divideBy input:Integer -> output:Integer
-    x notEqualTo 0 -> a</pre>
-                </div>
+                <p><em>Code example coming soon.</em></p>
                 <p>Ozark's strength is collaboration. Multiple developers of varying skill levels may work on a project using different tools, yet will produce the same code line-for-line.</p>
                 <p>Similarly, Ozark files are a suitable save format for applications that generate code. This means that artificial intelligence or visual development tools produce correct Ozark and can parse existing code into a working model.</p>
                 <h1>Object-Oriented</h1>
                 <p>Starting with the program execution, everything in Ozark is an object. Running a program in Ozark consists of creating an instance of a class, and then calling a method on that instance.</p>
-                <div class='code-sample-header code-sample-header-inline'></div>
-                <div class='code-sample code-sample-inline'>
-                  <pre>method divideBy input:Integer -> output:Integer
-    x notEqualTo 0 -> a</pre>
-                </div>
+                <p><em>Code example coming soon.</em></p>
                 <h1>Declarative</h1>
                 <p>Many object-oriented languages define their classes through a set of imperitive statements. In Ozark, the only imperitive statements you'll find are inside of a method; Everything else is written as a declaration.</p>
-                <div class='code-sample-header code-sample-header-inline'></div>
-                <div class='code-sample code-sample-inline'>
-                  <pre>method divideBy input:Integer -> output:Integer
-    x notEqualTo 0 -> a</pre>
-                </div>
+                <p><em>Code example coming soon.</em></p>
               </div>
             </div>
           </div>

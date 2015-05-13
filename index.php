@@ -116,26 +116,26 @@
   <span class='declaration'>requirement</span> <span class='class'>Map</span> <span class='argument'>source:</span><span class='literal'>"Map"</span>
   <span class='declaration'>requirement</span> <span class='class'>Mountain</span> <span class='argument'>source:</span><span class='literal'>"Mountain"</span>
 
-  <span class='class'>HikeAbility</span> <span class='property'>@hiker</span>
-  <span class='class'>Hat?</span> <span class='property'>@hat</span>
-  <span class='class'>Map?</span> <span class='property'>@map</span>
+  <span class='declaration'>member</span> <span class='noun'>hiker:</span><span class='class'>HikeAbility</span>
+  <span class='declaration'>member</span> <span class='noun'>hat:</span><span class='class'>Hat?</span>
+  <span class='declaration'>member</span> <span class='noun'>map:</span><span class='class'>Map?</span>
 
   <span class='declaration'>method</span> <span class='method'>prepare</span>
-    <span class='class'>Map</span> <span class='noun'>map</span> <span class='method'>initialize</span>
-    <span class='class'>Hat</span> <span class='noun'>hat</span> <span class='method'>initialize</span>
-    <span class='property'>@map</span> <span class='symbol'>=</span> <span class='noun'>map</span>
-    <span class='property'>@hat</span> <span class='symbol'>=</span> <span class='noun'>hat</span>
+    <span class='declaration'>create</span> <span class='noun'>map:</span><span class='class'>Map</span> <span class='method'>initialize</span>
+    <span class='declaration'>create</span> <span class='noun'>hat:</span><span class='class'>Hat</span> <span class='method'>initialize</span>
+    <span class='declaration'>set</span> <span class='property'>my</span> <span class='noun'>map</span> <span class='symbol'>&lt;-</span> <span class='noun'>map</span>
+    <span class='declaration'>set</span> <span class='property'>my</span> <span class='noun'>hat</span> <span class='symbol'>&lt;-</span> <span class='noun'>hat</span>
 
   <span class='declaration'>method</span> <span class='method'>climbMountain</span> <span class='implicit'>input:</span><span class='class'>Mountain</span>
-    <span class='property'>@map</span> <span class='method'>findTrail</span> <span class='argument'>mountain:</span><span class='implicit'>input</span> <span class='symbol'>-&gt;</span> <span class='noun'>trail</span> <span class='symbol'>\</span>
+    <span class='property'>my</span> <span class='noun'>map</span> <span class='method'>findTrail</span> <span class='argument'>mountain:</span><span class='implicit'>input</span> <span class='symbol'>-&gt;</span> <span class='noun'>trail</span> <span class='symbol'>\</span>
       <span class='declaration'>catch</span> <span class='argument'>e:</span><span class='class'>UnpackedEmptyOptionalException</span>
         <span class='noun'>e</span> <span class='method'>setMessage</span> <span class='literal'>"I'm lost."</span>
         <span class='declaration'>throw</span> <span class='noun'>e</span>
 
-    <span class='property'>@hiker</span> <span class='method'>followTrail</span> <span class='noun'>trail</span> <span class='symbol'>-&gt;</span> <span class='argument'>success:</span><span class='noun'>result</span>
+    <span class='property'>my</span> <span class='noun'>hiker</span> <span class='method'>followTrail</span> <span class='noun'>trail</span> <span class='symbol'>-&gt;</span> <span class='argument'>success:</span><span class='noun'>result</span>
     
     <span class='declaration'>if</span> <span class='noun'>result</span>
-      <span class='property'>@speaker</span> <span class='method'>shout</span> <span class='literal'>"Hello, world!"</span>
+      <span class='property'>my</span> <span class='noun'>speaker</span> <span class='method'>shout</span> <span class='literal'>"Hello, world!"</span>
                   </pre>
                 </div>
               </div>

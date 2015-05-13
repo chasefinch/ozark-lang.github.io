@@ -6,57 +6,21 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
 <url>
-  <loc>http://ozark.cc/</loc>
+  <loc>https://ozark.cc/</loc>
 </url>
 <url>
-  <loc>http://ozark.cc/about-ozark</loc>
+  <loc>https://ozark.cc/about-ozark</loc>
 </url>
 <url>
-  <loc>http://ozark.cc/language-documentation/</loc>
+  <loc>https://ozark.cc/language-documentation/</loc>
 </url>
 <url>
-  <loc>http://ozark.cc/download-ozark</loc>
+  <loc>https://ozark.cc/download-ozark</loc>
 </url>
 <url>
-  <loc>http://ozark.cc/ozark-faq</loc>
+  <loc>https://ozark.cc/ozark-faq</loc>
 </url>
 <url>
-  <loc>http://ozark.cc/contribute-to-ozark</loc>
-</url>
-<url>
-  <loc>http://ozark.cc/language-documentation/object-oriented</loc>
-</url>
-<url>
-  <loc>http://ozark.cc/language-documentation/literals</loc>
-</url>
-<url>
-  <loc>http://ozark.cc/language-documentation/variables/</loc>
-</url>
-<url>
-  <loc>http://ozark.cc/language-documentation/variables/objects</loc>
-</url>
-<url>
-  <loc>http://ozark.cc/language-documentation/variables/optionals</loc>
-</url>
-<url>
-  <loc>http://ozark.cc/language-documentation/variables/collections</loc>
-</url>
-<url>
-  <loc>http://ozark.cc/language-documentation/control-flow</loc>
-</url>
-<url>
-  <loc>http://ozark.cc/language-documentation/methods</loc>
-</url>
-<url>
-  <loc>http://ozark.cc/language-documentation/data-types/</loc>
-</url>
-<url>
-  <loc>http://ozark.cc/language-documentation/data-types/classes</loc>
-</url>
-<url>
-  <loc>http://ozark.cc/language-documentation/data-types/enumerations</loc>
-</url>
-<url>
-  <loc>http://ozark.cc/language-documentation/data-types/nesting</loc>
+  <loc>https://ozark.cc/contribute-to-ozark</loc>
 </url>
 </urlset>
