@@ -104,8 +104,8 @@
                 <p>The instruction set is small, leaving almost all tasks to instance methods.</p>
                 <div class='code-sample-header code-sample-header-inline'></div>
                 <div class='code-sample code-sample-inline'>
-                  <pre><span class='declaration'>each</span> <span class='noun'>range(1, foo)</span> <span class='declaration'>as</span> <span class='noun'>f</span>
-    <span class='declaration'>each</span> <span class='noun'>bar</span> <span class='declaration'>as</span> <span class='noun'>b</span>
+                  <pre><span class='declaration'>for</span> <span class='noun'>f</span> <span class='declaration'>in:</span><span class='noun'>range(1, foo)</span>
+    span class='declaration'>for</span> <span class='noun'>b</span> <span class='declaration'>in:</span><span class='noun'>range(1, bar)</span>
         <span class='noun'>print</span> <span class='noun'>f</span> + <span class='noun'>b</span>
                 </div>
                 <h4>No return types, just inputs and outputs</h4>

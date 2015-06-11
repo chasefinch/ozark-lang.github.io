@@ -29,7 +29,7 @@
         <div class='row'>
           <div class='col-md-10 col-md-offset-1'>
             <div class='row'>
-              <div class='col-sm-3 hidden-xs'>
+              <div class='col-sm-3'>
                 <?php $submenu = ''; $subpage = 'object-oriented'; require('../includes/documentation-nav.php'); ?>
               </div>
               <div class='col-sm-9'>
