@@ -165,11 +165,11 @@ div.portal .glyphicon { float:right; margin-right:15px; color:#25aae1; }
 
 .continue { text-align:right; margin:1em 0 1em 0; }
 
-.documentation { margin:3em 0 0 0; }
+.documentation { margin:2em 0 0 0; }
 	.documentation .btn { position:relative; left:-4px; }
 
 .callout { font-size:0.9em; margin-top:0em; }
-.github { padding:20px 0 0 0; }
+.github { padding:10px 0 0 0; }
 	.github .btn { position:relative; left:-4px; }
 
 .ornament { text-align:center; margin-top:6em; }
@@ -249,6 +249,7 @@ footer { position:relative; z-index:1; margin-top:3em; padding-top:3em; padding-
 		.copyright a:hover { color:#055a91; }
 
 .to-top { text-align:right; }
+	.to-top .link-to-top { position:relative; z-index:3; }
 	.to-top .link-to-top:hover { text-decoration:none; }
 
 @media (min-width:768px) {

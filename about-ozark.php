@@ -29,7 +29,7 @@
         <div class='row'>
           <div class='col-sm-6 col-md-5 col-md-offset-1'>
             <h1>Fall in love with Ozark.</h1>
-            <p class='lead'>Ozark code is a joy to write; Beautiful, straightforward, and future-proof. You can easily see the purpose of each method &ndash; And so can your IDE.</p>
+            <p class='lead'>Ozark code is a joy to write; Beautiful, straightforward, and collaborative. You can easily see the purpose of each method &ndash; And so can the next person who works on your code.</p>
             <p class='lead'>This makes software development faster and easier to learn. It also welcomes a new generation of smart software-writing tools.</p>
             <div style='clear:both;'></div>
           </div>
@@ -42,20 +42,19 @@
                   <ul class='clean'><li><a href='https://github.com/ozark-lang/demo-rifle-range/archive/master.zip' class='download'><span class="glyphicon glyphicon-file"></span>&nbsp;&nbsp;Rifle Range</a></li></ul>
                 </div>
               </div>
-              <div class='code-sample-header'>Rifleman.ozark</div>
+              <div class='code-sample-header'>Rifleman.class.ozark</div>
               <div class='code-sample'>
-                <pre><span class='declaration'>class</span> <span class='class'>Rifleman</span>
-  <span class='declaration'>inheritance</span> <span class='class'>Person</span> <span class='argument'>source:</span><span class='literal'>"Person"</span>
+                <pre><span class='declaration'>inheritance</span> <span class='class'>Person</span>
 
-  <span class='declaration'>requirement</span> <span class='class'>StandardIO</span> <span class='argument'>reference:</span><span class='literal'>"StandardIO"</span>
-  <span class='declaration'>requirement</span> <span class='class'>Location</span> <span class='argument'>reference:</span><span class='literal'>"Location"</span>
-  <span class='declaration'>requirement</span> <span class='class'>Rifle</span> <span class='argument'>source:</span><span class='literal'>"Rifle"</span>
-  <span class='declaration'>requirement</span> <span class='class'>Boot</span> <span class='argument'>source:</span><span class='literal'>"Boot"</span>
+<span class='declaration'>requirement</span> <span class='class'>StandardIO</span>
+<span class='declaration'>requirement</span> <span class='class'>Location</span>
+<span class='declaration'>requirement</span> <span class='class'>Rifle</span>
+<span class='declaration'>requirement</span> <span class='class'>Boot</span>
 
-  <span class='declaration'>member</span> <span class='property'>io:</span><span class='class'>StandardIO</span>
-  <span class='declaration'>member</span> <span class='property'>location:</span><span class='class'>Location</span>
-  <span class='declaration'>member</span> <span class='property'>leftBoot:</span><span class='class'>Boot</span> 
-  <span class='declaration'>member</span> <span class='property'>rightBoot:</span><span class='class'>Boot</span>
+<span class='declaration'>member</span> <span class='property'>io:</span><span class='class'>StandardIO</span>
+<span class='declaration'>member</span> <span class='property'>location:</span><span class='class'>Location</span>
+<span class='declaration'>member</span> <span class='property'>leftBoot:</span><span class='class'>Boot</span> 
+<span class='declaration'>member</span> <span class='property'>rightBoot:</span><span class='class'>Boot</span>
                 </pre>
               </div>
             </div>
@@ -82,12 +81,16 @@
                 <h4>No expressions, just instructions</h4>
                 <p>Lines of code don't have a value to be computed behind the scenes. Instead, you clearly see and define what steps the processor will take during execution.</p>
                 <p>Code is verbose and clear, and each line has only one instruction.</p>
-                <div class='code-sample-header code-sample-header-inline'></div>
+                <div class='code-sample-header code-sample-header-inline'>GameLevel.class.ozark</div>
                 <div class='code-sample code-sample-inline'>
-                  <pre><span class='declaration'>method</span> <span class='method'>processScene</span>
-    <span class='property'>scene</span> <span class='method'>evaluateActions</span>
-    <span class='property'>scene</span> <span class='method'>simulatePhysics</span>
-    <span class='property'>scene</span> <span class='method'>update</span></pre>
+                  <pre><span class='declaration'>requirement</span> <span class='class'>GameScene</span>
+
+<span class='declaration'>member</span> <span class='property'>scene:</span><span class='class'>GameScene</span>
+
+<span class='declaration'>method</span> <span class='method'>processScene</span>
+    <span class='property'>@scene</span> <span class='method'>evaluateActions</span>
+    <span class='property'>@scene</span> <span class='method'>simulatePhysics</span>
+    <span class='property'>@scene</span> <span class='method'>update</span></pre>
                 </div>
                 <h4>Declarative, not imperitive</h4>
                 <p>Other object-oriented programming languages start imperitively. An Ozark program reads the classes first, and begins with an instance method. It's objects and message passing, all the way down.</p>
@@ -98,21 +101,22 @@
               </div>
               <div class='col-sm-6'>
                 <h4>Parallelism is automatic</h4>
-                <p>Ozark apps use multi-core processors automatically. The strict scopes and decoupling give clear separation of concerns, so the compiler is able to run code in parallel.</p>
+                <p>Ozark apps are ready to make use of multi-core processors automatically. The strict scopes and decoupling give clear separation of concerns, so the compiler is able to run code in parallel.</p>
                 <h4>Clean &amp; strict formatting rules</h4>
                 <p>Ozark is strongly typed and explicit about code structure; So, Ozark apps have code consistency and one-to-one correspondence with a visual graph.</p>
-                <p>The instruction set is small, leaving almost all tasks to instance methods.</p>
-                <div class='code-sample-header code-sample-header-inline'></div>
+                <p>The instruction set is small, leaving almost all tasks to instance methods and all calculations to inline functions.</p>
+                <div class='code-sample-header code-sample-header-inline'>Calculation.class.ozark</div>
                 <div class='code-sample code-sample-inline'>
-                  <pre><span class='declaration'>for</span> <span class='noun'>f</span> <span class='declaration'>in:</span><span class='noun'>range(1, foo)</span>
-    span class='declaration'>for</span> <span class='noun'>b</span> <span class='declaration'>in:</span><span class='noun'>range(1, bar)</span>
-        <span class='noun'>print</span> <span class='noun'>f</span> + <span class='noun'>b</span>
+                  <pre><span class='declaration'>method</span> <span class='method'>printSums</span> <span class='argument'>foo:</span><span class='class'>Integer</span> <span class='argument'>bar:</span><span class='class'>Integer</span>
+    <span class='declaration'>for</span> <span class='noun'>f</span> <span class='declaration'>in:</span><span class='noun'>range(1, foo)</span>
+        <span class='declaration'>for</span> <span class='noun'>b</span> <span class='declaration'>in:</span><span class='noun'>range(1, bar)</span>
+            <span class='noun'>print</span> <span class='noun'>f</span> + <span class='noun'>b</span></pre>
                 </div>
                 <h4>No return types, just inputs and outputs</h4>
                 <p>Rather than evaluating like an expression, a method is an action by an object, and has any number of inputs and/or outputs.</p>
                 <h4>One way to do everything</h4>
                 <p>Whether written by an expert, an amateur, or generated by software: Code is correct the first time, and logic can be figured out by looking at the code.</p>
-                <p>Because of the principles of Ozark, entire categories of potential errors have been removed, and many best-practice factoring principles are actually enforced.</p>
+                <p>Because of the principles of Ozark, entire categories of potential errors have been removed, and many best-practice factoring principles are not just recommended but enforced.</p>
               </div>
             </div>
           </div>

@@ -106,40 +106,36 @@
             </div>
             <div class='row'>
               <div class='col-sm-7'>
-                <div class='code-sample-header'>Mountaineer.ozark</div>
+                <div class='code-sample-header'>Mountaineer.class.ozark</div>
                 <div class='code-sample'>
-                  <pre><span class='declaration'>class</span> <span class='class'>Mountaineer</span>
-  <span class='declaration'>inheritance</span> <span class='class'>Person</span> <span class='argument'>source:</span><span class='literal'>"Person"</span>
+<pre><span class='declaration'>inheritance</span> <span class='class'>Person</span>
 
-  <span class='declaration'>requirement</span> <span class='class'>HikeAbility</span> <span class='argument'>source:</span><span class='literal'>"HikeAbility"</span>
-  <span class='declaration'>requirement</span> <span class='class'>Hat</span> <span class='argument'>source:</span><span class='literal'>"Hat"</span>
-  <span class='declaration'>requirement</span> <span class='class'>Map</span> <span class='argument'>source:</span><span class='literal'>"Map"</span>
-  <span class='declaration'>requirement</span> <span class='class'>Mountain</span> <span class='argument'>source:</span><span class='literal'>"Mountain"</span>
+<span class='declaration'>requirement</span> <span class='class'>HikeAbility</span>
+<span class='declaration'>requirement</span> <span class='class'>Hat</span>
+<span class='declaration'>requirement</span> <span class='class'>Map</span>
+<span class='declaration'>requirement</span> <span class='class'>Mountain</span>
 
-  <span class='declaration'>member</span> <span class='noun'>hiker:</span><span class='class'>HikeAbility</span>
-  <span class='declaration'>member</span> <span class='noun'>hat:</span><span class='class'>Hat?</span>
-  <span class='declaration'>member</span> <span class='noun'>map:</span><span class='class'>Map?</span>
+<span class='declaration'>member</span> <span class='noun'>hiker:</span><span class='class'>HikeAbility</span>
+<span class='declaration'>member</span> <span class='noun'>hat:</span><span class='class'>Hat?</span>
+<span class='declaration'>member</span> <span class='noun'>map:</span><span class='class'>Map?</span>
 
-  <span class='declaration'>method</span> <span class='method'>prepare</span>
+<span class='declaration'>method</span> <span class='method'>prepare</span>
     <span class='declaration'>create</span> <span class='noun'>map:</span><span class='class'>Map</span> <span class='method'>initialize</span>
     <span class='declaration'>create</span> <span class='noun'>hat:</span><span class='class'>Hat</span> <span class='method'>initialize</span>
-    <span class='declaration'>set</span> <span class='noun'>.map</span> <span class='symbol'>&lt;-</span> <span class='noun'>map</span>
-    <span class='declaration'>set</span> <span class='noun'>.hat</span> <span class='symbol'>&lt;-</span> <span class='noun'>hat</span>
+    <span class='declaration'>set</span> <span class='noun'>@map</span> <span class='symbol'>&lt;-</span> <span class='noun'>map</span>
+    <span class='declaration'>set</span> <span class='noun'>@hat</span> <span class='symbol'>&lt;-</span> <span class='noun'>hat</span>
 
-  <span class='declaration'>method</span> <span class='method'>climbMountain</span> <span class='implicit'>input:</span><span class='class'>Mountain</span>
-    <span class='noun'>.map!</span> <span class='method'>findTrail</span> <span class='argument'>mountain:</span><span class='implicit'>input</span> <span class='symbol'>-&gt;</span> <span class='noun'>trail</span>
-      <span class='declaration'>catch</span> <span class='argument'>e:</span><span class='class'>UnpackedEmptyOptionalException</span>
-        <span class='noun'>e</span> <span class='method'>setMessage</span> <span class='literal'>"I'm lost."</span>
-        <span class='declaration'>throw</span> <span class='noun'>e</span>
+<span class='declaration'>method</span> <span class='method'>climbMountain</span> <span class='argument'>#mountain:</span><span class='class'>Mountain</span>
+    <span class='declaration'>with</span> <span class='noun'>@map</span>
+        <span class='noun'>@map</span> <span class='method'>findTrail</span> <span class='argument'>mountain:</span><span class='noun'>mountain</span> <span class='symbol'>-&gt;</span> <span class='noun'>trail</span>
+        <span class='noun'>@hiker</span> <span class='method'>followTrail</span> <span class='noun'>trail!</span> <span class='symbol'>-&gt;</span> <span class='argument'>success:</span><span class='noun'>result</span>
 
-    <span class='noun'>.hiker</span> <span class='method'>followTrail</span> <span class='noun'>trail!</span> <span class='symbol'>-&gt;</span> <span class='argument'>success:</span><span class='noun'>result</span>
-    
-    <span class='declaration'>if</span> <span class='noun'>result</span>
-      <span class='noun'>.speaker</span> <span class='method'>shout</span> <span class='literal'>"Hello, world!"</span>
+        <span class='declaration'>if</span> <span class='noun'>result</span>
+            <span class='noun'>@speaker</span> <span class='method'>shout</span> <span class='literal'>"Hello, world!"</span>
                   </pre>
                 </div>
               </div>
-              <div class='col-sm-4'>
+              <div class='col-sm-5'>
                 <div class='github'>
                   <h3>Contribute</h3>
                   <a target="_blank" href='https://github.com/ozark-lang/ozark' class='btn btn-primary btn-lg'>View the GitHub project &nbsp; <span class='glyphicon glyphicon-new-window'></span></a>
