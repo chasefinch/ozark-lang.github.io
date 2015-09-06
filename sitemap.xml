@@ -5,22 +5,10 @@
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
-<url>
-  <loc>https://ozark.cc/</loc>
-</url>
-<url>
-  <loc>https://ozark.cc/about-ozark</loc>
-</url>
-<url>
-  <loc>https://ozark.cc/language-documentation/</loc>
-</url>
-<url>
-  <loc>https://ozark.cc/download-ozark</loc>
-</url>
-<url>
-  <loc>https://ozark.cc/ozark-faq</loc>
-</url>
-<url>
-  <loc>https://ozark.cc/contribute-to-ozark</loc>
-</url>
+  <url><loc>https://ozark.cc/</loc></url>
+  <url><loc>https://ozark.cc/about-ozark</loc></url>
+  <url><loc>https://ozark.cc/language-documentation/</loc></url>
+  <url><loc>https://ozark.cc/download-ozark</loc></url>
+  <url><loc>https://ozark.cc/ozark-faq</loc></url>
+  <url><loc>https://ozark.cc/contribute-to-ozark</loc></url>
 </urlset>

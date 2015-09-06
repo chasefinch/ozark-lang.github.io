@@ -1,9 +1,11 @@
-body { font-family:'Raleway'; font-weight:400; color:#222; position:relative; }
+body { font-family:'Open Sans'; font-weight:400; color:#222; position:relative; }
 
 hr { border-color:#ddd; }
-h1, h2, h3, h4, h5, h6 { color:#000; font-family:'Raleway'; font-weight:300; margin-bottom:20px; line-height:1.3; }
+h1 { font-family:'Raleway'; }
+h1, h2, h3, h4, h5, h6 { color:#000; font-weight:300; margin-bottom:20px; line-height:1.3; }
 h4, h5, h6 { font-weight:bold; }
 h6 { text-transform:uppercase; color:#25aae1; font-size:0.8em; }
+pre { color:#000; }
 p { margin-bottom:20px; }
 	p.lead { font-size:1.4em; }
 
@@ -66,16 +68,16 @@ a.download { font-weight:bold; text-decoration:none; }
 	.btn-disabled:hover { color:#bbb; }
 	.btn-disabled:active { box-shadow:none; }
 
-.declaration { color:#5e4ed7; }
-.argument { color:#000; }
+.reserved { color:#5e4ed7; }
+.argument { color:#308495; }
 .noun { color:#000; }
-.method { color:#000; }
+.method { color:#308495; }
 .implicit { color:#28527c; }
 .comment { color:#05a74f; }
 .string { color:#ff2e2d; }
 .literal { color:#ff2e2d; }
 .property { color:#28527c; }
-.class { color:#25aae1; }
+.type { color:#25aae1; }
 .symbol { color:#5e4ed7; font-weight:bold; }
 
 .nothing { color:#e92c31; }
@@ -192,13 +194,15 @@ ul.contributors { padding-left:1.2em; }
 .prompt-section { display:none; }
 .prompt-dismiss:hover { text-decoration:none; }
 
+main a h2 { margin-top:2em; }
+
 .code .links { padding-top:5em; }
 
 .code-sample-header { position:relative; left:-4px; background-color:#25aae1; border:1px solid #258ac1; border-top:5px solid #258ac1; padding:5px 15px; color:#fff; border-top-right-radius:3px; border-top-left-radius:3px; }
 .code-sample { position:relative; left:-4px; border:1px solid #bbb; background:#fff; border-top:none; padding:15px; overflow-x:scroll; border-bottom-right-radius:3px; border-bottom-left-radius:3px; }
 	.code-sample pre { border:none !important; background:transparent !important; word-wrap:normal; margin:0; padding:0; }
-	.code-sample-header.code-sample-header-inline { left:-5px; }
-	.code-sample.code-sample-inline { margin-bottom:2em; left:-5px; }
+	.code-sample-header.code-sample-header-inline, main .code-sample-header { left:-5px; }
+	.code-sample.code-sample-inline, main .code-sample { margin-bottom:2em; left:-5px; }
 
 	section.blue .code-sample-header { margin-top:2em; }
 	section.blue .code-sample { height:202px; overflow:hidden; border-left-color:#258ac1; border-right-color:#258ac1; border-bottom-color:#ddd; border-bottom-right-radius:0; border-bottom-left-radius:0; }
