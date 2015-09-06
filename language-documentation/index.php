@@ -27,11 +27,11 @@
 									</div>
 								</div>
 								<div class='row'>
-									<div class='col-sm-10'>
+									<div class='col-lg-10'>
 										<main>
 											<p>Ozark is an object-oriented language for building software that's readable and reusable. It uses ideas from functional &amp; flow-based programming so that code can closely model real-world scenarios. Ozark is strict, which means that code only works when written according to strict guidelines. Strictness allows ozark code to be read into and edited by other software.</p>
 
-											<p>Ozark uses the subject -> verb -> direct object(s) pattern from natural human language. Each imperative line inside of a method follows that pattern, except for conditional clauses like "if" or loops.</p>
+											<p>Ozark uses the subject -&gt; verb -&gt; direct object(s) pattern from natural human language. Each imperative line inside of a method follows that pattern, except for conditional clauses like "if" or loops.</p>
 
 											<p>Unlike other languages, objects are not created and destroyed on the fly. Instead, pointers only exist to connect the output of a method to the input of another method. The only mutable pointers are an object's <em>members,</em> which are similar to instance variables in other languages.</p>
 

@@ -27,7 +27,7 @@
 									</div>
 								</div>
 								<div class='row'>
-									<div class='col-sm-10'>
+									<div class='col-lg-10'>
 										<main>
 											<h2>Object-oriented</h2>
 
@@ -72,8 +72,8 @@ method clockOut time:Time
 class OffensiveAbility
 	inheritance SportsAbility
 
-	method swing pitch:Pitch -> $hit:Boolean
-		pitch getBall -> ball
+	method swing pitch:Pitch -&gt; $hit:Boolean
+		pitch getBall -&gt; ball
 		ball getHit probability:0.3
 
 class DefensiveAbility
@@ -98,7 +98,7 @@ class DefensiveAbility
 		@defense &lt;- defensive
 
 	method bat pitcher:Pitcher
-		pitcher pitch -> pitch
+		pitcher pitch -&gt; pitch
 		@offense swing pitch:pitch</pre></div>
 
 											<a name='Declarative'><h2>Declarative</h2></a>
@@ -150,7 +150,7 @@ method race track:RaceTrack start:StartEvent
 											<div class='code-sample-header'>BrandSpecificBlue.class.ozark</div>
 											<div class='code-sample'><pre>inheritance Color 
 		
-extension rgbValue -> red:Integer green:Integer blue:Integer
+extension rgbValue -&gt; red:Integer green:Integer blue:Integer
 	set red &lt;- 0.0
 	set green &lt;- 0.0
 	set blue &lt;- 1.0</pre></div>
@@ -162,11 +162,11 @@ requirement Paper
 
 property paperTray:Array|Paper
 
-method rgbPrint color:Color -> document:Paper?
-	@paperTray pop -> sheet
+method rgbPrint color:Color -&gt; document:Paper?
+	@paperTray pop -&gt; sheet
 
 	with sheet
-		color rgbValue -> red:red green:green blue:blue
+		color rgbValue -&gt; red:red green:green blue:blue
 		sheet rgbFill red:red green:green blue:blue
 		set document &lt;- sheet</pre></div>
 			

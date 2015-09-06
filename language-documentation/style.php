@@ -27,7 +27,7 @@
 									</div>
 								</div>
 								<div class='row'>
-									<div class='col-sm-10'>
+									<div class='col-lg-10'>
 										<main>
 											<p>Ozark is verbose, and made to match the readability of natural English. Imperative statements within methods have a simple cadence: <em>subject</em>, <em>verb</em>, <em>argument</em>, <em>value</em>, <em>argument</em>, <em>value</em>, ...</p>
 
@@ -55,7 +55,7 @@ extension initialize
 extension initialize ~knife:ChefsKnife ~kitchen:Kitchen
 	set @knife &lt;- knife
 
-method chop #vegetable:Vegetable -> success:Boolean
+method chop #vegetable:Vegetable -&gt; success:Boolean
 	with @knife
 		vegetable getChopped
 		set success &lt;- true
