@@ -79,17 +79,18 @@ method setPieces whitePieces:ArrayOfChessPieces blackPieces:ArrayOfChessPieces
 
 											<p>Index Types are preceded by a backslash (<code>\</code>) and separated with an ampersand (<code>&amp;</code>), while Item Types are preceded by a pipe (<code>|</code>) and also separated with ampersands.</p>
 
-											<p>See the definition of the <code>Array</code> and <code>Dictionary</code> types from the Ozark standard library below.</p>
+											<p>See the definition of the <code>Array</code> and <code>Dictionary</code> types from the Ozark standard library below. They use the <code>index</code> and <code>type</code> keywords to represent the placeholder types that will be specified on initialization.</p>
 
 											<div class='code-sample-header'>Array.class.ozark</div>
 											<div class='code-sample'><pre>inheritance Collection
 
-TODO: Fill in Array definition</pre></div>
+type ValueType</pre></div>
 
 											<div class='code-sample-header'>Dictionary.class.ozark</div>
 											<div class='code-sample'><pre>inheritance Collection
 
-TODO: Fill in Dictionary definition</pre></div>
+index ValueType
+type ItemType</pre></div>
 
 											</main>
 									</div>

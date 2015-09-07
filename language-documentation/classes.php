@@ -39,6 +39,9 @@
 
 											<ul>
 												<li><a href='#Inheritance'><code>inheritance</code></a> - A parent class from which this class inherits all features</li>
+												<li><a href='objects#Generics'><code>index</code></a> - If this class is a collection type, a placeholder for the value type that is specified object initialization</li>
+												<li><a href='objects#Generics'><code>type</code></a> - If this class is a collection type, a placeholder for the type that is specified on object initialization</li>
+												<li><a href='#Inheritance'><code>inheritance</code></a> - A parent class from which this class inherits all features</li>
 												<li><a href='#Requirements'><code>requirement</code></a> - Another class, enumeration, or library of which this class must be aware</li>
 												<li><code>class</code> - A nested class declaration on which this class depends</li>
 												<li><a href='values#Enumeration'><code>enumeration</code></a> - A nested enumeration declaration on which this class depends</li>
