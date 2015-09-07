@@ -50,6 +50,7 @@
 												<li><code>or</code></li>
 												<li><code>property</code></li>
 												<li><code>requirement</code></li>
+												<li><code>return</code></li>
 												<li><code>set</code></li>
 												<li><code>state</code></li>
 												<li><code>true</code></li>

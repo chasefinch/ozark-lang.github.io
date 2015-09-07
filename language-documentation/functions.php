@@ -87,17 +87,18 @@ method demo io:StandardIO
 											<p>Because functions and libraries of functions are inherently global (that is, they apply to all values), they cannot be nested within classes. They only need to be referenced.</p>
 
 											<div class='code-sample-header'>Miscellaneous.library.ozark</div>
-											<div class='code-sample'><pre>function multiplyTwice(x:Integer, y:Float):Float
+											<div class='code-sample'><pre>multiplyTwice(x:Integer, y:Float)
 	return x * y * y
 
 function union(x:{Integer}, y:{Integer}):{Integer}
-	return TODO: Solve this method
+	return TODO: Solve this method</pre></div>
 
-FunctionExamples.class.ozark
+											<div class='code-sample-header'>FunctionExamples.class.ozark</div>
+											<div class='code-sample'><pre>multiplyTwice(x:Integer, y:Float)
 
 inheritance Example
 
-reference Miscellaneous
+requirement Miscellaneous
 
 method demo io:StandardIO
 	io print multiplyTwice(5, 7.3)

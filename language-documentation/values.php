@@ -85,11 +85,10 @@ TODO: Write Value example</pre></div>
 											<div class='code-sample-header'>Switch.enumeration.ozark</div>
 											<div class='code-sample'><pre>case forward
 case off
-case reverse
+case reverse</pre></div>
 
-ConveyorBelt.class.ozark	
-
-inheritance Machine
+											<div class='code-sample-header'>ConveyorBelt.class.ozark</div>
+											<div class='code-sample'><pre>inheritance Machine
 
 requirement Switch
 

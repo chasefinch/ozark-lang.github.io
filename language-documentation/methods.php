@@ -143,23 +143,23 @@ extension initialize ~color:Color -&gt; ~facing:Direction
 											<div class='code-sample-header'>Guitar.class.ozark</div>
 											<div class='code-sample'><pre>inheritance Instrument
 
-class String
+class GuitarString
 	inheritance Instrument.PlayableComponent
 
-member string1:String
-member string2:String
-member string3:String
-member string4:String
-member string5:String
-member string6:String
+member string1:GuitarString
+member string2:GuitarString
+member string3:GuitarString
+member string4:GuitarString
+member string5:GuitarString
+member string6:GuitarString
 
 method initialize
-	create string1:String initialize
-	create string2:String initialize
-	create string3:String initialize
-	create string4:String initialize
-	create string5:String initialize
-	create string6:String initialize
+	create string1:GuitarString initialize
+	create string2:GuitarString initialize
+	create string3:GuitarString initialize
+	create string4:GuitarString initialize
+	create string5:GuitarString initialize
+	create string6:GuitarString initialize
 
 	set @string1 &lt;- string1
 	set @string2 &lt;- string2
@@ -172,14 +172,14 @@ method initialize
 											<div class='code-sample'><pre>inheritance Musician
 
 requirement Guitar
-requirement Guitar.String
+requirement Guitar.GuitarString
 
 member guitar
 
 method setGuitar #guitar:Guitar
 	set @guitar &lt;- guitar
 
-method playString #string:Guitar.String -&gt; note:Note
+method playString #string:Guitar.GuitarString -&gt; note:Note
 	string play -&gt; note:note
 	set note &lt;- note</pre></div>
 	

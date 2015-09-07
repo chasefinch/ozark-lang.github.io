@@ -43,11 +43,11 @@ extension initialize ~latitude:Float ~longitude:Float
 	set @latitude &lt;- latitude
 	set @longitude &lt;- longitude
 
-extension getCoordinates -> latitude:Float longitude:Float
+method getCoordinates -> latitude:Float longitude:Float
 	set latitude &lt;- @latitude
 	set longitude &lt;- @longitude
 
-extension setLocation latitude:Float longitude:Float
+method setLocation latitude:Float longitude:Float
 	set @latitude &lt;- latitude
 	set @longitude &lt;- longitude</pre></div>
 		

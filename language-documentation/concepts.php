@@ -72,7 +72,7 @@ method clockOut time:Time
 class OffensiveAbility
 	inheritance SportsAbility
 
-	method swing pitch:Pitch -&gt; $hit:Boolean
+	method swing pitch:Pitch -&gt; #hit:Boolean
 		pitch getBall -&gt; ball
 		ball getHit probability:0.3
 
@@ -94,8 +94,8 @@ class DefensiveAbility
 	extension initialize
 		create offensive:OffensiveAbility initialize
 		create defensive:DefensiveAbility initialize
-		@offense &lt;- offensive
-		@defense &lt;- defensive
+		set @offense &lt;- offensive
+		set @defense &lt;- defensive
 
 	method bat pitcher:Pitcher
 		pitcher pitch -&gt; pitch

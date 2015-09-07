@@ -53,8 +53,6 @@
 											<div class='code-sample-header'>Superhero.class.ozark</div>
 											<div class='code-sample'><pre>inheritance Hero
 
-inheritance Hero
-
 requirement Superpower
 requirement XRayVision
 
@@ -69,13 +67,13 @@ member superpower:Superpower
 property strength:Strength
 
 extension initialize
-	create power:XRayVision
+	create power:XRayVision initialize
 	set @superpower &lt;- power
 	set @strength &lt;- Strength.fullStrength</pre></div>
 
 											<a name="Requirements"><h2>Requirements</h2></a>
 
-											<p>Any classes or enumerations used by a class that aren't nested must be explicitly declared as requirements. Additionally, all libraries used must be declared as requirements. The <code>requirement</code> declaration will find the object in the current project scope, which includes the file's current directory and the system-wide libraries linked in the Ozark compiler. See <a href='files'>File Structure</a> for more information.</p>
+											<p>Any classes or enumerations used by a class that aren't nested must be explicitly declared as requirements. Additionally, all libraries used must be declared as requirements. The <code>requirement</code> declaration will find the class, enumeration, or library in the current project scope, which includes the file's current directory and the system-wide libraries linked in the Ozark compiler. See <a href='files'>File Structure</a> for more information.</p>
 
 											<div class='code-sample-header'>TruckDriver.class.ozark</div>
 											<div class='code-sample'><pre>inheritance Driver
@@ -92,13 +90,12 @@ requirement BinaryTree</pre></div>
 
 											<div class='code-sample-header'>Cat.class.ozark</div>
 											<div class='code-sample'><pre>inheritance Cartoon
-
 inheritance Animal
 
 requirement Whisker
 requirement Tail
 
-member whiskers:Array/Whisker
+member whiskers:Array|Whisker
 member tail:Tail
 
 method catNap io:StandardIO
@@ -128,8 +125,7 @@ class ShootAbility
 	requirement Target
 	requirement Bullet.Casing
 	requirement Smoke
-
-	reference Calculus
+	requirement Calculus
 
 	enumeration SkillLevel
 		state Novice
