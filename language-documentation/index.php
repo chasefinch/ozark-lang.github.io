@@ -61,8 +61,9 @@ method grow days:Float rate:Float
 											<p>Ozark's strengths are standardization and collaboration. Multiple developers of varying skill levels may work on a project using different tools, yet will produce the same code line-for-line.</p>
 
 											<p>Similarly, Ozark files are a suitable save format for applications that generate code. This means that artificial intelligence or visual development tools produce correct Ozark and can parse existing code into a working model.</p>
-										</div>
-									</main>
+										</main>
+										<?php require('../includes/documentation-pagination.php'); ?>
+									</div>
 								</div>
 							</div>
 						</div>

@@ -109,6 +109,7 @@ method demo io:StandardIO
 											<p>TODO: Write this section once I decide what's available</p>
 											<p>...Syntax with parenthesis... Building blocks of functions... chained functions...</p>
 										</main>
+										<?php require('../includes/documentation-pagination.php'); ?>
 									</div>
 								</div>
 							</div>

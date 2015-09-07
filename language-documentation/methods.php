@@ -189,6 +189,7 @@ method playString #string:Guitar.GuitarString -&gt; note:Note
 	
 											<p>The robust nested-type system in Ozark is intended to keep code neat, since dependency injection is required by the built-in language rules.</p>
 										</main>
+										<?php require('../includes/documentation-pagination.php'); ?>
 									</div>
 								</div>
 							</div>

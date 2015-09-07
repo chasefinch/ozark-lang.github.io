@@ -124,6 +124,7 @@ method growFileSizeTo2K file:File
 		while fileSize &lt;= 2000
 		file appendMoreData</pre></div>
 										</main>
+										<?php require('../includes/documentation-pagination.php'); ?>
 									</div>
 								</div>
 							</div>

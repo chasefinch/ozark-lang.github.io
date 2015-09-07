@@ -235,6 +235,7 @@ method shootEveryOtherTarget #targets:Array|Target -&gt; casings:Array|Bullet.Ca
 
 											<p>Note that nested classes cannot be subclasses of the main class; Subclasses should be defined separately. Nesting is for supporting classes only.</p>
 										</main>
+										<?php require('../includes/documentation-pagination.php'); ?>
 									</div>
 								</div>
 							</div>

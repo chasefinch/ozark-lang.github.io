@@ -61,6 +61,7 @@
 												<li><code>without</code></li>
 											</ul>						
 										</main>
+										<?php require('../includes/documentation-pagination.php'); ?>
 									</div>
 								</div>	
 							</div>

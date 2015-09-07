@@ -62,6 +62,7 @@ SomeLibrary.library.ozark</pre></p>
 		AnotherClass.class.ozark
 		OneMoreClass.class.ozark</pre>
 										</main>
+										<?php require('../includes/documentation-pagination.php'); ?>
 									</div>
 								</div>
 							</div>

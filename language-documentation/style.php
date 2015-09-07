@@ -65,6 +65,7 @@ method chop #vegetable:Vegetable -&gt; success:Boolean
 	without @knife
 		set success &lt;- false</pre></div>
 										</main>
+										<?php require('../includes/documentation-pagination.php'); ?>
 									</div>
 								</div>
 							</div>

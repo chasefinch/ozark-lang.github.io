@@ -92,7 +92,8 @@ type ValueType</pre></div>
 index ValueType
 type ItemType</pre></div>
 
-											</main>
+										</main>
+										<?php require('../includes/documentation-pagination.php'); ?>
 									</div>
 								</div>
 							</div>

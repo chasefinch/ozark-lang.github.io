@@ -176,6 +176,7 @@ method rgbPrint color:Color -&gt; document:Paper?
 
 											<p>When coding in Ozark, the current working scope is always very small. The only mutable pointers/variables are either members/properties of a class, or outputs of the current method, and there are no globals. Pointers &amp; variables only exist to store the state of an object, and to connect the inputs &amp; outputs of functions. Think of them as values and objects that are handed from one method call to another until they are stored safely as properties or members of objects.</p>
 										</main>
+										<?php require('../includes/documentation-pagination.php'); ?>
 									</div>
 								</div>
 							</div>

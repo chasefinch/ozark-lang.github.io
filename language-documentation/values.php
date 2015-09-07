@@ -33,10 +33,21 @@
 
 											<p>Variables are specified and initialized with the <code>let</code> keyword, and are not mutable unless they are properties of an object.</p>
 
-											<div class='code-sample-header'>SomeExample.class.ozark</div>
-											<div class='code-sample'><pre>
+											<div class='code-sample-header'>ValueExample.class.ozark</div>
+											<div class='code-sample'><pre>inheritance Example
 
-TODO: Write Value example</pre></div>
+enumeration Directions
+	case north
+	case east
+	case south
+	case west
+
+extension initialize
+	let someInt &lt;- 5
+	let aList &lt;- [6, 12, 4]
+	let aSet &lt;- {42.4, 303.6, -0.112}
+	let aBoolean &lt;- true
+	let anEnumeration:Directions &lt;- Directions.north</pre></div>
 
 											<a name='Types'><h2>Value Types</h2></a>
 
@@ -154,7 +165,8 @@ method encodeAndContinue someObject:SomeClass value1:Integer value2:Integer valu
 											<div class='code-sample'><pre>function someMathFunction(x:Integer, y:Float):Float
 	let z &lt;- x * 1500 - 1 * y
 	return x + y + z - 1500 * 1.4 * z</pre></div>
-												</main>
+										</main>
+										<?php require('../includes/documentation-pagination.php'); ?>
 									</div>
 								</div>
 							</div>

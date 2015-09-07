@@ -197,7 +197,7 @@ function process(token, newline) {
                 }
             }
             words[i] = set.join(".");
-        } else if(word == "true" || word == "false" || word.match(/^'.*?'$/) || word.match(/^[0-9]+(\.[0-9]+)?$/)) {
+        } else if(word == "true" || word == "false" || word.match(/^'.*?'$/) || word.match(/^-?[0-9]+(\.[0-9]+)?$/)) {
             words[i] = "<span class='literal'>"+word+"</span>";
         } else if(word.match(/@[a-z][A-Za-z0-9]*/)) {
             words[i] = "<span class='property'>"+word+"</span>";

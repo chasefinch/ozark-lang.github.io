@@ -112,6 +112,7 @@ method getStringForPrinting -&gt; printable:String
 	string getText -&gt; text
 	set @printable &lt;- text</pre></div>
 										</main>
+										<?php require('../includes/documentation-pagination.php'); ?>
 									</div>
 								</div>
 							</div>

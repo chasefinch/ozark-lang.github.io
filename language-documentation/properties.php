@@ -59,6 +59,7 @@ method setLocation latitude:Float longitude:Float
 
 											<p>Variables (and therefore properties) cannot be declared as <em>optionals</em>; That concept exists only for objects. If you need to have an optional property, create a class based on the real-world use case you are modeling. For example, if a Person may or may not have an ID badge with a <code>String</code> as an ID, don't store the ID as a <code>String</code> variable on the <code>Person</code> class. Instead, create an <code>IDBadge</code> class that is an optional member of the <code>Person</code> class. That way, an <code>IDBadge</code> must have a <code>String</code>, but a Person may have an optional ID Badge.</p>
 										</main>
+										<?php require('../includes/documentation-pagination.php'); ?>
 									</div>
 								</div>
 							</div>
