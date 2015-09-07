@@ -66,11 +66,10 @@ function process(token, newline) {
 
     for(var i=0;i<token.length;i++) {
 
-
         if(token[i] == "{" && contexts == 0 && stringlevels == 0) {
-            return process(token.substring(0, token.indexOf("{")), true)+"{"+process(token.substring(token.indexOf("{")+1, token.indexOf("}")), false)+"}"+process(token.substring(token.indexOf("}")+1), false);
+            return process(token.substring(0, i), true)+"{"+process(token.substring(i+1, i+1+token.substring(i+1).indexOf("}")), false)+"}"+process(token.substring(i+2+token.substring(i+1).indexOf("}")), false);
         } else if(token[i] == "[" && contexts == 0 && stringlevels == 0) {
-            return process(token.substring(0, token.indexOf("[")), true)+"["+process(token.substring(token.indexOf("[")+1, token.indexOf("]")), false)+"]"+process(token.substring(token.indexOf("]")+1), false);
+            return process(token.substring(0, i), true)+"["+process(token.substring(i+1, i+1+token.substring(i+1).indexOf("]")), false)+"]"+process(token.substring(i+2+token.substring(i+1).indexOf("]")), false);
         } else if(token[i] == ")" && contexts == 0) {
             //error.
             return "Malformed code.";
@@ -129,7 +128,7 @@ function process(token, newline) {
         pieces[segment] += buffer[i];
     }
 
-    if(contexts != 0) return "eeeMalformed code.";
+    if(contexts != 0) return "Malformed code.";
 
     if(pieces.length > 1) {
         for(var i=0;i<pieces.length;i++) {
