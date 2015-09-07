@@ -29,7 +29,7 @@
 								<div class='row'>
 									<div class='col-lg-10'>
 										<main>
-											<p><strong>Functions</strong> are sequences of expressions that operate only on <em>values</em>. In contrast to <em>methods</em>, they have no state, and produce the same single output when given the same set of inputs.</p>
+											<p><strong>Functions</strong> are sequences of expressions that operate only on <em>values</em>. In contrast to <em>methods</em>, they have no state, and produce the same single output when given the same set of inputs. Because of this we can say that functions are *deterministic.*</p>
 
 											<p>Functions are a mathematical concept, similar to their counterparts in functional programming languages. They take values as inputs, and produce an output value based on a transformation. To learn more about values and how they differ from objects, read <a href='values'>Values &amp; Variables</a>.</p>
 
@@ -82,7 +82,7 @@ method demo io:StandardIO
 
 											<a name="Libraries"><h2>Libraries</h2></a>
 
-											<p>Named functions are defined within <strong>Libraries</strong>, which are simply sets of named functions that can be used by a class when imported with the <code>requirement</code> keyword.</p>
+											<p>Named functions are defined within <strong>Libraries</strong>, which are simply groups of named functions that can be used by a class when imported with the <code>requirement</code> keyword.</p>
 
 											<p>Because functions and libraries of functions are inherently global (that is, they apply to all values), they cannot be nested within classes. They only need to be referenced.</p>
 

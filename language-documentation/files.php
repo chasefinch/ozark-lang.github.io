@@ -31,7 +31,7 @@
 										<main>
 											<p>In Ozark, every root-level class, enumeration, or library is contained in a totally separate file on the file system. In fact, you don't have to declare these classes at the top of the file, because their name and type is included within the filename.</p>
 
-											<p>The three types of Ozark files are <em>classes</em>, <em>enumerations</em>, and <em>libraries</em>. Classes have filenames that end with <code>.class.ozark</code>, Enumerations with <code>.enumeration.ozark</code>, and libraries with <code>.library.ozark</code>.
+											<p>The three types of Ozark files are <em>classes</em>, <em>enumerations</em>, and <em>libraries</em>. Classes have filenames that end with <code>.class.ozark</code>, enumerations end with <code>.enumeration.ozark</code>, and libraries end with <code>.library.ozark</code>.
 
 											<p><pre>NameOfTheClass.class.ozark
 
@@ -41,11 +41,11 @@ SomeLibrary.library.ozark</pre></p>
 
 											<p>Nested classes and enumerations are included within the file, and declared in the appropriate location.</p>
 
-											<p>The Ozark compiler searches for files in the same directory, and linked from the compiler itself. In essence, every directory with an Ozark file in it is an Ozark project.</p>
+											<p>The Ozark compiler searches for files in the same directory, and also within directories linked from the compiler itself. In essence, every directory with an Ozark file in it can be compiled or edited as an Ozark project.</p>
 
 											<p>The best way to view an Ozark project is through an IDE or sidebar which can organize the classes via the inheritance tree.</p>
 
-											<p>Ozark can import and work with files in any directory, but a common pattern is to keep the "source" files in a directory separate from the project assets and supporting files.</p>
+											<p>Ozark can import and work with supporting files in any directory, but a common pattern is to keep the "source" files in a directory separate from the project assets and other supporting files.</p>
 
 											<p>Ozark file names must follow the same conventions as the classes, enumerations, and libraries that they represent; Beginning with a capital letter, CamelCased and with no underscores or special characters.</p>
 

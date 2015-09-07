@@ -29,15 +29,15 @@
 								<div class='row'>
 									<div class='col-lg-10'>
 										<main>
-											<p>Ozark has five control-flow constructs; <code>if</code>, <code>with</code>, <code>without</code>, <code>for</code>, and <code>repeat</code>. This is an intentionally small set, as each allows predictable patterns for accomplishing specific things within Ozark code.</p>
+											<p>Ozark has five <strong>control-flow</strong> constructs; <code>if</code>, <code>with</code>, <code>without</code>, <code>for</code>, and <code>repeat</code>. This is an intentionally small set, as each allows predictable patterns for accomplishing specific things within Ozark code.</p>
 
-											<p>These conditional statements have a body that is executed zero or more times based on the result of the conditional. Unlike other languages, these have their own scope; They may access <em>variables</em> and <em>pointers</em> from the method scope, but variables and pointers created inside the body are not available outside of it. When looping, <code>for</code> allows you to define outputs as <em>lists</em>, and set the elements of this list inside of the loop.</p>
+											<p>These conditional statements have a body that is executed zero or more times based on the result of the conditional. Unlike other languages, these have their own scope; They may access <em>variables</em> and <em>pointers</em> from the method scope, but variables and pointers created inside the body are not available outside of it. When looping, <code>for</code> allows you to define outputs as <em>lists</em>, and set the elements of the lists inside of the loop.</p>
 
 											<a name="If"><h4>If</h4></a>
 
 											<p>The <code>if</code> statement evaluates a <code>Boolean</code> value or expression and, if that expression evaluates to true, executes the body.</p>
 
-											<p>There is no concept of an else or a switch in Ozark. This makes a single pattern for conditionals, and prevents dangling and confusing multipart conditionals.</p>
+											<p>There is no concept of an *else* or a *switch* in Ozark. This makes a single pattern for conditionals, and prevents dangling and confusing multipart conditionals.</p>
 
 											<div class='code-sample-header'>BranchExample.class.ozark</div>
 											<div class='code-sample'><pre>inheritance Example
@@ -54,9 +54,9 @@ method branch object:Object condition:Boolean
 
 											<a name="WithAndWithout"><h4>With &amp; Without</h4></a>
 
-											<p>The <code>with</code> statement unpacks an optional <a href='objects'>pointer</a> and, if the pointer is set, executes the body. Inside the body, the pointer can be used as though it were not optional.</p>
+											<p>The <code>with</code> statement unpacks an optional <a href='objects#Pointers'>pointer</a> and, if the pointer is set, executes the body. Inside the body, the pointer can be used as though it were not optional.</p>
 
-											<p>The behavior is very similar to an if statement. The <code>without</code> keyword executes the body only if the optional pointer is not set.</p>
+											<p>The behavior is very similar to an <code>if</code> statement. The <code>without</code> keyword is similar, but executes the body only if the optional pointer is <strong>not</strong> set.</p>
 											
 											<div class='code-sample-header'>WithExample.class.ozark</div>
 											<div class='code-sample'><pre>inheritance Example
@@ -70,7 +70,7 @@ method testAndContinue object:ExampleObject? io:StandardIO
 
 											<a name="For"><h4>For</h4></a>
 
-											<p>The <code>for</code> statement declares a variable and takes a <a href='values#CollectionTypes'>list, set, or bag</a> as an argument, executing the body one time for each item in the collection.</p>
+											<p>The <code>for</code> statement declares a <a href='values#Variables'>variable</a> and takes a <a href='values#CollectionTypes'>list, set, or bag</a> as an argument, executing the body one time for each item in the collection.</p>
 
 											<div class='code-sample-header'>ForExample.class.ozark</div>
 											<div class='code-sample'><pre>inheritance Example

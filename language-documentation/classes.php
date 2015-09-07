@@ -29,9 +29,9 @@
 								<div class='row'>
 									<div class='col-lg-10'>
 										<main>
-											<p>As you've seen in the examples thus far, classes are the primary building blocks of Ozark applications. With the exception of <a href='functions#Libraries'>libraries</a> and <a href='values#Enumeration'>enumerations</a>, a class is the only thing that exists outside of any other context. In fact, building an Ozark application consists entirely of building classes and libraries.</p>
+											<p>As you've seen in the examples thus far, <strong>classes</strong> are the primary building blocks of Ozark applications. With the exception of <a href='functions#Libraries'>libraries</a> and <a href='values#Enumeration'>enumerations</a>, a class is the only thing that exists outside of any other context. In fact, building an Ozark application consists entirely of building classes, enumerations and libraries.</p>
 
-											<p>Root-level classes correspond to single files within an operating system. Class file names end with .class.ozark, with .ozark being the technical file extension, and .class being an identifier that Ozark uses to differentiate between classes, enumerations, and libraries. Nested classes are declared with the <code>class</code> keyword. See <a href='files'>file structure</a> for more details about Ozark files.</p>
+											<p>Root-level classes correspond to single files within an operating system. Class file names end with <code>.class.ozark</code>, with ".ozark" being the technical file extension, and ".class" being an identifier that Ozark uses to differentiate between classes, enumerations, and libraries. Nested classes are declared with the <code>class</code> keyword. See <a href='files'>file structure</a> for more details about Ozark files.</p>
 
 											<p>A class is a compound data type. An instance of a class is called an <a href='objects'>object</a> and that object can be referenced by a <a href='objects#Pointers'>pointer.</a>
 
@@ -73,7 +73,7 @@ extension initialize
 
 											<a name="Requirements"><h2>Requirements</h2></a>
 
-											<p>Any classes or enumerations used by a class that aren't nested must be explicitly declared as requirements. Additionally, all libraries used must be declared as requirements. The <code>requirement</code> declaration will find the class, enumeration, or library in the current project scope, which includes the file's current directory and the system-wide libraries linked in the Ozark compiler. See <a href='files'>File Structure</a> for more information.</p>
+											<p>Any classes or enumerations used by a class that aren't nested must be explicitly declared as <strong>requirements</strong>. Additionally, all libraries used must be declared as requirements. The <code>requirement</code> declaration will find the class, enumeration, or library in the current project scope, which includes the file's current directory and the system-wide libraries linked in the Ozark compiler. See <a href='files'>File Structure</a> for more information.</p>
 
 											<div class='code-sample-header'>TruckDriver.class.ozark</div>
 											<div class='code-sample'><pre>inheritance Driver
@@ -84,7 +84,7 @@ requirement BinaryTree</pre></div>
 
 											<a name="Inheritance"><h2>Inheritance</h2></a>
 
-											<p>Most classes other than the <code>Object</code> class (from the Ozark standard library) should have at least one inheritance. Making a class a descendant of the <code>Object</code> class allows you to use it in various collection types, and gives standard functionality out of the box.</p>
+											<p>Most classes other than the <code>Object</code> class (from the Ozark standard library) should have at least one <strong>inheritance</strong>. Making a class a descendant of the <code>Object</code> class allows you to use it in various collection types, and gives standard functionality out of the box.</p>
 
 											<p>Ozark supports multiple inheritance. For example, a <code>Cat</code> can be both a <code>Cartoon</code> and an <code>Animal</code>. Method naming conflicts are resolved using a depth-first search with the <a target="_blank" href='https://en.wikipedia.org/wiki/C3_linearization'>C3 linearization algorithm.</a> Other naming conflicts are not allowed, and produce a compile-time error.</p>
 
@@ -103,7 +103,7 @@ method catNap io:StandardIO
 
 											<a name='Nesting'><h2>Nesting</h2></a>
 
-											<p>Classes can be nested inside other classes. This lets you group supporting classes with the class they support. Since an object can't call it's own methods, classes must have related supporting classes to implement most of their functionality. A common pattern is to name nested classes after capabilities. This forces a pattern of dependency injection while keeping classes neatly grouped together.</p>
+											<p>Classes can be <strong>nested</strong> inside other classes. This lets you group supporting classes with the class they support. Since an object can't call it's own methods, classes must have related supporting classes to implement most of their functionality. A common pattern is to name nested classes after capabilities. This forces a pattern of dependency injection while keeping classes neatly grouped together.</p>
 
 											<p>Consider this example class from the RifleRange demo app. The <code>Rifleman</code> class has a <code>ShootAbility</code> and a <code>CelebrateAbility</code>, and both of those classes are nested within the <code>Rifleman</code> class.</p>
 

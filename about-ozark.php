@@ -74,10 +74,10 @@ method processScene
 	@scene simulatePhysics
 	@scene update</pre></div>
 								<h4>Declarative, not imperitive</h4>
-								<p>Other object-oriented programming languages start imperitively. An Ozark program reads the classes first, and begins with an instance method. It's objects and message passing, all the way down.</p>
-								<p>Everything is a declaration, and instructions are found only inside of methods. All methods are public instance methods. All properties are private. Only properties and outputs are mutable. Literals are objects, there is no reference to self or super, and all method calls use Smalltalk-style message passing.</p>
+								<p>Other object-oriented programming languages start imperitively. An Ozark program reads the classes first, and begins with an instance method.</p>
+								<p>Everything is a declaration, and instructions are found only inside of methods. All methods are public instance methods. All instance variables (in Ozark, these are called <strong>members</strong> and <strong>properties</strong>) are private. Only members, properties and method outputs are mutable. There is no reference to self or super, and all method calls use Smalltalk-style message passing.</p>
 								<h4>Functions and expressions</h4>
-								<p>In Ozark, everything is an object. But <em>values</em> (such as the number <code>5.3</code>, the list <code>[3, 4, 9]</code> or the string <code>Cheese</code>) are not <em>things</em>; they are attributes that we use to describe things. They can be manipulated by stateless functions, and Ozark handles this very powerfully.</p>
+								<p>In Ozark, everything is an object. But <em>values</em> (such as the number <code>5.3</code>, the list <code>[3, 4, 9]</code> or the string <code>Cheese</code>) are not <em>things</em>; they are attributes that we use to describe things. Therefore, they are not represented as objects, and they can be manipulated by stateless functions, and Ozark handles this very powerfully.</p>
 							</div>
 							<div class='col-sm-6'>
 								<h4>Parallelism is automatic</h4>

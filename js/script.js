@@ -1,4 +1,4 @@
-var reserved = ["&lt;-", "class", "clear", "create", "enumeration", "extension", "for", "function", "if", "in", "index", "inheritance", "let", "member", "method", "property", "requirement", "return", "set", "state", "type", "while", "with", "without"];
+var reserved = ["&lt;-", "case", "class", "clear", "create", "enumeration", "extension", "for", "function", "if", "in", "index", "inheritance", "let", "member", "method", "property", "requirement", "return", "set", "state", "type", "while", "with", "without"];
 var symbols = ["*", "/", "+", "-", "%", "=", "&gt;", "&gt;=", "&lt;", "&lt;=", "and", "or"];
 
 $(document).ready(function() {

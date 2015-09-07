@@ -32,6 +32,7 @@
 											<p>Below is a list of reserved words that cannot be used for variable names or functions in Ozark. Note that these are case sensitive.</p>
 											<ul>
 												<li><code>and</code></li>
+												<li><code>case</code></li>
 												<li><code>class</code></li>
 												<li><code>clear</code></li>
 												<li><code>create</code></li>

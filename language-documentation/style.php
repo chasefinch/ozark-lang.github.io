@@ -29,17 +29,19 @@
 								<div class='row'>
 									<div class='col-lg-10'>
 										<main>
-											<p>Ozark is verbose, and made to match the readability of natural English. Imperative statements within methods have a simple cadence: <em>subject</em>, <em>verb</em>, <em>argument</em>, <em>value</em>, <em>argument</em>, <em>value</em>, ...</p>
+											<p>Ozark is verbose, and made to match the readability of natural English. Imperative statements within methods have a simple cadence:</p>
 
-											<p>In some cases (when specified by the method author), the argument is implied. In the case of system commands (like <code>create</code> and <code>catch</code>) the subject is implied to be the system. However, as all lines are either method calls or control flow statements, the same cadence of <em>subject</em>, <em>verb</em>, <em>details</em> is followed very consistently.</p>
+											<p><em>subject</em>, <em>verb</em>, <em>argument</em>, <em>value</em>, <em>argument</em>, <em>value</em>, ...</p>
 
-											<p>Ozark is an indentation-based language; Whitespace is important, and indentation should be done with tabs. Elements should be separated, when appropriate, by a single space. Trailing whitespace on a line is not allowed.</p>
+											<p>In some cases (when specified in the method declaration), the argument is implied. In the case of system commands (like <code>create</code> and <code>catch</code>) the subject is implied to be the system. However, as all lines are either method calls or control flow statements, the same cadence is followed very consistently.</p>
 
-											<p>Many stylistic characteristics of the code are enforced. For example, type names begin with a capital letter (<code>Color</code>, <code>Dictionary</code>, <code>Array</code>) and noun and verb names begin with a lowercase letter. All words are camelCase; No underscores are allowed.<p>
+											<p>Ozark is an indentation-based language; Whitespace is important, and indentation uses ASCII tabs. Elements should be separated, when appropriate, by a single space. Trailing whitespace on a line is not allowed.</p>
 
-											<p>Another example of enforced style is whitespace; Single-line-spacing with padding around control flow statements and between sets of statement types is checked at compile-time and enforced. (A good Ozark IDE will clean this up for you, rather than throwing an error.) The correct order of declarations within a class (inheritances, requirements, classes, enumerations, members, properties, extensions, methods) is also a compiling requirement.</p>
+											<p>Many stylistic characteristics of the code are enforced. For example, type names begin with a capital letter (<code>Color</code>, <code>Dictionary</code>, <code>Array</code>) and noun and verb names begin with a lowercase letter. All words are camelCase and can include(but not start with) numbers <code>0</code>&ndash;<code>9</code>. No underscores are allowed.<p>
 
-											<p>The suggested naming convention is that method names should be written as though they are an action performed by the subject; For example, <code>chef chop</code> and <code>celery getChopped</code> instead of <code>celery chop</code>.</p>
+											<p>Another example of enforced style is whitespace; Single-line spacing with padding around control flow statements and between sets of statement types is checked at compile-time and enforced. (A good Ozark IDE will clean this up for you.) The correct order of declarations within a class (inheritances &rarr; requirements &rarr; classes &rarr; enumerations &rarr; members &rarr; properties &rarr; extensions &rarr; methods) is also a compiling requirement.</p>
+
+											<p>The suggested naming convention is to name methods as though they are an action performed by the subject; For example, <code>chef chop</code> and <code>celery getChopped</code> instead of <code>celery chop</code>.</p>
 
 											<div class='code-sample-header'>Chef.class.ozark</div>
 											<div class='code-sample'><pre>inheritance Person

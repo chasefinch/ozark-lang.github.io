@@ -29,15 +29,13 @@
 								<div class='row'>
 									<div class='col-lg-10'>
 										<main>
-											<h2>Object-oriented</h2>
-
-											<p>The root of Ozark is a class. Everything outside of a method is declarative, everything inside of a method is imperative, and everything involving values &amp; variables (as opposed to objects and pointers) is based on expressions and mathematical functions.</p>
+											<p>The root of Ozark is a class. Everything outside of a method is declarative, and everything inside of a method is imperative.</p>
 
 											<p>Running a program in Ozark consists of creating an instance of a class, and then calling a method on that instance. See <a href='files'>File Structure</a> for more details about how files are structured in Ozark.</p>
 
-											<p>Though Ozark is fully object-oriented, it differentiates objects from values. The number 5 is NOT an object with state or capabilities; It is a value that can be transformed, but it is a representation of a state and cannot do anything itself. Transformation of values in Ozark is done with <a href='functions'>functions</a> and borrows many of the principles of functional programming.</p>
+											<p>Though Ozark is fully object-oriented, it differentiates <em>objects</em> from <em>values</em>. The number 5 is NOT an object with state or capabilities; It's a value that can be transformed, a representation of a state, and it can't *do* anything itself. Transformation of values in Ozark is done with <a href='functions'>functions</a> and borrows many of the principles of functional programming.</p>
 
-											<p>There are no global pointers, variables, or import statements. Pointers &amp; variables can only exist within a method, a function, or as a member or property of a class, and other classes are imported via the <code>requirement</code> keyword.</p>
+											<p>There are no global pointers, variables, or import statements. Pointers &amp; variables can only exist within a method, a function, or as a <em>member</em> or <em>property</em> of a class. Other classes are imported via the <code>requirement</code> keyword.</p>
 
 											<div class='code-sample-header'>Accountant.class.ozark</div>
 											<div class='code-sample'><pre>inheritance BusinessPerson
@@ -58,13 +56,13 @@ method clockIn time:Time
 method clockOut time:Time
 	@timeLog addEntry time type:EntryType.clockOut</pre></div>
 
-											<p>All methods are instance methods. The object-oriented philosophy suggests that state be tightly integrated with functionality and stored within objects, and within Ozark, that is always the case.</p>
+											<p>All methods are instance methods. The object-oriented philosophy suggests that state be tightly integrated with functionality and stored within objects, and within Ozark, that's always the case.</p>
 
 											<p>These object-oriented constraints are uniquely valuable to Ozark. Developers who inherit legacy code in other languages often find that the underlying object-oriented structure was abandoned in certain places for convenience, maybe with a global variable or misuse of the singleton pattern. When you inherit Ozark code, you can be sure that's not the case. This is one of the ways that Ozark has been built for readability.</p>
 
-											<p>Ozark also avoids techniques that are often considered to be object-oriented, but don't truly adhere to the principles that govern OO development. Static methods are one example of such a technique. Another is an object's ability to call its own functions with a self reference.</p>
+											<p>Ozark also avoids techniques that are commonly considered to be object-oriented, but don't truly adhere to the principles that govern OO development. Static methods are one example of such a technique. Another is an object's ability to call its own functions with a reference to itself.</p>
 
-											<p>The lack of a <em>self</em> reference forces Ozark inheritance stacks to be tall, and it forces all Ozark software to be built purely with dependency injection. This results in a lot of classes, all of which are hyper-focused. <a href='classes#Nesting'>Nesting classes and enumerations</a> is the Ozark way of keeping these related classes organized.</p>
+											<p>The lack of a <em>self</em> reference forces Ozark inheritance stacks to be tall, and it forces all Ozark software to be built purely with dependency injection. This results in a lot of small, hyper-focused classes. <a href='classes#Nesting'>Nesting classes and enumerations</a> is the Ozark way of keeping these related classes organized.</p>
 
 											<div class='code-sample-header'>BaseballPlayer.class.ozark</div>
 											<div class='code-sample'><pre>inheritance SportsPlayer
@@ -103,7 +101,7 @@ class DefensiveAbility
 
 											<a name='Declarative'><h2>Declarative</h2></a>
 
-											<p>Many object-oriented languages define their classes through a set of imperative statements. In Ozark, the only imperative  statements you'll find are inside of a <a href='methods'>method;</a> Everything else is written as a declaration.</p>
+											<p>Many object-oriented languages define their classes through a set of imperative statements. In Ozark, the only imperative  statements you'll find are inside of a <a href='methods'>method</a>; Everything else is written as a declaration.</p>
 
 											<div class='code-sample-header'>RaceCarDriver.class.ozark</div>
 											<div class='code-sample'><pre>inheritance Driver
@@ -127,7 +125,9 @@ method race track:RaceTrack start:StartEvent
 
 											<a name='Compiled'><h2>Compiled</h2></a>
 
-											<p>Ozark is a compiled language which will run on the Java Virtual Machine (JVM). This means great performance with the flexibility of being able to run on all major platforms.</p>
+											<p>Ozark is compiled to run on the Java Virtual Machine (JVM). This means great performance with the flexibility of being able to run on all major platforms.</p>
+
+											<p>Plans are also in place to build an Ozark interpreter for ease of use in web development and other script-based environments.</p>
 
 											<a name='StrictProgramming'><h2>Strict programming</h2></a>
 
@@ -135,7 +135,7 @@ method race track:RaceTrack start:StartEvent
 
 											<p>Ozark code always looks the same, which makes it readable. It also means that an IDE can quickly parse Ozark into a logical model.</p>
 
-											<p>A code-generating application can use an Ozark file as a save format, much like Adobe Photoshop uses .psd files, or Microsoft Word uses .docx files. Even better, this saved Ozark file can be opened, read, and edited by hand by a human, then saved and read back in to the code-generating application!</p>
+											<p>A code-generating application can use an Ozark file as a save format, much like Adobe Photoshop uses .psd files, or Microsoft Word uses .docx files. Even better, this saved Ozark file can be opened, read, and edited by hand, then saved and read back into the code-generating application!</p>
 
 											<a name="Parallel"><h2>Parallel</h2></a>
 
@@ -145,7 +145,7 @@ method race track:RaceTrack start:StartEvent
 
 											<p>Ozark is a strongly-typed language, and all collection types are homogenous. There's no typecasting; Values should be explicitly converted, and objects cannot be assumed to be of a given class.</p>
 
-											<p>This adds readability. If you get a value or an object from a collection, you can be assured of its type, and can use overwritten methods to take advantage of the extra functionality in the subclass.</p>
+											<p>This improves readability and reduces the amount of errors that aren't caught at compile time. If you get a value or an object from a collection, you can be assured of its type.</p>
 
 											<div class='code-sample-header'>BrandSpecificBlue.class.ozark</div>
 											<div class='code-sample'><pre>inheritance Color 
@@ -170,7 +170,7 @@ method rgbPrint color:Color -&gt; document:Paper?
 		sheet rgbFill red:red green:green blue:blue
 		set document &lt;- sheet</pre></div>
 			
-											<p>Ozark doesn't differentiate between different sizes of related values, such as floats and doubles. The compiler optimizes value storage based on usage.</p>
+											<p>Ozark doesn't differentiate between different sizes of related values, such as floats and doubles. The compiler optimizes value storage based on how the values are used.</p>
 
 											<a name='SmallScopes'><h2>Small scopes with no globals</h2></a>
 

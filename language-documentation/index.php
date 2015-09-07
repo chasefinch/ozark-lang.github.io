@@ -29,13 +29,13 @@
 								<div class='row'>
 									<div class='col-lg-10'>
 										<main>
-											<p>Ozark is an object-oriented language for building software that's readable and reusable. It uses ideas from functional &amp; flow-based programming so that code can closely model real-world scenarios. Ozark is strict, which means that code only works when written according to strict guidelines. Strictness allows ozark code to be read into and edited by other software.</p>
+											<p>Ozark is an object-oriented language for building software that's readable and reusable. It uses ideas from functional &amp; flow-based programming so that code can closely model real-world scenarios. Ozark is strict, which means that code only works when written according to tight guidelines. Strictness allows Ozark code to be read and edited by other software.</p>
 
-											<p>Ozark uses the subject -&gt; verb -&gt; direct object(s) pattern from natural human language. Each imperative line inside of a method follows that pattern, except for conditional clauses like "if" or loops.</p>
+											<p>Ozark uses the subject &rarr; verb &rarr; direct object(s) pattern from natural human language. Each imperative line inside of a method follows that pattern, except for conditional clauses like "if" or loops.</p>
 
-											<p>Unlike other languages, objects are not created and destroyed on the fly. Instead, pointers only exist to connect the output of a method to the input of another method. The only mutable pointers are an object's <em>members,</em> which are similar to instance variables in other languages.</p>
+											<p>Unlike other languages, objects are not created and destroyed on the fly. Instead, pointers connect the output of a method to the input of another method. The only mutable pointers are an object's <em>members,</em> which are similar to instance variables in other languages.</p>
 
-											<p>Small scopes are encouraged by design. There are no global pointers or variables, so it's often the case that the entire scope is visible during method design.</p>
+											<p>Ozark code is always operating on a small scope. There are no global pointers or variables, so often the entire scope is visible during method design.</p>
 
 											<div class='code-sample-header'>Vegetable.class.ozark</div>
 											<div class='code-sample'><pre>inheritance Food
@@ -58,7 +58,7 @@ method grow days:Float rate:Float
 	set @size &lt;- days * rate
 	set @weight &lt;- days * rate * 0.25</pre></div>
 	
-											<p>Ozark's strength is standardization and collaboration. Multiple developers of varying skill levels may work on a project using different tools, yet will produce the same code line-for-line.</p>
+											<p>Ozark's strengths are standardization and collaboration. Multiple developers of varying skill levels may work on a project using different tools, yet will produce the same code line-for-line.</p>
 
 											<p>Similarly, Ozark files are a suitable save format for applications that generate code. This means that artificial intelligence or visual development tools produce correct Ozark and can parse existing code into a working model.</p>
 										</div>
