@@ -12,8 +12,12 @@ $(document).ready(function() {
     });
 
     if(typeof(Storage)!=='undefined') {
-        if(!localStorage.prompt_111414_5_status) localStorage.prompt_111414_5_status = 1;
-        if(localStorage.prompt_111414_5_status == 1) $('.prompt-section').show();
+        try {
+            if(!localStorage.prompt_111414_5_status) localStorage.prompt_111414_5_status = 1;
+            if(localStorage.prompt_111414_5_status == 1) $('.prompt-section').show();
+        } catch(e) {
+            // do nothing
+        }
     }
 
     $('.prompt-dismiss').click(function() {
