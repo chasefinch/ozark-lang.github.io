@@ -20,7 +20,7 @@
 											<h1>There is much to be done.</h1>
 											<p class='lead'>Software development is today's wild west. It easier than ever to build something new, but hard to build something that lasts. Version control and application frameworks are awesome... But still, code coaxes us to make more of a mess with every commit.</p>
 											<p class='lead'>Ozark is the next step; A clean language totally inseparable from an app's logic. A lot of care has gone into the language design to make it enjoyable, clear, and optimized. However, we're still in the early stages, and if you're a talented coder, we could use your help.</p>
-											<br /><a href='mailto:jchasefinch@gmail.com?subject=Ozark%20Founding%20Contributor' class='btn btn-lg btn-default'>Become Founding Developer #6</a><br />
+											<br /><a href='mailto:info@ozark.cc?subject=Ozark%20Founding%20Contributor' class='btn btn-lg btn-default'>Become Founding Developer #6</a><br />
 											<a class='prompt-dismiss' href='javascript:void(0);'><span class='glyphicon glyphicon-remove'></span> Dismiss</a>
 										</div>
 									</div>
@@ -91,7 +91,7 @@
 							<div class='row'>
 								<div class='col-sm-4'>
 									<h4>Contributors</h4>
-									<p>Thanks to those who continually contribute effort to the Ozark project. Our Founding Developers (people who have submitted commits or other effort before the initial release) are listed here. <a href='mailto:jchasefinch@gmail.com?subject=Ozark%20Founding%20Contributor'>Become one</a>.</p>
+									<p>Thanks to those who continually contribute effort to the Ozark project. Our Founding Developers (people who have submitted commits or other effort before the initial release) are listed here. <a href='mailto:info@ozark.cc?subject=Ozark%20Founding%20Contributor'>Become one</a>.</p>
 									<ul class='contributors'>
 										<li>Rob Campbell <a target="_blank" href='https://github.com/rwcee'>rwcee</a></li>
 										<li>Chase Finch <a target="_blank" href='https://github.com/chasefinch'>chasefinch</a></li>
