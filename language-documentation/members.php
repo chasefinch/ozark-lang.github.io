@@ -48,7 +48,7 @@ member leftLeg:Leg
 member rightLeg:Leg
 member torso:Torso
 
-property age:Cardinal
+property age:Integer
 property weight:Float
 
 extension initialize
@@ -101,7 +101,7 @@ method getStringForPrinting -&gt; printable:String
 
 	@chapters getItemCount -&gt; count
 	
-	for i in:range(1, count)
+	each i:range(1, count)
 		@chapters getItemAt i -&gt; chapter
 		string append chapter
 

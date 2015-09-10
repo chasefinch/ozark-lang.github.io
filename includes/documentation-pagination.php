@@ -18,11 +18,11 @@
 	} else if($document == 'objects') {
 		echo "<span class='prev'><a href='control'>&larr; Previous: Control Flow</a></span><span class='next'><a href='values'>Next: Values &amp; Variables &rarr;</a></span>";
 	} else if($document == 'values') {
-		echo "<span class='prev'><a href='objects'>&larr; Previous: Objects &amp; Pointers</a></span><span class='next'><a href='functions'>Next: Functions &amp; Libraries &rarr;</a></span>";
+		echo "<span class='prev'><a href='objects'>&larr; Previous: Objects &amp; Pointers</a></span><span class='next'><a href='functions'>Next: Functions &amp; Expressions &rarr;</a></span>";
 	} else if($document == 'functions') {
 		echo "<span class='prev'><a href='values'>&larr; Previous: Values &amp; Variables</a></span><span class='next'><a href='files'>Next: File Structure &rarr;</a></span>";
 	} else if($document == 'files') {
-		echo "<span class='prev'><a href='functions'>&larr; Previous: Functions &amp; Libraries</a></span><span class='next'><a href='reserved'>Next: Reserved Words &rarr;</a></span>";
+		echo "<span class='prev'><a href='functions'>&larr; Previous: Functions &amp; Expressions</a></span><span class='next'><a href='reserved'>Next: Reserved Words &rarr;</a></span>";
 	} else if($document == 'reserved') {
 		echo "<span class='prev'><a href='files'>&larr; Previous: File Structure</a></span></span>";
 	} ?>

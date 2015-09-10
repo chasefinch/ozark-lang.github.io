@@ -33,9 +33,9 @@
 
 											<p>Running a program in Ozark consists of creating an instance of a class, and then calling a method on that instance. See <a href='files'>File Structure</a> for more details about how files are structured in Ozark.</p>
 
-											<p>Though Ozark is fully object-oriented, it differentiates <em>objects</em> from <em>values</em>. The number 5 is NOT an object with state or capabilities; It's a value that can be transformed, a representation of a state, and it can't *do* anything itself. Transformation of values in Ozark is done with <a href='functions'>functions</a> and borrows many of the principles of functional programming.</p>
+											<p>Though Ozark is fully object-oriented, it differentiates <em>objects</em> from <em>values</em>. The number 5 is NOT an object with state or capabilities; It's a value that can be transformed, a representation of a state, and it can't *do* anything itself. Transformation of values in Ozark is done with built-in <a href='functions'>functions</a> that combine to form <em>expressions</em>.</p>
 
-											<p>There are no global pointers, variables, or import statements. Pointers &amp; variables can only exist within a method, a function, or as a <em>member</em> or <em>property</em> of a class. Other classes are imported via the <code>requirement</code> keyword.</p>
+											<p>There are no global pointers, variables, or import statements. Pointers &amp; variables can only exist within a method, or as a <em>member</em> or <em>property</em> of a class. Other classes are imported via the <code>requirement</code> keyword.</p>
 
 											<div class='code-sample-header'>Accountant.class.ozark</div>
 											<div class='code-sample'><pre>inheritance BusinessPerson
@@ -60,7 +60,7 @@ method clockOut time:Time
 
 											<p>These object-oriented constraints are uniquely valuable to Ozark. Developers who inherit legacy code in other languages often find that the underlying object-oriented structure was abandoned in certain places for convenience, maybe with a global variable or misuse of the singleton pattern. When you inherit Ozark code, you can be sure that's not the case. This is one of the ways that Ozark has been built for readability.</p>
 
-											<p>Ozark also avoids techniques that are commonly considered to be object-oriented, but don't truly adhere to the principles that govern OO development. Static methods are one example of such a technique. Another is an object's ability to call its own functions with a reference to itself.</p>
+											<p>Ozark also avoids techniques that are commonly considered to be object-oriented, but don't truly adhere to the principles that govern OO development. Static methods are one example of such a technique. Another is an object's ability to call its own methods with a reference to itself.</p>
 
 											<p>The lack of a <em>self</em> reference forces Ozark inheritance stacks to be tall, and it forces all Ozark software to be built purely with dependency injection. This results in a lot of small, hyper-focused classes. <a href='classes#Nesting'>Nesting classes and enumerations</a> is the Ozark way of keeping these related classes organized.</p>
 
@@ -174,7 +174,7 @@ method rgbPrint color:Color -&gt; document:Paper?
 
 											<a name='SmallScopes'><h2>Small scopes with no globals</h2></a>
 
-											<p>When coding in Ozark, the current working scope is always very small. The only mutable pointers/variables are either members/properties of a class, or outputs of the current method, and there are no globals. Pointers &amp; variables only exist to store the state of an object, and to connect the inputs &amp; outputs of functions. Think of them as values and objects that are handed from one method call to another until they are stored safely as properties or members of objects.</p>
+											<p>When coding in Ozark, the current working scope is always very small. The only mutable pointers/variables are either members/properties of a class, or outputs of the current method, and there are no globals. Pointers &amp; variables only exist to store the state of an object, and to connect the inputs &amp; outputs of methods. Think of them as values and objects that are handed from one method call to another until they are stored safely as properties or members of objects.</p>
 										</main>
 										<?php require('../includes/documentation-pagination.php'); ?>
 									</div>

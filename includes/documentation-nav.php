@@ -11,7 +11,7 @@
 		<li<?php if($document == 'control') echo " class='active'"; ?>><a href="/language-documentation/control">Control Flow</a></li>
 		<li<?php if($document == 'objects') echo " class='active'"; ?>><a href="/language-documentation/objects">Objects &amp; Pointers</a></li>
 		<li<?php if($document == 'values') echo " class='active'"; ?>><a href="/language-documentation/values">Values &amp; Variables</a></li>
-		<li<?php if($document == 'functions') echo " class='active'"; ?>><a href="/language-documentation/functions">Functions &amp; Libraries</a></li>
+		<li<?php if($document == 'functions') echo " class='active'"; ?>><a href="/language-documentation/functions">Functions &amp; Expressions</a></li>
 		<li<?php if($document == 'files') echo " class='active'"; ?>><a href="/language-documentation/files">File Structure</a></li>
 		<li<?php if($document == 'reserved') echo " class='active'"; ?>><a href="/language-documentation/reserved">Reserved Words</a></li>
 	</ul>

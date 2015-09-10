@@ -51,31 +51,17 @@ extension initialize
 
 											<a name='Types'><h2>Value Types</h2></a>
 
-											<p>There are 7 <strong>value types</strong> in Ozark: <code>Integer</code>, <code>Ordinal</code>, <code>Cardinal</code>, <code>Float</code>, <code>Boolean</code>, <code>Character</code>, and the user-defined <em>enumeration</em>. These values can be stored in variables, and are sized implicitly. Value types are available in every scope, and do not need to be declared as <em>requirements</em>.</p>
+											<p>There are 5 <strong>value types</strong> in Ozark: <code>Integer</code>, <code>Float</code>, <code>Boolean</code>, <code>Character</code>, and the user-defined <em>enumeration</em>. These values can be stored in variables, and are sized implicitly. Value types are available in every scope, and do not need to be declared as <em>requirements</em>.</p>
 
-											<p>Each one of the 7 value types can appear as part of a <em>list</em>, a <em>set</em>, or a <em>bag</em>. These types can also be nested (you can have a list of lists of Integers, for example.) They also do not need to be declared as requirements.</p>
+											<p>Each one of the 5 value types can appear as part of a <em>list</em>, a <em>set</em>, or a <em>bag</em>. These types can also be nested (you can have a list of lists of Integers, for example.) They also do not need to be declared as requirements.</p>
 
 											<a name='Integer'><h4>Integer</h4></a>
 
-											<p>An <code>Integer</code> is the most basic of types. It's a number without a fractional component, like <code>0</code>, <code>3</code>, <code>4</code>, <code>-3</code>, or <code>10000</code>. Integers are represented in decimal. They must start with a nonzero number.</p>
-
-											<p>An Integer can be used anywhere in place of a Float.</p>
-
-											<a name='Cardinal'><h4>Cardinal</h4></a>
-
-											<p>A <code>Cardinal</code> is a subset of Integers that represent quantity. It doesn't include negative numbers, but unlike Ordinal numbers, does include zero. Cardinals are represented in decimal.</p>
-
-											<p>A Cardinal can be used anywhere in place of an Integer or a Float.</p>
-
-											<a name='Ordinal'><h4>Ordinal</h4></a>
-
-											<p>An <code>Ordinal</code> is a subset of Integers that represent order. It's used to denote the first, second, fifth, etc. and doesn't include zero or negative numbers. Ordinals are represented in decimal.</p>
-
-											<p>An Ordinal is used as the index for lists (which are one-based, unlike many languages), and can be used anywhere in place of a Cardinal, an Integer or a Float.</p>
+											<p>An <code>Integer</code> is the most basic of types. It's a number without a fractional component, like <code>0</code>, <code>3</code>, <code>4</code>, <code>-3</code>, or <code>10000</code>. Integers appear in Ozark as decimal numbers. They must start with a nonzero number.</p>
 
 											<a name='Float'><h4>Float</h4></a>
 
-											<p>A <code>Float</code> is the Ozark representation of a floating-point number. A floating-point number is a number with a fractional component, such as <code>4.14</code>, <code>0.333</code>, or <code>-200.03</code>.</p>
+											<p>A <code>Float</code> is the Ozark representation of a floating-point number. A floating-point number is a number with a fractional component, such as <code>4.14</code>, <code>0.333</code>, or <code>-200.03</code>. These appear in decimal in Ozark, but are stored in binary behind the scenes, and are subject to common binary floating-point math characteristics.</p>
 
 											<a name='Boolean'><h4>Boolean</h4></a>
 
@@ -89,7 +75,7 @@ extension initialize
 
 											<a name='Enumeration'><h4>Enumeration</h4></a>
 
-											<p>An <strong>enumeration</strong> is a value for which the possibilities are defined in advance. Enumerations are declared by the user, and can be nested within a class or can appear as a root-level file with the extension <code>.enumeration.ozark</code>. Enumerations follow the same naming convention as classes, and must have names unique from other classes, enumerations, and libraries declared at the same level.</p>
+											<p>An <strong>enumeration</strong> is a value for which the possibilities are defined in advance. Enumerations are declared by the user, and can be nested within a class or can appear as a root-level file with the extension <code>.enumeration.ozark</code>. Enumerations follow the same naming convention as classes, and must have names unique from other classes and enumerations declared at the same level.</p>
 
 											<p>Possible values for enumerations are declared with the <code>case</code> keyword, must start with a lowercase letter, and are referenced with dot notation.</p>
 
@@ -118,7 +104,7 @@ method reverse
 
 											<p>There are 3 <strong>collection types for values</strong> in Ozark: <em>list</em>, <em>set</em>, and <em>bag</em>. These structures are homogeneous, meaning they can only contain one type of value, and that a list of Boolean values is different from a list of Character values. These collection types can also contain other collections; For example, you can have a list of sets of characters (but not a list of sets of different types.)</p>
 
-											<p>Each one of the 7 value types can appear as part of a list, a set, or a bag.</p>
+											<p>Each one of the 5 value types can appear as part of a list, a set, or a bag.</p>
 
 											<a name='List'><h4>List</h4></a>
 
@@ -128,7 +114,7 @@ method reverse
 
 											<p>The <code>String</code> is a list of characters, and it has special syntax. Surround a grouping of Characters by double quotes (<code>""</code>) to denote a string.</p>
 
-											<p>Lists are indexed by Ordinals. An Ordinal is the set of Integers greater than and including the number 1. You can specify an element in a list using the square bracket notation, like <code>someList[3]</code> or <code>someNestedList[13][4]</code>.</p>
+											<p>Lists are indexed by Integers, starting with position zero. You can specify an element in a list using the square bracket notation, like <code>someList[3]</code> or <code>someNestedList[13][4]</code>.</p>
 
 											<a name='Set'><h4>Set</h4></a>
 
@@ -155,16 +141,12 @@ method encodeAndContinue someObject:SomeClass value1:Integer value2:Integer valu
 	if value1 + value2 &gt; 55 and all(value3)
 		someObject doSomethingWithString reverse(value3)</pre></div>
 
-											<a name='ValuesAndFunctions'><h2>Values are part of expressions and functions</h2></a>
+											<a name='ValuesAndFunctions'><h2>Values are part of expressions</h2></a>
 
 											<p>Values are mathematical concepts that can be part of <strong>expressions</strong>. In Ozark as in mathematics, values cannot change; The value <code>5</code> cannot be changed to the value <code>8</code>. Values don't have a physical representation; instead, they are states used to describe objects.</p>
 
-											<p><a href='functions'>Functions</a> are named groups of expressions that evaluate to a single value. You'll notice that in Ozark, methods aren't "evaluated", but instead they are simply subroutines with any number of inputs and outputs. Expressions, on the other hand, do evaluate to a single output, but they have no state. This means that an expression run with the same set of values will produce the same output, every time. This is also true for a function, which is simply a named sequence of expressions.</p>
-
-											<div class='code-sample-header'>Miscellaneous.library.ozark</div>
-											<div class='code-sample'><pre>function someMathFunction(x:Integer, y:Float):Float
-	let z &lt;- x * 1500 - 1 * y
-	return x + y + z - 1500 * 1.4 * z</pre></div>
+											<p><a href='functions'>Functions</a> are built-in expressions that evaluate to a single value. You'll notice that in Ozark, methods aren't "evaluated", but instead they are simply subroutines with any number of inputs and outputs. Expressions, on the other hand, do evaluate to a single output, but they have no state. This means that an expression with the same set of values will produce the same output, every time. This is also true for a function, which is simply a named expression that can be used in other expressions.</p>
+											
 										</main>
 										<?php require('../includes/documentation-pagination.php'); ?>
 									</div>

@@ -55,7 +55,7 @@ method concludeConcerto #concerto:Song orchestra:Orchestra
 
 											<p>Methods do not have a "return value" like in other object-oriented languages. Statements are not expressions to be evaluated; They are instructions to be executed, and they may or may not have any number of outputs. Separating the concept of evaluable expressions from the concept of executable instructions is one of the core uniquenesses of Ozark.</p>
 
-											<p>Methods are executable instructions that can operate on <em>objects</em> and using both <em>objects</em> and <em>values</em>, where as evaluable <em>expressions</em> exist only for values and are often grouped into <a href='functions'>functions</a>.</p>
+											<p>Methods are executable instructions that can operate on <em>objects</em> and using both <em>objects</em> and <em>values</em>, where as evaluable <em>expressions</em> consist of only values and built-in functions.</p>
 
 											<a name='InputsAndOutputs'><h2>Inputs &amp; outputs</h2></a>
 
@@ -99,9 +99,9 @@ method sailTo #destination:WaterfrontLocation -&gt; duration:TimeInterval
 
 											<a name="Extensions"><h2>Overriding &amp; extending parent methods</h2></a>
 
-											<p>As discussed in <a href='classes#Inheritance'>Inheritance</a>, a class inherits all methods, members, and properties from its parent classes. It also has access to declared <em>requirements</em>, nested classes, <em>enumerations</em>, and <em>libraries</em>. To redeclare a method in a child class, simply declare it as usual. An object will use the new method definition instead of the inherited one.</p>
+											<p>As discussed in <a href='classes#Inheritance'>Inheritance</a>, a class inherits all methods, members, and properties from its parent classes. It also has access to declared <em>requirements</em>, nested classes, and nested <em>enumerations</em>. To redeclare a method in a child class, simply declare it as usual. An object will use the new method definition instead of the inherited one.</p>
 
-											<p>To extend a parent method, drop the <code>method</code> keyword and instead declare an <code>extension</code>. This is commonly seen with the <code>initialize</code> function.</p>
+											<p>To extend a parent method, drop the <code>method</code> keyword and instead declare an <code>extension</code>. This is commonly seen with the <code>initialize</code> method.</p>
 
 											<div class='code-sample-header'>Flower.class.ozark</div>
 											<div class='code-sample'><pre>inheritance Plant

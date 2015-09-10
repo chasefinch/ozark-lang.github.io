@@ -76,7 +76,7 @@
 							<div class='col-sm-6'>
 								<div class='portal'>
 									<h3>Smart<span class='glyphicon glyphicon-refresh'></span></h3>
-									<p>Ozark blends the structure of object-oriented programming for objects (such as <code>systemIO</code> and <code>myHat</code>) with the elegance of functional programming for values (such as <code>5.3</code> and <code>true</code>).</p>
+									<p>Ozark blends the structure of object-oriented programming for objects (such as <code>systemIO</code> and <code>myHat</code>) with the elegance of reusable expressions for values (such as <code>5.3</code> and <code>true</code>).</p>
 								</div>
 							</div>
 						</div>

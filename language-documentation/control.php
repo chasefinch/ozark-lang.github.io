@@ -62,10 +62,10 @@ method branch object:Object condition:Boolean
 											<div class='code-sample'><pre>inheritance Example
 
 method testAndContinue object:ExampleObject? io:StandardIO
-	with object:
+	with object
 		object doSomething
 	
-	without object:
+	without object
 		io print "Cannot continue - no object."</pre></div>
 
 											<a name="For"><h4>For</h4></a>
@@ -78,13 +78,13 @@ method testAndContinue object:ExampleObject? io:StandardIO
 requirement Attendee
 
 method printStrings #strings:[String] io:StandardIO
-	for string in:strings
+	for string:strings
 		io print string
 
 method printNames attendees:Array|Attendee io:StandardIO
 	attendees count -&gt; count
 
-	for i in:range(1, count)
+	for i:range(1, count)
 		attendees itemAtIndex i -&gt; item
 		item getName -&gt; name
 		io print name</pre></div>
@@ -97,7 +97,7 @@ method printNames attendees:Array|Attendee io:StandardIO
 											<div class='code-sample'><pre>inheritance Example
 
 method reverseStrings #strings:[String] -&gt; reversedStrings:[String] 
-	for string in:strings -&gt; new:[String]
+	for string:strings -&gt; new:[String]
 		set new &lt;- reverse(string)
 
 	set reversedStrings &lt;- new</pre></div>

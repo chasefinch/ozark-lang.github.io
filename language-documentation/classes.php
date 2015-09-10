@@ -29,9 +29,9 @@
 								<div class='row'>
 									<div class='col-lg-10'>
 										<main>
-											<p>As you've seen in the examples thus far, <strong>classes</strong> are the primary building blocks of Ozark applications. With the exception of <a href='functions#Libraries'>libraries</a> and <a href='values#Enumeration'>enumerations</a>, a class is the only thing that exists outside of any other context. In fact, building an Ozark application consists entirely of building classes, enumerations and libraries.</p>
+											<p>As you've seen in the examples thus far, <strong>classes</strong> are the primary building blocks of Ozark applications. With the exception of <a href='values#Enumeration'>enumerations</a>, a class is the only thing that exists outside of any other context. In fact, building an Ozark application consists entirely of building classes and enumerations.</p>
 
-											<p>Root-level classes correspond to single files within an operating system. Class file names end with <code>.class.ozark</code>, with ".ozark" being the technical file extension, and ".class" being an identifier that Ozark uses to differentiate between classes, enumerations, and libraries. Nested classes are declared with the <code>class</code> keyword. See <a href='files'>file structure</a> for more details about Ozark files.</p>
+											<p>Root-level classes correspond to single files within an operating system. Class file names end with <code>.class.ozark</code>, with ".ozark" being the technical file extension, and ".class" being an identifier that Ozark uses to differentiate between classes and enumerations. Nested classes are declared with the <code>class</code> keyword. See <a href='files'>file structure</a> for more details about Ozark files.</p>
 
 											<p>A class is a compound data type. An instance of a class is called an <a href='objects'>object</a> and that object can be referenced by a <a href='objects#Pointers'>pointer.</a>
 
@@ -42,7 +42,7 @@
 												<li><a href='objects#Generics'><code>index</code></a> - If this class is a collection type, a placeholder for the value type that is specified object initialization</li>
 												<li><a href='objects#Generics'><code>type</code></a> - If this class is a collection type, a placeholder for the type that is specified on object initialization</li>
 												<li><a href='#Inheritance'><code>inheritance</code></a> - A parent class from which this class inherits all features</li>
-												<li><a href='#Requirements'><code>requirement</code></a> - Another class, enumeration, or library of which this class must be aware</li>
+												<li><a href='#Requirements'><code>requirement</code></a> - Another class or enumeration of which this class must be aware</li>
 												<li><code>class</code> - A nested class declaration on which this class depends</li>
 												<li><a href='values#Enumeration'><code>enumeration</code></a> - A nested enumeration declaration on which this class depends</li>
 												<li><a href='members'><code>member</code></a> - A pointer within the scope of an object of this class</li>
@@ -76,7 +76,7 @@ extension initialize
 
 											<a name="Requirements"><h2>Requirements</h2></a>
 
-											<p>Any classes or enumerations used by a class that aren't nested must be explicitly declared as <strong>requirements</strong>. Additionally, all libraries used must be declared as requirements. The <code>requirement</code> declaration will find the class, enumeration, or library in the current project scope, which includes the file's current directory and the system-wide libraries linked in the Ozark compiler. See <a href='files'>File Structure</a> for more information.</p>
+											<p>Any classes or enumerations used by a class that aren't nested must be explicitly declared as <strong>requirements</strong>. The <code>requirement</code> declaration will find the class or enumeration in the current project scope, which includes the file's current directory and the system-wide libraries linked in the Ozark compiler. See <a href='files'>File Structure</a> for more information.</p>
 
 											<div class='code-sample-header'>TruckDriver.class.ozark</div>
 											<div class='code-sample'><pre>inheritance Driver
@@ -218,7 +218,7 @@ method shootEveryOtherTarget #targets:Array|Target -&gt; casings:Array|Bullet.Ca
 	input getOddItems -&gt; oddItems
 	oddItems getKeys -&gt; keys
 
-	for k in:keys -&gt; success:[Boolean]
+	for k:keys -&gt; success:[Boolean]
 		oddItems lookup k -&gt; i
 		shooter shootTarget i -&gt; result
 		set success &lt;- result
