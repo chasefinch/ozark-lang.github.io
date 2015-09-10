@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<?php
-		$title = "Ozark Language - Documentation - Functions &amp; Libraries";
+		$title = "Ozark Language - Documentation - Functions &amp; Expressions";
 		$description = "Ozark is a purely object-oriented programming language designed to build software with maximum modularity, inherent clarity of purpose, and a long lifespan.";
 		$active = 'documentation';
 		$document = 'functions';
