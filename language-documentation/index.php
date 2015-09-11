@@ -45,8 +45,8 @@ requirement Seed
 
 member plant:Plant
 
-property weight:Float
-property size:Float
+property weight:Number
+property size:Number
 
 extension initialize ~seed:Seed
 	seed sprout -&gt; plant
@@ -54,7 +54,7 @@ extension initialize ~seed:Seed
 	set @size &lt;- 0.0
 	set @weight &lt;- 0.0
 
-method grow days:Float rate:Float
+method grow days:Number rate:Number
 	set @size &lt;- days * rate
 	set @weight &lt;- days * rate * 0.25</pre></div>
 	

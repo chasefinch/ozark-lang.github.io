@@ -37,10 +37,10 @@
 											<div class='code-sample'><pre>inheritance Example
 
 enumeration Directions
-	case north
-	case east
-	case south
-	case west
+	state north
+	state east
+	state south
+	state west
 
 extension initialize
 	let someInt &lt;- 5
@@ -51,17 +51,21 @@ extension initialize
 
 											<a name='Types'><h2>Value Types</h2></a>
 
-											<p>There are 5 <strong>value types</strong> in Ozark: <code>Integer</code>, <code>Float</code>, <code>Boolean</code>, <code>Character</code>, and the user-defined <em>enumeration</em>. These values can be stored in variables, and are sized implicitly. Value types are available in every scope, and do not need to be declared as <em>requirements</em>.</p>
+											<p>There are 5 <strong>value types</strong> in Ozark: <code>Integer</code>, <code>Number</code>, <code>Boolean</code>, <code>Character</code>, and the user-defined <em>enumeration</em>. These values can be stored in variables. Value types are available in every scope, and do not need to be declared as <em>requirements</em>.</p>
 
 											<p>Each one of the 5 value types can appear as part of a <em>list</em>, a <em>set</em>, or a <em>bag</em>. These types can also be nested (you can have a list of lists of Integers, for example.) They also do not need to be declared as requirements.</p>
 
 											<a name='Integer'><h4>Integer</h4></a>
 
-											<p>An <code>Integer</code> is the most basic of types. It's a number without a fractional component, like <code>0</code>, <code>3</code>, <code>4</code>, <code>-3</code>, or <code>10000</code>. Integers appear in Ozark as decimal numbers. They must start with a nonzero number.</p>
+											<p>An <code>Integer</code> is the most basic of types. It's a number without a fractional component, like <code>0</code>, <code>3</code>, <code>4</code>, <code>-3</code>, or <code>10000</code>. Integers in Ozark are entered by default as decimals, but can be specified in binary with the prefix <code>0b</code> or in hexadecimal with the prefix <code>0x</code>. <code>0b1101</code> and <code>0x6A43</code> are examples of valid Integers in binary and hexadecimal, respectively.</p>
 
-											<a name='Float'><h4>Float</h4></a>
+											<a name='Number'><h4>Number</h4></a>
 
-											<p>A <code>Float</code> is the Ozark representation of a floating-point number. A floating-point number is a number with a fractional component, such as <code>4.14</code>, <code>0.333</code>, or <code>-200.03</code>. These appear in decimal in Ozark, but are stored in binary behind the scenes, and are subject to common binary floating-point math characteristics.</p>
+											<p>A <code>Number</code> is the Ozark representation of a floating-point number, acting according to the <a href='https://en.wikipedia.org/wiki/IEEE_floating_point'>IEEE 754 standard</a>. A floating-point number is a number with a fractional component, such as <code>4.14</code>, <code>0.333</code>, or <code>-200.03</code>. By default, these appear in decimal, but are stored in binary, and are subject to common binary floating-point math characteristics. Like Integers, you can specify Number values in binary or hexadecimal using the <code>0b</code> and <code>0x</code> prefixes. <code>0b101101.1101</code> and <code>0x12F2.FF43</code> are examples of valid Numbers in binary and hexadecimal, respectively.</p>
+
+											<p>A floating-point number has both a base, and a precision. The default base for a Number is 2, but you can also specify that a Number is in base 10 with the underscore (<code>_</code>) symbol, like <code>let var1:Number_10</code> or <code>0.333_10</code>. This has much slower performance, and is only recommended for scenarios when modeling real-life decimal systems where decimal precision is important, like financial models.</p>
+
+											<p>You can also specify a different precision for a Number using the exclamation mark (<code>!</code>) symbol. The default precision is 32, but you can specify 64 and 128. <code>let var1:Number!128</code>, <code>1_10!64 / 3_10</code>. Inside an expression, the return value of a function is specified in the precision of the highest-precision Number involved in the equation. Precision can be increased implicitly, but must be decreased manually with the truncate function, e.g. <code>truncate(32, (1!64/3))</code></p>
 
 											<a name='Boolean'><h4>Boolean</h4></a>
 
@@ -69,20 +73,22 @@ extension initialize
 
 											<a name='Character'><h4>Character</h4></a>
 
-											<p>A <code>Character</code> is a single character from the Unicode character set. A Character literal is surrounded by single quotes, such as  <code>'x'</code>, <code>'3'</code>, <code>'^'</code>, or <code>'🙉'</code>.</p>
+											<p>A <code>Character</code> is a single character from the Unicode character set. A Character literal is surrounded by single quotes, such as <code>'x'</code>, <code>'3'</code>, <code>'^'</code>, or <code>'🙉'</code>. You can also specify a unicode character with the <code>`</code> symbol and the lowercase letter u, followed by the unicode code point, like <code>`u0063</code>, which represents the latin lowercase letter "c".</p>
 
-											<p>Ozark also has a <code>String</code> type, which is treated exactly as a <a href='#List'>list</a> of Characters. You can't use the standard list syntax for a string; Instead, you surround the list of Characters with double quotes to denote a string, such as <code>"hello"</code>, <code>"1234"</code>, or <code>"wonderbread!!"</code>.</p>
+											<p>Ozark also has a <code>String</code> type, which is treated exactly as a <a href='#List'>list</a> of Characters. To specify a string literal, surround the group of Characters with double quotes to denote a string, such as <code>"hello"</code>, <code>"1234"</code>, or <code>"wonderbread!!"</code>.</p>
+
+											<p>The backslash <code>\</code> character is used as an escape character within strings. You can enter a backslash escaped by simply repeating it <code>\\</code>. Other control characters in a string must appear in source code in their escaped form, such as <code>\n</code> (newline) or <code>\t</code> (tab).</p>
 
 											<a name='Enumeration'><h4>Enumeration</h4></a>
 
 											<p>An <strong>enumeration</strong> is a value for which the possibilities are defined in advance. Enumerations are declared by the user, and can be nested within a class or can appear as a root-level file with the extension <code>.enumeration.ozark</code>. Enumerations follow the same naming convention as classes, and must have names unique from other classes and enumerations declared at the same level.</p>
 
-											<p>Possible values for enumerations are declared with the <code>case</code> keyword, must start with a lowercase letter, and are referenced with dot notation.</p>
+											<p>Possible values for enumerations are declared with the <code>state</code> keyword, must start with a lowercase letter, and are referenced with dot notation.</p>
 
 											<div class='code-sample-header'>Switch.enumeration.ozark</div>
-											<div class='code-sample'><pre>case forward
-case off
-case reverse</pre></div>
+											<div class='code-sample'><pre>state forward
+state off
+state reverse</pre></div>
 
 											<div class='code-sample-header'>ConveyorBelt.class.ozark</div>
 											<div class='code-sample'><pre>inheritance Machine

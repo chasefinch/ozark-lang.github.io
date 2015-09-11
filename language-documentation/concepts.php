@@ -170,8 +170,6 @@ method rgbPrint color:Color -&gt; document:Paper?
 		sheet rgbFill red:red green:green blue:blue
 		set document &lt;- sheet</pre></div>
 			
-											<p>Ozark doesn't differentiate between different sizes of related values, such as floats and doubles. The compiler optimizes value storage based on how the values are used.</p>
-
 											<a name='SmallScopes'><h2>Small scopes with no globals</h2></a>
 
 											<p>When coding in Ozark, the current working scope is always very small. The only mutable pointers/variables are either members/properties of a class, or outputs of the current method, and there are no globals. Pointers &amp; variables only exist to store the state of an object, and to connect the inputs &amp; outputs of methods. Think of them as values and objects that are handed from one method call to another until they are stored safely as properties or members of objects.</p>

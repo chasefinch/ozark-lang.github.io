@@ -60,10 +60,10 @@ requirement Superpower
 requirement XRayVision
 
 enumeration Strength
-	case fullStrength
-	case prettyStrong
-	case beatenUp
-	case veryWeak
+	state fullStrength
+	state prettyStrong
+	state beatenUp
+	state veryWeak
 
 member superpower:Superpower
 

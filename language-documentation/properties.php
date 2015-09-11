@@ -36,18 +36,18 @@
 											<div class='code-sample-header'>Location.class.ozark</div>
 											<div class='code-sample'><pre>inheritance Object
 	
-property latitude:Float
-property longitude:Float
+property latitude:Number
+property longitude:Number
 
-extension initialize ~latitude:Float ~longitude:Float
+extension initialize ~latitude:Number ~longitude:Number
 	set @latitude &lt;- latitude
 	set @longitude &lt;- longitude
 
-method getCoordinates -> latitude:Float longitude:Float
+method getCoordinates -> latitude:Number longitude:Number
 	set latitude &lt;- @latitude
 	set longitude &lt;- @longitude
 
-method setLocation latitude:Float longitude:Float
+method setLocation latitude:Number longitude:Number
 	set @latitude &lt;- latitude
 	set @longitude &lt;- longitude</pre></div>
 		

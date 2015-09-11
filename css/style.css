@@ -9,6 +9,12 @@ pre { color:#000; }
 p { margin-bottom:20px; }
 	p.lead { font-size:1.4em; }
 
+table.reference { width:100%; margin-bottom:2em; }
+	table.reference tr.flag { background-color:#eee; color:#fd9632; }
+		
+	table.reference tr th, table.reference tr td { padding:4px; border:1px solid #ccc; vertical-align:top; }
+		table.reference tr.flag th { border-color:#ccc; }
+
 .page-not-found { min-height:300px; }
 
 label { font-weight:normal; margin:1em 0 1em 0; }

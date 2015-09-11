@@ -49,7 +49,7 @@ member rightLeg:Leg
 member torso:Torso
 
 property age:Integer
-property weight:Float
+property weight:Number
 
 extension initialize
 	create aHead:Head initialize
