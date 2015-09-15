@@ -86,18 +86,18 @@ class DefensiveAbility
 	method catch #ball:Ball
 		set @ball &lt;- ball
 
-	member offense:OffensiveAbility
-	member defense:DefensiveAbility
+member offense:OffensiveAbility
+member defense:DefensiveAbility
 
-	extension initialize
-		create offensive:OffensiveAbility initialize
-		create defensive:DefensiveAbility initialize
-		set @offense &lt;- offensive
-		set @defense &lt;- defensive
+extension initialize
+	create offensive:OffensiveAbility initialize
+	create defensive:DefensiveAbility initialize
+	set @offense &lt;- offensive
+	set @defense &lt;- defensive
 
-	method bat pitcher:Pitcher
-		pitcher pitch -&gt; pitch
-		@offense swing pitch:pitch</pre></div>
+method bat pitcher:Pitcher
+	pitcher pitch -&gt; pitch
+	@offense swing pitch:pitch</pre></div>
 
 											<a name='Declarative'><h2>Declarative</h2></a>
 
