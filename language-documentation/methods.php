@@ -44,8 +44,10 @@ requirement Orchestra
 method beginConcerto #concerto:Concerto orchestra:Orchestra
 	concerto getFirstMovement -&gt; movement
 	orchestra perform movement
+
 	concerto getSecondMovement -&gt; movement2
 	concerto perform movement2
+
 	concerto getFinalMovement -&gt; movement3
 	concert perform movement3
 
@@ -81,7 +83,7 @@ member docker:DockAbility
 
 method sailTo #destination:WaterfrontLocation -&gt; duration:TimeInterval
 	@launcher launch
-
+	
 	destination getPort -&gt; port
 	port getLocation -&gt; location
 	@navigator navigate destination:location -&gt; finalLocation:final
