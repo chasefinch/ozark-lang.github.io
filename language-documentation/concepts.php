@@ -150,7 +150,7 @@ method race track:RaceTrack start:StartEvent
 											<div class='code-sample-header'>BrandSpecificBlue.class.ozark</div>
 											<div class='code-sample'><pre>inheritance Color 
 		
-extension rgbValue -&gt; red:Integer green:Integer blue:Integer
+extension rgbValue -&gt; red:Number green:Number blue:Number
 	set red &lt;- 0.0
 	set green &lt;- 0.0
 	set blue &lt;- 1.0</pre></div>
