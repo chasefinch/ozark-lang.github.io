@@ -50,6 +50,7 @@ property size:Number
 
 extension initialize ~seed:Seed
 	seed sprout -&gt; plant
+
 	set @plant &lt;- plant
 	set @size &lt;- 0.0
 	set @weight &lt;- 0.0

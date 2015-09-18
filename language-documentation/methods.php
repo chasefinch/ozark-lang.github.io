@@ -44,10 +44,8 @@ requirement Orchestra
 method beginConcerto #concerto:Concerto orchestra:Orchestra
 	concerto getFirstMovement -&gt; movement
 	orchestra perform movement
-
 	concerto getSecondMovement -&gt; movement2
 	concerto perform movement2
-
 	concerto getFinalMovement -&gt; movement3
 	concert perform movement3
 
@@ -83,7 +81,6 @@ member docker:DockAbility
 
 method sailTo #destination:WaterfrontLocation -&gt; duration:TimeInterval
 	@launcher launch
-	
 	destination getPort -&gt; port
 	port getLocation -&gt; location
 	@navigator navigate destination:location -&gt; finalLocation:final
@@ -114,6 +111,7 @@ member color:Color
 
 extension initialize
 	create color:Color initializeRandom
+
 	set @color &lt;- color</pre></div>
 
 											<p>To add additional input &amp; output parameters to an extension, prefix them with the tilde (<code>~</code>) symbol.</p>
@@ -130,6 +128,7 @@ extension initialize ~color:Color -&gt; ~facing:Direction
 	set @color &lt;- color
 
 	create direction:Direction initializeRandom
+
 	set facing &lt;- direction</pre></div>
 	
 											<a name='Calling'><h2>Calling methods</h2></a>
@@ -187,6 +186,7 @@ method setGuitar #guitar:Guitar
 
 method playString #string:Guitar.GuitarString -&gt; note:Note
 	string play -&gt; note:note
+	
 	set note &lt;- note</pre></div>
 	
 											<p>The robust nested-type system in Ozark is intended to keep code neat, since dependency injection is required by the built-in language rules.</p>

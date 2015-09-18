@@ -71,6 +71,7 @@ property strength:Strength
 
 extension initialize
 	create power:XRayVision initialize
+
 	set @superpower &lt;- power
 	set @strength &lt;- Strength.fullStrength</pre></div>
 
@@ -169,6 +170,7 @@ class CelebrateAbility
 
 	extension initialize ~io:StandardIO
 		set @io &lt;- io
+
 		@hatTipper initialize
 
 	method showOffForTheCrowd hat:Hat
@@ -221,10 +223,12 @@ method shootEveryOtherTarget #targets:Array|Target -&gt; casings:Array|Bullet.Ca
 	for k:keys -&gt; success:[Boolean]
 		oddItems lookup k -&gt; i
 		shooter shootTarget i -&gt; result
+
 		set success &lt;- result
 
 	if all(success)
 		@celebrator showOffForTheCrowd hat:@hat
+		
 		set @mood &lt;- Mood.happy
 
 	set casings &lt;- theCasings

@@ -45,6 +45,7 @@
 method branch object:Object condition:Boolean
 	if condition
 		object doSomething
+
 	if not(condition)
 		object getConditionA -&gt; conditionA
 		object getConditionB -&gt; conditionB
@@ -116,12 +117,15 @@ requirement KeyboardInput
 method listenForInput io:StandardIO
 	repeat
 		io getInputFromUser -&gt; input
+
 		while input = 0
 
 method growFileSizeTo2K file:File
 	repeat
 		file getFileSize -&gt; fileSize
+
 		while fileSize &lt;= 2000
+		
 		file appendMoreData</pre></div>
 										</main>
 										<?php require('../includes/documentation-pagination.php'); ?>

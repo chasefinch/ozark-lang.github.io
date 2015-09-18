@@ -114,9 +114,9 @@ method reverse
 
 											<a name='List'><h4>List</h4></a>
 
-											<p>A <strong>list</strong> is a group of ordered, repeatable values. The list literal is denoted by square braces, and the values are separated by a comma and a space. <code>[1, 2, -1]</code> is an example of a list of Integers. Other valid examples of lists are:</p>
+											<p>A <strong>list</strong> is a group of ordered, repeatable values. The list literal is denoted by square braces, and the values are separated by a comma and a space. <code>[1, 2, -1]</code> is an example of a list of Integers. The empty list literal should specify the type, e.g. <code>[Integer]</code> or <code>[[Number]]</code>. Other valid examples of lists are:</p>
 
-											<p><code>[true, true, false, true]</code><br /><code>[[2, 3], [], [3, 5, 5]]</code><br /><code>["apple", "banana", "orange"]</code><br /><code>[]</code></p>
+											<p><code>[true, true, false, true]</code><br /><code>[[2, 3], [Integer], [3, 5, 5]]</code><br /><code>["apple", "banana", "orange"]</code><br /><code>[String]</code></p>
 
 											<p>The <code>String</code> is a list of characters, and it has special syntax. Surround a grouping of Characters by double quotes (<code>""</code>) to denote a string.</p>
 
@@ -124,11 +124,13 @@ method reverse
 
 											<a name='Set'><h4>Set</h4></a>
 
-											<p>A <strong>set</strong> is a group of unordered, non-repeatable values. A set may not contain the same value twice. The set literal is denoted by curly braces, and the values are separated by a comma and a space. <code>{1, 2, -1}</code> is an example of a set of Integers. Other valid examples of sets are <code>{"apple", "orange", "banana"}</code> and <code>{[1, 2], [4, 5, 6]}</code>.</p>
+											<p>A <strong>set</strong> is a group of unordered, non-repeatable values. A set may not contain the same value twice. The set literal is denoted by curly braces, and the values are separated by a comma and a space. <code>{1, 2, -1}</code> is an example of a set of Integers. The empty set literal should specify the type, e.g. <code>{Integer}</code> or <code>{[Number]}</code>. Other valid examples of sets are <code>{"apple", "orange", "banana"}</code> and <code>{[1, 2], [4, 5, 6]}</code>.</p>
 
 											<a name='Bag'><h4>Bag</h4></a>
 
-											<p>A <strong>bag</strong> is a group of unordered, repeatable values. It is like a <em>set</em>, except that it is allowed to contain the same value twice. The bag literal is denoted by angle braces, and the values are separated by a comma and a space.  <code>&lt;1, 2, -1&gt;</code> is an example of a bag of Integers. Other valid examples of bags are:</p>
+											<p>A <strong>bag</strong> is a group of unordered, repeatable values. It is like a <em>set</em>, except that it is allowed to contain the same value twice. The bag literal is denoted by angle braces, and the values are separated by a comma and a space. The empty bag literal should specify the type, e.g. <code>&lt;Integer&gt;</code>.</p>
+
+											<p><code>&lt;1, 2, -1&gt;</code> is an example of a bag of Integers. Other valid examples of bags are:</p>
 
 											<p><code>&lt;"apple", "orange", "orange", "banana"&gt;</code><br /><code>&lt;[1, 2], [4, 5, 6]&gt;</code></p>
 

@@ -52,6 +52,7 @@ member blackPieces:ArrayOfChessPieces
 method initialize
 	create whitePieces ArrayOfChessPieces initializeSet
 	create blackPieces ArrayOfChessPieces initializeSet
+
 	set @whitePieces &lt;- whitePieces
 	set @blackPieces &lt;- blackPieces
 
@@ -90,6 +91,7 @@ type ValueType</pre></div>
 											<div class='code-sample'><pre>inheritance Collection
 
 index ValueType
+
 type ItemType</pre></div>
 
 										</main>
