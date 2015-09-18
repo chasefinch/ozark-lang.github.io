@@ -39,7 +39,7 @@
 
 											<p>Many stylistic characteristics of the code are enforced. For example, type names begin with a capital letter (<code>Color</code>, <code>Dictionary</code>, <code>Array</code>) and noun and verb names begin with a lowercase letter. All words are camelCase and can include(but not start with) numbers <code>0</code>&ndash;<code>9</code>. No underscores are allowed.<p>
 
-											<p>Another example of enforced style is whitespace; Single-line spacing with padding around control flow statements and between sets of statement types is checked at compile-time and enforced. (A good Ozark IDE will clean this up for you.) The correct order of declarations within a class (inheritances &rarr; requirements &rarr; classes &rarr; enumerations &rarr; members &rarr; properties &rarr; extensions &rarr; methods) is also a compiling requirement.</p>
+											<p>Another example of enforced style is whitespace; Single-line spacing with padding around control flow statements and between sets of statement types is checked at compile-time and enforced. (A good Ozark IDE will clean this up for you.) The correct order of declarations within a class (inheritances &rarr; requirements &rarr; classes &rarr; enumerations &rarr; members &rarr; properties &rarr; extensions &rarr; methods) is also a compiling requirement. Within a method, control flow blocks and implicit actions have an extra line above and below them, with the exception that implicit actions are grouped with other like actions.</p>
 
 											<p>The suggested naming convention is to name methods as though they are an action performed by the subject; For example, <code>chef chop</code> and <code>celery getChopped</code> instead of <code>celery chop</code>.</p>
 
@@ -52,6 +52,7 @@ member knife:ChefsKnife?
 
 extension initialize
 	create knife:ChefsKnife initialize
+	
 	set @knife &lt;- knife
 
 extension initialize ~knife:ChefsKnife ~kitchen:Kitchen

@@ -81,6 +81,7 @@ class DefensiveAbility
 
 	method throw target:BaseballPlayer
 		target catch @ball
+
 		clear @ball
 
 	method catch #ball:Ball
@@ -92,6 +93,7 @@ member defense:DefensiveAbility
 extension initialize
 	create offensive:OffensiveAbility initialize
 	create defensive:DefensiveAbility initialize
+
 	set @offense &lt;- offensive
 	set @defense &lt;- defensive
 
@@ -115,6 +117,7 @@ member raceAbility:RaceAbility
 
 extension initialize car:RaceCar
 	create ability:RaceAbility initialize
+	
 	set @raceAbility &lt;- ability
 	set @car &lt;- car
 

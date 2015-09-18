@@ -58,6 +58,7 @@ extension initialize
 	create leg1:Leg initialize
 	create leg2:Leg initialize
 	create aTorso:Torso initialize
+
 	set @head &lt;- aHead
 	set @leftArm &lt;- arm1
 	set @rightArm &lt;- arm2
@@ -86,6 +87,7 @@ member epilogue:TextBlock?
 
 extension initialize
 	create chapters:Array|TextBlock initialize
+
 	set @chapters &lt;- chapters
 
 method removePrologueAndEpilogue
@@ -110,6 +112,7 @@ method getStringForPrinting -&gt; printable:String
 		string append text
 
 	string getText -&gt; text
+	
 	set @printable &lt;- text</pre></div>
 										</main>
 										<?php require('../includes/documentation-pagination.php'); ?>
