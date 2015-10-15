@@ -43,7 +43,7 @@
 			<div class='container'>
 				<div class='row'>
 					<div class='col-md-10 col-md-offset-1' itemscope itemtype="http://schema.org/NewsArticle">
-						<strong class='category'>Latest News</strong> Sample app for version 0.2.1 of the Ozark specification <a itemprop="url" href='https://groups.google.com/d/msg/ozark-lang/ScHtG-z6gRo/1nkjWLE3AgAJ'>See&nbsp;Announcement&nbsp;&rarr;</a>
+						<strong class='category'>Latest News</strong> Sample app for version 0.2.2 of the Ozark specification <a itemprop="url" href='https://groups.google.com/d/msg/ozark-lang/ScHtG-z6gRo/1nkjWLE3AgAJ'>See&nbsp;Announcement&nbsp;&rarr;</a>
 					</div>
 				</div>
 			</div>

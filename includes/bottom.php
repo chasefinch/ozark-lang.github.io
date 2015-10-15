@@ -47,7 +47,7 @@
 					<div class='col-xs-12 col-sm-4'>
 						<div class='footer-nav'>
 							<h6>Latest News</h6>
-							<div itemscope itemtype="http://schema.org/NewsArticle" class='announcement'>Sample app for version 0.2.1 of the Ozark specification <a itemprop="url" href='https://groups.google.com/d/msg/ozark-lang/ScHtG-z6gRo/1nkjWLE3AgAJ'>See&nbsp;Announcement&nbsp;&rarr;</a></div>
+							<div itemscope itemtype="http://schema.org/NewsArticle" class='announcement'>Sample app for version 0.2.2 of the Ozark specification <a itemprop="url" href='https://groups.google.com/d/msg/ozark-lang/ScHtG-z6gRo/1nkjWLE3AgAJ'>See&nbsp;Announcement&nbsp;&rarr;</a></div>
 						</div>
 					</div>
 				</div>
