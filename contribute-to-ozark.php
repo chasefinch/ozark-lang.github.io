@@ -6,7 +6,7 @@
 		$active = 'contribute';
 		require('includes/header.php');
 	?>
-	<body>
+	<body itemscope itemtype='http://schema.org/Language'>
 		<?php require('includes/top.php'); ?>
 		<div class='prompt-section'>
 			<section class='white'>
@@ -20,7 +20,7 @@
 											<h1>There is much to be done.</h1>
 											<p class='lead'>Software development is today's wild west. It's easy to start a new project, but hard to build something that lasts.<p><p class='lead'>Version control, application frameworks, and auto-formatters have paved the way for developers to collaborate in a civilized way. Still, it's so easy to make a bigger mess with every commit.</p>
 											<p class='lead'>Ozark is the next step; A clean language totally inseparable from an app's logic. A lot of care has gone into the language design to make it enjoyable, clear, and optimized. However, we're still in the early stages, and if you're a talented coder, we could use your help.</p>
-											<br /><a href='mailto:info@ozark.cc?subject=Ozark%20Founding%20Contributor' class='btn btn-lg btn-default'>Become Founding Developer #6</a><br />
+											<br /><a itemscope itemtype="http://schema.org/JoinAction" href='mailto:info@ozark.cc?subject=Ozark%20Founding%20Contributor' class='btn btn-lg btn-default'>Become Founding Developer #6</a><br />
 											<a class='prompt-dismiss' href='javascript:void(0);'><span class='glyphicon glyphicon-remove'></span> Dismiss</a>
 										</div>
 									</div>
@@ -40,11 +40,11 @@
 							<div class='row'>
 								<div class='col-sm-7'>
 									<h1>Open-Source Code</h1>
-									<p class='lead'>Ozark is maintained and developed on GitHub, including all code &amp; documentation source, the sample apps, the full language spec, and the roadmap for future language development.</p>
+									<p class='lead'><span itemprop='name'>Ozark</span> is maintained and developed on GitHub, including all code &amp; documentation source, the sample apps, the full language spec, and the roadmap for future language development.</p>
 								</div>
 								<div class='col-sm-4 col-sm-offset-1'>
 									<div class='links'>
-										<a class='btn btn-lg btn-primary' href='https://github.com/ozark-lang'>View Ozark on GitHub &nbsp; <span class='glyphicon glyphicon-new-window'></span></a>
+										<a itemscope itemtype="http://schema.org/JoinAction" class='btn btn-lg btn-primary' href='https://github.com/ozark-lang'>View Ozark on GitHub &nbsp; <span class='glyphicon glyphicon-new-window'></span></a>
 									</div>
 								</div>
 							</div>
@@ -71,13 +71,13 @@
 									<form action="//ozark.us9.list-manage.com/subscribe/post?u=db19e11de3ec47da1da91149f&amp;id=13de2cb1c6" method="post" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 										<div class='form-group'>
 											<div class='input-group input-block'>
-												<input type="email" value="" name="EMAIL" class="email form-control input-md" id="mce-EMAIL" placeholder="email address..." required /><div class='input-group-addon'><input type="submit" value="Go" name="subscribe" /></div>
+												<input type="email" value="" name="EMAIL" class="email form-control input-md" id="mce-EMAIL" placeholder="email address..." required /><div class='input-group-addon'><input itemscope itemtype="http://schema.org/SubscribeAction" type="submit" value="Go" name="subscribe" /></div>
 											</div>
 										</div>
 										<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
 										<div style="position: absolute; left: -5000px;"><input type="text" name="b_db19e11de3ec47da1da91149f_13de2cb1c6" tabindex="-1" value=""></div>
 									</form>
-									<p>Alongside public newsletter, there is a separate email for less frequent official language announcements. Sign up for that <a target="_blank" href='http://eepurl.com/55-Vz'>here</a>.</p>
+									<p>Alongside public newsletter, there is a separate email for less frequent official language announcements. Sign up for that <a itemscope itemtype="http://schema.org/SubscribeAction" target="_blank" href='http://eepurl.com/55-Vz'>here</a>.</p>
 								</div>
 								<div class='col-sm-4'>
 									<h4>Google Group</h4>
@@ -93,11 +93,11 @@
 									<h4>Contributors</h4>
 									<p>Thanks to those who continually contribute effort to the Ozark project. Our Founding Developers (people who have submitted commits or other effort before the initial release) are listed here. <a href='mailto:info@ozark.cc?subject=Ozark%20Founding%20Contributor'>Become one</a>.</p>
 									<ul class='contributors'>
-										<li>Rob Campbell <a target="_blank" href='https://github.com/rwcee'>rwcee</a></li>
-										<li>Chase Finch <a target="_blank" href='https://github.com/chasefinch'>chasefinch</a></li>
-										<li>Ben Guerrette <a target="_blank" href='https://twitter.com/benguerrette'>@benguerrette</a></li>
-										<li>Jaime Nacach <a target="_blank" href='https://twitter.com/bloominari'>@bloominari</a></li>
-										<li>Devin Smith <a target="_blank" href='https://twitter.com/devinwsmith'>@devinwsmith</a></li>
+										<li itemscope itemtype='http://schema.org/Person'><span itemprop='givenName'>Rob</span> <span itemprop='familyName'>Campbell</span> <a itemprop='url' target="_blank" href='https://github.com/rwcee'>rwcee</a></li>
+										<li itemscope itemtype='http://schema.org/Person'><span itemprop='givenName'>Chase</span> <span itemprop='familyName'>Finch</span> <a itemprop='url' target="_blank" href='https://github.com/chasefinch'>chasefinch</a></li>
+										<li itemscope itemtype='http://schema.org/Person'><span itemprop='givenName'>Ben</span> <span itemprop='familyName'>Guerrette</span> <a itemprop='url' target="_blank" href='https://twitter.com/benguerrette'>@benguerrette</a></li>
+										<li itemscope itemtype='http://schema.org/Person'><span itemprop='givenName'>Jaime</span> <span itemprop='familyName'>Nacach</span> <a itemprop='url' target="_blank" href='https://twitter.com/bloominari'>@bloominari</a></li>
+										<li itemscope itemtype='http://schema.org/Person'><span itemprop='givenName'>Devin</span> <span itemprop='familyName'>Smith</span> <a itemprop='url' target="_blank" href='https://twitter.com/devinwsmith'>@devinwsmith</a></li>
 									</ul>
 								</div>
 								<!--
@@ -114,9 +114,9 @@
 									<script>!function(d,s,id) {var js,cjs=d.getElementsByTagName(s)[0],e=d.getElementById(id);if(e){return;}js=d.createElement(s);js.id=id;js.src="https://www.coinbase.com/assets/tips.js";cjs.parentNode.insertBefore(js,cjs);}(document, 'script', 'coinbase-tips');</script>
 								</div>
 								-->
-								<div class='col-sm-4'>
-									<h4>Founder</h4>
-									<p>Ozark was founded in San Diego, California by Chase Finch, primarily in support of a venture to build visual software development tools. Find him on Twitter as <a target="_blank" href='https://twitter.com/______chase'>@______chase</a>, GitHub as <a target="_blank" href='https://github.com/chasefinch'>chasefinch</a>, or by email at <a href='mailto:info@ozark.cc'>info@ozark.cc</a>.</p>
+								<div class='col-sm-4' itemscope itemtype="http://schema.org/Person">
+									<h4 itemprop="jobTitle">Founder</h4>
+									<p>Ozark was founded in <span itemprop="homeLocation" itemscope itemtype="http://schema.org/City">San Diego</span>, <span itemscope itemtype="http://schema.org/State">California</span> by <span itemprop="givenName">Chase</span> <span itemprop="familyName">Finch</span>, primarily in support of a venture to build visual software development tools. Find him on Twitter as <a itemprop="url" target="_blank" href='https://twitter.com/______chase'>@______chase</a>, GitHub as <a itemprop="url" target="_blank" href='https://github.com/chasefinch'>chasefinch</a>, or by email at <a itemprop="url" href='mailto:info@ozark.cc'>info@ozark.cc</a>.</p>
 								</div>
 							</div>
 						</div>

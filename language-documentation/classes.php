@@ -7,7 +7,7 @@
 		$document = 'classes';
 		require('../includes/header.php');
 	?>
-	<body>
+	<body itemscope itemtype='http://schema.org/Language'>
 		<?php require ('../includes/top.php'); ?>
 		<section class='white short'>
 			<div class='container'>
@@ -29,7 +29,7 @@
 								<div class='row'>
 									<div class='col-lg-10'>
 										<main>
-											<p>As you've seen in the examples thus far, <strong>classes</strong> are the primary building blocks of Ozark applications. With the exception of <a href='values#Enumeration'>enumerations</a>, a class is the only thing that exists outside of any other context. In fact, building an Ozark application consists entirely of building classes and enumerations.</p>
+											<p>As you've seen in the examples thus far, <strong>classes</strong> are the primary building blocks of <span itemprop='name'>Ozark</span> applications. With the exception of <a href='objects#Enumeration'>enumerations</a>, a class is the only thing that exists outside of any other context. In fact, building an Ozark application consists entirely of building classes and enumerations.</p>
 
 											<p>Root-level classes correspond to single files within an operating system. Class file names end with <code>.class.ozark</code>, with ".ozark" being the technical file extension, and ".class" being an identifier that Ozark uses to differentiate between classes and enumerations. Nested classes are declared with the <code>class</code> keyword. See <a href='files'>file structure</a> for more details about Ozark files.</p>
 
@@ -39,14 +39,12 @@
 
 											<ul>
 												<li><a href='#Inheritance'><code>inheritance</code></a> - A parent class from which this class inherits all features</li>
-												<li><a href='objects#Generics'><code>index</code></a> - If this class is a collection type, a placeholder for the value type that is specified object initialization</li>
-												<li><a href='objects#Generics'><code>type</code></a> - If this class is a collection type, a placeholder for the type that is specified on object initialization</li>
+												<li><a href='objects#Generics'><code>type</code></a> - If this class uses generics, a placeholder for a type that is specified on object initialization</li>
 												<li><a href='#Inheritance'><code>inheritance</code></a> - A parent class from which this class inherits all features</li>
 												<li><a href='#Requirements'><code>requirement</code></a> - Another class or enumeration of which this class must be aware</li>
 												<li><code>class</code> - A nested class declaration on which this class depends</li>
 												<li><a href='values#Enumeration'><code>enumeration</code></a> - A nested enumeration declaration on which this class depends</li>
-												<li><a href='members'><code>member</code></a> - A pointer within the scope of an object of this class</li>
-												<li><a href='properties'><code>property</code></a> - A variable within the scope of the object of this class</li>
+												<li><a href='properties'><code>property</code></a> - A pointer or collection within the scope of the object of this class</li>
 												<li><a href='methods#extensions'><code>inheritance</code></a> - A parent class from which this class inherits all features</li>
 												<li><a href='methods'><code>method</code></a> - A named subroutine with any number of inputs and outputs</li>
 											</ul>
@@ -54,7 +52,7 @@
 											<p>A class starts with a capital letter, and everything is declarative within a class definition. Only a method has imperative statements.</p>
 
 											<div class='code-sample-header'>Superhero.class.ozark</div>
-											<div class='code-sample'><pre>inheritance Hero
+											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>inheritance Hero
 
 requirement Superpower
 requirement XRayVision
@@ -65,14 +63,13 @@ enumeration Strength
 	state beatenUp
 	state veryWeak
 
-member superpower:Superpower
-
-property strength:Strength
+property @superpower:Superpower
+property @strength:Strength
 
 extension initialize
 	create power:XRayVision initialize
 
-	set @superpower &lt;- power
+	set @power &lt;- power
 	set @strength &lt;- Strength.fullStrength</pre></div>
 
 											<a name="Requirements"><h2>Requirements</h2></a>
@@ -80,7 +77,7 @@ extension initialize
 											<p>Any classes or enumerations used by a class that aren't nested must be explicitly declared as <strong>requirements</strong>. The <code>requirement</code> declaration will find the class or enumeration in the current project scope, which includes the file's current directory and the system-wide libraries linked in the Ozark compiler. See <a href='files'>File Structure</a> for more information.</p>
 
 											<div class='code-sample-header'>TruckDriver.class.ozark</div>
-											<div class='code-sample'><pre>inheritance Driver
+											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>inheritance Driver
 
 requirement Truck
 requirement Road
@@ -93,14 +90,14 @@ requirement BinaryTree</pre></div>
 											<p>Ozark supports multiple inheritance. For example, a <code>Cat</code> can be both a <code>Cartoon</code> and an <code>Animal</code>. Method naming conflicts are resolved using a depth-first search with the <a target="_blank" href='https://en.wikipedia.org/wiki/C3_linearization'>C3 linearization algorithm.</a> Other naming conflicts are not allowed, and produce a compile-time error.</p>
 
 											<div class='code-sample-header'>Cat.class.ozark</div>
-											<div class='code-sample'><pre>inheritance Cartoon
+											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>inheritance Cartoon
 inheritance Animal
 
 requirement Whisker
 requirement Tail
 
-member whiskers:Array|Whisker
-member tail:Tail
+property @whiskers:[Whisker]
+property @tail:Tail
 
 method catNap io:StandardIO
 	io print "zzzzzzz"</pre></div>
@@ -112,7 +109,7 @@ method catNap io:StandardIO
 											<p>Consider this example class from the RifleRange demo app. The <code>Rifleman</code> class has a <code>ShootAbility</code> and a <code>CelebrateAbility</code>, and both of those classes are nested within the <code>Rifleman</code> class.</p>
 
 											<div class='code-sample-header'>Rifleman.class.ozark</div>
-											<div class='code-sample'><pre>inheritance Soldier
+											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>inheritance Soldier
 
 requirement StandardIO
 requirement Gun
@@ -129,23 +126,25 @@ class ShootAbility
 	requirement Target
 	requirement Bullet.Casing
 	requirement Smoke
-	requirement Calculus
 
 	enumeration SkillLevel
-		state Novice
-		state Intermediate
-		state Expert
+		state novice
+		state intermediate
+		state expert
 
-	member skill:SkillLevel
+	property @skill:SkillLevel
 
-	extension initialize ~skill:SkillLevel
+	extension initialize		
+		set @skill &lt;- SkillLevel.novice
+
+	extension initialize &amp;skill:SkillLevel
 		set @skill &lt;- skill
 
-	method fireGun #gun:Gun target:Target -&gt; casing:Bullet.Casing smoke:Smoke
-		gun shootTarget target -&gt; casing:casing1 smoke:smoke1
+	method fireGun gun:Gun target:Target -&gt; $casing:Bullet.Casing $smoke:Smoke
+		gun shoot target -&gt; casing:casing smoke:smoke
 
-		set casing &lt;- casing1
-		set smoke &lt;- smoke1
+		set $casing &lt;- casing
+		set $smoke &lt;- smoke
 
 class CelebrateAbility
 	inheritance Ability
@@ -158,82 +157,89 @@ class CelebrateAbility
 
 		requirement Hat
 
-		method tipHat #hat:Hat
+		method tipHat _hat:Hat
 			hat getTipped
 
-	member io:StandardIO
-	member hatTipper:HatTipAbility
+	property @io:StandardIO
+	property @hatTipper:HatTipAbility
 
 	extension initialize
-		@io initialize
-		@hatTipper initialize
+		create io:StandardIO; initialize
+		create hatTipper:HatTipAbility; initialize
 
-	extension initialize ~io:StandardIO
 		set @io &lt;- io
+		set @hatTipper &lt;- hatTipper
 
-		@hatTipper initialize
+	extension initialize &amp;io:StandardIO
+		create hatTipper:HatTipAbility; initialize
+
+		set @io &lt;- io
+		set @hatTipper &lt;- hatTipper
 
 	method showOffForTheCrowd hat:Hat
 		@hatTipper tipHat hat
-		@io print "Hello, ladies."
+		@io print "Hello,&nbsp;ladies."
 
-member io:StandardIO
-member shooter:ShootAbility
-member celebrator:CelebrateAbility
-member gun:Gun
-member hat:Hat
-
-property mood:Mood
-property fieldGuides:Dictionary\String|String
+property @io:StandardIO
+property @shooter:ShootAbility
+property @celebrator:CelebrateAbility
+property @gun:Gun
+property @hat:Hat
+property @mood:Mood
 
 extension initialize
-	create io:StandardIO initialize
-	create shooter:ShootAbility initialize
-	create celebrator:CelebrateAbility initialize io:io
-	create gun:Gun initialize
-	create hat:Hat initialize
+	create io:StandardIO; initialize
+	create shooter:ShootAbility; initialize
+	create celebrator:CelebrateAbility; initialize io:io
+	create gun:Gun; initialize
+	create hat:Hat; initialize
 
 	set @io &lt;- io
 	set @shooter &lt;- shooter
 	set @celebrator &lt;- celebrator
-	set @mood &lt;- Mood.happy
 	set @gun &lt;- gun
 	set @hat &lt;- hat
+	set @mood &lt;- Mood.happy
 
-extension initialize ~io:StandardIO
-	create shooter:ShootAbility initialize
-	create celebrator:CelebrateAbility initialize io:io
-	create gun:Gun initialize
-	create hat:Hat initialize
+extension initialize &amp;io:StandardIO
+	create shooter:ShootAbility; initialize
+	create celebrator:CelebrateAbility; initialize io:io
+	create gun:Gun; initialize
+	create hat:Hat; initialize
 
 	set @io &lt;- io
 	set @shooter &lt;- shooter
 	set @celebrator &lt;- celebrator
-	set @mood &lt;- Mood.happy
 	set @gun &lt;- gun
 	set @hat &lt;- hat
+	set @mood &lt;- Mood.happy
 
-method shootEveryOtherTarget #targets:Array|Target -&gt; casings:Array|Bullet.Casing smoke:Smoke success:Boolean
-	create theCasings:Array|Bullet.Casing initialize
-	create theSmoke:Smoke initialize
+method shootEveryOtherTarget _targets:[Target] -&gt; $casings:[Bullet.Casing] $smoke:Smoke $success:Boolean
+	create smoke:Smoke; initialize
+	create success:Boolean; initialize true
+	create testShotCasing1:Bullet.Casing; initialize
+	create testShotCasing2:Bullet.Casing; initialize
 
-	input getOddItems -&gt; oddItems
-	oddItems getKeys -&gt; keys
+	identify testCasings:[testShotCasing1, testShotCasing2]
 
-	for k:keys -&gt; success:[Boolean]
-		oddItems lookup k -&gt; i
-		shooter shootTarget i -&gt; result
+	for target:targets[2%2] -&gt; casings:[Bullet.Casing]
+		shooter shootTarget target -&gt; success:success1 casing:casing smoke:smoke1
+		success and success1
+		smoke add smoke1
+		set casings[$] &lt;- casing
 
-		set success &lt;- result
-
-	if all(success)
+	unless someVar
 		@celebrator showOffForTheCrowd hat:@hat
-		
+	
+	else; if someOtherVar
 		set @mood &lt;- Mood.happy
 
-	set casings &lt;- theCasings
-	set smoke &lt;- theSmoke
-	set success &lt;- all(successes)</pre></div>
+	else
+		set @mood &lt;- Mood.tired
+
+	set $casings &lt;- testCasings + casings
+	set $smoke &lt;- smoke
+	set $success &lt;- success</pre></div>
 
 											<p>From outside of the parent class, subclasses can be imported via the <code>requirement</code> declaration and referenced with dot notation. For example, a class making use of the <code>Rifleman</code> class but wishing to declare an independent <code>ShootAbility</code> would reference the class as <code>Rifleman.ShootAbility</code></p>
 

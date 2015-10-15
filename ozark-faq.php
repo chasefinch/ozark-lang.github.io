@@ -6,7 +6,7 @@
 		$active = "faq";
 		require('includes/header.php');
 	?>
-	<body>
+	<body itemscope itemtype='http://schema.org/Language'>
 		<?php require('includes/top.php'); ?>
 		<section class='white'>
 			<div class='container'>
@@ -21,12 +21,12 @@
 						<div class='row'>
 							<div class='col-sm-6'>
 								<h4>Q. Why strict programming?</h4>
-								<p><strong>A.</strong> Limiting style choices in programming makes reliable and future-ready code libraries &ndash; meaning strict code is more readable and collaborative.</p>
+								<p><strong>A.</strong> Limiting style choices in programming makes code more readable and collaborative. Since the style is enforced, software written in <span itemprop='name'>Ozark</span> is easy to pass between developers.</p>
 								<h4>Q. Why is Ozark important?</h4>
 								<p><strong>A.</strong> Development tools can generate code in other languages, but that code can't be read back in for further development. Ozark is different; Because of the strict formatting rules, handwritten code can be interpreted and extended by development tools, and vice versa.</p>
 								<p>A set of Ozark files serves as both a codebase and a save format for advanced IDEs.
 								<h4>Q. Why can't I use variables like I'm used to?</h4>
-								<p><strong>A.</strong> Ozark uses pointers and variables as properties of objects, and as connections between the inputs and outputs of methods.</p>
+								<p><strong>A.</strong> Ozark uses variables (in Ozark, <em>pointers</em>) as properties of objects, and as connections between the inputs and outputs of methods.</p>
 								<p>Like in flow-based programming, the programmer focuses on the flow of data rather than creating temporary states. The state is nicely wrapped up in the properties of the objects themselves.</p>
 							</div>
 							<div class='col-sm-6'>

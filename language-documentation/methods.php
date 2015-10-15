@@ -7,7 +7,7 @@
 		$document = 'methods';
 		require('../includes/header.php');
 	?>
-	<body>
+	<body itemscope itemtype='http://schema.org/Language'>
 		<?php require ('../includes/top.php'); ?>
 		<section class='white short'>
 			<div class='container'>
@@ -33,15 +33,15 @@
 
 											<p>A method declaration specifies named inputs, named outputs, and a method body. The body is made of imperative statements.</p>
 
-											<p>All methods are public (accessible to any context that has reference to the object) &ndash; but in Ozark, an object cannot call its own methods.</p>
+											<p>All methods are public (accessible to any context that has reference to the object) &ndash; but in <span itemprop='name'>Ozark</span>, an object cannot call its own methods.</p>
 											
 											<div class='code-sample-header'>Conductor.class.ozark</div>
-											<div class='code-sample'><pre>inheritance Musician
+											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>inheritance Musician
 	
 requirement Concerto
 requirement Orchestra
 
-method beginConcerto #concerto:Concerto orchestra:Orchestra
+method beginConcerto _concerto:Concerto orchestra:Orchestra
 	concerto getFirstMovement -&gt; movement
 	orchestra perform movement
 	concerto getSecondMovement -&gt; movement2
@@ -49,87 +49,86 @@ method beginConcerto #concerto:Concerto orchestra:Orchestra
 	concerto getFinalMovement -&gt; movement3
 	concert perform movement3
 
-method concludeConcerto #concerto:Song orchestra:Orchestra
+method concludeConcerto _concerto:Song orchestra:Orchestra
 	orchestra concludeConcerto concerto</pre></div>
 
 
 											<p>Methods do not have a "return value" like in other object-oriented languages. Statements are not expressions to be evaluated; They are instructions to be executed, and they may or may not have any number of outputs. Separating the concept of evaluable expressions from the concept of executable instructions is one of the core uniquenesses of Ozark.</p>
 
-											<p>Methods are executable instructions that can operate on <em>objects</em> and using both <em>objects</em> and <em>values</em>, where as evaluable <em>expressions</em> consist of only values and built-in functions.</p>
-
 											<a name='InputsAndOutputs'><h2>Inputs &amp; outputs</h2></a>
 
-											<p>Methods have any number of predefined inputs and outputs.</p>
+											<p>Methods have any number of predefined inputs and outputs. In the method signature and within the method body, the outputs are prefixed with a <code>$</code> symbol to avoid naming conflicts with inputs, properties, and other pointers and collections.</p>
 
-											<p>Within a method, outputs are final, meaning they can only be pointed to an object (or assigned a value) once during a method, and inputs are constant, meaning they cannot have their object/value changed at all. The only other mutable items are <a href='classes#Members'>members</a> and <a href='classes#Properties'>properties</a>, which are also final within a method.</p>
+											<p>Within a method, outputs are final, meaning they can only be pointed to an object once during a method, and inputs are constant, meaning they cannot have their value changed at all. The only other mutable items are <a href='classes#Properties'>properties</a>, which are also final within a method.</p>
 
 											<p>When calling a method, the inputs are final (meaning they can only be assigned once), and the outputs are constant and cannot be changed.</p>
 
-											<p>Within a method signature, inputs are declared sequentially after the method name, and outputs are declared after an arrow (<code>-&gt;</code>) symbol.</p>
+											<p>Within a method signature, inputs are declared sequentially after the method name, and outputs are declared after an arrow (<code>-&gt;</code>) symbol and prefixed with a <code>$</code> symbol.</p>
 
-											<p>Both pointers and variables can be defined as inputs and outputs. The type and name of the pointers and variables is defined explicitly in the method signature. Inputs are both named and ordered, allowing verbose method names. An input prefixed with a hash (<code>#</code>) is not mentioned explicitly when called.</p>
+											<p>The types of the pointers and collections are defined explicitly in the method signature. Inputs are both named and ordered, allowing verbose method names. An input prefixed with an underscore (<code>_</code>) is not mentioned explicitly when called.</p>
 
 											<div class='code-sample-header'>Sailboat.class.ozark</div>
-											<div class='code-sample'><pre>inheritance Boat
+											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>inheritance Boat
 
 requirement WaterfrontLocation
 
-member location:Location
-member launcher:LaunchAbility
-member navigator:NavigateAbility
-member docker:DockAbility
+property @location:Location
+property @launcher:LaunchAbility
+property @navigator:NavigateAbility
+property @docker:DockAbility
 
-method sailTo #destination:WaterfrontLocation -&gt; duration:TimeInterval
+method sailTo _destination:WaterfrontLocation -&gt; $duration:TimeInterval
 	@launcher launch
 	destination getPort -&gt; port
 	port getLocation -&gt; location
-	@navigator navigate destination:location -&gt; finalLocation:final
+	@navigator navigate destination:location -&gt; finalLocation:final duration:duration
 	@docker dock port:port
 
-	set @location &lt;- final</pre></div>
+	set @location &lt;- final
+	set $duration &lt;- duration</pre></div>
 
 		
-											<a name='Properties'><h2>Properties &amp; members</h2></a>
+											<a name='Properties'><h2>Properties</h2></a>
 
-											<p>Ozark has very small scopes. A method may access the <strong>properties</strong> &amp; <strong>members</strong> of the instance object, and the inputs and outputs of the method itself. No other predefined value are available to it.</p>
+											<p>Ozark has very small scopes. A method may access the <strong>properties</strong> of the instance object, and the inputs and outputs of the method itself. No other predefined value are available to it.</p>
 
-											<p>A method is, however, the only way of accessing the properties and members of a given object. Those properties and members are not accessible to other objects.</p>
+											<p>A method is, however, the only way of accessing the properties of a given object. Those properties are not accessible to other objects.</p>
 
 
 											<a name="Extensions"><h2>Overriding &amp; extending parent methods</h2></a>
 
-											<p>As discussed in <a href='classes#Inheritance'>Inheritance</a>, a class inherits all methods, members, and properties from its parent classes. It also has access to declared <em>requirements</em>, nested classes, and nested <em>enumerations</em>. To redeclare a method in a child class, simply declare it as usual. An object will use the new method definition instead of the inherited one.</p>
+											<p>As discussed in <a href='classes#Inheritance'>Inheritance</a>, a class inherits all methods and properties from its parent classes. It also has access to declared <em>requirements</em>, nested classes, and nested <em>enumerations</em>. To redeclare a method in a child class, simply declare it as usual. An object will use the new method definition instead of the inherited one.</p>
 
-											<p>To extend a parent method, drop the <code>method</code> keyword and instead declare an <code>extension</code>. This is commonly seen with the <code>initialize</code> method.</p>
+											<p>To extend a parent method, drop the <code>method</code> keyword and instead declare an <code>extension</code>. This is commonly seen with the <code>initialize</code> method. The body declared for the extension will execute after the code declared in the parent method.</p>
 
 											<div class='code-sample-header'>Flower.class.ozark</div>
-											<div class='code-sample'><pre>inheritance Plant
+											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>inheritance Plant
 
 requirement Color
 
-member color:Color
+property @color:Color
 
 extension initialize
-	create color:Color initializeRandom
+	create color:Color; initializeRandom
+	
+	set @color &lt; color</pre></div>
 
-	set @color &lt;- color</pre></div>
-
-											<p>To add additional input &amp; output parameters to an extension, prefix them with the tilde (<code>~</code>) symbol.</p>
+											<p>To add additional input &amp; output parameters to an extension, prefix them with the ampersand (<code>&amp;</code>) symbol.</p>
 
 											<div class='code-sample-header'>Flower.class.ozark</div>
-											<div class='code-sample'><pre>inheritance Plant
+											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>inheritance Plant
 
 requirement Color
 requirement Direction
 
-member color:Color
+property @color:Color
 
-extension initialize ~color:Color -&gt; ~facing:Direction
+extension initialize &amp;color:Color -&gt; &amp;$facing:Direction
+	create color:Color; initializeRandom
+	create facing:Direction; initializeRandom
+	
 	set @color &lt;- color
-
-	create direction:Direction initializeRandom
-
-	set facing &lt;- direction</pre></div>
+	set $facing &lt;- facing</pre></div>
 	
 											<a name='Calling'><h2>Calling methods</h2></a>
 
@@ -146,25 +145,25 @@ extension initialize ~color:Color -&gt; ~facing:Direction
 											<p><strong>Nested types</strong> can be used within the primary class as named. From outside a class, dot notation is used to identify the class name. This example contains a few of each situation:</p>
 
 											<div class='code-sample-header'>Guitar.class.ozark</div>
-											<div class='code-sample'><pre>inheritance Instrument
+											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>inheritance Instrument
 
 class GuitarString
 	inheritance Instrument.PlayableComponent
 
-member string1:GuitarString
-member string2:GuitarString
-member string3:GuitarString
-member string4:GuitarString
-member string5:GuitarString
-member string6:GuitarString
+property @string1:GuitarString
+property @string2:GuitarString
+property @string3:GuitarString
+property @string4:GuitarString
+property @string5:GuitarString
+property @string6:GuitarString
 
 method initialize
-	create string1:GuitarString initialize
-	create string2:GuitarString initialize
-	create string3:GuitarString initialize
-	create string4:GuitarString initialize
-	create string5:GuitarString initialize
-	create string6:GuitarString initialize
+	create string1:GuitarString; initialize
+	create string2:GuitarString; initialize
+	create string3:GuitarString; initialize
+	create string4:GuitarString; initialize
+	create string5:GuitarString; initialize
+	create string6:GuitarString; initialize
 
 	set @string1 &lt;- string1
 	set @string2 &lt;- string2
@@ -174,22 +173,22 @@ method initialize
 	set @string6 &lt;- string6</pre></div>
 
 											<div class='code-sample-header'>GuitarPlayer.class.ozark</div>
-											<div class='code-sample'><pre>inheritance Musician
+											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>inheritance Musician
 
 requirement Guitar
 requirement Guitar.GuitarString
 
-member guitar
+property @guitar
 
-method setGuitar #guitar:Guitar
+method setGuitar _guitar:Guitar
 	set @guitar &lt;- guitar
 
-method playString #string:Guitar.GuitarString -&gt; note:Note
+method playString _string:Guitar.GuitarString -&gt; $note:Note
 	string play -&gt; note:note
 	
-	set note &lt;- note</pre></div>
+	set $note &lt;- note</pre></div>
 	
-											<p>The robust nested-type system in Ozark is intended to keep code neat, since dependency injection is required by the built-in language rules.</p>
+											<p>The robust nested-type system in Ozark is intended to keep code short and neat, since dependency injection is required by the built-in language rules.</p>
 										</main>
 										<?php require('../includes/documentation-pagination.php'); ?>
 									</div>
