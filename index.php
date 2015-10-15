@@ -6,7 +6,7 @@
 		$active = 'home';
 		require('includes/header.php');
 	?>
-	<body>
+	<body itemscope itemtype='http://schema.org/Language'>
 		<?php require('includes/top.php'); ?>
 		<section class='blue thinker'>
 			<div class='container'>
@@ -14,7 +14,7 @@
 					<div class='col-md-10 col-md-offset-1'>
 						<div class='row'>
 							<div class='col-sm-7'>
-								<h1 class='heading'>Ozark is a readable open-source programming language. Through strict code standards, Ozark enables new tools for building software.</h1>
+								<h1 class='heading' itemprop='description'>Ozark is a readable open-source programming language. Through strict code standards, Ozark enables new tools for building software.</h1>
 								<div class='row'>
 									<div class='col-sm-10'>
 										<form action="//ozark.us9.list-manage.com/subscribe/post?u=db19e11de3ec47da1da91149f&amp;id=13de2cb1c6" method="post" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
@@ -23,7 +23,7 @@
 												<div class='row'>
 													<div class='col-sm-10'>
 														<div class='input-group input-block input-group-large'>
-															<input type="email" id="mce-EMAIL" value="" name="EMAIL" class="email form-control input-lg" placeholder="email address..." required /><div class='input-group-addon'><input type="submit" value="Go" name="subscribe" /></div>
+															<input type="email" id="mce-EMAIL" value="" name="EMAIL" class="email form-control input-lg" placeholder="email address..." required /><div class='input-group-addon'><input itemscope itemtype="http://schema.org/SubscribeAction" type="submit" value="Go" name="subscribe" /></div>
 														</div>
 													</div>
 												</div>
@@ -42,8 +42,8 @@
 		<section class='news'>
 			<div class='container'>
 				<div class='row'>
-					<div class='col-md-10 col-md-offset-1'>
-						<strong class='category'>Latest News</strong> Sample app for version 0.2.1 of the Ozark specification <a href='https://groups.google.com/d/msg/ozark-lang/ScHtG-z6gRo/1nkjWLE3AgAJ'>See&nbsp;Announcement&nbsp;&rarr;</a>
+					<div class='col-md-10 col-md-offset-1' itemscope itemtype="http://schema.org/NewsArticle">
+						<strong class='category'>Latest News</strong> Sample app for version 0.2.1 of the Ozark specification <a itemprop="url" href='https://groups.google.com/d/msg/ozark-lang/ScHtG-z6gRo/1nkjWLE3AgAJ'>See&nbsp;Announcement&nbsp;&rarr;</a>
 					</div>
 				</div>
 			</div>
@@ -56,13 +56,13 @@
 							<div class='col-sm-6'>
 								<div class='portal'>
 									<h3>Concise<span class='glyphicon glyphicon-align-left'></span></h3>
-									<p>In Ozark, code has tight formatting rules and is strictly object-oriented. It has a narrow instruction set, and there's a single 'correct' way to accomplish just about everything.</p>
+									<p>In <span itemprop='name'>Ozark</span>, code has tight formatting rules and is strictly object-oriented. It has a narrow instruction set, and there's a single 'correct' way to accomplish just about everything.</p>
 								</div>
 							</div>
 							<div class='col-sm-6'>
 								<div class='portal'>
 									<h3>Authoritative<span class='glyphicon glyphicon-ok'></span></h3>
-									<p>Ozark is both a programming language and a file-storage format for applications that write code. That makes it great for development with visual programming tools or by Artificial Intelligence.</p>
+									<p>Ozark is both a programming language and a file-storage format for applications that write code. That makes it great for development with visual programming tools or by artificial intelligence.</p>
 								</div>
 							</div>
 						</div>
@@ -76,7 +76,7 @@
 							<div class='col-sm-6'>
 								<div class='portal'>
 									<h3>Smart<span class='glyphicon glyphicon-refresh'></span></h3>
-									<p>Ozark blends the structure of object-oriented programming for objects (such as <code>systemIO</code> and <code>myHat</code>) with the elegance of reusable expressions for values (such as <code>5.3</code> and <code>true</code>).</p>
+									<p>Ozark blends the structure of object-oriented programming with the elegance of flow-based programming. An app has discrete states, wrapped into objects, but lacks any global state that get in the way of clean data flow.</p>
 								</div>
 							</div>
 						</div>
@@ -88,33 +88,34 @@
 							</div>
 						</div>
 						<div class='row'>
-							<div class='col-sm-7'>
+							<div class='col-sm-7' itemscope itemtype="http://schema.org/SoftwareSourceCode">
 
 								<div class='code-sample-header'>Mountaineer.class.ozark</div>
-								<div class='code-sample'><pre>inheritance Person
+								<div class='code-sample'><meta itemprop="language" content="Ozark" />
+									<pre>inheritance Person
 
 requirement HikeAbility
 requirement Hat
 requirement Map
 requirement Mountain
 
-member hiker:HikeAbility
-member hat:Hat?
-member map:Map?
+property hiker:HikeAbility
+property hat:Hat?
+property map:Map?
 
 method prepare
-	create map:Map initialize
-	create hat:Hat initialize
+	create map:Map; initialize
+	create hat:Hat; initialize
 	set @map &lt;- map
 	set @hat &lt;- hat
 
-method climbMountain #mountain:Mountain
-	with @map
-		@map findTrail mountain:mountain -&gt; trail
+method climbMountain _mountain:Mountain
+	with map:@map!
+		map findTrail mountain:mountain -&gt; trail
 		@hiker followTrail trail -&gt; success:result
 	
 		if result
-			@speaker shout "Hello, world!"</pre></div>
+			@speaker shout "Hello,&nbsp;world!"</pre></div>
 							</div>
 							<div class='col-sm-5'>
 								<div class='github'>

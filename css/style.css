@@ -77,20 +77,14 @@ a.download { font-weight:bold; text-decoration:none; }
 .reserved { color:#5e4ed7; }
 .argument { color:#308495; }
 .method { color:#308495; }
-.emphasize { color:#308495; font-weight:bold; }
-.function { color:#fd9632; }
-.implicit { color:#28527c; }
 .comment { color:#05a74f; }
 .string { color:#ff2e2d; }
 .literal { color:#0000ff; }
 .property { color:#344; font-weight:bold; }
 .type { color:#25aae1; }
 .separator { color:#006a91; }
-.symbol { color:#fd9632; }
 
-.nothing { color:#e92c31; }
-
-/* color:#fd9632; color:#18525c; color:#496fb1; */
+/* color:#fd9632; color:#28527c; color:#18525c; color:#496fb1; */
 
 /*---*/
 

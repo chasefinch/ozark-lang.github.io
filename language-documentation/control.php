@@ -7,7 +7,7 @@
 		$document = 'control';
 		require('../includes/header.php');
 	?>
-	<body>
+	<body itemscope itemtype='http://schema.org/Language'>
 		<?php require ('../includes/top.php'); ?>
 		<section class='white short'>
 			<div class='container'>
@@ -29,88 +29,99 @@
 								<div class='row'>
 									<div class='col-lg-10'>
 										<main>
-											<p>Ozark has five <strong>control-flow</strong> constructs; <code>if</code>, <code>with</code>, <code>without</code>, <code>for</code>, and <code>repeat</code>. This is an intentionally small set, as each allows predictable patterns for accomplishing specific things within Ozark code.</p>
+											<p><span itemprop='name'>Ozark</span> has three <strong>control-flow</strong> constructs:</p>
 
-											<p>These conditional statements have a body that is executed zero or more times based on the result of the conditional. Unlike other languages, these have their own scope; They may access <em>variables</em> and <em>pointers</em> from the method scope, but variables and pointers created inside the body are not available outside of it. When looping, <code>for</code> allows you to define outputs as <em>lists</em>, and set the elements of the lists inside of the loop.</p>
+											<ul>
+												<li><code>if</code>/<code>unless</code>/<code>with</code>/<code>without</code>/<code>else</code></li>
+												<li><code>for</code></li>
+												<li><code>repeat</code></li>
+											</ul>
 
-											<a name="If"><h4>If</h4></a>
+											<p>This is an intentionally small set, as each allows predictable patterns for accomplishing specific things within Ozark code.</p>
 
-											<p>The <code>if</code> statement evaluates a <code>Boolean</code> value or expression and, if that expression evaluates to true, executes the body.</p>
+											<p>These conditional statements have a body that is executed zero or more times based on the result of the conditional. Unlike other languages, these have their own scope; They may access <em>variables</em> and <em>pointers</em> from the method scope, but variables and pointers created inside the body are not available outside of it. When looping, <code>for</code> allows you to define outputs as <em>arrays</em>, and set the elements of the arrays inside of the loop.</p>
 
-											<p>There is no concept of an *else* or a *switch* in Ozark. This makes a single pattern for conditionals, and prevents dangling and confusing multipart conditionals.</p>
+											<a name="If"><h4>If / Unless / Else</h4></a>
+
+											<p>The <code>if</code> statement evaluates a <code>Testable</code> value and, if that value is <code>true</code>, executes the body. Objects that inherit from <code>Testable</code> include <code>Boolean</code> objects, as well as the other primitives. Custom classes can also inherit from <code>Testable</code>, and can overwrite the <code>isTrue -> _value:Boolean</code> method, which by default returns true if the two pointers are referencing the same object.</p>
+
+											<p>The <code>unless</code> statement is the opposite of <code>if</code>, executing only if the passed value returns <code>false</code> for the test function.</p>
+
+											<p>The <code>else</code> executes if the previously chained statements did not. <code>if</code>, <code>unless</code>, and <code>else</code> can be chained with the semicolon (<code>;</code>) operator.</p>
 
 											<div class='code-sample-header'>BranchExample.class.ozark</div>
-											<div class='code-sample'><pre>inheritance Example
+											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>inheritance Example
 
-method branch object:Object condition:Boolean
-	if condition
+method branch object:Object condition1:Boolean condition2:Boolean
+	if condition1
 		object doSomething
 
-	if not(condition)
-		object getConditionA -&gt; conditionA
-		object getConditionB -&gt; conditionB
+	else; unless condition2
+		object doSomethingElse
 
-		if conditionA and conditionB
-			object doSomething</pre></div>
+	else
+		object reset</pre></div>
 
-											<a name="WithAndWithout"><h4>With &amp; Without</h4></a>
+											<a name="With"><h4>With / Without / Else</h4></a>
 
 											<p>The <code>with</code> statement unpacks an optional <a href='objects#Pointers'>pointer</a> and, if the pointer is set, executes the body. Inside the body, the pointer can be used as though it were not optional.</p>
 
 											<p>The behavior is very similar to an <code>if</code> statement. The <code>without</code> keyword is similar, but executes the body only if the optional pointer is <strong>not</strong> set.</p>
+
+											<p>The <code>else</code> keyword can be used just like in an <a href='#If'>if</a> statement, and in fact all 5 conditionals can be chained together.</p>
 											
 											<div class='code-sample-header'>WithExample.class.ozark</div>
-											<div class='code-sample'><pre>inheritance Example
+											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>inheritance Example
 
-method testAndContinue object:ExampleObject? io:StandardIO
+method testAndContinue object:ExampleObject? objectNeeded:Boolean io:StandardIO
 	with object
 		object doSomething
 	
-	without object
-		io print "Cannot continue - no object."</pre></div>
+	else; if objectNeeded
+		io print "Cannot&nbsp;continue&nbsp;-&nbsp;no&nbsp;object."
+
+	else
+		io print "Continuing&nbsp;without&nbsp;object."</pre></div>
 
 											<a name="For"><h4>For</h4></a>
 
-											<p>The <code>for</code> statement declares a <a href='values#Variables'>variable</a> and takes a <a href='values#CollectionTypes'>list, set, or bag</a> as an argument, executing the body one time for each item in the collection.</p>
+											<p>The <code>for</code> statement declares a <a href='objects#Pointers'>pointer</a> and takes an <a href='collections#Arrays'>array</a> as an argument, executing the body one time for each item in the collection.</p>
 
 											<div class='code-sample-header'>ForExample.class.ozark</div>
-											<div class='code-sample'><pre>inheritance Example
+											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>inheritance Example
 
 requirement Attendee
 
-method printStrings #strings:[String] io:StandardIO
-	for string:strings
-		io print string
+method printCount count:Integer io:StandardIO
+	for i:[1~count]
+		io print i
 
-method printNames attendees:Array|Attendee io:StandardIO
-	attendees count -&gt; count
-
-	for i:range(1, count)
-		attendees itemAtIndex i -&gt; item
-		item getName -&gt; name
+method printNames attendees:[Attendee] io:StandardIO
+	for attendee:attendees
+		attendee getName -&gt; name
 		io print name</pre></div>
 
-											<p>A <code>for</code> loop can also declare any number of outputs as <em>list</em> types. If this is done, each iteration of the loop must set set a variable of the same name as the list type, and that list will be available outside of the loop.</p>
+											<p>A <code>for</code> loop can also declare any number of outputs as <em>array</em> types. If this is done, each iteration of the loop must set a pointer with the <code>[$]</code> syntax, and that list will be available outside of the loop.</p>
 
 											<p>Otherwise, variables and pointers created within the loop do not exist outside of it.</p>
 
 											<div class='code-sample-header'>ForExample.class.ozark</div>
-											<div class='code-sample'><pre>inheritance Example
+											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>inheritance Example
 
-method reverseStrings #strings:[String] -&gt; reversedStrings:[String] 
+method reverseStrings _strings:[String] -&gt; $reversedStrings:[String] 
 	for string:strings -&gt; new:[String]
-		set new &lt;- reverse(string)
+		set new[$] &lt;- string[-1~1]
 
 	set reversedStrings &lt;- new</pre></div>
 
 											<a name="Repeat"><h4>Repeat</h4></a>
 
-											<p>The <code>repeat</code> statement has a body which repeats indefinitely. It usually contains a <code>while</code> statement that evaluates a <code>Boolean</code> expression and, if it evaluates to <code>false</code>, ends the loop immediately.</p>
+											<p>The <code>repeat</code> statement has a body which repeats indefinitely. It usually contains a <code>while</code> or <code>until</code> statement that checks a <code>Testable</code> value and, if the <code>while</code> condition is <code>false</code> or the <code>until</code> condition is <code>true</code>, ends the loop immediately.</p>
 
-											<p>The while statement can appear at any point within the loop.</p>
+											<p>The <code>while</code> or <code>until</code> statements can appear at any point within the loop.</p>
 
 											<div class='code-sample-header'>RepeatExample.class.ozark</div>
-											<div class='code-sample'><pre>inheritance Example
+											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>inheritance Example
 
 requirement KeyboardInput
 
@@ -118,13 +129,14 @@ method listenForInput io:StandardIO
 	repeat
 		io getInputFromUser -&gt; input
 
-		while input = 0
+		until input
 
 method growFileSizeTo2K file:File
 	repeat
 		file getFileSize -&gt; fileSize
+		filesize &lt; 2000 -> check
 
-		while fileSize &lt;= 2000
+		while check
 		
 		file appendMoreData</pre></div>
 										</main>

@@ -36,7 +36,7 @@
 							<form action="//ozark.us9.list-manage.com/subscribe/post?u=db19e11de3ec47da1da91149f&amp;id=13de2cb1c6" method="post" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 							  <div class='form-group'>
 								<div class='input-group input-block'>
-								  <input type="email" value="" name="EMAIL" class="email form-control input-md" placeholder="email address..." required /><div class='input-group-addon'><input type="submit" value="Go" name="subscribe" /></div>
+								  <input type="email" value="" name="EMAIL" class="email form-control input-md" placeholder="email address..." required /><div class='input-group-addon'><input itemscope itemtype="http://schema.org/SubscribeAction" type="submit" value="Go" name="subscribe" /></div>
 								</div>
 							  </div>
 							  <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
@@ -47,12 +47,12 @@
 					<div class='col-xs-12 col-sm-4'>
 						<div class='footer-nav'>
 							<h6>Latest News</h6>
-							<div class='announcement'>Sample app for version 0.2.1 of the Ozark specification <a href='https://groups.google.com/d/msg/ozark-lang/ScHtG-z6gRo/1nkjWLE3AgAJ'>See&nbsp;Announcement&nbsp;&rarr;</a></div>
+							<div itemscope itemtype="http://schema.org/NewsArticle" class='announcement'>Sample app for version 0.2.1 of the Ozark specification <a itemprop="url" href='https://groups.google.com/d/msg/ozark-lang/ScHtG-z6gRo/1nkjWLE3AgAJ'>See&nbsp;Announcement&nbsp;&rarr;</a></div>
 						</div>
 					</div>
 				</div>
 				<div class='copyright'>
-					Ozark&trade; and the Ozark logo are trademarks of Finch Software | <a rel="author" target="_blank" href="https://plus.google.com/+ChaseFinch/?rel=author">Authorship</a>
+					Ozark&trade; and the Ozark logo are trademarks of <span itemscope itemtype="organization"><span itemprop="name">Finch Software</span></span> | <a rel="author" target="_blank" href="https://plus.google.com/+ChaseFinch/?rel=author">Authorship</a>
 				</div>
 			</div>
 		</div>
