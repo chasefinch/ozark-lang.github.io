@@ -98,6 +98,7 @@
 										<li itemscope itemtype='http://schema.org/Person'><span itemprop='givenName'>Ben</span> <span itemprop='familyName'>Guerrette</span> <a itemprop='url' target="_blank" href='https://twitter.com/benguerrette'>@benguerrette</a></li>
 										<li itemscope itemtype='http://schema.org/Person'><span itemprop='givenName'>Jaime</span> <span itemprop='familyName'>Nacach</span> <a itemprop='url' target="_blank" href='https://twitter.com/bloominari'>@bloominari</a></li>
 										<li itemscope itemtype='http://schema.org/Person'><span itemprop='givenName'>Devin</span> <span itemprop='familyName'>Smith</span> <a itemprop='url' target="_blank" href='https://twitter.com/devinwsmith'>@devinwsmith</a></li>
+										<li itemscope itemtype='http://schema.org/Person'><span itemprop='givenName'>Zach</span> <span itemprop='familyName'>Boldyga</span> <a itemprop='url' target="_blank" href='https://instagram.com/zboldyga/'>@zboldyga</a></li>
 									</ul>
 								</div>
 								<!--
