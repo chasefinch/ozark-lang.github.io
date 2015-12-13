@@ -111,7 +111,7 @@ property @color:Color
 extension initialize
 	create color:Color; initializeRandom
 	
-	set @color &lt; color</pre></div>
+	set @color &lt;- color</pre></div>
 
 											<p>To add additional input &amp; output parameters to an extension, prefix them with the ampersand (<code>&amp;</code>) symbol.</p>
 

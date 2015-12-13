@@ -31,7 +31,7 @@
 										<main>
 											<p>In <span itemprop='name'>Ozark</span>, every root-level class and enumeration is contained in a totally separate file on the file system. In fact, you don't have to declare these classes at the top of the file, because their name and type is included within the filename.</p>
 
-											<p>The three types of Ozark files are <em>classes</em> and <em>enumerations</em>. Classes have filenames that end with <code>.class.ozark</code> and enumerations end with <code>.enumeration.ozark</code>.
+											<p>The two types of Ozark files are <em>classes</em> and <em>enumerations</em>. Classes have filenames that end with <code>.class.ozark</code> and enumerations end with <code>.enumeration.ozark</code>.
 
 											<p><pre>NameOfTheClass.class.ozark
 

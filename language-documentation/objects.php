@@ -33,7 +33,7 @@
 
 											<a name='EverythingIsAnObject'><h2>Everything is an object</h2></a>
 
-											<p>Everything in Ozark is an object, even "primitive" types such as Integers and Booleans. Declaring an object literal (such as <code>5.3</code> or <code>true</code>) automatically creates the space in which that new object will reside, and so you are able to pass messages to even the object literals (e.g. <code>5 add 3 -&gt; sum</code>)</p>
+											<p>Everything in Ozark is an object, even "primitive" types such as Integers and Booleans. Declaring an object literal (such as <code>5.3</code> or <code>true</code>) automatically creates the space in which that new object will reside, and so you are able to pass messages to even the object literals (e.g. <code>5 + 3 -&gt; sum</code>)</p>
 
 											<p>Objects are allocated manually with the <code>create</code> keyword when declaring a pointer, and then have a method called immediately using the semicolon (<code>;</code>) syntax.</p>
 
@@ -97,7 +97,7 @@ extension intialize
 
 											<p>These items are all required in <code>Object</code>, so any class that inherits from Object need not require them again.</p>
 
-											<p>The basic types don't include "set" functions or many basic manipulations. If you need to modify their value directly, create a class based on the real-world use case you are modeling. For example, if a Person may or may not have an ID badge with a <code>String</code> as an ID, don't store the ID as a <code>String</code> variable on the <code>Person</code> class. Instead, create an <code>IDBadge</code> class that is an optional property of the <code>Person</code> class. That way, an <code>IDBadge</code> must have a <code>String</code>, but a Person may have an optional ID Badge, and could theoretically swap it for a new one.</p>
+											<p>Rather than using the basic types heavily, create a class based on the real-world use case you are modeling. For example, if a Person may or may not have an ID badge with a <code>String</code> as an ID, don't store the ID as a <code>String</code> variable on the <code>Person</code> class. Instead, create an <code>IDBadge</code> class that is an optional property of the <code>Person</code> class. That way, an <code>IDBadge</code> must have a <code>String</code>, but a Person may have an optional ID Badge, and could theoretically swap it for a new one.</p>
 
 											<a name='Integer'><h4>Integer</h4></a>
 
@@ -107,9 +107,9 @@ extension intialize
 
 											<p>A <code>Number</code> is the Ozark representation of a floating-point number, acting according to the <a href='https://en.wikipedia.org/wiki/IEEE_floating_point'>IEEE 754 standard</a>. A floating-point number is a number with a fractional component, such as <code>4.14</code>, <code>0.333</code>, or <code>-200.03</code>. By default, these appear in decimal, but are stored in binary, and are subject to common binary floating-point math characteristics. Like Integers, you can specify Number values in binary or hexadecimal using the <code>0b</code> and <code>0x</code> prefixes. <code>0b101101.1101</code> and <code>0x12F2.FF43</code> are examples of valid Numbers in binary and hexadecimal, respectively.</p>
 
-											<p>A floating-point number has both a stored base, and a precision. The default base for a Number is 2, but you can also specify that a Number is in base 10 with the tick (<code>`</code>) symbol, like <code>let var1:Number`10</code> or <code>0.333`10</code>. This has much slower performance, and is only recommended for scenarios when modeling real-life decimal systems where decimal precision is important, like financial models.</p>
+											<p>A floating-point number has both a stored base, and a precision. The default base for a Number is 2, but you can also specify that a Number is in base 10 with the tick (<code>`</code>) symbol, like <code>create var1:Number`10</code> or <code>0.333`10</code>. This has much slower performance, and is only recommended for scenarios when modeling real-life decimal systems where decimal precision is important, like financial models.</p>
 
-											<p>You can also specify a different precision for a Number using the degrees (<code>°</code>) symbol. The default precision is 32, but you can specify 64 and 128. <code>let var1:°128</code>, <code>1`10°64 / 3`10</code>.</p>
+											<p>You can also specify a different precision for a Number using the degrees (<code>°</code>) symbol. The default precision is 32, but you can specify 64 and 128. <code>create var1:°128</code>, <code>1`10°64 / 3`10</code>.</p>
 
 											<a name='Boolean'><h4>Boolean</h4></a>
 
