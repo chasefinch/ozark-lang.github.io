@@ -84,7 +84,7 @@ method getCoordinates -&gt; $latitude:Number $longitude:Number
 
 method setLocation latitude:Number longitude:Number
 	set @latitude &lt;- latitude
-	set @longitude &lt;- longitude</pre>
+	set @longitude &lt;- longitude</pre></div>
 											<a name="Optionals"><h2>Optionals</h2></a>
 
 											<p>There is no concept of "nil" - Instead, Ozark uses <strong>optionals</strong> to denote pointers that are allowed not to have a value. You can read more about that in <a href='objects#Optionals'>Optionals</a>. Properties can be declared as optionals with the question mark (<code>?</code>) symbol, they can be "unpacked" via the <code>with</code> or <code>without</code> statements, and they can be stripped of their value with the <code>clear</code> statement.</p>
