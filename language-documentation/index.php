@@ -55,8 +55,8 @@ extension initialize &amp;seed:Seed
 	set @weight &lt;- 0.0
 
 method grow days:Number rate:Number
-	days multiply rate -> size
-	size multiply 0.25 -> weight
+	days * rate -> size
+	size * 0.25 -> weight
 
 	set @size &lt;- size
 	set @weight &lt;- weight</pre></div>
