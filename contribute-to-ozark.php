@@ -40,7 +40,7 @@
 							<div class='row'>
 								<div class='col-sm-7'>
 									<h1>Open-Source Code</h1>
-									<p class='lead'><span itemprop='name'>Ozark</span> is maintained and developed on GitHub, including all code &amp; documentation source, the sample apps, the full language spec, and the roadmap for future language development.</p>
+									<p class='lead'><span itemprop='name'>Ozark</span> is maintained and developed on GitHub, including the compiler source code, the sample apps, the full language spec, and the roadmap for future language development.</p>
 								</div>
 								<div class='col-sm-4 col-sm-offset-1'>
 									<div class='links'>
