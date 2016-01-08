@@ -76,7 +76,7 @@
 							<div class='col-sm-6'>
 								<div class='portal'>
 									<h3>Smart<span class='glyphicon glyphicon-refresh'></span></h3>
-									<p>Ozark blends the structure of object-oriented programming with the elegance of flow-based programming. An app has discrete states, wrapped into objects, but lacks any global state that get in the way of clean data flow.</p>
+									<p>Ozark blends the structure of object-oriented programming with the elegance of flow-based programming. An app has discrete states, wrapped into objects, but doesn't have a global state to get in the way of clean data flow.</p>
 								</div>
 							</div>
 						</div>

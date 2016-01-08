@@ -4,7 +4,7 @@
 			<div class='col-md-10 col-md-offset-1'>
 		<div class="site-nav">
 			<ul>
-				<li class='active'><a href="/">Ozark</a></li><li><a target="_blank" href="http://eepurl.com/56iVb">Newsletter &nbsp;<span class='glyphicon glyphicon-new-window'></span></a></li>
+				<li class='active'><a href="/">Ozark</a></li><li><a target="_blank" href='https://madewithobjects.com'>Objects: Visual Programming &nbsp;<span class='glyphicon glyphicon-new-window'></span></a></li><li><a target="_blank" href="http://eepurl.com/56iVb">Newsletter &nbsp;<span class='glyphicon glyphicon-new-window'></span></a></li>
 			</ul>
 		</div>
 			</div>

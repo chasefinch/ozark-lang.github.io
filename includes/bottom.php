@@ -6,23 +6,23 @@
 					<div class='col-xs-6 col-sm-2'>
 						<div class='footer-nav'>
 							<a id='footer-logo' href="/"><img src="/img/ozark-dark.png" alt='ozark' /></a>
-						  <ul>
-							<li<?php if($active == 'about') echo " class='active'"; ?>><a href="/about-ozark">About</a></li>
-							<li<?php if($active == 'documentation') echo " class='active'"; ?>><a href="/language-documentation">Documentation</a></li>
-							<li<?php if($active == 'download') echo " class='active'"; ?>><a href="/download-ozark">Download</a></li>
-							<li<?php if($active == 'faq') echo " class='active'"; ?>><a href="/ozark-faq">FAQ</a></li>
-							<li<?php if($active == 'contribute') echo " class='active'"; ?>><a href="/contribute-to-ozark">Contribute</a></li>
-						  </ul>
+							<ul>
+								<li<?php if($active == 'about') echo " class='active'"; ?>><a href="/about-ozark">About</a></li>
+								<li<?php if($active == 'documentation') echo " class='active'"; ?>><a href="/language-documentation">Documentation</a></li>
+								<li<?php if($active == 'download') echo " class='active'"; ?>><a href="/download-ozark">Download</a></li>
+								<li<?php if($active == 'faq') echo " class='active'"; ?>><a href="/ozark-faq">FAQ</a></li>
+								<li<?php if($active == 'contribute') echo " class='active'"; ?>><a href="/contribute-to-ozark">Contribute</a></li>
+							</ul>
 						</div>
 					</div>
 					<div class='col-xs-6 col-sm-2'>
 						<div class='footer-nav'>
 							<h6>Connect</h6>
-						  <ul>
-							<li><a href="https://github.com/ozark-lang">GitHub</a></li>
-							<li><a href="https://groups.google.com/forum/?fromgroups#!forum/ozark-lang">Google Group</a></li>
-							<li><a href="http://webchat.freenode.net/?channels=#ozark">IRC</a></li>
-						  </ul>
+							<ul>
+								<li><a href="https://github.com/ozark-lang">GitHub</a></li>
+								<li><a href="https://groups.google.com/forum/?fromgroups#!forum/ozark-lang">Google Group</a></li>
+								<li><a href="http://webchat.freenode.net/?channels=#ozark">IRC</a></li>
+							</ul>
 						</div>
 					</div>
 					<div class='col-xs-12 col-sm-4'>
@@ -52,7 +52,8 @@
 					</div>
 				</div>
 				<div class='copyright'>
-					Ozark&trade; and the Ozark logo are trademarks of <span itemscope itemtype="organization"><span itemprop="name">Finch Software</span></span> | <a rel="author" target="_blank" href="https://plus.google.com/+ChaseFinch/?rel=author">Authorship</a>
+					Ozark&trade; and the Ozark logo are trademarks of <span itemscope itemtype="organization"><span itemprop="name">Finch Software</span></span> | <a rel="author" target="_blank" href="https://plus.google.com/+ChaseFinch/?rel=author">Authorship</a> |
+					<a href='https://madewithobjects.com'>Objects <span class='glyphicon glyphicon-new-window'></span></a>
 				</div>
 			</div>
 		</div>
