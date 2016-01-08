@@ -77,7 +77,7 @@
 										<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
 										<div style="position: absolute; left: -5000px;"><input type="text" name="b_db19e11de3ec47da1da91149f_13de2cb1c6" tabindex="-1" value=""></div>
 									</form>
-									<p>Alongside public newsletter, there is a separate email for less frequent official language announcements. Sign up for that <a itemscope itemtype="http://schema.org/SubscribeAction" target="_blank" href='http://eepurl.com/55-Vz'>here</a>.</p>
+									<p>Alongside the public newsletter, there is a separate email for less frequent official language announcements. Sign up for that <a itemscope itemtype="http://schema.org/SubscribeAction" target="_blank" href='http://eepurl.com/55-Vz'>here</a>.</p>
 								</div>
 								<div class='col-sm-4'>
 									<h4>Google Group</h4>
