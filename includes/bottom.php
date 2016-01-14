@@ -53,7 +53,8 @@
 				</div>
 				<div class='copyright'>
 					Ozark&trade; and the Ozark logo are trademarks of <span itemscope itemtype="organization"><span itemprop="name">Finch Software</span></span> | <a rel="author" target="_blank" href="https://plus.google.com/+ChaseFinch/?rel=author">Authorship</a> |
-					<a href='https://madewithobjects.com'>Objects <span class='glyphicon glyphicon-new-window'></span></a>
+					<a href='https://madewithobjects.com'>Objects <span class='glyphicon glyphicon-new-window'></span></a><br /><br />
+					<a href="//www.iubenda.com/privacy-policy/7777055" class="iubenda-white iubenda-embed" title="Privacy Policy">Privacy Policy</a><script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src = "//cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
 				</div>
 			</div>
 		</div>
