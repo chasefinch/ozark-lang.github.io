@@ -84,8 +84,8 @@
 									<p>The <a target="_blank" href='https://groups.google.com/forum/?fromgroups#!forum/ozark-lang'>Ozark Google Group</a> is the official forum &amp; message board. It's the main place for announcements and discussion regarding the development and use of the Ozark language.</p>
 								</div>
 								<div class='col-sm-4'>
-									<h4>IRC</h4>
-									<p>Join <a href='http://webchat.freenode.net/?channels=#ozark'>#ozark</a> on irc.freenode.net for informal conversation, help and commit notifications.</p>
+									<h4>Slack</h4>
+									<p>Join our <a href='https://ozark-slack-signup.stamplayapp.com'>#Slack channel</a> for informal conversation, help and commit notifications.</p>
 								</div>
 							</div>
 							<div class='row'>
