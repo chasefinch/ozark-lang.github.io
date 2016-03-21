@@ -33,7 +33,7 @@
 
 											<p>Ozark uses the subject &rarr; verb &rarr; direct object(s) pattern from natural human language. Each line inside of a method follows that pattern, except for conditional clauses like "if" or loops.</p>
 
-											<p>All variables in Ozark are <em>pointers</em>. Unlike other languages, pointers are not modified on the fly. Instead, pointers connect the output of a method to the input of another method. The only mutable pointers are an object's <em>properties</em>, which are similar to instance variables in other languages.</p>
+											<p>All variables in Ozark are <em>pointers</em>. Unlike other languages, pointers are not modified on the fly. Instead, pointers connect the output of a method to the input of another method. The only mutable pointers are an object's <em>properties</em>, which are similar to instance variables in other languages, and the expected outputs of the current method.</p>
 
 											<p>Ozark code is always operating on a small scope. There are no global pointers, so often the entire scope is visible during method design.</p>
 

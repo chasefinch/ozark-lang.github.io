@@ -59,9 +59,9 @@ method concludeConcerto _concerto:Song orchestra:Orchestra
 
 											<p>Methods have any number of predefined inputs and outputs. In the method signature and within the method body, the outputs are prefixed with a <code>$</code> symbol to avoid naming conflicts with inputs, properties, and other pointers and collections.</p>
 
-											<p>Within a method, outputs are final, meaning they can only be pointed to an object once during a method, and inputs are constant, meaning they cannot have their value changed at all. The only other mutable items are <a href='classes#Properties'>properties</a>, which are also final within a method.</p>
+											<p>Within a method, inputs are constant, meaning they cannot have their value changed. The only mutable items are the outputs of the method, and the <a href='classes#Properties'>properties</a> of the current object.</p>
 
-											<p>When calling a method, the inputs are final (meaning they can only be assigned once), and the outputs are constant and cannot be changed.</p>
+											<p>When calling a method, the created outputs are constants that cannot be changed.</p>
 
 											<p>Within a method signature, inputs are declared sequentially after the method name, and outputs are declared after an arrow (<code>-&gt;</code>) symbol and prefixed with a <code>$</code> symbol.</p>
 

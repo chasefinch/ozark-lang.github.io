@@ -99,6 +99,23 @@ method bat pitcher:Pitcher
 	pitcher pitch -&gt; pitch
 	@offense swing pitch:pitch</pre></div>
 
+											<a name='Instructions'><h2>Instructions aren't expressions</h2></a>
+
+											<p>Lines of code don't have a value to be computed behind the scenes. Instead, you clearly see and define what steps the processor will take during execution.</p>
+											<p>Code is verbose and clear, and each line has only one instruction.</p>
+								
+											<div class='code-sample-header code-sample-header-inline'>GameLevel.class.ozark</div>
+											<div class='code-sample code-sample-inline' itemscope itemtype="http://schema.org/SoftwareSourceCode"><meta itemprop="language" content="Ozark" />
+												<pre>inheritance GameAsset
+
+requirement GameScene
+
+property scene:GameScene
+
+method processScene
+	@scene evaluateActions
+	@scene simulatePhysics
+	@scene update</pre></div>
 											<a name='Declarative'><h2>Declarative</h2></a>
 
 											<p>Many object-oriented languages define their classes through a set of imperative statements. In Ozark, the only imperative  statements you'll find are inside of a <a href='methods'>method</a>; Everything else is written as a declaration.</p>
@@ -123,6 +140,10 @@ method race track:RaceTrack start:StartEvent
 	@raceAbility moveToTrack track
 	@raceAbility turnKey car:@car
 	@raceAbility beginRace startEvent:start</pre></div>
+
+											<a name="Return"><h2>No return types for methods, just inputs and outputs</h2></a>
+											
+											<p>Rather than evaluating like an expression, a method is an action by an object, and has any number of inputs and/or outputs.</p>
 
 											<a name='Compiled'><h2>Compiled</h2></a>
 

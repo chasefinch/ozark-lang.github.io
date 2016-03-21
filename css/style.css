@@ -153,6 +153,8 @@ section.blue { padding:20px 0 20px; background:#25aae1; color:#fff; }
 	section.blue h6 { color:#156aa1; }
 
 	section.blue a.download { color:#fff; }
+	section.blue h1.heading a { font-size:0.6em; position:relative; top:-5px; font-weight:bold; color:#a5daff; text-decoration:none; display:inline-block; border-bottom:3px solid #a5daff; }
+		section.blue h1.heading a:hover { border-color:#fff; color:#fff; }
 
 section.white { padding:20px 0; }
 	section.white.short { padding:0 0 20px 0; }
@@ -165,7 +167,7 @@ section.news { padding:1em 0; border-bottom:1px solid #ddd; }
 
 div.portal .glyphicon { float:right; margin-right:15px; color:#25aae1; }
 
-.bg-pad { padding:30px 0 0 0; }
+.bg-pad { padding:60px 0 0 0; }
 
 .continue { text-align:right; margin:1em 0 1em 0; }
 
@@ -189,6 +191,7 @@ div.portal .glyphicon { float:right; margin-right:15px; color:#25aae1; }
 .code .btn { position:relative; left:-4px; }
 .community .btn { position:relative; left:-4px; }
 .prompt { text-align:center; margin-bottom:4em; }
+.snippet { margin-top:2em; }
 
 ul.contributors { padding-left:1.2em; }
 	ul.contributors li {  }
