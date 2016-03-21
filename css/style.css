@@ -167,8 +167,6 @@ section.news { padding:1em 0; border-bottom:1px solid #ddd; }
 
 div.portal .glyphicon { float:right; margin-right:15px; color:#25aae1; }
 
-.bg-pad { padding:60px 0 0 0; }
-
 .continue { text-align:right; margin:1em 0 1em 0; }
 
 .documentation { margin:2em 0 0 0; }
@@ -223,10 +221,10 @@ main a h2 { margin-top:2em; }
 
 		section.pull { margin-bottom:-100px; }
 			section.pull .code-sample { border-bottom-color:#258ac1 !important; }
-
 }
 
 @media screen and (min-width:992px) {
+	.bg-pad { padding:60px 0 60px 0; }
 	.code-sample-header { left:-16px; }
 	.code-sample { left:-16px; }
 }

@@ -11,7 +11,7 @@
 		<section class='blue chop'>
 			<div class='container'>
 				<div class='row'>
-					<div class='col-sm-7 col-md-6 col-md-offset-1'>
+					<div class='col-xs-12 col-md-6 col-md-offset-1'>
 						<h1>Deny your code a personality.</h1>
 						<p class='lead'>Ozark code abides by a strict set of syntax rules. It has a narrow instruction set, and there's a single 'correct' way to use each programming tactic.</p>
 						<p class='lead'>Since everyone's code looks the same, it's easy to share and to pick up where someone else left off. This is also good for abstract software development tools, which can depend on Ozark's strictness to easily import valid code.</p>
@@ -19,7 +19,7 @@
 						<p><a class='btn btn-lg' href='/language-documentation'>Ozark documentation&nbsp; <span class='glyphicon glyphicon-chevron-right'></span></a>
 						<div style='clear:both;'></div>
 					</div>
-					<div class='col-sm-4 col-sm-offset-1'>
+					<div class='col-xs-12 col-md-4 col-md-offset-1'>
 						<div class='bg-pad'>
 							<div class='row'>
 								<div class='col-md-9'>
@@ -28,9 +28,10 @@
 									<ul class='clean'><li><a href='https://github.com/ozark-lang/demo-rifle-range/archive/master.zip' class='download'><span class="glyphicon glyphicon-file"></span>&nbsp;&nbsp;Rifle Range</a></li></ul>
 								</div>
 							</div>
-							<div class='code-sample-header'>Rifleman.class.ozark</div>
-							<div class='code-sample' itemscope itemtype="http://schema.org/SoftwareSourceCode"><meta itemprop="language" content="Ozark" />
-								<pre>inheritance Person
+						</div>
+						<div class='code-sample-header'>Rifleman.class.ozark</div>
+						<div class='code-sample' itemscope itemtype="http://schema.org/SoftwareSourceCode"><meta itemprop="language" content="Ozark" />
+							<pre>inheritance Person
 
 requirement StandardIO
 requirement Location
@@ -41,9 +42,8 @@ property io:StandardIO
 property location:Location
 property leftBoot:Boot
 property rightBoot:Boot</pre></div>
-						</div>
-						<div style='clear:both;'></div>
 					</div>
+					<div style='clear:both;'></div>
 					<div style='clear:both;'></div>
 				</div>
 			</div>
