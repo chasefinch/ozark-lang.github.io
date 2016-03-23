@@ -241,9 +241,9 @@ method shootEveryOtherTarget _targets:[Target] -&gt; $casings:[Bullet.Casing] $s
 	set $smoke &lt;- smoke
 	set $success &lt;- success</pre></div>
 
-											<p>From outside of the parent class, subclasses can be imported via the <code>requirement</code> declaration and referenced with dot notation. For example, a class making use of the <code>Rifleman</code> class but wishing to declare an independent <code>ShootAbility</code> would reference the class as <code>Rifleman.ShootAbility</code></p>
+											<p>From outside of the parent class, nested can be imported via the <code>requirement</code> declaration and referenced with dot notation. For example, a class making use of the <code>Rifleman</code> class but wishing to declare an independent <code>ShootAbility</code> would reference the class as <code>Rifleman.ShootAbility</code></p>
 
-											<p>Note that nested classes cannot be subclasses of the main class; Subclasses should be defined separately. Nesting is for supporting classes only.</p>
+											<p>Note that nested classes cannot be subclasses of the parent class; Subclasses should be defined separately. Nesting is for supporting classes only.</p>
 										</main>
 										<?php require('../includes/documentation-pagination.php'); ?>
 									</div>
