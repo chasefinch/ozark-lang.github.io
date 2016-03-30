@@ -23,7 +23,7 @@ label { font-weight:normal; margin:1em 0 1em 0; }
 ul.clean { padding-left:0; }
 	ul.clean li { list-style-type:none; padding-bottom:0.4em; }
 
-h1.heading { font-size:30px; }
+h1.heading { font-size:30px; font-weight:normal !important; }
 h2.subheading, h3.subheading { margin-bottom:2em; }
 	.subheading strong { font-weight:300; font-size:0.6em; text-transform:uppercase; color:#25aae1; }
 
@@ -149,14 +149,18 @@ section.blue { padding:20px 0 20px; background:#25aae1; color:#fff; }
 
 	section.blue.thinker { background:#25aae1; }
 	section.blue h1, section.blue h2, section.blue h3, section.blue h4, section.blue h5, section.blue h6 { color:#fff; }
+	section.blue h1 { font-weight:normal; }
 	section.blue p { color:#def; } 
 	section.blue h6 { color:#156aa1; }
+
+	section.blue .accent { display:inline-block; margin-left:0.4em; position:relative; top:8px; color:#156aa1; }
 
 	section.blue a.download { color:#fff; }
 	section.blue h1.heading a { font-size:0.6em; position:relative; top:-5px; color:#a5daff; text-decoration:none; display:inline-block; border-bottom:2px solid #a5daff; }
 		section.blue h1.heading a:hover { border-color:#fff; color:#fff; }
 
 section.white { padding:20px 0; }
+	section.white.tall { padding:60px 0 20px 0; }
 	section.white.short { padding:0 0 20px 0; }
 	section.white.pull { position:relative; z-index:2; }
 

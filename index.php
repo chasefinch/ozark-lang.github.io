@@ -14,7 +14,7 @@
 					<div class='col-md-10 col-md-offset-1'>
 						<div class='row'>
 							<div class='col-sm-7'>
-								<h1 class='heading' itemprop='description'>Ozark is a readable open-source programming language for building software that lasts. <a href='/about-ozark'>Learn more</a></h1>
+								<h1 class='heading' itemprop='description'>Ozark is a readable, open-source programming language for building software that lasts. <a href='/about-ozark'>Learn more</a></h1>
 								<div class='row'>
 									<div class='col-sm-10'>
 										<form action="//ozark.us9.list-manage.com/subscribe/post?u=db19e11de3ec47da1da91149f&amp;id=13de2cb1c6" method="post" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>

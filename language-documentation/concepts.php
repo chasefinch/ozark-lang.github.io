@@ -159,20 +159,16 @@ method race track:RaceTrack start:StartEvent
 
 											<p>A code-generating application can use an Ozark file as a save format, much like Adobe Photoshop uses .psd files, or Microsoft Word uses .docx files. Even better, this saved Ozark file can be opened, read, and edited by hand, then saved and read back into the code-generating application!</p>
 
-											<a name="Parallel"><h2>Parallel</h2></a>
-
-											<p>Because of the strict language rules, the Ozark compiler is able to see a lot of situations where it makes sense to execute code on a new thread. It implicitly introduces new threads behind the scenes to make the most of the available CPU resources.</p>
-
 											<a name="StronglyTyped"><h2>Strongly typed with no casting</h2></a>
 
 											<p>Ozark is a strongly-typed language. There's no typecasting; Values should be explicitly converted, and objects cannot be assumed to be of a given class.</p>
 
-											<p>This improves readability and reduces the amount of errors that aren't caught at compile time. If you get a value or an object from a collection, you can be assured of its type.</p>
+											<p>This improves readability and reduces the amount of errors that aren't caught at compile time. If you get an object from an array, you can be assured of its type.</p>
 
 											<div class='code-sample-header'>BrandSpecificBlue.class.ozark</div>
 											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>inheritance Color 
 		
-extension rgbValue -&gt; $red:Number $green:Number $blue:Number
+method rgbValue -&gt; $red:Number $green:Number $blue:Number
 	set $red &lt;- 0.0
 	set $green &lt;- 0.0
 	set $blue &lt;- 1.0</pre></div>
