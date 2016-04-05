@@ -87,7 +87,7 @@ requirement BinaryTree</pre></div>
 
 											<p>Most classes other than the <code>Object</code> class (from the Ozark standard library) should have at least one <strong>inheritance</strong>. Making a class a descendant of the <code>Object</code> class allows you to use it in various collection types, and gives standard functionality out of the box.</p>
 
-											<p>Ozark supports multiple inheritance. For example, a <code>Cat</code> can be both a <code>Cartoon</code> and an <code>Animal</code>. Method naming conflicts are resolved using a depth-first search with the <a target="_blank" href='https://en.wikipedia.org/wiki/C3_linearization'>C3 linearization algorithm.</a> Other naming conflicts are not allowed, and produce a compile-time error.</p>
+											<p>Ozark supports multiple inheritance. For example, a <code>Cat</code> can be both a <code>Cartoon</code> and an <code>Animal</code>. Method naming conflicts are resolved by using the method from the first-declared inheritance.</p>
 
 											<div class='code-sample-header'>Cat.class.ozark</div>
 											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>inheritance Cartoon

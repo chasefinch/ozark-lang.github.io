@@ -97,9 +97,9 @@ method sailTo _destination:WaterfrontLocation -&gt; $duration:TimeInterval
 
 											<a name="Extensions"><h2>Overriding &amp; extending parent methods</h2></a>
 
-											<p>As discussed in <a href='classes#Inheritance'>Inheritance</a>, a class inherits all methods and properties from its parent classes. It also has access to declared <em>requirements</em>, nested classes, and nested <em>enumerations</em>. To redeclare a method in a child class, simply declare it as usual. An object will use the new method definition instead of the inherited one.</p>
+											<p>As discussed in <a href='classes#Inheritance'>Inheritance</a>, a class inherits all methods and properties from its parent classes. It also has access to declared <em>requirements</em>, nested classes, and nested <em>enumerations</em>. To redeclare a method in a child class, drop the <code>method</code> keyword and instead declare a <code>replacement</code>.</p>
 
-											<p>To extend a parent method, drop the <code>method</code> keyword and instead declare an <code>extension</code>. This is commonly seen with the <code>initialize</code> method. The body declared for the extension will execute after the code declared in the parent method.</p>
+											<p>To extend a parent method, drop the <code>method</code> keyword and instead declare an <code>extension</code>. This is commonly seen with the <code>initialize</code> method. The body declared for the extension will execute after the code declared in the parent method. You can choose to add additional inputs and outputs to the extension.</p>
 
 											<div class='code-sample-header'>Flower.class.ozark</div>
 											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>inheritance Plant

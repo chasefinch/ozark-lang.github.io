@@ -35,9 +35,9 @@
 
 											<p>In some cases (when specified in the method declaration), the argument is implied. In the case of system commands (like <code>create</code>) the subject is implied to be the system itself. However, as all lines are either method calls or control flow statements, the same cadence is followed very consistently.</p>
 
-											<p>Ozark is an indentation-based language; Whitespace is important, and indentation uses ASCII tabs. Elements should be separated, when appropriate, by a single space. Trailing whitespace on a line is not allowed.</p>
+											<p>Ozark uses indentation to denote blocks. Whitespace is important, and indentation uses ASCII tabs. Elements should be separated, when appropriate, by a single space. Trailing whitespace on a line is not allowed.</p>
 
-											<p>Many stylistic characteristics of the code are enforced. For example, type names begin with a capital letter (<code>Color</code>, <code>Integer</code>, <code>GameScene</code>) and noun and verb names begin with a lowercase letter. All words are camelCased and can include(but not start with) numbers <code>0</code>&ndash;<code>9</code>. No underscores are allowed.<p>
+											<p>Many stylistic characteristics of the code are enforced. For example, type names begin with a capital letter (<code>Color</code>, <code>Integer</code>, <code>GameScene</code>) and noun and verb names begin with a lowercase letter. All words are camelCased and can include (but not start with) numbers <code>0</code>&ndash;<code>9</code>. No underscores are allowed.<p>
 
 											<p>In addition to camelCased letter/number combinations, the following characters can also be used as function names:</p>
 

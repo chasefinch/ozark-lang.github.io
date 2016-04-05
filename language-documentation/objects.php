@@ -35,7 +35,7 @@
 
 											<p>Everything in Ozark is an object, even "primitive" types such as Integers and Booleans. Declaring an object literal (such as <code>5.3</code> or <code>true</code>) automatically creates the space in which that new object will reside, and so you are able to pass messages to even the object literals (e.g. <code>5 + 3 -&gt; sum</code>)</p>
 
-											<p>Objects are allocated manually with the <code>create</code> keyword when declaring a pointer, and then have a method called immediately using the semicolon (<code>;</code>) syntax.</p>
+											<p>Objects are allocated manually with the <code>create</code> keyword when declaring a pointer, and then have a method called immediately using the semicolon (<code>;</code>) syntax. You cannot declare a pointer with one of the built-in types with the "create" keyword; You should instead use an object literal.</p>
 
 											<a name="Pointers"><h2>Objects are stored in pointers</h2></a>
 
@@ -107,9 +107,9 @@ extension intialize
 
 											<p>A <code>Number</code> is the Ozark representation of a floating-point number, acting according to the <a href='https://en.wikipedia.org/wiki/IEEE_floating_point'>IEEE 754 standard</a>. A floating-point number is a number with a fractional component, such as <code>4.14</code>, <code>0.333</code>, or <code>-200.03</code>. By default, these appear in decimal, but are stored in binary, and are subject to common binary floating-point math characteristics. Like Integers, you can specify Number values in binary or hexadecimal using the <code>0b</code> and <code>0x</code> prefixes. <code>0b101101.1101</code> and <code>0x12F2.FF43</code> are examples of valid Numbers in binary and hexadecimal, respectively.</p>
 
-											<p>A floating-point number has both a stored base, and a precision. The default base for a Number is 2, but you can also specify that a Number is in base 10 with the tick (<code>`</code>) symbol, like <code>create var1:Number`10</code> or <code>0.333`10</code>. This has much slower performance, and is only recommended for scenarios when modeling real-life decimal systems where decimal precision is important, like financial models.</p>
+											<p>A floating-point number has both a stored base, and a precision. The default base for a Number is 2, but you can also specify that a Number is in base 10 with the tick (<code>`</code>) symbol, like <code>property var1:Number`10</code> or <code>0.333`10</code>. This has much slower performance, and is only recommended for scenarios when modeling real-life decimal systems where decimal precision is important, like financial models.</p>
 
-											<p>You can also specify a different precision for a Number using the degrees (<code>°</code>) symbol. The default precision is 32, but you can specify 64 and 128. <code>create var1:°128</code>, <code>1`10°64 / 3`10</code>.</p>
+											<p>You can also specify a different precision for a Number using the degrees (<code>°</code>) symbol. The default precision is 32, but you can specify 64 and 128. <code>property var1:Number°128</code>, <code>1`10°64 / 3`10</code>.</p>
 
 											<a name='Boolean'><h4>Boolean</h4></a>
 

@@ -12,7 +12,7 @@
 			<div class='container'>
 				<div class='row'>
 					<div class='col-xs-12 col-md-6 col-md-offset-1'>
-						<h1>Deny your code its personality.<span class='accent'><span class='glyphicon glyphicon-thumbs-down'></span></span></h1>
+						<h1>Deny your code a personality.</h1>
 						<p style='clear:both;' class='lead'>Ozark code abides by a strict set of syntax rules. It has a narrow instruction set, and there's a single 'correct' way to use each programming tactic.</p>
 						<p class='lead'>Since everyone's code looks the same, it's easy to share and to pick up where someone else left off. This is also good for abstract software development tools, which can depend on Ozark's strictness to easily import valid code.</p>
 						<h6>Further reading</h6>

@@ -21,10 +21,10 @@
 						<div class='row'>
 							<div class='col-sm-6'>
 								<h4>Q. Why strict programming?</h4>
-								<p><strong>A.</strong> Limiting style choices in programming makes code more readable and collaborative. Since the style is enforced, software written in <span itemprop='name'>Ozark</span> is easy to pass between developers.</p>
+								<p><strong>A.</strong> Limited style choices make Ozark code more readable, and thus more collaborative. Since the style is enforced, software written in <span itemprop='name'>Ozark</span> is easy to pass between developers.</p>
 								<h4>Q. Why is Ozark important?</h4>
 								<p><strong>A.</strong> Development tools can generate code in other languages, but that code can't be read back in for further development. Ozark is different; Because of the strict formatting rules, handwritten code can be interpreted and extended by development tools, and vice versa.</p>
-								<p>A set of Ozark files serves as both a codebase and a save format for advanced IDEs.
+								<p>A set of Ozark files is both source code and a save format for advanced IDEs.
 								<h4>Q. Why can't I use variables like I'm used to?</h4>
 								<p><strong>A.</strong> Ozark uses variables (in Ozark, <em>pointers</em>) as properties of objects, and as connections between the inputs and outputs of methods.</p>
 								<p>Like in flow-based programming, the programmer focuses on the flow of data rather than creating temporary states. The state is nicely wrapped up in the properties of the objects themselves.</p>
