@@ -60,11 +60,6 @@
 									<div class='code-sample'><meta itemprop="language" content="Ozark" />
 										<pre>inheritance Person
 
-	requirement HikeAbility
-	requirement Hat
-	requirement Map
-	requirement Mountain
-
 	property hiker:HikeAbility
 	property hat:Hat?
 	property map:Map?

@@ -33,13 +33,10 @@
 
 											<p>Running a program in Ozark consists of creating an instance of a class, and then calling a method on that instance. See <a href='files'>File Structure</a> for more details about how files are structured in Ozark.</p>
 
-											<p>There are no global pointers or import statements. Pointers can only exist within a method or as a <em>property</em> of a class. Other classes are imported via the <code>requirement</code> keyword.</p>
+											<p>There are no global pointers or import statements. Pointers can only exist within a method or as a <em>property</em> of a class.</p>
 
 											<div class='code-sample-header'>Accountant.class.ozark</div>
 											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>inheritance BusinessPerson
-
-requirement Calculator
-requirement Telephone
 
 property @calculator:Calculator
 property @cellPhone:Telephone
@@ -108,8 +105,6 @@ method bat pitcher:Pitcher
 											<div class='code-sample code-sample-inline' itemscope itemtype="http://schema.org/SoftwareSourceCode"><meta itemprop="language" content="Ozark" />
 												<pre>inheritance GameAsset
 
-requirement GameScene
-
 property scene:GameScene
 
 method processScene
@@ -123,10 +118,6 @@ method processScene
 											<div class='code-sample-header'>RaceCarDriver.class.ozark</div>
 											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>inheritance Driver
 		
-requirement RaceCar
-requirement RaceAbility
-requirement RaceTrack
-
 property @car:RaceCar
 property @raceAbility:RaceAbility
 
@@ -175,8 +166,6 @@ method rgbValue -&gt; $red:Number $green:Number $blue:Number
 
 											<div class='code-sample-header'>Printer.class.ozark</div>
 											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>inheritance Object
-
-requirement Paper
 
 property @paperTray:[Paper]
 

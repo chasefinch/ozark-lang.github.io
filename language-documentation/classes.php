@@ -41,7 +41,6 @@
 												<li><a href='#Inheritance'><code>inheritance</code></a> - A parent class from which this class inherits all features</li>
 												<li><a href='objects#Generics'><code>type</code></a> - If this class uses generics, a placeholder for a type that is specified on object initialization</li>
 												<li><a href='#Inheritance'><code>inheritance</code></a> - A parent class from which this class inherits all features</li>
-												<li><a href='#Requirements'><code>requirement</code></a> - Another class or enumeration of which this class must be aware</li>
 												<li><code>class</code> - A nested class declaration on which this class depends</li>
 												<li><a href='values#Enumeration'><code>enumeration</code></a> - A nested enumeration declaration on which this class depends</li>
 												<li><a href='properties'><code>property</code></a> - A pointer or collection within the scope of the object of this class</li>
@@ -53,9 +52,6 @@
 
 											<div class='code-sample-header'>Superhero.class.ozark</div>
 											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>inheritance Hero
-
-requirement Superpower
-requirement XRayVision
 
 enumeration Strength
 	state fullStrength
@@ -72,17 +68,6 @@ extension initialize
 	set @power &lt;- power
 	set @strength &lt;- Strength.fullStrength</pre></div>
 
-											<a name="Requirements"><h2>Requirements</h2></a>
-
-											<p>Any classes or enumerations used by a class that aren't nested must be explicitly declared as <strong>requirements</strong>. The <code>requirement</code> declaration will find the class or enumeration in the current project scope, which includes the file's current directory and the system-wide libraries linked in the Ozark compiler. See <a href='files'>File Structure</a> for more information.</p>
-
-											<div class='code-sample-header'>TruckDriver.class.ozark</div>
-											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>inheritance Driver
-
-requirement Truck
-requirement Road
-requirement BinaryTree</pre></div>
-
 											<a name="Inheritance"><h2>Inheritance</h2></a>
 
 											<p>Most classes other than the <code>Object</code> class (from the Ozark standard library) should have at least one <strong>inheritance</strong>. Making a class a descendant of the <code>Object</code> class allows you to use it in various collection types, and gives standard functionality out of the box.</p>
@@ -92,9 +77,6 @@ requirement BinaryTree</pre></div>
 											<div class='code-sample-header'>Cat.class.ozark</div>
 											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>inheritance Cartoon
 inheritance Animal
-
-requirement Whisker
-requirement Tail
 
 property @whiskers:[Whisker]
 property @tail:Tail
@@ -111,21 +93,8 @@ method catNap io:StandardIO
 											<div class='code-sample-header'>Rifleman.class.ozark</div>
 											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>inheritance Soldier
 
-requirement StandardIO
-requirement Gun
-requirement Bullet.Casing
-requirement Smoke
-requirement Target
-requirement Mood
-requirement Hat
-
 class ShootAbility
 	inheritance Ability
-
-	requirement Gun
-	requirement Target
-	requirement Bullet.Casing
-	requirement Smoke
 
 	enumeration SkillLevel
 		state novice
@@ -149,13 +118,8 @@ class ShootAbility
 class CelebrateAbility
 	inheritance Ability
 
-	requirement StandardIO
-	requirement Hat
-
 	class HatTipAbility
 		inheritance Ability
-
-		requirement Hat
 
 		method tipHat _hat:Hat
 			hat getTipped
@@ -241,7 +205,7 @@ method shootEveryOtherTarget _targets:[Target] -&gt; $casings:[Bullet.Casing] $s
 	set $smoke &lt;- smoke
 	set $success &lt;- success</pre></div>
 
-											<p>From outside of the parent class, nested can be imported via the <code>requirement</code> declaration and referenced with dot notation. For example, a class making use of the <code>Rifleman</code> class but wishing to declare an independent <code>ShootAbility</code> would reference the class as <code>Rifleman.ShootAbility</code></p>
+											<p>From outside of the parent class, nested classes and enumerations are referenced with dot notation. For example, a class making use of the <code>Rifleman</code> class but wishing to declare an independent <code>ShootAbility</code> would reference the class as <code>Rifleman.ShootAbility</code></p>
 
 											<p>Note that nested classes cannot be subclasses of the parent class; Subclasses should be defined separately. Nesting is for supporting classes only.</p>
 										</main>

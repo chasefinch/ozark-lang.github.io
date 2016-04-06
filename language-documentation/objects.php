@@ -44,8 +44,6 @@
 											<div class='code-sample-header'>ChessBoard.class.ozark</div>
 											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>inheritance GameBoard
 
-requirement ChessPiece
-
 property @whitePieces:[ChessPiece]
 property @blackPieces:[ChessPiece]
 
@@ -136,8 +134,6 @@ state reverse</pre></div>
 
 											<div class='code-sample-header'>ConveyorBelt.class.ozark</div>
 											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>inheritance Machine
-
-requirement Switch
 
 property @direction:Switch
 

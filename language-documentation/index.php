@@ -40,9 +40,6 @@
 											<div class='code-sample-header'>Vegetable.class.ozark</div>
 											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>inheritance Food
 
-requirement Plant
-requirement Seed
-
 property @plant:Plant
 property @weight:Number
 property @size:Number

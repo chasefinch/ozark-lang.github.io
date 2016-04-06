@@ -90,8 +90,6 @@ method testAndContinue object:ExampleObject? objectNeeded:Boolean io:StandardIO
 											<div class='code-sample-header'>ForExample.class.ozark</div>
 											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>inheritance Example
 
-requirement Attendee
-
 method printCount count:Integer io:StandardIO
 	for i:[1~count]
 		io print i
@@ -122,8 +120,6 @@ method reverseStrings _strings:[String] -&gt; $reversedStrings:[String]
 
 											<div class='code-sample-header'>RepeatExample.class.ozark</div>
 											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>inheritance Example
-
-requirement KeyboardInput
 
 method listenForInput io:StandardIO
 	repeat

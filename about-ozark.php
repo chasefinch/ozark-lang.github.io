@@ -33,15 +33,15 @@
 						<div class='code-sample' itemscope itemtype="http://schema.org/SoftwareSourceCode"><meta itemprop="language" content="Ozark" />
 							<pre>inheritance Person
 
-requirement StandardIO
-requirement Location
-requirement Rifle
-requirement Boot
-
 property io:StandardIO
 property location:Location
 property leftBoot:Boot
-property rightBoot:Boot</pre></div>
+property rightBoot:Boot
+
+class ShootAbility
+	inheritance Ability
+
+	enumeration SkillLevel</pre></div>
 					</div>
 					<div style='clear:both;'></div>
 					<div style='clear:both;'></div>

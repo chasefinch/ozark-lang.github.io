@@ -38,9 +38,6 @@
 											<div class='code-sample-header'>Conductor.class.ozark</div>
 											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>inheritance Musician
 	
-requirement Concerto
-requirement Orchestra
-
 method beginConcerto _concerto:Concerto orchestra:Orchestra
 	concerto getFirstMovement -&gt; movement
 	orchestra perform movement
@@ -70,8 +67,6 @@ method concludeConcerto _concerto:Song orchestra:Orchestra
 											<div class='code-sample-header'>Sailboat.class.ozark</div>
 											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>inheritance Boat
 
-requirement WaterfrontLocation
-
 property @location:Location
 property @launcher:LaunchAbility
 property @navigator:NavigateAbility
@@ -97,14 +92,12 @@ method sailTo _destination:WaterfrontLocation -&gt; $duration:TimeInterval
 
 											<a name="Extensions"><h2>Overriding &amp; extending parent methods</h2></a>
 
-											<p>As discussed in <a href='classes#Inheritance'>Inheritance</a>, a class inherits all methods and properties from its parent classes. It also has access to declared <em>requirements</em>, nested classes, and nested <em>enumerations</em>. To redeclare a method in a child class, drop the <code>method</code> keyword and instead declare a <code>replacement</code>.</p>
+											<p>As discussed in <a href='classes#Inheritance'>Inheritance</a>, a class inherits all methods and properties from its parent classes. It also has access to nested classes and <em>enumerations</em>, and classes and enumerations from other files in the same directory. To redeclare a method in a child class, drop the <code>method</code> keyword and instead declare a <code>replacement</code>.</p>
 
 											<p>To extend a parent method, drop the <code>method</code> keyword and instead declare an <code>extension</code>. This is commonly seen with the <code>initialize</code> method. The body declared for the extension will execute after the code declared in the parent method. You can choose to add additional inputs and outputs to the extension.</p>
 
 											<div class='code-sample-header'>Flower.class.ozark</div>
 											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>inheritance Plant
-
-requirement Color
 
 property @color:Color
 
@@ -117,9 +110,6 @@ extension initialize
 
 											<div class='code-sample-header'>Flower.class.ozark</div>
 											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>inheritance Plant
-
-requirement Color
-requirement Direction
 
 property @color:Color
 
@@ -174,9 +164,6 @@ method initialize
 
 											<div class='code-sample-header'>GuitarPlayer.class.ozark</div>
 											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>inheritance Musician
-
-requirement Guitar
-requirement Guitar.GuitarString
 
 property @guitar
 

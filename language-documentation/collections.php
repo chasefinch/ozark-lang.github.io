@@ -38,8 +38,6 @@
 											<div class='code-sample-header'>ArrayExample.class.ozark</div>
 											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>inheritance Example
 
-requirement Banana
-
 method initialize helper:ComplexObject
 	identify integers1:[1, 2, 3, 4]
 	identify integers2:[5~10]

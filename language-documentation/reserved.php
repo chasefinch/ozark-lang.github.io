@@ -45,14 +45,13 @@
 														<li><code>if</code></li>
 														<li><code>inheritance</code></li>
 														<li><code>method</code></li>
-														<li><code>property</code></li>
 													</ul>
 												</div>
 												<div class='col-sm-6'>
 													<ul>
+														<li><code>property</code></li>
 														<li><code>repeat</code></li>
 														<li><code>replacement</code></li>
-														<li><code>requirement</code></li>
 														<li><code>set</code></li>
 														<li><code>state</code></li>
 														<li><code>true</code></li>

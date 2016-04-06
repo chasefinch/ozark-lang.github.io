@@ -36,11 +36,6 @@
 											<div class='code-sample-header'>HumanBody.class.ozark</div>
 											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>inheritance Body
 
-requirement Head
-requirement Arm
-requirement Leg
-requirement Torso
-
 property @head:Head
 property @leftArm:Arm
 property @rightArm:Arm
