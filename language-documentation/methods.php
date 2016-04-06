@@ -114,7 +114,6 @@ extension initialize
 property @color:Color
 
 extension initialize &amp;color:Color -&gt; &amp;$facing:Direction
-	create color:Color; initializeRandom
 	create facing:Direction; initializeRandom
 	
 	set @color &lt;- color

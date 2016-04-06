@@ -71,11 +71,8 @@ extension initialize &amp;latitude:Number &amp;longitude:Number
 	set @longitude &lt;- longitude
 
 method getCoordinates -&gt; $latitude:Number $longitude:Number
-	@latitude value -&gt; latitude
-	@longitude value -&gt; longitude
-
-	set $latitude &lt;- latitude
-	set $longitude &lt;- longitude
+	set $latitude &lt;- @latitude
+	set $longitude &lt;- @longitude
 
 method setLocation latitude:Number longitude:Number
 	set @latitude &lt;- latitude

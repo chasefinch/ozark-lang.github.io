@@ -35,7 +35,7 @@
 
 											<p>Everything in Ozark is an object, even "primitive" types such as Integers and Booleans. Declaring an object literal (such as <code>5.3</code> or <code>true</code>) automatically creates the space in which that new object will reside, and so you are able to pass messages to even the object literals (e.g. <code>5 + 3 -&gt; sum</code>)</p>
 
-											<p>Objects are allocated manually with the <code>create</code> keyword when declaring a pointer, and then have a method called immediately using the semicolon (<code>;</code>) syntax. You cannot declare a pointer with one of the built-in types with the "create" keyword; You should instead use an object literal.</p>
+											<p>Objects are allocated manually with the <code>create</code> keyword when declaring a pointer, and then have a method called immediately using the semicolon (<code>;</code>) syntax.</p>
 
 											<a name="Pointers"><h2>Objects are stored in pointers</h2></a>
 
@@ -64,7 +64,7 @@ method setPieces whitePieces:[ChessPiece] blackPieces:[ChessPiece]
 
 											<p>There is no concept of "nil" - Instead, <span itemprop='name'>Ozark</span> uses <strong>optionals</strong> to denote pointers that are allowed to nave no value. Pointers marked as optional have limited capabilities, but can be unpacked for conditional usage with the <code>with</code> keyword.</p>
 
-											<p>You can specify an object as optional by including a question mark (<code>?</code>) after the type, and when you unpack it, use an exclamation point (<code>!</code>).</p>
+											<p>You can specify an object as optional by including a question mark (<code>?</code>) after the type.</p>
 
 											<a name="Generics"><h2>Generics</h2></a>
 
@@ -96,6 +96,8 @@ extension intialize
 											<p>These items are all required in <code>Object</code>, so any class that inherits from Object need not require them again.</p>
 
 											<p>Rather than using the basic types heavily, create a class based on the real-world use case you are modeling. For example, if a Person may or may not have an ID badge with a <code>String</code> as an ID, don't store the ID as a <code>String</code> variable on the <code>Person</code> class. Instead, create an <code>IDBadge</code> class that is an optional property of the <code>Person</code> class. That way, an <code>IDBadge</code> must have a <code>String</code>, but a Person may have an optional ID Badge, and could theoretically swap it for a new one.</p>
+
+											<p>Note that assigning one of the 5 basic types (or one of the two under-the-hood types, <code>Bit</code> and <code>Byte</code>) with the <code>set</code> keyword creates a copy of the object, rather than having the new pointer reference the same object in memory.</p>
 
 											<a name='Integer'><h4>Integer</h4></a>
 
