@@ -76,11 +76,11 @@
 			@hiker followTrail trail -&gt; success:result
 		
 			if result
-				@speaker shout "Hello,&nbsp;world!"</pre></div>
+				@speaker shout "Hello,&nbsp;world!"
+				</pre></div>
 								</div>
 								<div class='col-sm-5'>
 									<div class='github'>
-										<h3>Contribute</h3>
 										<a target="_blank" href='https://github.com/ozark-lang/ozark' class='btn btn-primary btn-lg'>View the GitHub project &nbsp; <span class='glyphicon glyphicon-new-window'></span></a>
 										<div class='callout'>
 											<p>Ozark is open source under the <a target="_blank" href='https://github.com/ozark-lang/ozark/blob/master/LICENSE'>GPL v3 license</a>. It's hosted and developed on GitHub.</p>

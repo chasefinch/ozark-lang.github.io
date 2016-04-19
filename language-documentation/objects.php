@@ -91,13 +91,17 @@ extension intialize
 	@io print element</pre></div>
 											<a name='BuiltInTypes'><h2>Built-In Types</h2></a>
 
-											<p>There are 5 primary <strong>built-in types</strong> that come from the Ozark standard library: <code>Integer</code>, <code>Number</code>, <code>Boolean</code>, <code>Character</code>, and the user-defined <em>enumeration</em>. There is also the basic class <code>Object</code>. All of the basic types inherit from <code>Testable</code> (allowing them to be used in <code>if</code>/<code>unless</code> statements) and <code>Comparable</code> which defines basic functions to test for equality.</p>
+											<p>There are 5 primary <strong>built-in types</strong> that come from the Ozark standard library: <code>Integer</code>, <code>Number</code>, <code>Boolean</code>, <code>Character</code>, and the user-defined <em>enumeration</em>. There is also the basic class <code>Object</code>. </p>
 
 											<p>These items are all required in <code>Object</code>, so any class that inherits from Object need not require them again.</p>
 
 											<p>Rather than using the basic types heavily, create a class based on the real-world use case you are modeling. For example, if a Person may or may not have an ID badge with a <code>String</code> as an ID, don't store the ID as a <code>String</code> variable on the <code>Person</code> class. Instead, create an <code>IDBadge</code> class that is an optional property of the <code>Person</code> class. That way, an <code>IDBadge</code> must have a <code>String</code>, but a Person may have an optional ID Badge, and could theoretically swap it for a new one.</p>
 
-											<p>Note that assigning one of the 5 basic types (or one of the two under-the-hood types, <code>Bit</code> and <code>Byte</code>) with the <code>set</code> keyword creates a copy of the object, rather than having the new pointer reference the same object in memory.</p>
+											<div class='alert alert-warning'>
+												<p><span class='glyphicon glyphicon-alert'></span> <strong>Notice:</strong> Built-in types behave differently than other types.</p>
+												<p>Assigning one of the 5 basic types with the <code>set</code> keyword creates a copy of the object, rather than having the new pointer reference the same object in memory.</p>
+												<p>Also, you cannot create subclasses of the 5 built-in types.</p>
+											</div>
 
 											<a name='Integer'><h4>Integer</h4></a>
 

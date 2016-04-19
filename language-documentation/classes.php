@@ -207,7 +207,9 @@ method shootEveryOtherTarget _targets:[Target] -&gt; $casings:[Bullet.Casing] $s
 
 											<p>From outside of the parent class, nested classes and enumerations are referenced with dot notation. For example, a class making use of the <code>Rifleman</code> class but wishing to declare an independent <code>ShootAbility</code> would reference the class as <code>Rifleman.ShootAbility</code></p>
 
-											<p>Note that nested classes cannot be subclasses of the parent class; Subclasses should be defined separately. Nesting is for supporting classes only.</p>
+											<div class='alert alert-warning'>
+												<p><span class='glyphicon glyphicon-alert'></span> <strong>Notice:</strong> Nested classes cannot be subclasses of the parent class; Subclasses should be defined separately. Nesting is for supporting classes only.</p>
+											</div>
 										</main>
 										<?php require('../includes/documentation-pagination.php'); ?>
 									</div>

@@ -43,7 +43,7 @@
 
 											<a name="If"><h4>If / Unless / Else</h4></a>
 
-											<p>The <code>if</code> statement evaluates a <code>Testable</code> value and, if that value is <code>true</code>, executes the body. Objects that inherit from <code>Testable</code> include <code>Boolean</code> objects, as well as the other primitives. Custom classes can also inherit from <code>Testable</code>, and can overwrite the <code>isTrue -> _value:Boolean</code> method, which by default returns true if the two pointers are referencing the same object.</p>
+											<p>The <code>if</code> statement evaluates a Boolean value and, if that value is <code>true</code>, executes the body.</p>
 
 											<p>The <code>unless</code> statement is the opposite of <code>if</code>, executing only if the passed value returns <code>false</code> for the test function.</p>
 
@@ -114,7 +114,7 @@ method reverseStrings _strings:[String] -&gt; $reversedStrings:[String]
 
 											<a name="Repeat"><h4>Repeat</h4></a>
 
-											<p>The <code>repeat</code> statement has a body which repeats indefinitely. It usually contains a <code>while</code> or <code>until</code> statement that checks a <code>Testable</code> value and, if the <code>while</code> condition is <code>false</code> or the <code>until</code> condition is <code>true</code>, ends the loop immediately.</p>
+											<p>The <code>repeat</code> statement has a body which repeats indefinitely. It usually contains a <code>while</code> or <code>until</code> statement that checks a <code>Boolean</code> value and, if the <code>while</code> condition is <code>false</code> or the <code>until</code> condition is <code>true</code>, ends the loop immediately.</p>
 
 											<p>The <code>while</code> or <code>until</code> statements can appear at any point within the loop.</p>
 

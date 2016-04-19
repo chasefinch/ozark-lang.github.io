@@ -177,7 +177,7 @@ div.portal .glyphicon { float:right; margin-right:15px; color:#25aae1; }
 	.documentation .btn { position:relative; left:-4px; }
 
 .callout { font-size:0.9em; margin-top:0em; }
-.github { padding:10px 0 0 0; }
+.github { padding:0px 0 0 0; }
 	.github .btn { position:relative; left:-4px; }
 
 .ornament { text-align:center; margin-top:6em; }

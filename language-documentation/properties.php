@@ -81,7 +81,10 @@ method setLocation latitude:Number longitude:Number
 
 											<p>There is no concept of "nil" - Instead, Ozark uses <strong>optionals</strong> to denote pointers that are allowed not to have a value. You can read more about that in <a href='objects#Optionals'>Optionals</a>. Properties can be declared as optionals with the question mark (<code>?</code>) symbol, they can be "unpacked" via the <code>with</code> or <code>without</code> statements, and they can be stripped of their value with the <code>clear</code> statement.</p>
 
-											<p>Note that *uninitialized* and *cleared* are not different concepts. A non-optional property will throw a compile-time error if it's used before being initialized; However, an optional property that has been marked as empty with the command <code>clear</code> will behave accordingly.</p>
+											<div class='alert alert-warning'>
+												<p><span class='glyphicon glyphicon-alert'></span> <strong>Notice:</strong> *Uninitialized* and *cleared* are not different concepts.</p>
+												<p>A non-optional property will throw a compile-time error if it's used before being initialized; However, an optional property that has been marked as empty with the command <code>clear</code> will behave accordingly.</p>
+											</div>
 
 											<div class='code-sample-header'>BookContents.class.ozark</div>
 											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>inheritance Contents
