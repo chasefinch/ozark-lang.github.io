@@ -39,7 +39,7 @@
 
 											<p>Many stylistic characteristics of the code are enforced. For example, type names begin with a capital letter (<code>Color</code>, <code>Integer</code>, <code>GameScene</code>) and noun and verb names begin with a lowercase letter. All words are camelCased and can include (but not start with) numbers <code>0</code>&ndash;<code>9</code>. No underscores are allowed.<p>
 
-											<p>In addition to camelCased letter/number combinations, the following characters can also be used as function names:</p>
+											<p>In addition to camelCased letter/number combinations, the following characters can also be used as method names:</p>
 
 											<ul>
 												<li><code>+</code></li>
