@@ -31,12 +31,11 @@
 				</div>
 			</div>
 		</section>
-		<section class='white pull'>
+		<section class='white'>
 			<div class='container'>
 				<div class='row'>
 					<div class='col-md-10 col-md-offset-1'>
 						<div class='snippet'>
-							<h3>Example code in Ozark:</h3>
 							<div class='row'>
 								<div class='col-sm-7' itemscope itemtype="http://schema.org/SoftwareSourceCode">
 

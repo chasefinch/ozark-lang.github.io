@@ -193,7 +193,7 @@ div.portal .glyphicon { float:right; margin-right:15px; color:#25aae1; }
 .code .btn { position:relative; left:-4px; }
 .community .btn { position:relative; left:-4px; }
 .prompt { text-align:center; margin-bottom:4em; }
-.snippet { margin-top:6em; }
+.snippet { margin-top:6em; margin-bottom:4em; }
 
 ul.contributors { padding-left:1.2em; }
 	ul.contributors li {  }
@@ -211,7 +211,7 @@ main a h2 { margin-top:2em; }
 .code-sample-header { position:relative; text-align:center; left:-4px; background-color:#25aae1; padding:5px 15px; color:#fff; border-top-right-radius:3px; border-top-left-radius:3px; }
 	.code-sample-header .extension { opacity:0.8; }
 
-.code-sample { position:relative; left:-4px; border:2px solid #25aae1; background:#fff; border-top:none; padding:15px; overflow-x:scroll; border-bottom-right-radius:3px; border-bottom-left-radius:3px; }
+.code-sample { position:relative; left:-4px; border:3px solid #25aae1; background:#fff; border-top:none; padding:15px; overflow-x:scroll; border-bottom-right-radius:3px; border-bottom-left-radius:3px; }
 	.code-sample pre { border:none !important; background:transparent !important; word-wrap:normal; margin:0; padding:0; }
 	.code-sample-header.code-sample-header-inline, main .code-sample-header { left:-5px; }
 	.code-sample.code-sample-inline, main .code-sample { margin-bottom:2em; left:-5px; }
@@ -269,7 +269,6 @@ footer { position:relative; z-index:1; margin-top:3em; padding-top:3em; padding-
 	.to-top .link-to-top:hover { text-decoration:none; }
 
 @media (min-width:768px) {
-	footer { padding-top:6em; padding-bottom:6em; }
 	#footer-logo { margin-bottom:0.5em; }
 
 	.footer-nav { font-size:1.0em; }
