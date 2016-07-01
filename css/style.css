@@ -208,10 +208,10 @@ main a h2 { margin-top:2em; }
 
 .code .links { padding-top:5em; }
 
-.code-sample-header { position:relative; text-align:center; left:-4px; background-color:#25aae1; border:1px solid #258ac1; border-top:5px solid #258ac1; padding:5px 15px; color:#fff; border-top-right-radius:3px; border-top-left-radius:3px; }
+.code-sample-header { position:relative; text-align:center; left:-4px; background-color:#25aae1; padding:5px 15px; color:#fff; border-top-right-radius:3px; border-top-left-radius:3px; }
 	.code-sample-header .extension { opacity:0.8; }
 
-.code-sample { position:relative; left:-4px; border:1px solid #bbb; background:#fff; border-top:none; padding:15px; overflow-x:scroll; border-bottom-right-radius:3px; border-bottom-left-radius:3px; }
+.code-sample { position:relative; left:-4px; border:2px solid #25aae1; background:#fff; border-top:none; padding:15px; overflow-x:scroll; border-bottom-right-radius:3px; border-bottom-left-radius:3px; }
 	.code-sample pre { border:none !important; background:transparent !important; word-wrap:normal; margin:0; padding:0; }
 	.code-sample-header.code-sample-header-inline, main .code-sample-header { left:-5px; }
 	.code-sample.code-sample-inline, main .code-sample { margin-bottom:2em; left:-5px; }
