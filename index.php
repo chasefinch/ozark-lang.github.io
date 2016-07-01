@@ -15,7 +15,7 @@
 						<div class='row'>
 							<div class='col-sm-10 col-md-9'>
 								<h1 class='heading'>Boring, readable code.</h1>
-								<p class='lead'>Ozark is an open-source programming language currently in development. Code written in Ozark is readable and reliable due to strict syntax rules. Ozark is used with <a target="_blank" href='https://madewithobjects.com'>Objects&nbsp;<small><span class='glyphicon glyphicon-new-window'></span></small></a>, a visual IDE, for web and native software development.</p>
+								<p class='lead'>Ozark is an open-source programming language currently in development. Code written in Ozark is readable and reliable due to strict syntax rules. Ozark is used with <a href='https://madewithobjects.com'>Objects&nbsp;<small><span class='glyphicon glyphicon-new-window'></span></small></a>, a visual IDE, for web and native software development.</p>
 							</div>
 						</div>
 					</div>
