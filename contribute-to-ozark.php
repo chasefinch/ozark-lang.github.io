@@ -8,6 +8,7 @@
 	?>
 	<body itemscope itemtype='http://schema.org/Language'>
 		<?php require('includes/top.php'); ?>
+		<!--
 		<div class='prompt-section'>
 			<section class='white'>
 				<div class='container'>
@@ -32,6 +33,7 @@
 			</section>
 			<hr />
 		</div>
+		-->
 		<section class='white'>
 			<div class='container'>
 				<div class='row'>

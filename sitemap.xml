@@ -6,7 +6,6 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
   <url><loc>https://ozark.cc/</loc></url>
-  <url><loc>https://ozark.cc/about-ozark</loc></url>
   <url><loc>https://ozark.cc/language-documentation/</loc></url>
   <url><loc>https://ozark.cc/language-documentation/concepts</loc></url>
   <url><loc>https://ozark.cc/language-documentation/style</loc></url>

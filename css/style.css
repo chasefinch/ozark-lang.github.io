@@ -23,7 +23,7 @@ label { font-weight:normal; margin:1em 0 1em 0; }
 ul.clean { padding-left:0; }
 	ul.clean li { list-style-type:none; padding-bottom:0.4em; }
 
-h1.heading { font-size:30px; font-weight:normal !important; }
+h1.heading { font-weight:bold !important; }
 h2.subheading, h3.subheading { margin-bottom:2em; }
 	.subheading strong { font-weight:300; font-size:0.6em; text-transform:uppercase; color:#25aae1; }
 
@@ -166,7 +166,7 @@ section.white { padding:20px 0; }
 
 section.ribbon { text-align:center; margin-top:0.5em; }
 
-section.news { padding:1em 0; border-bottom:1px solid #ddd; }
+section.news { padding:1em 0;  }
 	.news strong.category { color:#25aae1; font-weight:bold; text-transform:uppercase; font-size:0.8em; margin-right:1em; }
 
 div.portal .glyphicon { float:right; margin-right:15px; color:#25aae1; }
@@ -177,7 +177,7 @@ div.portal .glyphicon { float:right; margin-right:15px; color:#25aae1; }
 	.documentation .btn { position:relative; left:-4px; }
 
 .callout { font-size:0.9em; margin-top:0em; }
-.github { padding:0px 0 0 0; }
+.github { padding:6em 0 0 0; }
 	.github .btn { position:relative; left:-4px; }
 
 .ornament { text-align:center; margin-top:6em; }
@@ -193,7 +193,7 @@ div.portal .glyphicon { float:right; margin-right:15px; color:#25aae1; }
 .code .btn { position:relative; left:-4px; }
 .community .btn { position:relative; left:-4px; }
 .prompt { text-align:center; margin-bottom:4em; }
-.snippet { margin-top:2em; }
+.snippet { margin-top:6em; }
 
 ul.contributors { padding-left:1.2em; }
 	ul.contributors li {  }
@@ -243,7 +243,7 @@ main a h2 { margin-top:2em; }
 
 /* --- */
 
-footer { position:relative; z-index:1; margin-top:3em; padding-top:3em; padding-bottom:3em; background:#25aae1 url(../img/bg-footer.png?v=0) center bottom no-repeat; color:#def; }
+footer { position:relative; z-index:1; margin-top:3em; padding-top:3em; padding-bottom:3em; background:#25aae1; color:#def; }
 	footer a { color:#fff; text-decoration:underline; }
 	footer a:hover { color:#fff; }
 
@@ -269,6 +269,7 @@ footer { position:relative; z-index:1; margin-top:3em; padding-top:3em; padding-
 	.to-top .link-to-top:hover { text-decoration:none; }
 
 @media (min-width:768px) {
+	footer { padding-top:6em; padding-bottom:6em; }
 	#footer-logo { margin-bottom:0.5em; }
 
 	.footer-nav { font-size:1.0em; }
@@ -279,6 +280,4 @@ footer { position:relative; z-index:1; margin-top:3em; padding-top:3em; padding-
     screen and (min-width:768px) and (-o-min-device-pixel-ratio: 3/2),
     screen and (min-width:768px) and (min--moz-device-pixel-ratio: 1.5),
     screen and (min-width:768px) and (min-device-pixel-ratio: 1.5) {
-
-	footer { background-image:url(../img/bg-footer@2x.png); background-size:1500px; }	
 }
