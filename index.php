@@ -11,13 +11,9 @@
 		<section class='white'>
 			<div class='container'>
 				<div class='row'>
-					<div class='col-md-10 col-md-offset-1'>
-						<div class='row'>
-							<div class='col-sm-10 col-md-9'>
-								<h1 class='heading'>Boring, readable code.</h1>
-								<p class='lead'>Ozark is an open-source programming language currently under construction. Code written in Ozark is readable and reliable due to strict syntax rules. Ozark is used with <a href='https://madewithobjects.com'>Objects&nbsp;<small><span class='glyphicon glyphicon-new-window'></span></small></a>, a visual IDE for web and native software development.</p>
-							</div>
-						</div>
+					<div class='col-md-10 col-md-offset-1 col-lg-9'>
+						<h1 class='heading'>Boring, readable code.</h1>
+						<p class='lead'>Ozark is an open-source programming language currently under construction. Code written in Ozark is readable and reliable due to strict syntax rules. Ozark is used with <a href='https://madewithobjects.com'>Objects&nbsp;<small><span class='glyphicon glyphicon-new-window'></span></small></a>, a visual IDE for web and native software development.</p>
 					</div>
 				</div>
 			</div>
@@ -25,7 +21,7 @@
 		<section class='news'>
 			<div class='container'>
 				<div class='row'>
-					<div class='col-md-10 col-md-offset-1' itemscope itemtype="http://schema.org/NewsArticle">
+					<div class='col-md-10 col-md-offset-1 col-lg-8' itemscope itemtype="http://schema.org/NewsArticle">
 						<strong class='category'>Latest News</strong> Sample app for version 0.2.2 of the Ozark specification <a itemprop="url" href='https://groups.google.com/d/msg/ozark-lang/ScHtG-z6gRo/1nkjWLE3AgAJ'>See&nbsp;Announcement&nbsp;&rarr;</a>
 					</div>
 				</div>
