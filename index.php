@@ -73,7 +73,6 @@
 				</div>
 			</div>
 		</section>
-		<?php require('includes/back-to-top.php'); ?>
 		<?php require('includes/bottom.php'); ?>
 		<?php require('includes/scripts.php'); ?>
 	</body>
