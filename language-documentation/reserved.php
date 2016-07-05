@@ -41,15 +41,14 @@
 														<li><code>extension</code></li>
 														<li><code>false</code></li>
 														<li><code>for</code></li>
-														<li><code>identify</code></li>
 														<li><code>if</code></li>
 														<li><code>inheritance</code></li>
 														<li><code>method</code></li>
+														<li><code>property</code></li>
 													</ul>
 												</div>
 												<div class='col-sm-6'>
 													<ul>
-														<li><code>property</code></li>
 														<li><code>repeat</code></li>
 														<li><code>replacement</code></li>
 														<li><code>set</code></li>

@@ -184,8 +184,6 @@ method shootEveryOtherTarget _targets:[Target] -&gt; $casings:[Bullet.Casing] $s
 	create testShotCasing1:Bullet.Casing; initialize
 	create testShotCasing2:Bullet.Casing; initialize
 
-	identify testCasings:[testShotCasing1, testShotCasing2]
-
 	for target:targets[2%2] -&gt; casings:[Bullet.Casing]
 		shooter shootTarget target -&gt; success:success1 casing:casing smoke:smoke1
 		success and success1
@@ -201,7 +199,7 @@ method shootEveryOtherTarget _targets:[Target] -&gt; $casings:[Bullet.Casing] $s
 	else
 		set @mood &lt;- Mood.tired
 
-	set $casings &lt;- testCasings + casings
+	set $casings &lt;- [testShotCasing1, testShotCasing2] + casings
 	set $smoke &lt;- smoke
 	set $success &lt;- success</pre></div>
 

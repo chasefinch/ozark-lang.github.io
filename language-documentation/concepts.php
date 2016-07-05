@@ -170,13 +170,11 @@ method rgbValue -&gt; $red:Number $green:Number $blue:Number
 property @paperTray:[Paper]
 
 method rgbPrint color:Color -&gt; $document:Paper?
-	if @paperTray[#]
 		with sheet:@paperTray[-1]
 			color rgbValue -&gt; red:red green:green blue:blue
 			sheet rgbFill red:red green:green blue:blue
 			set $document &lt;- sheet
-
-		set @paperTray &lt;- @paperTray[1~-1]</pre></div>
+			set @paperTray &lt;- @paperTray[1~-1]</pre></div>
 			
 											<a name='SmallScopes'><h2>Small scopes with no globals</h2></a>
 

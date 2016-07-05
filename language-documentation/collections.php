@@ -33,20 +33,18 @@
 
 											<a name="Arrays"><h2>Arrays</h2></a>
 
-											<p>An <strong>Array</strong> is a nestable, homogeneous, 1-based ordered list of pointers. Arrays can be named using the <code>identify</code> keyword, or they can be specified by literals using square bracket (<code>[]</code>) notation, or they can be created sequentially as the output of a <a href='control#For'>for loop</a>.</p>
+											<p>An <strong>Array</strong> is an immutable, nestable, homogeneous, 1-based ordered list of pointers. Arrays can be specified literally using square bracket (<code>[]</code>) notation, or they can be created sequentially as the output of a <a href='control#For'>for loop</a>.</p>
 
 											<div class='code-sample-header'>ArrayExample.class.ozark</div>
 											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>inheritance Example
 
 method initialize helper:ComplexObject
-	identify integers1:[1, 2, 3, 4]
-	identify integers2:[5~10]
 
 	for i:[1~12] -> bananas:[Banana]
 		create banana:Banana; initialize
 		set bananas[$] &lt;- banana
 
-	helper doSomethingToArrayOfIntegers:integers1[1~2]</pre></div>
+	helper doSomethingToTwoBananas:bananas[1~2]</pre></div>
 
 											<p>Anywhere an array is needed, you can use subscript-based expressions to split and combine arrays into one set.</p>
 

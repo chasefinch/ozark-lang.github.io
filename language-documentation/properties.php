@@ -98,7 +98,7 @@ method removePrologueAndEpilogue
 	clear @epilogue
 
 method getStringForPrinting -&gt; $printable:String
-	create string:TextBlock initialize
+	create string:TextBlock; initialize
 
 	with @prologue
 		@prologue textAsString -&gt; text
