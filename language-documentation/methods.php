@@ -113,10 +113,9 @@ extension initialize
 
 property @color:Color
 
-extension initialize &amp;color:Color -&gt; &amp;$facing:Direction
+extension initialize -&gt; &amp;$facing:Direction
 	create facing:Direction; initializeRandom
 	
-	set @color &lt;- color
 	set $facing &lt;- facing</pre></div>
 	
 											<a name='Calling'><h2>Calling methods</h2></a>
