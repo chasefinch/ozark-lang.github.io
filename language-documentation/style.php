@@ -59,7 +59,7 @@
 												<li><code>≠</code></li>
 											</ul>
 
-											<p>Another example of enforced style is whitespace; Single-line spacing with padding around control flow statements and between sets of statement types is checked at compile-time and enforced. (A good Ozark IDE will clean this up for you.) The correct order of declarations within a class (inheritances &rarr; classes &rarr; enumerations &rarr; properties &rarr; extensions &rarr; methods) is also a compiling requirement. Within a method, control flow blocks and implicit actions have an extra line above and below them, with the exception that implicit actions are grouped with other like actions.</p>
+											<p>Another example of enforced style is whitespace; Single-line spacing with padding around control flow statements and between sets of statement types is enforced. (A good Ozark IDE will clean this up for you.) The correct order of declarations within a class (inheritances &rarr; classes &rarr; enumerations &rarr; properties &rarr; extensions &rarr; methods) is also a compiling requirement. Within a method, control flow blocks and implicit actions have an extra line above and below them, with the exception that implicit actions are grouped with other like actions.</p>
 
 											<p>The suggested naming convention is to name methods as though they are an action performed by the subject; For example, <code>chef chop</code> and <code>celery getChopped</code> instead of <code>celery chop</code>.</p>
 

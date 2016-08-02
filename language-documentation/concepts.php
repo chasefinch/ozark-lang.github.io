@@ -136,12 +136,6 @@ method race track:RaceTrack start:StartEvent
 											
 											<p>Rather than evaluating like an expression, a method is an action by an object, and has any number of inputs and/or outputs.</p>
 
-											<a name='Compiled'><h2>Compiled</h2></a>
-
-											<p>Ozark is compiled to run on the Java Virtual Machine (JVM). This means great performance with the flexibility of being able to run on all major platforms.</p>
-
-											<p>Plans are also in place to build an Ozark interpreter for ease of use in web development and other script-based environments.</p>
-
 											<a name='StrictProgramming'><h2>Strict programming</h2></a>
 
 											<p>Ozark is based on the philosophy of <em>Strict Programming</em>. This means that declaration order, whitespace (including line breaks and indentation), and naming conventions are all enforced. It also means no syntactic sugar; Each operation has exactly one syntax.</p>

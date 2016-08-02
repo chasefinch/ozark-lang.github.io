@@ -83,7 +83,7 @@ method setLocation latitude:Number longitude:Number
 
 											<div class='alert alert-warning'>
 												<p><span class='glyphicon glyphicon-alert'></span> <strong>Notice:</strong> *Uninitialized* and *cleared* are not different concepts.</p>
-												<p>A non-optional property will throw a compile-time error if it's used before being initialized; However, an optional property that has been marked as empty with the command <code>clear</code> will behave accordingly.</p>
+												<p>A non-optional property will cause an error if it's used before being initialized; However, an optional property that has been marked as empty with the command <code>clear</code> will behave accordingly.</p>
 											</div>
 
 											<div class='code-sample-header'>BookContents.class.ozark</div>

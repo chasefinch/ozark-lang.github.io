@@ -61,6 +61,12 @@ method grow days:Number rate:Number
 											<p>Ozark's strengths are standardization and collaboration. Multiple developers of varying skill levels may work on a project using different tools, yet will produce similar code that is easy to read.</p>
 
 											<p>Similarly, Ozark files are a suitable save format for applications that generate code. This means that artificial intelligence or visual development tools produce correct Ozark and can parse existing code into a working model.</p>
+											
+											<a name='Execution'><h2>Execution</h2></a>
+
+											<p>The Ozark interpreter can be invoked via command line with the <code>ozark</code> command, specifying the initial class file and method. An instance of the class is created, and the method is invoked to begin program execution.</p>
+
+											<pre>ozark Gunshow.ozark.class initialize</pre>
 										</main>
 										<?php require('../includes/documentation-pagination.php'); ?>
 									</div>
