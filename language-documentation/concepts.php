@@ -41,7 +41,7 @@
 property @calculator:Calculator
 property @cellPhone:Telephone
 
-extension initialize &amp;calculator:Calculator &amp;cellPhone:Telephone
+extension setup &amp;calculator:Calculator &amp;cellPhone:Telephone
 	set @calculator &lt;- calculator
 	set @cellPhone &lt;- cellPhone
 
@@ -55,9 +55,9 @@ method clockOut time:Time
 
 											<p>These object-oriented constraints are uniquely valuable to Ozark. Developers who inherit legacy code in other languages often find that the underlying object-oriented structure was abandoned in certain places for convenience, maybe with a global variable or misuse of the singleton pattern. When you inherit Ozark code, you can be sure that's not the case. This is one of the ways that Ozark has been built for readability.</p>
 
-											<p>Ozark also avoids techniques that are commonly considered to be object-oriented, but don't truly adhere to the principles that govern OO development. Static methods are one example of such a technique. Another is an object's ability to call its own methods with a reference to itself.</p>
+											<p>Ozark also avoids techniques that don't truly adhere to the principles of OO development. Static methods are one example. Another is an object's ability to call its own methods with a reference to itself.</p>
 
-											<p>The lack of a <em>self</em> reference forces Ozark inheritance stacks to be tall, and it forces all Ozark software to be built purely with dependency injection. This results in a lot of small, hyper-focused classes. <a href='classes#Nesting'>Nesting classes and enumerations</a> is the Ozark way of keeping these related classes organized.</p>
+											<p>The lack of a <em>self</em> reference and of unnamed code blocks forces Ozark inheritance stacks to be tall, Ozark methods to be short, and Ozark software to be built purely with dependency injection. This results in a lot of small, hyper-focused classes. <a href='classes#Nesting'>Nesting classes and enumerations</a> is the way to keeping these related classes organized.</p>
 
 											<div class='code-sample-header'>BaseballPlayer.class.ozark</div>
 											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>inheritance SportsPlayer
@@ -75,7 +75,7 @@ class DefensiveAbility
 	property @ball:Ball?
 
 	method throw target:BaseballPlayer
-		target catch @ball
+		target catch ball:@ball
 
 		clear @ball
 
@@ -85,9 +85,9 @@ class DefensiveAbility
 property @offense:OffensiveAbility
 property @defense:DefensiveAbility
 
-extension initialize
-	create offense:OffensiveAbility; initialize
-	create defense:DefensiveAbility; initialize
+extension setup
+	create offense:OffensiveAbility; setup
+	create defense:DefensiveAbility; setup
 
 	set @offense &lt;- offense
 	set @defense &lt;- defense
@@ -113,24 +113,24 @@ method processScene
 	@scene update</pre></div>
 											<a name='Declarative'><h2>Declarative</h2></a>
 
-											<p>Many object-oriented languages define their classes through a set of imperative statements. In Ozark, the only imperative  statements you'll find are inside of a <a href='methods'>method</a>; Everything else is written as a declaration.</p>
+											<p>Many object-oriented languages define their classes through a set of imperative statements. In Ozark, the only imperative statements you'll find are inside of a <a href='methods'>method</a>; Everything else is written as a declaration.</p>
 
 											<div class='code-sample-header'>RaceCarDriver.class.ozark</div>
 											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>inheritance Driver
 		
 property @car:RaceCar
-property @raceAbility:RaceAbility
+property @racing:RaceAbility
 
-extension initialize car:RaceCar
-	create raceAbility:RaceAbility; initialize
+extension setup car:RaceCar
+	create racing:RaceAbility; setup
 	
-	set @raceAbility &lt;- raceAbility
+	set @racing &lt;- raceAbility
 	set @car &lt;- car
 
 method race track:RaceTrack start:StartEvent
-	@raceAbility moveToTrack track
-	@raceAbility turnKey car:@car
-	@raceAbility beginRace startEvent:start</pre></div>
+	@racing enter track:track
+	@racing turnKey car:@car
+	@racing beginRace startEvent:start</pre></div>
 
 											<a name="Return"><h2>No return types for methods, just inputs and outputs</h2></a>
 											
@@ -138,11 +138,11 @@ method race track:RaceTrack start:StartEvent
 
 											<a name='StrictProgramming'><h2>Strict programming</h2></a>
 
-											<p>Ozark is based on the philosophy of <em>Strict Programming</em>. This means that declaration order, whitespace (including line breaks and indentation), and naming conventions are all enforced. It also means no syntactic sugar; Each operation has exactly one syntax.</p>
+											<p>In Ozark, declaration order, indentation, spacing and naming conventions are all important.</p>
 
-											<p>Ozark code always looks the same, which makes it readable. It also means that an IDE can quickly parse Ozark into a logical model.</p>
+											<p>Ozark code looks uniform, which makes it readable. It also means that an IDE can quickly parse Ozark into a logical model.</p>
 
-											<p>A code-generating application can use an Ozark file as a save format, much like Adobe Photoshop uses .psd files, or Microsoft Word uses .docx files. Even better, this saved Ozark file can be opened, read, and edited by hand, then saved and read back into the code-generating application!</p>
+											<p>A code-generating application can use an Ozark file as a save format, much like Adobe Photoshop uses .psd files. Even better, this saved Ozark file can be opened, read, and edited by hand, then saved and read back into the code-generating application!</p>
 
 											<a name="StronglyTyped"><h2>Strongly typed with no casting</h2></a>
 
@@ -159,16 +159,28 @@ method rgbValue -&gt; $red:Number $green:Number $blue:Number
 	set $blue &lt;- 1.0</pre></div>
 
 											<div class='code-sample-header'>Printer.class.ozark</div>
-											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>inheritance Object
+											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>inheritance Appliance
+
+class PrintAbility
+	method print color:Color sheet:Paper -> $document:Paper
+		color rgbValue -&gt; red:red green:green blue:blue
+		sheet rgbFill red:red green:green blue:blue
+		set $document &lt;- sheet
 
 property @paperTray:[Paper]
+property @printing:PrintAbility
+
+extension setup
+	create printing:PrintAbility; setup
+
+	set @printing <- printing
 
 method rgbPrint color:Color -&gt; $document:Paper?
-		with sheet:@paperTray[-1]
-			color rgbValue -&gt; red:red green:green blue:blue
-			sheet rgbFill red:red green:green blue:blue
-			set $document &lt;- sheet
-			set @paperTray &lt;- @paperTray[1~-1]</pre></div>
+	with sheet:@paperTray[-1]
+		@printing print color:color sheet:sheet -> document
+
+	set $document &lt;- document
+	set @paperTray &lt;- @paperTray[1~-1]</pre></div>
 			
 											<a name='SmallScopes'><h2>Small scopes with no globals</h2></a>
 

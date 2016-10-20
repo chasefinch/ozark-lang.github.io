@@ -87,7 +87,7 @@
 								</div>
 								<div class='col-sm-4'>
 									<h4>Slack</h4>
-									<p>Join our <a href='https://ozark-slack-signup.stamplayapp.com'>#Slack channel</a> for informal conversation, help and commit notifications.</p>
+									<p><a href='https://ozark-slack-signup.stamplayapp.com'>Join the Ozark Slack channel</a> for informal conversation, help and commit notifications.</p>
 								</div>
 							</div>
 							<div class='row'>

@@ -13,7 +13,7 @@
 				<div class='row'>
 					<div class='col-md-10 col-md-offset-1 col-lg-9'>
 						<h1 class='heading'>Boring, readable code.</h1>
-						<p class='lead'>Ozark is an open-source programming language currently under construction. Code written in Ozark is readable and reliable due to strict syntax rules. Ozark is used with <a href='https://madewithobjects.com'>Objects&nbsp;<small><span class='glyphicon glyphicon-new-window'></span></small></a>, a visual IDE for web and native software development.</p>
+						<p class='lead'>Ozark is an open-source programming language currently under construction. Code written in Ozark has elegant syntax and is purely object-oriented. Ozark is used with <a href='https://madewithobjects.com'>Objects&nbsp;<small><span class='glyphicon glyphicon-new-window'></span></small></a>, a visual IDE for web and native software development.</p>
 					</div>
 				</div>
 			</div>
@@ -22,7 +22,7 @@
 			<div class='container'>
 				<div class='row'>
 					<div class='col-md-10 col-md-offset-1 col-lg-8' itemscope itemtype="http://schema.org/NewsArticle">
-						<strong class='category'>Latest News</strong> Sample app for version 0.2.2 of the Ozark specification <a itemprop="url" href='https://groups.google.com/d/msg/ozark-lang/ScHtG-z6gRo/1nkjWLE3AgAJ'>See&nbsp;Announcement&nbsp;&rarr;</a>
+						<strong class='category'>Latest News</strong> Sample app for version 0.3.0 of the Ozark specification <a itemprop="url" href='https://groups.google.com/d/msg/ozark-lang/ScHtG-z6gRo/1nkjWLE3AgAJ'>See&nbsp;Announcement&nbsp;&rarr;</a>
 					</div>
 				</div>
 			</div>
@@ -39,31 +39,29 @@
 									<div class='code-sample'><meta itemprop="language" content="Ozark" />
 										<pre>inheritance Person
 
-	property hiker:HikeAbility
-	property hat:Hat?
-	property map:Map?
+property @speaking:SpeakAbility
+property @hiking:HikeAbility
+property @hat:Hat
+property @map:Map
 
-	method prepare
-		create map:Map; initialize
-		create hat:Hat; initialize
-		set @map &lt;- map
-		set @hat &lt;- hat
+method climb mountain:Mountain
+	@map findTrail mountain:mountain -&gt; trail:trail
+	@hiking follow trail:trail -&gt; location:result
 
-	method climbMountain _mountain:Mountain
-		with map:@map!
-			map findTrail mountain:mountain -&gt; trail
-			@hiker followTrail trail -&gt; success:result
-		
-			if result
-				@speaker shout "Hello,&nbsp;world!"
-				</pre></div>
+	mountain trailhead -> startingPoint
+	mountain peak -> destination
+
+	if result is ...
+		... destination | @speaking shout "Hello,&nbsp;world!"
+		... startingPoint | @speaking shout "Oh&nbsp;no!"
+		... none | @speaking callForHelp</pre></div>
 								</div>
 								<div class='col-sm-5'>
 									<div class='github'>
 										<a target="_blank" href='https://github.com/ozark-lang/ozark' class='btn btn-primary btn-lg'>View the GitHub project &nbsp; <span class='glyphicon glyphicon-new-window'></span></a>
 										<div class='callout'>
 											<p>Ozark is open source under the <a target="_blank" href='https://github.com/ozark-lang/ozark/blob/master/LICENSE'>GPL v3 license</a>. It's hosted and developed on GitHub.</p>
-											<p>The Ozark language is still in early development. The compiler isn't available yet, and contributors are needed (especially people with compiler expertise).</p>
+											<p>The Ozark language is still in early development, and the interpreter isn't available yet.</p>
 										</div>
 									</div>
 								</div>
