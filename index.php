@@ -44,10 +44,10 @@ property @map:Map
 property @radio:Radio
 
 extension setup
-	create Hike; use; setup
-	create Hat; set @hat; setup
-	create Map; set @map; setup
-	create Radio; set @radio; setup
+	make @:Hike; setup
+	make @hat:Hat; setup
+	make @map:Map; setup
+	make @radio:Radio; setup
 
 method climb mountain:Mountain
 	@map findTrail mountain:mountain -&gt; trail; set trail
