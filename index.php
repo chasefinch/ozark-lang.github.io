@@ -12,7 +12,7 @@
 			<div class='container'>
 				<div class='row'>
 					<div class='col-md-10 col-md-offset-1 col-lg-9'>
-						<h1 class='heading'>Boring, readable code.</h1>
+						<h1 class='heading'>Simple, readable code.</h1>
 						<p class='lead'>Ozark is an open-source programming language currently under construction. Code written in Ozark has elegant syntax and is purely object-oriented. Ozark is used with <a href='https://madewithobjects.com'>Objects&nbsp;<small><span class='glyphicon glyphicon-new-window'></span></small></a>, a visual IDE for web and native software development.</p>
 					</div>
 				</div>
@@ -22,7 +22,7 @@
 			<div class='container'>
 				<div class='row'>
 					<div class='col-md-10 col-md-offset-1 col-lg-8' itemscope itemtype="http://schema.org/NewsArticle">
-						<strong class='category'>Latest News</strong> Sample app for version 0.3.0 of the Ozark specification <a itemprop="url" href='https://groups.google.com/d/msg/ozark-lang/ScHtG-z6gRo/1nkjWLE3AgAJ'>See&nbsp;Announcement&nbsp;&rarr;</a>
+						<strong class='category'>Latest News</strong> Sample app update for the working Ozark specification <a itemprop="url" href='https://groups.google.com/d/msg/ozark-lang/Nw4CeO353iw/ou4rYmXiAQAJ'>See&nbsp;Announcement&nbsp;&rarr;</a>
 					</div>
 				</div>
 			</div>
@@ -39,22 +39,32 @@
 									<div class='code-sample'><meta itemprop="language" content="Ozark" />
 										<pre>inheritance Person
 
-property @speaking:SpeakAbility
-property @hiking:HikeAbility
 property @hat:Hat
 property @map:Map
+property @radio:Radio
+
+extension setup
+	create Hike; use; setup
+	create Hat; set @hat; setup
+	create Map; set @map; setup
+	create Radio; set @radio; setup
 
 method climb mountain:Mountain
-	@map findTrail mountain:mountain -&gt; trail:trail
-	@hiking follow trail:trail -&gt; location:result
+	@map findTrail mountain:mountain -&gt; trail; set trail
+	@ follow trail:trail -&gt; location:result
 
-	mountain trailhead -> startingPoint
-	mountain peak -> destination
+	mountain -> trailhead:startingPoint
+	mountain -> peak:destination
 
 	if result is ...
-		... destination | @speaking shout "Hello,&nbsp;world!"
-		... startingPoint | @speaking shout "Oh&nbsp;no!"
-		... none | @speaking callForHelp</pre></div>
+	... destination
+		print "Hello,&nbsp;world!"
+	
+	... startingPoint
+		print "Oh&nbsp;no!"
+	
+	... none
+		@radio callForHelp</pre></div>
 								</div>
 								<div class='col-sm-5'>
 									<div class='github'>

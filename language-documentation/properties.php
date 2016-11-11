@@ -43,22 +43,17 @@ property @leftLeg:Leg
 property @rightLeg:Leg
 property @torso:Torso
 
-extension initialize
-	create head:Head; initialize
-	create leftArm:Arm; initialize
-	create rightArm:Arm; initialize
-	create leftLeg:Leg; initialize
-	create rightLeg:Leg; initialize
-	create torso:Torso; initialize
-
-	set @head &lt;- head
-	set @leftArm &lt;- leftArm
-	set @rightArm &lt;- rightArm
-	set @leftLeg &lt;- leftLeg
-	set @rightLeg &lt;- rightLeg
-	set @torso &lt;- torso</pre></div>
+extension setup
+	make @head:Head; setup
+	make @leftArm:Arm; setup
+	make @rightArm:Arm; setup
+	make @leftLeg:Leg; setup
+	make @rightLeg:Leg; setup
+	make @torso:Torso; setup</pre></div>
 
 											<p>Properties are denoted by <code>@</code>. This prevents naming conflicts with the method's inputs &amp; other pointers.</p>
+
+											<p>Properties do not use dynamic dispatch or linearization, because they are not overridable. In a multiple inheritance situation, the property selected is the one from the first-declared inheritance, unless the object is currently stored in a pointer with one of the other inheritances' types.</p>
 	
 											<div class='code-sample-header'>Location.class.ozark</div>
 											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>inheritance Object
@@ -66,24 +61,24 @@ extension initialize
 property @latitude:Number
 property @longitude:Number
 
-extension initialize &amp;latitude:Number &amp;longitude:Number
+extension setup &amp;latitude:Number, &amp;longitude:Number
 	set @latitude &lt;- latitude
 	set @longitude &lt;- longitude
 
-method getCoordinates -&gt; $latitude:Number $longitude:Number
-	set $latitude &lt;- @latitude
-	set $longitude &lt;- @longitude
+method getCoordinates -&gt; latitude:Number, longitude:Number
+	set latitude &lt;- @latitude
+	set longitude &lt;- @longitude
 
-method setLocation latitude:Number longitude:Number
+method set latitude:Number, longitude:Number
 	set @latitude &lt;- latitude
 	set @longitude &lt;- longitude</pre></div>
 											<a name="Optionals"><h2>Optionals</h2></a>
 
-											<p>There is no concept of "nil" - Instead, Ozark uses <strong>optionals</strong> to denote pointers that are allowed not to have a value. You can read more about that in <a href='objects#Optionals'>Optionals</a>. Properties can be declared as optionals with the question mark (<code>?</code>) symbol, they can be "unpacked" via the <code>with</code> or <code>without</code> statements, and they can be stripped of their value with the <code>clear</code> statement.</p>
+											<p>Ozark uses <strong>optionals</strong> to denote pointers that are allowed not to have a value, which means they are set to <code>nil</code>. You can read more about that in <a href='objects#Optionals'>Optionals</a>. Properties can be declared as optionals with the question mark (<code>?</code>) symbol, they can be "unpacked" via the <code>with</code> statement, and they can be set to <code>nil</code>.</p>
 
 											<div class='alert alert-warning'>
-												<p><span class='glyphicon glyphicon-alert'></span> <strong>Notice:</strong> *Uninitialized* and *cleared* are not different concepts.</p>
-												<p>A non-optional property will cause an error if it's used before being initialized; However, an optional property that has been marked as empty with the command <code>clear</code> will behave accordingly.</p>
+												<p><span class='glyphicon glyphicon-alert'></span> <strong>Notice:</strong> *Uninitialized* and *nil* are not different concepts.</p>
+												<p>A non-optional property will cause an error if it's not set at the end of the first method called on a new object; However, an optional property that has not been set to <code>nil</code> will behave just as if it had been explicitly set, and will not throw an error.</p>
 											</div>
 
 											<div class='code-sample-header'>BookContents.class.ozark</div>
@@ -94,26 +89,23 @@ property @chapters:[TextBlock]
 property @epilogue:TextBlock?
 
 method removePrologueAndEpilogue
-	clear @prologue
-	clear @epilogue
+	set @prologue <- nil
+	set @epilogue <- nil
 
-method getStringForPrinting -&gt; $printable:String
-	create string:TextBlock; initialize
+method printableString -&gt; printableString:String
+	create block:TextBlock; setup
 
 	with @prologue
-		@prologue textAsString -&gt; text
-		string append text
+		@prologue -&gt; stringValue:text
+		block append text:text
 	
-	for chapter:@chapters
-		string append chapter
+	block append each text:@chapter
 
 	with @epilogue
-		@epilogue textAsString -&gt; text
-		string append text
+		@epilogue -&gt; stringValue:text
+		block append text:text
 
-	string getText -&gt; text
-	
-	set $printable &lt;- text</pre></div>
+	block -&gt; text; set printableString</pre></div>
 										</main>
 										<?php require('../includes/documentation-pagination.php'); ?>
 									</div>

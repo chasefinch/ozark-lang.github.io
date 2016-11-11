@@ -33,20 +33,17 @@
 
 											<a name="Arrays"><h2>Arrays</h2></a>
 
-											<p>An <strong>Array</strong> is an immutable, nestable, homogeneous, 1-based ordered list of pointers. Arrays can be specified literally using square bracket (<code>[]</code>) notation, or they can be created sequentially as the output of a <a href='control#For'>for loop</a>.</p>
+											<p>An <strong>Array</strong> is an immutable, nestable, homogeneous, 1-based ordered list of pointers. Arrays can be specified literally using square bracket (<code>[]</code>) notation, or created sequentially as the output of a <a href='control#Repeat'>repeat loop</a> or <a href='control#Each'>repeating "each" statement</a>.</p>
 
 											<div class='code-sample-header'>ArrayExample.class.ozark</div>
 											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>inheritance Example
 
-method initialize helper:ComplexObject
-
-	for i:[1~12] -> bananas:[Banana]
-		create banana:Banana; initialize
-		set bananas[$] &lt;- banana
+method setup helper:ComplexObject
+	create bananas:[Banana]; setup | repeat 12 times
 
 	helper doSomethingToTwoBananas:bananas[1~2]</pre></div>
 
-											<p>Anywhere an array is needed, you can use subscript-based expressions to split and combine arrays into one set.</p>
+											<p>Anywhere an array is needed, you can use subscript-based expressions to split and combine arrays.</p>
 
 											<table class='reference'>
 											<tr class='flag'><th>Example</th><th>Meaning</th></tr>
@@ -63,6 +60,28 @@ method initialize helper:ComplexObject
 											<tr><td><code>someArray[5*2]</code></td><td>An array representing two copies of the 5th element in the array</td></tr>
 											<tr><td><code>someArray[*6]</code></td><td>An array representing the array repeated 6 times</td></tr>
 											</table>
+
+											<a name="Split"><h2>Split</h2></a>
+
+											<p>You can use the <strong>split</strong> keyword on a property or output that contains an array. This removes a subset of the array and loads it into an output variable for future use.</p>
+
+											<div class='code-sample-header'>ArrayExample.class.ozark</div>
+											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>inheritance Example
+
+property @someArray:Element
+
+extension setup helper:ComplexObject
+	split @somePropertyArray[2] as secondElement
+
+	helper doSomethingToElement:secondElement
+
+extension setup -> element:Element
+	split @somePropertyArray[2]; set element
+
+extension setup helper:ComplexObject -> element:Element
+	split @somePropertyArray[2] as secondElement; set element
+
+	helper doSomethingToElement:secondElement</pre></div>
 
 											<a name="Strings"><h2>Strings</h2></a>
 

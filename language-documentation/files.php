@@ -34,14 +34,12 @@
 											<p>The two types of Ozark files are <em>classes</em> and <em>enumerations</em>. Classes have filenames that end with <code>.class.ozark</code> and enumerations end with <code>.enumeration.ozark</code>.
 
 											<p><pre>NameOfTheClass.class.ozark
-
+NameOfTheClass.FeatureClass.class.ozark
 AnEnumeration.enumeration.ozark</pre></p>
 
-											<p>Nested classes and enumerations are included within the file, and declared in the appropriate location.</p>
+											<p>The Ozark interpreter searches for files in the same directory as the source file. In essence, every directory with an Ozark file in it can be compiled or edited as an Ozark project.</p>
 
-											<p>The Ozark compiler searches for files in the same directory, and also within directories linked from the compiler itself. In essence, every directory with an Ozark file in it can be compiled or edited as an Ozark project.</p>
-
-											<p>The best way to view an Ozark project is through an IDE or sidebar which can organize the classes via the inheritance tree.</p>
+											<p>Classes within subdirectories can be accessed using forward-slash notation, i.e. <code>ModuleName/ClassName</code>, <code>ModuleName/SubmoduleName/ClassName</code>.</p> 
 
 											<p>Ozark can import and work with supporting files in any directory, but a common pattern is to keep the "source" files in a directory separate from the project assets and other supporting files.</p>
 

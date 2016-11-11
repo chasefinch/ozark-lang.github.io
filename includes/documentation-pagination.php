@@ -2,11 +2,11 @@
 	<?php if($document == 'overview') {
 		echo "<span class='next'><a href='concepts'>Next: Basic Features &rarr;</a></span>";
 	} else if($document == 'concepts') {
-		echo "<span class='prev'><a href='./'>&larr; Previous: Overview</a></span><span class='next'><a href='style'>Next: Style Requirements &rarr;</a></span>";
+		echo "<span class='prev'><a href='./'>&larr; Previous: Overview</a></span><span class='next'><a href='style'>Next: Style &rarr;</a></span>";
 	} else if($document == 'style') {
 		echo "<span class='prev'><a href='concepts'>&larr; Previous: Basic Features</a></span><span class='next'><a href='classes'>Next: Classes &rarr;</a></span>";
 	} else if($document == 'classes') {
-		echo "<span class='prev'><a href='style'>&larr; Previous: Style Requirements</a></span><span class='next'><a href='properties'>Next: Properties &rarr;</a></span>";
+		echo "<span class='prev'><a href='style'>&larr; Previous: Style</a></span><span class='next'><a href='properties'>Next: Properties &rarr;</a></span>";
 	} else if($document == 'properties') {
 		echo "<span class='prev'><a href='classes'>&larr; Previous: Classes</a></span><span class='next'><a href='methods'>Next: Methods &rarr;</a></span>";
 	} else if($document == 'methods') {

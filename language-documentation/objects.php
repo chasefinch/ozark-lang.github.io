@@ -35,7 +35,7 @@
 
 											<p>Everything in Ozark is an object, even "primitive" types such as Integers and Booleans. Declaring an object literal (such as <code>5.3</code> or <code>true</code>) automatically creates the space in which that new object will reside, and so you are able to pass messages to even the object literals (e.g. <code>5 + 3 -&gt; sum</code>)</p>
 
-											<p>Objects are allocated manually with the <code>create</code> keyword when declaring a pointer, and then have a method called immediately using the semicolon (<code>;</code>) syntax.</p>
+											<p>Objects are allocated manually with the <code>create</code> keyword when declaring a pointer, and then have a method called immediately using the semicolon (<code>;</code>) syntax. You may also create an object and assign it directly to an output or property using the <code>make</code> keyword.</p>
 
 											<a name="Pointers"><h2>Objects are stored in pointers</h2></a>
 
@@ -47,16 +47,14 @@
 property @whitePieces:[ChessPiece]
 property @blackPieces:[ChessPiece]
 
-method initialize
-	for i:[1~16]
-		create piece:ChessPiece; initialize
-		set @whitePieces[$] &lt;- piece
+method setup
+	make @whitePieces:[ChessPiece]; setup | repeat 16 times
+	make @blackPieces:[ChessPiece]; setup | repeat 16 times
 
-	for i:[1~16]
-		create piece:ChessPiece; initialize
-		set @blackPieces[$] &lt;- piece
+	create boardLogic:[ChessRules]; setup
+	boardLogic setupBoard white:@whitePieces, black:@blackPieces
 
-method setPieces whitePieces:[ChessPiece] blackPieces:[ChessPiece]
+method set whitePieces:[ChessPiece], blackPieces:[ChessPiece]
 	set @whitePieces &lt;- whitePieces
 	set @blackPieces &lt;- blackPieces</pre></div>
 
@@ -64,13 +62,13 @@ method setPieces whitePieces:[ChessPiece] blackPieces:[ChessPiece]
 
 											<p>There is no concept of "nil" - Instead, <span itemprop='name'>Ozark</span> uses <strong>optionals</strong> to denote pointers that are allowed to nave no value. Pointers marked as optional have limited capabilities, but can be unpacked for conditional usage with the <code>with</code> keyword.</p>
 
-											<p>You can specify an object as optional by including a question mark (<code>?</code>) after the type.</p>
+											<p>You can specify a property, input or output as optional by including a question mark (<code>?</code>) after the type.</p>
 
 											<a name="Generics"><h2>Generics</h2></a>
 
 											<p>Classes that manage objects of a generic type can be built with <strong>generics</strong>. These special types are included in the class definition.</p>
 
-											<p>Types are separated from the class name and from each other by a pipe (<code>|</code>)</p>
+											<p>Types are separated from the class name and from each other by parenthesis <code>()</code></p>
 
 											<div class='code-sample-header'>BinaryTree.class.ozark</div>
 											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>inheritance Collection
@@ -84,18 +82,14 @@ property @right:@Type</pre></div>
 											<div class='code-sample-header'>TreeExample.class.ozark</div>
 											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>inheritance Example
 
-extension intialize
-	create btree:BinaryTree|Integer; initialize [1, 2, 3, 4, 5]
+extension setup
+	create btree:BinaryTree(Integer); setup values:[1,&nbsp;2,&nbsp;3,&nbsp;4,&nbsp;5]
 
-	btree getElement index:3 -> element
-	@io print element</pre></div>
+	btree element index:3 -> element:element
+	print element</pre></div>
 											<a name='BuiltInTypes'><h2>Built-In Types</h2></a>
 
-											<p>There are 5 primary <strong>built-in types</strong> that come from the Ozark standard library: <code>Integer</code>, <code>Number</code>, <code>Boolean</code>, <code>Character</code>, and the user-defined <em>enumeration</em>. There is also the basic class <code>Object</code>. </p>
-
-											<p>These items are all required in <code>Object</code>, so any class that inherits from Object need not require them again.</p>
-
-											<p>Rather than using the basic types heavily, create a class based on the real-world use case you are modeling. For example, if a Person may or may not have an ID badge with a <code>String</code> as an ID, don't store the ID as a <code>String</code> variable on the <code>Person</code> class. Instead, create an <code>IDBadge</code> class that is an optional property of the <code>Person</code> class. That way, an <code>IDBadge</code> must have a <code>String</code>, but a Person may have an optional ID Badge, and could theoretically swap it for a new one.</p>
+											<p>There are 5 primary <strong>built-in types</strong> that come from the Ozark standard library: <code>Integer</code>, <code>Number</code>, <code>Boolean</code>, <code>Character</code>, and the user-defined <em>enumeration</em>.</p>
 
 											<div class='alert alert-warning'>
 												<p><span class='glyphicon glyphicon-alert'></span> <strong>Notice:</strong> Built-in types behave differently than other types.</p>

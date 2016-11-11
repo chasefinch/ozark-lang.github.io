@@ -31,13 +31,13 @@
 										<main>
 											<p><span itemprop='name'>Ozark</span> is an object-oriented language for building software that's readable and reusable. It uses ideas from flow-based programming so that code can closely model real-world scenarios. Ozark has a simple, elegant syntax. The simplicity and uniformity allows Ozark code to be read and edited by other software.</p>
 
-											<p>Ozark uses the subject &rarr; verb &rarr; direct object(s) pattern from natural human language. Each line inside of a method follows that pattern, except for conditional clauses like "if" or loops.</p>
+											<p>Ozark uses the subject &rarr; verb &rarr; direct object(s) pattern from natural human language. Each line inside of a method follows that pattern, except for conditional clauses (e.g. <code>if</code>.)</p>
 
 											<p>All variables in Ozark are <em>pointers</em>. Unlike other languages, inline pointers are not mutable. Instead, pointers connect the output of a method to the input of another method. The only mutable pointers are an object's <em>properties</em> (similar to instance variables in other languages) and the expected outputs of the current method.</p>
 
 											<p>Ozark code is always operating on a small scope. There are no global pointers, so often the entire scope is visible during method design.</p>
 
-											<p>Conditional statements and loops apply to a single method call. This means that unlike other languages, Ozark does not have nested trees of indentation.</p>
+											<p>Ozark does not have nested trees of indentation. Loops are declared on a single line, and conditional statements cannot be nested. Instead, a robust matching construct keeps logic trees simple.</p>
 
 											<div class='code-sample-header'>Vegetable.class.ozark</div>
 											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>inheritance Food
@@ -47,18 +47,14 @@ property @weight:Number
 property @size:Number
 
 extension setup &amp;seed:Seed
-	seed sprout -&gt; plant
+	seed sprout -&gt; plant; set @plant
 
-	set @plant &lt;- plant
 	set @size &lt;- 0.0
 	set @weight &lt;- 0.0
 
-method grow days:Number rate:Number
-	days * rate -> size
-	size * 0.25 -> weight
-
-	set @size &lt;- size
-	set @weight &lt;- weight</pre></div>
+method grow days:Number, rate:Number
+	days * rate -> size; set @size
+	size * 0.25 -> weight; set @weight</pre></div>
 	
 											<p>Ozark's strengths are standardization and collaboration. Multiple developers of varying skill levels may work on a project using different tools, yet will produce similar code that is easy to read.</p>
 
@@ -68,7 +64,7 @@ method grow days:Number rate:Number
 
 											<p>The Ozark interpreter can be invoked via command line with the <code>ozark</code> command, specifying the initial class file and method. An instance of the class is created, and the method is invoked to begin program execution.</p>
 
-											<pre>ozark Gunshow.ozark.class setup</pre>
+											<pre>ozark Gunshow.ozark.class begin</pre>
 										</main>
 										<?php require('../includes/documentation-pagination.php'); ?>
 									</div>

@@ -38,49 +38,48 @@
 											<div class='code-sample-header'>Conductor.class.ozark</div>
 											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>inheritance Musician
 	
-method beginConcerto _concerto:Concerto orchestra:Orchestra
-	concerto getFirstMovement -&gt; movement
-	orchestra perform movement
-	concerto getSecondMovement -&gt; movement2
-	concerto perform movement2
-	concerto getFinalMovement -&gt; movement3
-	concert perform movement3
+method begin concerto:Concerto, orchestra:Orchestra
+	concerto movement number:1 -&gt; movement:movement1
+	orchestra perform movement1
 
-method concludeConcerto _concerto:Song orchestra:Orchestra
-	orchestra concludeConcerto concerto</pre></div>
+	concerto movement number:2 -&gt; movement:movement2
+	orchestra perform movement1
+
+	concerto movement number:3 -&gt; movement:movement3
+	orchestra perform movement3
+
+method conclude concerto:Song, orchestra:Orchestra
+	orchestra conclude concerto:concerto</pre></div>
 
 
 											<p>Methods do not have a "return value" like in other object-oriented languages. Statements are not expressions to be evaluated; They are instructions to be executed, and they may or may not have any number of outputs. Separating the concept of evaluable expressions from the concept of executable instructions is one of the core uniquenesses of Ozark.</p>
 
 											<a name='InputsAndOutputs'><h2>Inputs &amp; outputs</h2></a>
 
-											<p>Methods have any number of predefined inputs and outputs. In the method signature and within the method body, the outputs are prefixed with a <code>$</code> symbol to avoid naming conflicts with inputs, properties, and other pointers and collections.</p>
-
-											<p>Within a method, inputs are constant, meaning they cannot have their value changed. The only mutable items are the outputs of the method, and the <a href='classes#Properties'>properties</a> of the current object.</p>
+											<p>Methods have any number of predefined inputs and outputs. Within a method, inputs are constant, meaning they cannot have their value changed. The only mutable items are the outputs of the method, and the <a href='properties'>properties</a> of the current object.</p>
 
 											<p>When calling a method, the created outputs are constants that cannot be changed.</p>
 
-											<p>Within a method signature, inputs are declared sequentially after the method name, and outputs are declared after an arrow (<code>-&gt;</code>) symbol and prefixed with a <code>$</code> symbol.</p>
+											<p>Within a method signature, inputs are declared sequentially after the method name, and outputs are declared after an arrow symbol (<code>-&gt;</code>).</p>
 
-											<p>The types of the pointers and collections are defined explicitly in the method signature. Inputs are both named and ordered, allowing verbose method names. An input prefixed with an underscore (<code>_</code>) is not mentioned explicitly when called.</p>
+											<p>The types of the pointers and collections are defined explicitly in the method signature. Inputs are both named and ordered, allowing verbose method names. If a method has no inputs, one output, and the output is of the same name as the method, the method name is omitted when called.</p>
 
 											<div class='code-sample-header'>Sailboat.class.ozark</div>
 											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>inheritance Boat
 
-property @location:Location
-property @launcher:LaunchAbility
-property @navigator:NavigateAbility
-property @docker:DockAbility
+property @location:Location?
 
-method sailTo _destination:WaterfrontLocation -&gt; $duration:TimeInterval
-	@launcher launch
-	destination getPort -&gt; port
-	port getLocation -&gt; location
-	@navigator navigate destination:location -&gt; finalLocation:final duration:duration
-	@docker dock port:port
+method setup
+	make @:Launch; setup
+	make @:Navigate; setup
+	make @:Dock; setup
 
-	set @location &lt;- final
-	set $duration &lt;- duration</pre></div>
+method sail destination:WaterfrontLocation -&gt; duration:TimeInterval
+	@ launch
+	destination -&gt; port:port
+	port -&gt; location:location
+	@ navigate destination:location -&gt; finalLocation; set @location, duration; set duration
+	@ dock port:port</pre></div>
 
 		
 											<a name='Properties'><h2>Properties</h2></a>
@@ -89,22 +88,22 @@ method sailTo _destination:WaterfrontLocation -&gt; $duration:TimeInterval
 
 											<p>A method is, however, the only way of accessing the properties of a given object. Those properties are not accessible to other objects.</p>
 
+											<p>The special property, <code>@</code>, refers to the collection of feature classes available to the current class.</p>
+
 
 											<a name="Extensions"><h2>Overriding &amp; extending parent methods</h2></a>
 
-											<p>As discussed in <a href='classes#Inheritance'>Inheritance</a>, a class inherits all methods and properties from its parent classes. It also has access to nested classes and <em>enumerations</em>, and classes and enumerations from other files in the same directory. To redeclare a method in a child class, drop the <code>method</code> keyword and instead declare a <code>replacement</code>.</p>
+											<p>As discussed in <a href='classes#Inheritance'>Inheritance</a>, a class inherits all methods and properties from its parent classes. It also has access to classes and enumerations from other files in the same directory. To redeclare a method in a child class, drop the <code>method</code> keyword and instead declare a <code>replacement</code>.</p>
 
-											<p>To extend a parent method, drop the <code>method</code> keyword and instead declare an <code>extension</code>. This is commonly seen with the <code>initialize</code> method. The body declared for the extension will execute after the code declared in the parent method. You can choose to add additional inputs and outputs to the extension.</p>
+											<p>To extend a parent method, drop the <code>method</code> keyword and instead declare an <code>extension</code>. This is commonly seen with the <code>setup</code> method. The body declared for the extension will execute after the code declared in the parent method. You can choose to add additional inputs and outputs to the extension.</p>
 
 											<div class='code-sample-header'>Flower.class.ozark</div>
 											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>inheritance Plant
 
 property @color:Color
 
-extension initialize
-	create color:Color; initializeRandom
-	
-	set @color &lt;- color</pre></div>
+extension setup
+	make @color:Color; random</pre></div>
 
 											<p>To add additional input &amp; output parameters to an extension, prefix them with the ampersand (<code>&amp;</code>) symbol.</p>
 
@@ -113,10 +112,8 @@ extension initialize
 
 property @color:Color
 
-extension initialize -&gt; &amp;$facing:Direction
-	create facing:Direction; initializeRandom
-	
-	set $facing &lt;- facing</pre></div>
+extension setup -&gt; &amp;facing:Direction
+	make facing:Direction; random</pre></div>
 	
 											<a name='Calling'><h2>Calling methods</h2></a>
 
@@ -128,52 +125,16 @@ extension initialize -&gt; &amp;$facing:Direction
 
 											<p>See the <a href='style'>Ozark Style Guide</a> for more information.</p>
 
-											<a name="NestedTypes"><h2>Using nested types</h2></a>
-
-											<p><strong>Nested types</strong> can be used within the primary class as named. From outside a class, dot notation is used to identify the class name. This example contains a few of each situation:</p>
-
-											<div class='code-sample-header'>Guitar.class.ozark</div>
-											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>inheritance Instrument
-
-class GuitarString
-	inheritance Instrument.PlayableComponent
-
-property @string1:GuitarString
-property @string2:GuitarString
-property @string3:GuitarString
-property @string4:GuitarString
-property @string5:GuitarString
-property @string6:GuitarString
-
-method initialize
-	create string1:GuitarString; initialize
-	create string2:GuitarString; initialize
-	create string3:GuitarString; initialize
-	create string4:GuitarString; initialize
-	create string5:GuitarString; initialize
-	create string6:GuitarString; initialize
-
-	set @string1 &lt;- string1
-	set @string2 &lt;- string2
-	set @string3 &lt;- string3
-	set @string4 &lt;- string4
-	set @string5 &lt;- string5
-	set @string6 &lt;- string6</pre></div>
-
 											<div class='code-sample-header'>GuitarPlayer.class.ozark</div>
 											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>inheritance Musician
 
 property @guitar
 
-method setGuitar _guitar:Guitar
+method set guitar:Guitar
 	set @guitar &lt;- guitar
 
-method playString _string:Guitar.GuitarString -&gt; $note:Note
-	string play -&gt; note:note
-	
-	set $note &lt;- note</pre></div>
-	
-											<p>The robust nested-type system in Ozark is intended to keep code short and neat, since dependency injection is required by the built-in language rules.</p>
+method play string:GuitarString -&gt; note:Note
+	string play -&gt; note; set note</pre></div>
 										</main>
 										<?php require('../includes/documentation-pagination.php'); ?>
 									</div>
