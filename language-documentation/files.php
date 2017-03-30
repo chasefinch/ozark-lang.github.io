@@ -34,7 +34,7 @@
 											<p>The two types of Ozark files are <em>classes</em> and <em>enumerations</em>. Classes have filenames that end with <code>.class.ozark</code> and enumerations end with <code>.enumeration.ozark</code>.
 
 											<p><pre>NameOfTheClass.class.ozark
-NameOfTheClass.FeatureClass.class.ozark
+NameOfTheClass.ComponentClass.class.ozark
 AnEnumeration.enumeration.ozark</pre></p>
 
 											<p>The Ozark interpreter searches for files in the same directory as the source file. In essence, every directory with an Ozark file in it can be compiled or edited as an Ozark project.</p>

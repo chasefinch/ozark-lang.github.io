@@ -88,7 +88,7 @@ method sail destination:WaterfrontLocation -&gt; duration:TimeInterval
 
 											<p>A method is, however, the only way of accessing the properties of a given object. Those properties are not accessible to other objects.</p>
 
-											<p>The special property, <code>@</code>, refers to the collection of feature classes available to the current class.</p>
+											<p>The special property, <code>@</code>, refers to the collection of component classes available to the current class.</p>
 
 
 											<a name="Extensions"><h2>Overriding &amp; extending parent methods</h2></a>

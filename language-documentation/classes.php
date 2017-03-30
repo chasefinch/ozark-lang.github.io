@@ -38,7 +38,7 @@
 											<p>A class may contain any number of the following declarations in this order:</p>
 
 											<ul>
-												<li><a href='#Inheritance'><code>inheritance</code></a> - A parent class from which this class inherits all features</li>
+												<li><a href='#Inheritance'><code>inheritance</code></a> - A parent class from which this class inherits all properties, methods and components</li>
 												<li><a href='objects#Generics'><code>type</code></a> - If this class uses generics, a placeholder for a type that is specified on object initialization</li>
 												<li><a href='properties'><code>property</code></a> - A pointer or collection within the scope of the object of this class</li>
 												<li><a href='methods'><code>method</code></a> - A named subroutine with any number of inputs and outputs</li>
@@ -78,20 +78,16 @@ extension setup
 method catNap
 	print "zzzzzzz"</pre></div>
 
-											<a name='Features'><h2>Features</h2></a>
+											<a name='Components'><h2>Components</h2></a>
 
-											<p><strong>Features</strong> are special types of classes that are actually part of another class. They often represent abilities or parts of the parent (e.g. a <code>Human</code> might have a <code>Body</code> and be able to <code>Run</code>.) You can create a feature class by naming the file with dot notation (e.g. <code>Human.Run.class.ozark</code>) and attach a feature with the <code>use</code> keyword. Since an object can't call it's own methods, classes must have related feature classes to implement most of their functionality. This forces a pattern of dependency injection while keeping classes neatly grouped together.</p>
+											<p><strong>Components</strong> are special types of classes that are actually part of another class. They often represent abilities or parts of the parent (e.g. a <code>Human</code> might have a <code>Body</code> and be able to <code>Run</code>.) You can create a component class by naming the file with dot notation (e.g. <code>Human.Run.class.ozark</code>) and attach a component with the <code>use</code> keyword. Since an object can't call it's own methods, classes must have related component classes to implement most of their functionality. This forces a pattern of dependency injection while keeping classes neatly grouped together.</p>
 
-											<p>To call a method on a feature, reference your feature set with the <code>@</code> symbol. If multiple features have methods with the same name, they will be executed one after the other in the order in which the features were attached.</p>
+											<p>To call a method on a component, reference your component set with the <code>@</code> symbol. If multiple compnents have methods with the same name, they will be executed one after the other in the order in which the components were attached.</p>
 
-											<p>Consider this example class from the RifleRange demo app. The <code>Rifleman</code> class has <code>Shoot</code> and <code>Celebrate</code> features, and both of those classes are designated as features within the <code>Rifleman</code> class.</p>
+											<p>Consider this example class from the RifleRange demo app. The <code>Rifleman</code> class has <code>Shoot</code> and <code>Celebrate</code> components, and both of those classes are designated as components within the <code>Rifleman</code> class.</p>
 
 											<div class='code-sample-header'>Rifleman.class.ozark</div>
 											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>inheritance Soldier
-
-class
-
-inheritance Soldier
 
 property @gun:Gun
 property @hat:Hat

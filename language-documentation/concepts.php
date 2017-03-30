@@ -57,7 +57,7 @@ method clockOut time:Time
 
 											<p>Ozark also avoids techniques that don't truly adhere to the principles of OO development. Static methods are one example. Another is an object's ability to call its own methods with a reference to itself.</p>
 
-											<p>The lack of a <em>self</em> reference and of unnamed code blocks forces Ozark inheritance stacks to be tall, Ozark methods to be short, and Ozark software to be built purely with dependency injection. This results in a lot of small, hyper-focused classes. <a href='classes#Features'>Feature classes</a> are the key to keeping these related classes organized.</p>
+											<p>The lack of a <em>self</em> reference and of unnamed code blocks forces Ozark inheritance stacks to be tall, Ozark methods to be short, and Ozark software to be built purely with dependency injection. This results in a lot of small, hyper-focused classes. <a href='classes#Components'>Component classes</a> are the key to keeping these related classes organized.</p>
 
 											<div class='code-sample-header'>BaseballPlayer.Offense.class.ozark</div>
 											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>
