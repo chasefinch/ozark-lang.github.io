@@ -33,9 +33,9 @@
 
 											<a name='EverythingIsAnObject'><h2>Everything is an object</h2></a>
 
-											<p>Everything in Ozark is an object, even "primitive" types such as Integers and Booleans. Declaring an object literal (such as <code>5.3</code> or <code>true</code>) automatically creates the space in which that new object will reside, and so you are able to pass messages to even the object literals (e.g. <code>5 + 3 -&gt; sum</code>)</p>
+											<p>Everything in Ozark is an object, even "primitive" types such as Integers and Booleans. Declaring an object literal (such as <code>5.3</code> or <code>true</code>) automatically allocates the memory space for the new object, and so you are able to pass messages to even the object literals (e.g. <code>5 + 3 -&gt; sum</code>)</p>
 
-											<p>Objects are allocated manually with the <code>create</code> keyword when declaring a pointer, and then have a method called immediately using the semicolon (<code>;</code>) syntax. You may also create an object and assign it directly to an output or property using the <code>make</code> keyword.</p>
+											<p>Objects are allocated manually with the <code>create</code> keyword when declaring a pointer, and then have a method called immediately using the semicolon (<code>;</code>) syntax.</p>
 
 											<a name="Pointers"><h2>Objects are stored in pointers</h2></a>
 
@@ -44,17 +44,16 @@
 											<div class='code-sample-header'>ChessBoard.class.ozark</div>
 											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>inheritance GameBoard
 
-property @whitePieces:[ChessPiece]
-property @blackPieces:[ChessPiece]
+property @whitePieces: [ChessPiece]
+property @blackPieces: [ChessPiece]
 
 method setup
-	make @whitePieces:[ChessPiece]; setup | repeat 16 times
-	make @blackPieces:[ChessPiece]; setup | repeat 16 times
+	create [ChessPiece]; set @whitePieces; setup | repeat 16 times
+	create [ChessPiece]; set @blackPieces; setup | repeat 16 times
 
-	create boardLogic:[ChessRules]; setup
-	boardLogic setupBoard white:@whitePieces, black:@blackPieces
+	create ChessRules; setupBoard white: @whitePieces, black: @blackPieces
 
-method set whitePieces:[ChessPiece], blackPieces:[ChessPiece]
+method set whitePieces: [ChessPiece], blackPieces: [ChessPiece]
 	set @whitePieces &lt;- whitePieces
 	set @blackPieces &lt;- blackPieces</pre></div>
 
@@ -75,17 +74,17 @@ method set whitePieces:[ChessPiece], blackPieces:[ChessPiece]
 
 type @Type
 
-property @value:@Type
-property @left:@Type
-property @right:@Type</pre></div>
+property @value: @Type
+property @left: @Type
+property @right: @Type</pre></div>
 
 											<div class='code-sample-header'>TreeExample.class.ozark</div>
 											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>inheritance Example
 
 extension setup
-	create btree:BinaryTree(Integer); setup values:[1,&nbsp;2,&nbsp;3,&nbsp;4,&nbsp;5]
+	create btree: BinaryTree(Integer); setup values: [1,&nbsp;2,&nbsp;3,&nbsp;4,&nbsp;5]
 
-	btree element index:3 -> element:element
+	btree! index: 3 -> element: element
 	print element</pre></div>
 											<a name='BuiltInTypes'><h2>Built-In Types</h2></a>
 
@@ -135,7 +134,7 @@ state reverse</pre></div>
 											<div class='code-sample-header'>ConveyorBelt.class.ozark</div>
 											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>inheritance Machine
 
-property @direction:Switch
+property @direction: Switch
 
 method start
 	set @direction &lt;- Switch.forward

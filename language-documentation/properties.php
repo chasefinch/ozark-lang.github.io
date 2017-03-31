@@ -36,20 +36,20 @@
 											<div class='code-sample-header'>HumanBody.class.ozark</div>
 											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>inheritance Body
 
-property @head:Head
-property @leftArm:Arm
-property @rightArm:Arm
-property @leftLeg:Leg
-property @rightLeg:Leg
-property @torso:Torso
+property @head: Head
+property @leftArm: Arm
+property @rightArm: Arm
+property @leftLeg: Leg
+property @rightLeg: Leg
+property @torso: Torso
 
 extension setup
-	make @head:Head; setup
-	make @leftArm:Arm; setup
-	make @rightArm:Arm; setup
-	make @leftLeg:Leg; setup
-	make @rightLeg:Leg; setup
-	make @torso:Torso; setup</pre></div>
+	create Head; set @head; setup
+	create Arm; set @leftArm; setup
+	create Arm; set @rightArm; setup
+	create Leg; set @leftLeg; setup
+	create Leg; set @rightLeg; setup
+	create Tordo; set @torso; setup</pre></div>
 
 											<p>Properties are denoted by <code>@</code>. This prevents naming conflicts with the method's inputs &amp; other pointers.</p>
 
@@ -58,18 +58,18 @@ extension setup
 											<div class='code-sample-header'>Location.class.ozark</div>
 											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>inheritance Object
 	
-property @latitude:Number
-property @longitude:Number
+property @latitude: Number
+property @longitude: Number
 
-extension setup &amp;latitude:Number, &amp;longitude:Number
+extension setup &amp;latitude: Number, &amp;longitude: Number
 	set @latitude &lt;- latitude
 	set @longitude &lt;- longitude
 
-method getCoordinates -&gt; latitude:Number, longitude:Number
+method getCoordinates -&gt; latitude: Number, longitude: Number
 	set latitude &lt;- @latitude
 	set longitude &lt;- @longitude
 
-method set latitude:Number, longitude:Number
+method set latitude: Number, longitude: Number
 	set @latitude &lt;- latitude
 	set @longitude &lt;- longitude</pre></div>
 											<a name="Optionals"><h2>Optionals</h2></a>
@@ -84,26 +84,26 @@ method set latitude:Number, longitude:Number
 											<div class='code-sample-header'>BookContents.class.ozark</div>
 											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>inheritance Contents
 
-property @prologue:TextBlock?
-property @chapters:[TextBlock]
-property @epilogue:TextBlock?
+property @prologue: TextBlock?
+property @chapters: [TextBlock]
+property @epilogue: TextBlock?
 
 method removePrologueAndEpilogue
 	set @prologue <- nil
 	set @epilogue <- nil
 
-method printableString -&gt; printableString:String
-	create block:TextBlock; setup
+method printableString -&gt; printableString: String
+	create block: TextBlock; setup
 
 	with @prologue
-		@prologue -&gt; stringValue:text
-		block append text:text
+		@prologue -&gt; stringValue: text
+		block append text: text
 	
-	block append each text:@chapter
+	block append each text: @chapter
 
 	with @epilogue
-		@epilogue -&gt; stringValue:text
-		block append text:text
+		@epilogue -&gt; stringValue: text
+		block append text: text
 
 	block -&gt; text; set printableString</pre></div>
 										</main>

@@ -38,18 +38,18 @@
 											<div class='code-sample-header'>Conductor.class.ozark</div>
 											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>inheritance Musician
 	
-method begin concerto:Concerto, orchestra:Orchestra
-	concerto movement number:1 -&gt; movement:movement1
+method begin concerto: Concerto, orchestra: Orchestra
+	concerto movement number:1 -&gt; movement: movement1
 	orchestra perform movement1
 
-	concerto movement number:2 -&gt; movement:movement2
+	concerto movement number:2 -&gt; movement: movement2
 	orchestra perform movement1
 
-	concerto movement number:3 -&gt; movement:movement3
+	concerto movement number:3 -&gt; movement: movement3
 	orchestra perform movement3
 
-method conclude concerto:Song, orchestra:Orchestra
-	orchestra conclude concerto:concerto</pre></div>
+method conclude concerto: Song, orchestra: Orchestra
+	orchestra conclude concerto: concerto</pre></div>
 
 
 											<p>Methods do not have a "return value" like in other object-oriented languages. Statements are not expressions to be evaluated; They are instructions to be executed, and they may or may not have any number of outputs. Separating the concept of evaluable expressions from the concept of executable instructions is one of the core uniquenesses of Ozark.</p>
@@ -67,19 +67,22 @@ method conclude concerto:Song, orchestra:Orchestra
 											<div class='code-sample-header'>Sailboat.class.ozark</div>
 											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>inheritance Boat
 
-property @location:Location?
+property @location: Location?
+property @launch: Launch
+property @navigate: Navigate
+property @dock: Dock
 
 method setup
-	make @:Launch; setup
-	make @:Navigate; setup
-	make @:Dock; setup
+	create Launch; set @launch; setup
+	create Navigate; set @navigate; setup
+	create Dock; set @dock; setup
 
-method sail destination:WaterfrontLocation -&gt; duration:TimeInterval
-	@ launch
-	destination -&gt; port:port
-	port -&gt; location:location
-	@ navigate destination:location -&gt; finalLocation; set @location, duration; set duration
-	@ dock port:port</pre></div>
+method sail destination: WaterfrontLocation -&gt; duration: TimeInterval
+	@launch!
+	destination -&gt; port: port
+	port -&gt; location: location
+	@navigate! destination:location -&gt; finalLocation; set @location, duration; set duration
+	@dock! port:port</pre></div>
 
 		
 											<a name='Properties'><h2>Properties</h2></a>
@@ -87,9 +90,6 @@ method sail destination:WaterfrontLocation -&gt; duration:TimeInterval
 											<p>Ozark has very small scopes. A method may access the <strong>properties</strong> of the instance object, and the inputs and outputs of the method itself. No other predefined value are available to it.</p>
 
 											<p>A method is, however, the only way of accessing the properties of a given object. Those properties are not accessible to other objects.</p>
-
-											<p>The special property, <code>@</code>, refers to the collection of component classes available to the current class.</p>
-
 
 											<a name="Extensions"><h2>Overriding &amp; extending parent methods</h2></a>
 
@@ -100,20 +100,20 @@ method sail destination:WaterfrontLocation -&gt; duration:TimeInterval
 											<div class='code-sample-header'>Flower.class.ozark</div>
 											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>inheritance Plant
 
-property @color:Color
+property @color: Color
 
 extension setup
-	make @color:Color; random</pre></div>
+	create Color; set @color; random</pre></div>
 
 											<p>To add additional input &amp; output parameters to an extension, prefix them with the ampersand (<code>&amp;</code>) symbol.</p>
 
 											<div class='code-sample-header'>Flower.class.ozark</div>
 											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>inheritance Plant
 
-property @color:Color
+property @color: Color
 
-extension setup -&gt; &amp;facing:Direction
-	make facing:Direction; random</pre></div>
+extension setup -&gt; &amp;facing: Direction
+	create Direction; set facing; random</pre></div>
 	
 											<a name='Calling'><h2>Calling methods</h2></a>
 
@@ -130,10 +130,10 @@ extension setup -&gt; &amp;facing:Direction
 
 property @guitar
 
-method set guitar:Guitar
+method set guitar: Guitar
 	set @guitar &lt;- guitar
 
-method play string:GuitarString -&gt; note:Note
+method play string: GuitarString -&gt; note: Note
 	string play -&gt; note; set note</pre></div>
 										</main>
 										<?php require('../includes/documentation-pagination.php'); ?>

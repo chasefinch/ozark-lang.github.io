@@ -38,18 +38,18 @@
 											<div class='code-sample-header'>Employee.class.ozark</div>
 											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>inheritance Person
 
-property @calculator:Calculator
-property @cellPhone:Telephone
+property @calculator: Calculator
+property @cellPhone: Telephone
 
-extension setup &amp;calculator:Calculator, &amp;cellPhone:Telephone
+extension setup &amp;calculator: Calculator, &amp;cellPhone: Telephone
 	set @calculator &lt;- calculator
 	set @cellPhone &lt;- cellPhone
 
-method clockIn time:Time
-	@timeLog addEntry time:time, type:EntryType.clockIn
+method clockIn time: Time
+	@timeLog addEntry time: time, type: EntryType.clockIn
 
-method clockOut time:Time
-	@timeLog addEntry time:time, type:EntryType.clockOut</pre></div>
+method clockOut time: Time
+	@timeLog addEntry time: time, type: EntryType.clockOut</pre></div>
 
 											<p>All methods are instance methods. The object-oriented philosophy suggests that state be tightly integrated with functionality and stored within objects, and within Ozark, that's always the case.</p>
 
@@ -57,36 +57,39 @@ method clockOut time:Time
 
 											<p>Ozark also avoids techniques that don't truly adhere to the principles of OO development. Static methods are one example. Another is an object's ability to call its own methods with a reference to itself.</p>
 
-											<p>The lack of a <em>self</em> reference and of unnamed code blocks forces Ozark inheritance stacks to be tall, Ozark methods to be short, and Ozark software to be built purely with dependency injection. This results in a lot of small, hyper-focused classes. <a href='classes#Components'>Component classes</a> are the key to keeping these related classes organized.</p>
+											<p>The lack of a <em>self</em> reference and of unnamed code blocks forces Ozark inheritance stacks to be tall, Ozark methods to be short, and Ozark software to be built purely with dependency injection. This results in a lot of small, hyper-focused classes.</p>
 
-											<div class='code-sample-header'>BaseballPlayer.Offense.class.ozark</div>
+											<div class='code-sample-header'>Offense.class.ozark</div>
 											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>
-method swing pitch:Pitch
-	pitch -&gt; ball:ball
-	ball hit probability:0.3</pre></div>
+method swing pitch: Pitch
+	pitch -&gt; ball: ball
+	ball hit probability: 0.3</pre></div>
 
-											<div class='code-sample-header'>BaseballPlayer.Defense.class.ozark</div>
+											<div class='code-sample-header'>Defense.class.ozark</div>
 											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>
-property @ball:Ball?
+property @ball: Ball?
 
-method throw target:BaseballPlayer
-	target catch ball:@ball
+method throw target: BaseballPlayer
+	target catch ball: @ball
 
 	set @ball <- nil
 
-method catch ball:Ball
+method catch ball: Ball
 	set @ball &lt;- ball</pre></div>
 
 											<div class='code-sample-header'>BaseballPlayer.class.ozark</div>
 											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>inheritance SportsPlayer
 
-extension setup
-	make @:Offense; setup
-	make @:Defense; setup
+property @offense: Offense
+property @defense: Defense
 
-method bat pitcher:Pitcher
-	pitcher -&gt; pitch:pitch
-	@ swing pitch:pitch</pre></div>
+extension setup
+	create Offense; set @offense; setup
+	create Defense; set @defense; setup
+
+method bat pitcher: Pitcher
+	pitcher -&gt; pitch: pitch
+	@offense swing pitch: pitch</pre></div>
 
 											<a name='Instructions'><h2>Instructions aren't expressions</h2></a>
 
@@ -97,10 +100,10 @@ method bat pitcher:Pitcher
 											<div class='code-sample code-sample-inline' itemscope itemtype="http://schema.org/SoftwareSourceCode"><meta itemprop="language" content="Ozark" />
 												<pre>inheritance GameAsset
 
-property @scene:GameScene
+property @scene: GameScene
 
 extension setup
-	make @scene:GameScene; setup
+	create GameScene; set @scene; setup
 
 method processScene
 	@scene evaluateActions
@@ -113,16 +116,17 @@ method processScene
 											<div class='code-sample-header'>RaceCarDriver.class.ozark</div>
 											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>inheritance Driver
 		
-property @car:RaceCar
+property @car: RaceCar
+property @race: Race
 
-extension setup car:RaceCar
-	make @:RaceAbility; setup
+extension setup car: RaceCar
+	create Race; set @race; setup
 	set @car &lt;- car
 
-method race track:RaceTrack, start:StartEvent
-	@ enter track:track
-	@ start car:@car
-	@ beginRace startEvent:start</pre></div>
+method race track: RaceTrack, start: StartEvent
+	@race enter track: track
+	@race start car: @car
+	@race begin startEvent: start</pre></div>
 
 											<a name="Return"><h2>No return types for methods, just inputs and outputs</h2></a>
 											
@@ -145,31 +149,32 @@ method race track:RaceTrack, start:StartEvent
 											<div class='code-sample-header'>BrandSpecificBlue.class.ozark</div>
 											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>inheritance Color 
 		
-method rgbValue -&gt; red:Number, green:Number, blue:Number
+method rgbValue -&gt; red: Number, green: Number, blue: Number
 	set red &lt;- 0.0
 	set green &lt;- 0.0
 	set blue &lt;- 0.7</pre></div>
 
-											<div class='code-sample-header'>Printer.Print.class.ozark</div>
+											<div class='code-sample-header'>Print.class.ozark</div>
 											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>
-method print color:Color, sheet:Paper -> document:Paper
-	color rgbValue -&gt; red:red, green:green, blue:blue
-	sheet rgbFill red:red, green:green, blue:blue
+method print color: Color, sheet: Paper -> document: Paper
+	color rgbValue -&gt; red: red, green: green, blue: blue
+	sheet rgbFill red: red, green: green, blue: blue
 	set document &lt;- sheet</pre></div>
 
 											<div class='code-sample-header'>Printer.class.ozark</div>
 											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>inheritance Appliance
 
-property @paperTray:[Paper]
+property @paperTray: [Paper]
+property @print: Print
 
 extension setup
-	make @PrintAbility; setup
-	make @paperTray:[Paper]; setup | repeat 100 times
+	create Print; set @print; setup
+	create [Paper]; set @paperTray; setup | repeat 100 times
 
-method rgbPrint color:Color -&gt; document:Paper?
+method rgbPrint color: Color -&gt; document: Paper?
 	with @paperTray
 		split @paperTray[-1] -> sheet
-		@ print color:color, sheet:sheet -> document; set document</pre></div>
+		@print colorToSheet color: color, sheet: sheet -> document; set document</pre></div>
 			
 											<a name='SmallScopes'><h2>Small scopes with no globals</h2></a>
 

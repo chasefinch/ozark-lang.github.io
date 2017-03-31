@@ -1,5 +1,5 @@
-var reserved = ["&lt;-", "...", "|", "as", "create", "each", "else", "extension", "for", "if", "in", "is", "inheritance", "make", "method", "print", "property", "repeat", "run", "replacement", "set", "split", "state", "times", "type", "unless", "until", "use", "while", "with"];
-var symbols = ["+", "-", "&gt;", "&lt;", "≥", "≤", "^", "¬", "*", "÷", "√", "∫", "∑", "=", "≠"];
+var reserved = ["&lt;-", "...", "|", "as", "create", "each", "else", "extension", "for", "if", "in", "is", "inheritance", "method", "new", "print", "property", "repeat", "run", "replacement", "set", "split", "state", "times", "type", "unless", "until", "while", "with"];
+var symbols = ["!", "+", "-", "&gt;", "&lt;", "≥", "≤", "^", "¬", "*", "÷", "√", "∫", "∑", "=", "≠"];
 
 $(document).ready(function() {
 
@@ -76,6 +76,10 @@ function process(line) {
 
             if(parts[0].match(/@([a-z][A-Za-z0-9]*)?/)) {
                 parts[0] = "<span class='property'>"+parts[0]+":</span>";
+            } else if(parts[0].match(/inheritance/) || parts[0].match(/create/)) {
+                parts[0] = "<span class='reserved'>"+parts[0]+":</span>";
+            } else if(parts[0].match(/&amp;[a-z][A-Za-z0-9]*/)){
+                parts[0] = "<span class='argument'><span class='add'>&amp;</span>"+parts[0].substr(5)+":</span>";
             } else if(!declaration) {
                 parts[0] = "<span class='argument'>"+parts[0]+":</span>";
             } else {
@@ -137,9 +141,9 @@ function process(line) {
             if(i == 0 && ["extension", "method"].indexOf(word) == -1) {
                 declaration = true;
             }
-        } else if(i == 1 && words[1].match(/^\[?[A-Z][A-Za-z0-9]*((\.|\\)?[A-Z][A-Za-z0-9]*)*\??\]?;?$/)) {
-            var match = words[1].match(/\.|\\|\;|\[|\]/g);
-            var set = words[1].split(/\.|\\|\;|\[|\]/);
+        } else if(words[i].match(/^\[?[A-Z][A-Za-z0-9]*((\.|\\)?[A-Z][A-Za-z0-9]*)*\??\]?(,|;)?$/)) {
+            var match = words[i].match(/\.|\\|\;|\,|\[|\]/g);
+            var set = words[i].split(/\.|\\|\;|\,|\[|\]/);
             var whole = new Array();
 
             whole[0] = "<span class='type'>"+set[0]+"</span>";
@@ -153,7 +157,7 @@ function process(line) {
                     }
                 }
             }
-            words[1] = whole.join("");
+            words[i] = whole.join("");
         } else if(i == 1 && words[1].match(/^[A-Z][A-Za-z0-9]*(\.?[A-Z][A-Za-z0-9]*)*(\.?[a-z][A-Za-z0-9]*)?$/)) {
             var set = words[1].split(".");
             for(var j=0; j<set.length; j++) {

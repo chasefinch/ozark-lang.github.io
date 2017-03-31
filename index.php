@@ -39,22 +39,23 @@
 									<div class='code-sample'><meta itemprop="language" content="Ozark" />
 										<pre>inheritance Person
 
-property @hat:Hat
-property @map:Map
-property @radio:Radio
+property @hike: Hike
+property @radio: Radio
+property @hat: Hat
+property @map: Map
 
 extension setup
-	make @:Hike; setup
-	make @hat:Hat; setup
-	make @map:Map; setup
-	make @radio:Radio; setup
+	create Hike; set @hike; setup
+	create Radio; set @radio; setup
+	create Hat; set @hat; setup
+	create Map; set @map; setup
 
-method climb mountain:Mountain
-	@map findTrail mountain:mountain -&gt; trail; set trail
-	@ follow trail:trail -&gt; location:result
+method climb mountain: Mountain
+	@map findTrail mountain: mountain -&gt; trail; set trail
+	@hike follow trail: trail -&gt; location: result
 
-	mountain -> trailhead:startingPoint
-	mountain -> peak:destination
+	mountain -> trailhead: startingPoint
+	mountain -> peak: destination
 
 	if result is ...
 	... destination
@@ -64,7 +65,7 @@ method climb mountain:Mountain
 		print "Oh&nbsp;no!"
 	
 	... none
-		@radio callForHelp</pre></div>
+		@radio forHelp</pre></div>
 								</div>
 								<div class='col-sm-5'>
 									<div class='github'>

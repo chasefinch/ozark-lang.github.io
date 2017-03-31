@@ -75,7 +75,8 @@ a.download { font-weight:bold; text-decoration:none; }
 	.btn-disabled:active { box-shadow:none; }
 
 .reserved { color:#5e4ed7; }
-.argument { color:#308495; }
+.argument { color:#308495; font-style:italic; }
+.add { font-weight: bold; }
 .method { color:#308495; }
 .comment { color:#05a74f; }
 .string { color:#ff2e2d; }

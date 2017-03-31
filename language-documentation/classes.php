@@ -38,7 +38,7 @@
 											<p>A class may contain any number of the following declarations in this order:</p>
 
 											<ul>
-												<li><a href='#Inheritance'><code>inheritance</code></a> - A parent class from which this class inherits all properties, methods and components</li>
+												<li><a href='#Inheritance'><code>inheritance</code></a> - A parent class from which this class inherits all properties and methods</li>
 												<li><a href='objects#Generics'><code>type</code></a> - If this class uses generics, a placeholder for a type that is specified on object initialization</li>
 												<li><a href='properties'><code>property</code></a> - A pointer or collection within the scope of the object of this class</li>
 												<li><a href='methods'><code>method</code></a> - A named subroutine with any number of inputs and outputs</li>
@@ -51,11 +51,11 @@
 											<div class='code-sample-header'>Superhero.class.ozark</div>
 											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>inheritance Hero
 
-property @superpower:Superpower
-property @strength:Strength
+property @superpower: Superpower
+property @strength: Strength
 
 extension setup
-	make @power:XRayVision; setup
+	create XRayVision; set @superpower; setup
 	set @strength &lt;- Strength.fullStrength</pre></div>
 
 											<a name="Inheritance"><h2>Inheritance</h2></a>
@@ -68,92 +68,15 @@ extension setup
 											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>inheritance Cartoon
 inheritance Animal
 
-property @whiskers:[Whisker]
-property @tail:Tail
+property @whiskers: [Whisker]
+property @tail: Tail
 
 extension setup
-	make @whiskers:[Whisker]; setup | repeat 6 times
-	make @tail:Tail; setup
+	create [Whisker]; set @whiskers; setup | repeat 6 times
+	create Tail; set @tail; setup
 
 method catNap
 	print "zzzzzzz"</pre></div>
-
-											<a name='Components'><h2>Components</h2></a>
-
-											<p><strong>Components</strong> are special types of classes that are actually part of another class. They often represent abilities or parts of the parent (e.g. a <code>Human</code> might have a <code>Body</code> and be able to <code>Run</code>.) You can create a component class by naming the file with dot notation (e.g. <code>Human.Run.class.ozark</code>) and attach a component with the <code>use</code> keyword. Since an object can't call it's own methods, classes must have related component classes to implement most of their functionality. This forces a pattern of dependency injection while keeping classes neatly grouped together.</p>
-
-											<p>To call a method on a component, reference your component set with the <code>@</code> symbol. If multiple compnents have methods with the same name, they will be executed one after the other in the order in which the components were attached.</p>
-
-											<p>Consider this example class from the RifleRange demo app. The <code>Rifleman</code> class has <code>Shoot</code> and <code>Celebrate</code> components, and both of those classes are designated as components within the <code>Rifleman</code> class.</p>
-
-											<div class='code-sample-header'>Rifleman.class.ozark</div>
-											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>inheritance Soldier
-
-property @gun:Gun
-property @hat:Hat
-property @mood:Mood
-
-extension setup
-	make @gun:Gun; setup
-	make @hat:Hat; setup
-
-	set @mood &lt;- Mood.happy
-
-	make @:Shoot; setup
-	make @:CelebrateAbility; setup mood:Mood.happy
-
-method shootEveryOther targets:[Target] -&gt; casings:[Bullet.Casing], smoke:Smoke, success:Boolean
-	make smoke:Smoke; setup
-	make success:Boolean; setup true
-
-	@ shoot each target:targets[2%2] -&gt; success:successValue, casing; set casings, smoke:someSmoke
-
-	success andFilter each boolean:successes
-	smoke add each smoke:someSmoke
-
-	if success is ...
-	... true
-		@ showOffForTheCrowd hat:@hat, mood:@mood
-
-	... false
-		set @mood &lt;- Mood.sad</pre></div>
-
-
-											<div class='code-sample-header'>Rifleman.Shoot.class.ozark</div>
-											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>inheritance RiflemanAbility
-
-property @skill:SkillLevel
-
-extension setup
-	set @skill &lt;- SkillLevel.novice
-
-extension setup &amp;skill:SkillLevel
-	set @skill &lt;- skill
-
-method fireGun gun:Gun target:Target -&gt; casing:Bullet.Casing, smoke:Smoke
-	gun shoot target -&gt; casing; set casing, smoke; set smoke</pre></div>
-
-											<div class='code-sample-header'>Rifleman.Celebrate.class.ozark</div>
-											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>inheritance RiflemanAbility
-
-extension setup
-	make @:HatTipAbility; setup
-
-method showOffForTheCrowd hat:Hat
-	@ tip hat:hat
-	print "Hello,&nbsp;ladies."</pre></div>
-
-											<div class='code-sample-header'>Rifleman.Celebrate.HatTip.class.ozark</div>
-											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>inheritance RiflemanAbility
-
-method tip hat:Hat
-	print "&laquo;Raise&nbsp;hat&raquo;"</pre></div>
-
-											<p>From outside of the parent class, nested classes and enumerations are referenced with dot notation. For example, a class making use of the <code>Rifleman</code> class but wishing to declare an independent <code>ShootAbility</code> would reference the class as <code>Rifleman.ShootAbility</code></p>
-
-											<div class='alert alert-warning'>
-												<p><span class='glyphicon glyphicon-alert'></span> <strong>Notice:</strong> Nested classes cannot be subclasses of the parent class; Subclasses should be defined separately. Nesting is for supporting classes only.</p>
-											</div>
 										</main>
 										<?php require('../includes/documentation-pagination.php'); ?>
 									</div>

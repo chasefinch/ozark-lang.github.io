@@ -42,17 +42,17 @@
 											<div class='code-sample-header'>Vegetable.class.ozark</div>
 											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>inheritance Food
 
-property @plant:Plant
-property @weight:Number
-property @size:Number
+property @plant: Plant
+property @weight: Number
+property @size: Number
 
-extension setup &amp;seed:Seed
+extension setup &amp;seed: Seed
 	seed sprout -&gt; plant; set @plant
 
 	set @size &lt;- 0.0
 	set @weight &lt;- 0.0
 
-method grow days:Number, rate:Number
+method grow days: Number, rate: Number
 	days * rate -> size; set @size
 	size * 0.25 -> weight; set @weight</pre></div>
 	

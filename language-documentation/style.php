@@ -40,23 +40,29 @@
 											<div class='code-sample-header'>Chef.class.ozark</div>
 											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>inheritance Person
 
-property @knife:ChefsKnife?
+property @knife: ChefsKnife?
 
 extension setup
-	make @knife:ChefsKnife; setup
+	create ChefsKnife; set @knife; setup
 
-extension setup &amp;knife:ChefsKnife
+extension setup &amp;knife: ChefsKnife
 	set @knife &lt;- knife
 
-method chop vegetable:Vegetable -&gt; success:Boolean
+method chop vegetable: Vegetable -&gt; success: Boolean
 	with @knife ...
-		vegetable chop knife:@knife
+		vegetable chop knife: @knife
 		set success &lt;- true
 		
 	... else
 		set success &lt;- false</pre></div>
 		
 											<p>Many stylistic characteristics of the code are enforced. For example, type names begin with a capital letter (<code>Color</code>, <code>Integer</code>, <code>GameScene</code>) and noun and verb names begin with a lowercase letter. All words are camelCased and can include (but not start with) numbers <code>0</code>&ndash;<code>9</code>. No underscores are allowed.<p>
+
+											<p>You can also use the <code>!</code> character as a method name. In this case, the method name should appear after the subject name without a space. This is for two primary uses:</p>
+											<ul>
+												<li>Classes named for verbs (e.g. <code>Fly</code>) that have a method that would be sufficiently described by the class name and a semantic variable name, e.g. <code>@fly!</code></li>
+												<li>Methods whose input parameters are sufficient to describe the method, e.g. <code>@binaryTree! index: 3 -> element: element</code></li>
+											</ul>
 
 											<p>In addition to camelCased letter/number combinations, the following characters are used as method names on primitive Ozark types:</p>
 

@@ -50,7 +50,7 @@
 											<div class='code-sample-header'>BranchExample.class.ozark</div>
 											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>inheritance Example
 
-method branch object:Object, condition1:Boolean, condition2:Boolean
+method branch object: Object, condition1: Boolean, condition2: Boolean
 	if condition1, condition2 is ...
 	... true, 3
 		object doSomething
@@ -67,7 +67,7 @@ method branch object:Object, condition1:Boolean, condition2:Boolean
 											<div class='code-sample-header'>WithExample.class.ozark</div>
 											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>inheritance Example
 
-method testAndContinue object:ExampleObject?
+method testAndContinue object: ExampleObject?
 	with object
 		object doSomething
 		print "Success"
@@ -82,11 +82,11 @@ method testAndContinue object:ExampleObject?
 											<div class='code-sample-header'>EachExample.class.ozark</div>
 											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>inheritance Example
 
-method printCount count:Integer
+method printCount count: Integer
 	print each [1~count]
 
-method printNames attendees:[Attendee]
-	each attendee -> name:names
+method printNames attendees: [Attendee]
+	each attendee -> name: names
 	print each names</pre></div>
 
 											<a name="Repeat"><h4>Repeat</h4></a>
@@ -104,11 +104,11 @@ method printNames attendees:[Attendee]
 											<div class='code-sample-header'>RepeatExample.class.ozark</div>
 											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>inheritance Example
 
-method listenForInput io:StandardIO
+method listenForInput io: StandardIO
 	io getInputFromUser -&gt; input | repeat until input is not nil
 
-method growFileSizeTo2KB file:File
-	@ growFileTo size:2000000 -> reached:complete | repeat until complete</pre></div>
+method growFileSizeTo2KB file: File
+	@ growFileTo size: 2000000 -> reached: complete | repeat until complete</pre></div>
 										</main>
 										<?php require('../includes/documentation-pagination.php'); ?>
 									</div>

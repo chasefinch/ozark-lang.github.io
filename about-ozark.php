@@ -29,6 +29,7 @@
 								</div>
 							</div>
 						</div>
+						<!-- Obsolete
 						<div class='code-sample-header'>Rifleman.class.ozark</div>
 						<div class='code-sample' itemscope itemtype="http://schema.org/SoftwareSourceCode"><meta itemprop="language" content="Ozark" />
 							<pre>inheritance Person
@@ -42,6 +43,7 @@ class ShootAbility
 	inheritance Ability
 
 	enumeration SkillLevel</pre></div>
+						-->
 					</div>
 					<div style='clear:both;'></div>
 					<div style='clear:both;'></div>

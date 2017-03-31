@@ -38,10 +38,10 @@
 											<div class='code-sample-header'>ArrayExample.class.ozark</div>
 											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>inheritance Example
 
-method setup helper:ComplexObject
-	create bananas:[Banana]; setup | repeat 12 times
+method setup helper: ComplexObject
+	create bananas: [Banana]; setup | repeat 12 times
 
-	helper doSomethingToTwoBananas:bananas[1~2]</pre></div>
+	helper doSomething twoBananas: bananas[1~2]</pre></div>
 
 											<p>Anywhere an array is needed, you can use subscript-based expressions to split and combine arrays.</p>
 
@@ -68,20 +68,20 @@ method setup helper:ComplexObject
 											<div class='code-sample-header'>ArrayExample.class.ozark</div>
 											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>inheritance Example
 
-property @someArray:Element
+property @someArray: Element
 
-extension setup helper:ComplexObject
-	split @somePropertyArray[2] as secondElement
+extension setup helper: ComplexObject
+	split @somePropertyArray[2] -> secondElement
 
-	helper doSomethingToElement:secondElement
+	helper doSomethingToElement: secondElement
 
-extension setup -> element:Element
+extension setup -> element: Element
 	split @somePropertyArray[2]; set element
 
-extension setup helper:ComplexObject -> element:Element
-	split @somePropertyArray[2] as secondElement; set element
+extension setup helper: ComplexObject -> element: Element
+	split @somePropertyArray[2] -> secondElement; set element
 
-	helper doSomethingToElement:secondElement</pre></div>
+	helper doSomethingToElement: secondElement</pre></div>
 
 											<a name="Strings"><h2>Strings</h2></a>
 
