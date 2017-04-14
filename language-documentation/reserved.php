@@ -64,6 +64,7 @@
 														<li><code>type</code></li>
 														<li><code>unless</code></li>
 														<li><code>until</code></li>
+														<li><code>where</code></li>
 														<li><code>while</code></li>
 														<li><code>with</code></li>
 													</ul>

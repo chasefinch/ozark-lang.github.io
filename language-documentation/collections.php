@@ -68,18 +68,18 @@ method setup helper: ComplexObject
 											<div class='code-sample-header'>ArrayExample.class.ozark</div>
 											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>inheritance Example
 
-property @someArray: Element
+property @elements: [Element]
 
 extension setup helper: ComplexObject
-	split @somePropertyArray[2] -> secondElement
+	split @elements[2] -> secondElement
 
 	helper doSomethingToElement: secondElement
 
 extension setup -> element: Element
-	split @somePropertyArray[2]; set element
+	split @elements[2]; set element
 
 extension setup helper: ComplexObject -> element: Element
-	split @somePropertyArray[2] -> secondElement; set element
+	split @elements[2] -> secondElement; set element
 
 	helper doSomethingToElement: secondElement</pre></div>
 

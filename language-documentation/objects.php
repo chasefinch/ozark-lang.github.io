@@ -65,18 +65,20 @@ method set whitePieces: [ChessPiece], blackPieces: [ChessPiece]
 
 											<a name="Generics"><h2>Generics</h2></a>
 
-											<p>Classes that manage objects of a generic type can be built with <strong>generics</strong>. These special types are included in the class definition.</p>
+											<p>Classes that manage objects of a generic type can be built with <strong>generics</strong>. These special types are included in the class definition. You can restrict a generic type to only classes which inherit from a given ancestor with the <code>where</code> keyword.</p>
 
 											<p>Types are separated from the class name and from each other by parenthesis <code>()</code></p>
 
 											<div class='code-sample-header'>BinaryTree.class.ozark</div>
 											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>inheritance Collection
 
-type @Type
+type @Type1
+type @Type2 where Hashable
 
-property @value: @Type
-property @left: @Type
-property @right: @Type</pre></div>
+property @value: @Type1
+property @left: @Type1
+property @right: @Type1
+property @id: @Type2</pre></div>
 
 											<div class='code-sample-header'>TreeExample.class.ozark</div>
 											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>inheritance Example

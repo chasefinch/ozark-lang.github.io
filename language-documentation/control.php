@@ -78,6 +78,8 @@ method testAndContinue object: ExampleObject?
 											<a name="Each"><h4>Each</h4></a>
 
 											<p>The <code>each</code> keyword indicates that an array is being used in place of an object, and that the given statement will be executed one time for every element in the array.</p>
+											
+											<p>This can be used with multi-dimensional arrays.</p>
 
 											<div class='code-sample-header'>EachExample.class.ozark</div>
 											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>inheritance Example

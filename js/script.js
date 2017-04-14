@@ -1,4 +1,4 @@
-var reserved = ["&lt;-", "...", "|", "as", "create", "each", "else", "extension", "for", "if", "in", "is", "inheritance", "method", "new", "print", "property", "repeat", "run", "replacement", "set", "split", "state", "times", "type", "unless", "until", "while", "with"];
+var reserved = ["&lt;-", "...", "|", "as", "create", "each", "else", "extension", "for", "if", "in", "is", "inheritance", "method", "new", "print", "property", "repeat", "run", "replacement", "set", "split", "state", "times", "type", "unless", "until", "where", "while", "with"];
 var symbols = ["!", "+", "-", "&gt;", "&lt;", "≥", "≤", "^", "¬", "*", "÷", "√", "∫", "∑", "=", "≠"];
 
 $(document).ready(function() {
