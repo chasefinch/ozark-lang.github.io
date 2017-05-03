@@ -69,7 +69,7 @@ method climb mountain: Mountain
 								</div>
 								<div class='col-sm-5'>
 									<div class='github'>
-										<a target="_blank" href='https://github.com/ozark-lang/ozark' class='btn btn-primary btn-lg'>View the GitHub project &nbsp; <span class='glyphicon glyphicon-new-window'></span></a>
+										<a target='_blank' href='https://github.com/ozark-lang/ozark' class='btn btn-primary btn-lg'>View the GitHub project &nbsp; <span class='glyphicon glyphicon-new-window'></span></a>
 										<div class='callout'>
 											<p>Ozark is open source under the <a target="_blank" href='https://github.com/ozark-lang/ozark/blob/master/LICENSE'>GPL v3 license</a>. It's hosted and developed on GitHub.</p>
 											<p>The Ozark language is still in early development, and the interpreter isn't available yet.</p>
