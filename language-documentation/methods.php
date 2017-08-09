@@ -38,18 +38,18 @@
 											<div class='code-sample-header'>Conductor.class.ozark</div>
 											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>inheritance Musician
 	
-method begin concerto: Concerto, orchestra: Orchestra
-	concerto movement number:1 -&gt; movement: movement1
+method begin concerto: Song, orchestra: Orchestra
+	concerto movement 1 -&gt; movement1
 	orchestra perform movement1
 
-	concerto movement number:2 -&gt; movement: movement2
+	concerto movement 2 -&gt; movement2
 	orchestra perform movement1
 
-	concerto movement number:3 -&gt; movement: movement3
+	concerto movement 3 -&gt; movement3
 	orchestra perform movement3
 
 method conclude concerto: Song, orchestra: Orchestra
-	orchestra conclude concerto: concerto</pre></div>
+	orchestra conclude concerto</pre></div>
 
 
 											<p>Methods do not have a "return value" like in other object-oriented languages. Statements are not expressions to be evaluated; They are instructions to be executed, and they may or may not have any number of outputs. Separating the concept of evaluable expressions from the concept of executable instructions is one of the core uniquenesses of Ozark.</p>
@@ -79,10 +79,10 @@ method setup
 
 method sail destination: WaterfrontLocation -&gt; duration: TimeInterval
 	@launch!
-	destination -&gt; port: port
-	port -&gt; location: location
-	@navigate! destination:location -&gt; finalLocation; set @location, duration; set duration
-	@dock! port:port</pre></div>
+	destination port -&gt; port
+	port location -&gt; location
+	@navigate! destination: location -&gt; set @location, duration; set duration
+	@dock! port: port</pre></div>
 
 		
 											<a name='Properties'><h2>Properties</h2></a>
@@ -130,11 +130,11 @@ extension setup -&gt; &amp;facing: Direction
 
 property @guitar
 
-method set guitar: Guitar
+method guitar _guitar: Guitar
 	set @guitar &lt;- guitar
 
-method play string: GuitarString -&gt; note: Note
-	string play -&gt; note; set note</pre></div>
+method play string: GuitarString -&gt; _note: Note
+	string play -&gt; set note</pre></div>
 										</main>
 										<?php require('../includes/documentation-pagination.php'); ?>
 									</div>

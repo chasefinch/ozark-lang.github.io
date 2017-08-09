@@ -45,23 +45,23 @@
 
 											<p>The <code>if</code> statement body that is executed, or not, based on the result of the conditional. For more complex <code>if</code> statements that involve pattern matching, the powerful ... notation can be used. The <code>with</code> keyword unpacks an optional <a href='objects#Pointers'>pointer</a>, and is forced shorthand for <code>if &laquo;someOptional&raquo; is not nil</code>.</p>
 
-											<p>The <code>else</code> executes if the previously chained statements did not. <code>if</code>, <code>unless</code>, and <code>else</code> can be chained with the semicolon (<code>;</code>) operator.</p>
+											<p>Conditions following an <code>else</code> execute only if none of the previously chained statements have executed.</p>
 
 											<div class='code-sample-header'>BranchExample.class.ozark</div>
 											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>inheritance Example
 
 method branch object: Object, condition1: Boolean, condition2: Boolean
-	if condition1, condition2 is ...
+	if condition1, condition2 is
 	... true, 3
 		object doSomething
 
 	... any, 4
 		object doSomethingElse
 
-	... any, in [1, 2, 5]
+	... else any, in [1, 2, 5]
 		object doAnotherThing
 
-	... none
+	... else
 		object reset</pre></div>
 											
 											<div class='code-sample-header'>WithExample.class.ozark</div>
@@ -70,6 +70,7 @@ method branch object: Object, condition1: Boolean, condition2: Boolean
 method testAndContinue object: ExampleObject?
 	with object
 		object doSomething
+
 		print "Success"
 
 	... else
@@ -84,12 +85,13 @@ method testAndContinue object: ExampleObject?
 											<div class='code-sample-header'>EachExample.class.ozark</div>
 											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>inheritance Example
 
-method printCount count: Integer
-	print each [1~count]
+method printRange count: Integer
+	print all [1~count]
 
 method printNames attendees: [Attendee]
-	each attendee -> name: names
-	print each names</pre></div>
+	all attendees name -&gt; names
+	
+	print all names</pre></div>
 
 											<a name="Repeat"><h4>Repeat</h4></a>
 
@@ -109,8 +111,8 @@ method printNames attendees: [Attendee]
 method listenForInput io: StandardIO
 	io getInputFromUser -&gt; input | repeat until input is not nil
 
-method growFileSizeTo2KB file: File
-	@ growFileTo size: 2000000 -> reached: complete | repeat until complete</pre></div>
+method growTo2KB _file: File
+	@fileManager appendToFile file chunk: 1000 -&gt; size | repeat until size is 2000000</pre></div>
 										</main>
 										<?php require('../includes/documentation-pagination.php'); ?>
 									</div>

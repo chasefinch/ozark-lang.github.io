@@ -71,17 +71,17 @@ method setup helper: ComplexObject
 property @elements: [Element]
 
 extension setup helper: ComplexObject
-	split @elements[2] -> secondElement
+	split @elements[2] -&gt; secondElement
 
-	helper doSomethingToElement: secondElement
+	helper process secondElement
 
-extension setup -> element: Element
-	split @elements[2]; set element
+extension setup -&gt; element: Element
+	split @elements[2] -&gt; set element
 
-extension setup helper: ComplexObject -> element: Element
-	split @elements[2] -> secondElement; set element
+extension setup helper: ComplexObject -&gt; element: Element
+	split @elements[2] -&gt; set element
 
-	helper doSomethingToElement: secondElement</pre></div>
+	helper process element</pre></div>
 
 											<a name="Strings"><h2>Strings</h2></a>
 

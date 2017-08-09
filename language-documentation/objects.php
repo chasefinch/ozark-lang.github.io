@@ -50,10 +50,9 @@ property @blackPieces: [ChessPiece]
 method setup
 	create [ChessPiece]; set @whitePieces; setup | repeat 16 times
 	create [ChessPiece]; set @blackPieces; setup | repeat 16 times
-
 	create ChessRules; setupBoard white: @whitePieces, black: @blackPieces
 
-method set whitePieces: [ChessPiece], blackPieces: [ChessPiece]
+method use whitePieces: [ChessPiece], blackPieces: [ChessPiece]
 	set @whitePieces &lt;- whitePieces
 	set @blackPieces &lt;- blackPieces</pre></div>
 
@@ -84,9 +83,10 @@ property @id: @Type2</pre></div>
 											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>inheritance Example
 
 extension setup
-	create btree: BinaryTree(Integer); setup values: [1,&nbsp;2,&nbsp;3,&nbsp;4,&nbsp;5]
+	create btree: BinaryTree(Integer); setup [1,&nbsp;2,&nbsp;3,&nbsp;4,&nbsp;5]
 
-	btree! index: 3 -> element: element
+	btree! 3 -&gt; element
+
 	print element</pre></div>
 											<a name='BuiltInTypes'><h2>Built-In Types</h2></a>
 
@@ -129,9 +129,9 @@ extension setup
 											<p>Possible values for enumerations are declared with the <code>state</code> keyword, must start with a lowercase letter, and are referenced with dot notation.</p>
 
 											<div class='code-sample-header'>Switch.enumeration.ozark</div>
-											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>state forward
-state off
-state reverse</pre></div>
+											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>state .forward
+state .off
+state .reverse</pre></div>
 
 											<div class='code-sample-header'>ConveyorBelt.class.ozark</div>
 											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>inheritance Machine
@@ -139,13 +139,13 @@ state reverse</pre></div>
 property @direction: Switch
 
 method start
-	set @direction &lt;- Switch.forward
+	set @direction &lt;- .forward
 
 method stop
-	set @direction &lt;- Switch.off
+	set @direction &lt;- .off
 
 method reverse
-	set @direction &lt;- Switch.reverse</pre></div>
+	set @direction &lt;- .reverse</pre></div>
 		
 										<?php require('../includes/documentation-pagination.php'); ?>
 									</div>

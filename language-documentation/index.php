@@ -47,14 +47,14 @@ property @weight: Number
 property @size: Number
 
 extension setup &amp;seed: Seed
-	seed sprout -&gt; plant; set @plant
+	seed sprout -&gt; set @plant
 
 	set @size &lt;- 0.0
 	set @weight &lt;- 0.0
 
 method grow days: Number, rate: Number
-	days * rate -> size; set @size
-	size * 0.25 -> weight; set @weight</pre></div>
+	days * rate -&gt; set @size
+	size * 0.25 -&gt; set @weight</pre></div>
 	
 											<p>Ozark's strengths are standardization and collaboration. Multiple developers of varying skill levels may work on a project using different tools, yet will produce similar code that is easy to read.</p>
 

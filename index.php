@@ -50,14 +50,14 @@ extension setup
 	create Hat; set @hat; setup
 	create Map; set @map; setup
 
-method climb mountain: Mountain
-	@map findTrail mountain: mountain -&gt; trail; set trail
-	@hike follow trail: trail -&gt; location: result
+method climb _mountain: Mountain
+	@map findTrail mountain: mountain -&gt; trail
+	@hike! trail -&gt; location
 
-	mountain -> trailhead: startingPoint
-	mountain -> peak: destination
+	mountain trailhead -&gt; startingPoint
+	mountain peak -&gt; destination
 
-	if result is ...
+	if location is
 	... destination
 		print "Hello,&nbsp;world!"
 	
@@ -65,7 +65,7 @@ method climb mountain: Mountain
 		print "Oh&nbsp;no!"
 	
 	... none
-		@radio forHelp</pre></div>
+		@radio! searchAndRescue</pre></div>
 								</div>
 								<div class='col-sm-5'>
 									<div class='github'>

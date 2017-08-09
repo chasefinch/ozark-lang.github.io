@@ -45,11 +45,11 @@ extension setup &amp;calculator: Calculator, &amp;cellPhone: Telephone
 	set @calculator &lt;- calculator
 	set @cellPhone &lt;- cellPhone
 
-method clockIn time: Time
-	@timeLog addEntry time: time, type: EntryType.clockIn
+method clockIn _time: Time
+	@timeLog addEntry time, type: .clockIn
 
-method clockOut time: Time
-	@timeLog addEntry time: time, type: EntryType.clockOut</pre></div>
+method clockOut _time: Time
+	@timeLog addEntry time, type: .clockOut</pre></div>
 
 											<p>All methods are instance methods. The object-oriented philosophy suggests that state be tightly integrated with functionality and stored within objects, and within Ozark, that's always the case.</p>
 
@@ -62,19 +62,19 @@ method clockOut time: Time
 											<div class='code-sample-header'>Offense.class.ozark</div>
 											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>
 method swing pitch: Pitch
-	pitch -&gt; ball: ball
-	ball hit probability: 0.3</pre></div>
+	pitch ball -&gt; ball
+	ball getHit probability: 0.3</pre></div>
 
 											<div class='code-sample-header'>Defense.class.ozark</div>
 											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>
 property @ball: Ball?
 
 method throw target: BaseballPlayer
-	target catch ball: @ball
+	target catch @ball
 
-	set @ball <- nil
+	set @ball &lt;- nil
 
-method catch ball: Ball
+method catch _ball: Ball
 	set @ball &lt;- ball</pre></div>
 
 											<div class='code-sample-header'>BaseballPlayer.class.ozark</div>
@@ -88,8 +88,8 @@ extension setup
 	create Defense; set @defense; setup
 
 method bat pitcher: Pitcher
-	pitcher -&gt; pitch: pitch
-	@offense swing pitch: pitch</pre></div>
+	pitcher pitch -&gt; pitch
+	@offense swing pitch</pre></div>
 
 											<a name='Instructions'><h2>Instructions aren't expressions</h2></a>
 
@@ -121,12 +121,13 @@ property @race: Race
 
 extension setup car: RaceCar
 	create Race; set @race; setup
+
 	set @car &lt;- car
 
 method race track: RaceTrack, start: StartEvent
-	@race enter track: track
-	@race start car: @car
-	@race begin startEvent: start</pre></div>
+	@race enter track
+	@race start @car
+	@race! start</pre></div>
 
 											<a name="Return"><h2>No return types for methods, just inputs and outputs</h2></a>
 											
@@ -149,16 +150,16 @@ method race track: RaceTrack, start: StartEvent
 											<div class='code-sample-header'>BrandSpecificBlue.class.ozark</div>
 											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>inheritance Color 
 		
-method rgbValue -&gt; red: Number, green: Number, blue: Number
+method rgbValue -&gt; _rgbValue: {Number, Number, Number}
 	set red &lt;- 0.0
 	set green &lt;- 0.0
 	set blue &lt;- 0.7</pre></div>
 
 											<div class='code-sample-header'>Print.class.ozark</div>
 											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>
-method print color: Color, sheet: Paper -> document: Paper
-	color rgbValue -&gt; red: red, green: green, blue: blue
-	sheet rgbFill red: red, green: green, blue: blue
+method ! color: Color, sheet: Paper -&gt; _document: Paper
+	color rgbValue -&gt; rgbValue
+	sheet rgbFill rgbValue
 	set document &lt;- sheet</pre></div>
 
 											<div class='code-sample-header'>Printer.class.ozark</div>
@@ -173,8 +174,8 @@ extension setup
 
 method rgbPrint color: Color -&gt; document: Paper?
 	with @paperTray
-		split @paperTray[-1] -> sheet
-		@print colorToSheet color: color, sheet: sheet -> document; set document</pre></div>
+		pop @paperTray[-1] -&gt; sheet, rest: set @paperTray
+		@print! color: color, sheet: sheet -&gt; set document</pre></div>
 			
 											<a name='SmallScopes'><h2>Small scopes with no globals</h2></a>
 

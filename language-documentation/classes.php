@@ -56,7 +56,8 @@ property @strength: Strength
 
 extension setup
 	create XRayVision; set @superpower; setup
-	set @strength &lt;- Strength.fullStrength</pre></div>
+	
+	set @strength &lt;- .fullStrength</pre></div>
 
 											<a name="Inheritance"><h2>Inheritance</h2></a>
 

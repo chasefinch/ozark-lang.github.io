@@ -49,7 +49,7 @@ extension setup
 	create Arm; set @rightArm; setup
 	create Leg; set @leftLeg; setup
 	create Leg; set @rightLeg; setup
-	create Tordo; set @torso; setup</pre></div>
+	create Torso; set @torso; setup</pre></div>
 
 											<p>Properties are denoted by <code>@</code>. This prevents naming conflicts with the method's inputs &amp; other pointers.</p>
 
@@ -58,20 +58,21 @@ extension setup
 											<div class='code-sample-header'>Location.class.ozark</div>
 											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>inheritance Object
 	
-property @latitude: Number
-property @longitude: Number
+property @coordinates: {Number, Number}
+property @name: String?
 
-extension setup &amp;latitude: Number, &amp;longitude: Number
-	set @latitude &lt;- latitude
-	set @longitude &lt;- longitude
+extension setup &amp;coordinates: {Number, Number}, name: String
+	set @coordinates &lt;- coordinates
+	set @name &lt;- name
 
-method getCoordinates -&gt; latitude: Number, longitude: Number
-	set latitude &lt;- @latitude
-	set longitude &lt;- @longitude
+method coordinates -&gt; _coordinates: Number
+	set coordinates -&gt; @coordinates
 
-method set latitude: Number, longitude: Number
-	set @latitude &lt;- latitude
-	set @longitude &lt;- longitude</pre></div>
+method update _coordinates: {Number, Number}
+	set @coordinates &lt;- coordinates
+
+method update latitude: Number, longitude: Number
+	set @coordinates &lt;- latitude, longitude</pre></div>
 											<a name="Optionals"><h2>Optionals</h2></a>
 
 											<p>Ozark uses <strong>optionals</strong> to denote pointers that are allowed not to have a value, which means they are set to <code>nil</code>. You can read more about that in <a href='objects#Optionals'>Optionals</a>. Properties can be declared as optionals with the question mark (<code>?</code>) symbol, they can be "unpacked" via the <code>with</code> statement, and they can be set to <code>nil</code>.</p>
@@ -89,23 +90,23 @@ property @chapters: [TextBlock]
 property @epilogue: TextBlock?
 
 method removePrologueAndEpilogue
-	set @prologue <- nil
-	set @epilogue <- nil
+	set @prologue &lt;- nil
+	set @epilogue &lt;- nil
 
-method printableString -&gt; printableString: String
+method asString -&gt; _printableString: String
 	create block: TextBlock; setup
 
 	with @prologue
-		@prologue -&gt; stringValue: text
-		block append text: text
+		@prologue asString -&gt; text
+		block append text
 	
-	block append each text: @chapter
+	block append all @chapters
 
 	with @epilogue
-		@epilogue -&gt; stringValue: text
-		block append text: text
+		@epilogue asString -&gt; text
+		block append text
 
-	block -&gt; text; set printableString</pre></div>
+	block text -&gt; set printableString</pre></div>
 										</main>
 										<?php require('../includes/documentation-pagination.php'); ?>
 									</div>
