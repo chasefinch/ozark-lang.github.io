@@ -8,18 +8,22 @@
 	} else if($document == 'classes') {
 		echo "<span class='prev'><a href='style'>&larr; Previous: Style</a></span><span class='next'><a href='properties'>Next: Properties &rarr;</a></span>";
 	} else if($document == 'properties') {
-		echo "<span class='prev'><a href='classes'>&larr; Previous: Classes</a></span><span class='next'><a href='methods'>Next: Methods &rarr;</a></span>";
+		echo "<span class='prev'><a href='classes'>&larr; Previous: Classes</a></span><span class='next'><a href='methods'>Next: Methods &amp; Functions &rarr;</a></span>";
 	} else if($document == 'methods') {
 		echo "<span class='prev'><a href='properties'>&larr; Previous: Properties</a></span><span class='next'><a href='control'>Next: Control Flow &rarr;</a></span>";
 	} else if($document == 'control') {
-		echo "<span class='prev'><a href='methods'>&larr; Previous: Methods</a></span><span class='next'><a href='objects'>Next: Objects &amp; Pointers &rarr;</a></span>";
+		echo "<span class='prev'><a href='methods'>&larr; Previous: Methods & Functions</a></span><span class='next'><a href='objects'>Next: Objects &amp; Values &rarr;</a></span>";
 	} else if($document == 'objects') {
 		echo "<span class='prev'><a href='control'>&larr; Previous: Control Flow</a></span><span class='next'><a href='collections'>Next: Collections &rarr;</a></span>";
 	} else if($document == 'collections') {
-		echo "<span class='prev'><a href='objects'>&larr; Previous: Objects &amp; Pointers</a></span><span class='next'><a href='files'>Next: File Structure &rarr;</a></span>";
+		echo "<span class='prev'><a href='objects'>&larr; Previous: Objects &amp; Values</a></span><span class='next'><a href='files'>Next: File Structure &rarr;</a></span>";
+	//} else if($document == 'concurrency') {
+	//	echo "<span class='prev'><a href='collections'>&larr; Previous: Collections</a></span><span class='next'><a href='files'>Next: File Structure &rarr;</a></span>";
 	} else if($document == 'files') {
 		echo "<span class='prev'><a href='collections'>&larr; Previous: Collections</a></span><span class='next'><a href='reserved'>Next: Reserved Words &rarr;</a></span>";
+	//} else if($document == 'localization') {
+	//	echo "<span class='prev'><a href='files'>&larr; Previous: File Structure</a></span><span class='next'><a href='reserved'>Next: Reserved Words &rarr;</a></span>";
 	} else if($document == 'reserved') {
-		echo "<span class='prev'><a href='files'>&larr; Previous: File Structure</a></span></span>";
+		echo "<span class='prev'><a href='collections'>&larr; Previous: Collections</a></span></span>";
 	} ?>
 </div>

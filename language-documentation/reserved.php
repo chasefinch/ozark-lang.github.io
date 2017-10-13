@@ -29,44 +29,60 @@
 								<div class='row'>
 									<div class='col-lg-10'>
 										<main>
-											<p>Below is a list of reserved words that cannot be used for method or pointer names in <span itemprop='name'>Ozark</span>. Note that these are case sensitive.</p>
+											<p>Below is a list of reserved words and symbols that cannot be used for method or pointer names in <span itemprop='name'>Ozark</span>. Note that these are case sensitive.</p>
 											<div class='row'>
-												<div class='col-sm-6'>
+												<div class='col-sm-4'>
 													<ul>
+														<li><code>all</code></li>
 														<li><code>any</code></li>
+														<li><code>assign</code></li>
+														<li><code>at</code></li>
+														<li><code>clear</code></li>
 														<li><code>create</code></li>
-														<li><code>each</code></li>
+														<li><code>dependency</code></li>
 														<li><code>else</code></li>
 														<li><code>extension</code></li>
+														<li><code>extract</code></li>
 														<li><code>false</code></li>
 														<li><code>if</code></li>
+														<li><code>implied</code></li>
 														<li><code>in</code></li>
 														<li><code>is</code></li>
 														<li><code>inheritance</code></li>
 														<li><code>method</code></li>
 														<li><code>nil</code></li>
 														<li><code>not</code></li>
-														<li><code>none</code></li>
+														<li><code>of</code></li>
 														<li><code>property</code></li>
+														<li><code>public</code></li>
 													</ul>
 												</div>
-												<div class='col-sm-6'>
+												<div class='col-sm-4'>
 													<ul>
 														<li><code>print</code></li>
+														<li><code>readable</code></li>
 														<li><code>repeat</code></li>
 														<li><code>replacement</code></li>
 														<li><code>run</code></li>
-														<li><code>set</code></li>
 														<li><code>split</code></li>
 														<li><code>state</code></li>
 														<li><code>times</code></li>
+														<li><code>to</code></li>
 														<li><code>true</code></li>
 														<li><code>type</code></li>
-														<li><code>unless</code></li>
 														<li><code>until</code></li>
-														<li><code>where</code></li>
 														<li><code>while</code></li>
 														<li><code>with</code></li>
+														<li><code>writable</code></li>
+													</ul>
+												</div>
+												<div class='col-sm-4'>
+													<ul>
+														<li><code>&amp;</code></li>
+														<li><code>-&gt;</code></li>
+														<li><code>"</code></li>
+														<li><code>'</code></li>
+														<li><code>|</code></li>
 													</ul>
 												</div>
 											</div>					

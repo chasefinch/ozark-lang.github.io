@@ -1,5 +1,5 @@
-var reserved = ["&lt;-", "...", "|", "as", "create", "each", "else", "extension", "for", "if", "in", "is", "inheritance", "method", "new", "print", "property", "repeat", "run", "replacement", "set", "split", "state", "times", "type", "unless", "until", "where", "while", "with"];
-var symbols = ["!", "+", "-", "&gt;", "&lt;", "≥", "≤", "^", "¬", "*", "÷", "√", "∫", "∑", "=", "≠"];
+var reserved = ["...", "|", "assign", "at", "clear", "create", "dependency", "else", "extension", "extract", "if", "implied", "in", "is", "inheritance", "method", "not", "property", "public", "readable", "repeat", "replacement", "state", "times", "to", "type", "until", "where", "while", "with", "writable"];
+var symbols = ["true", "false", "all", "any", "nil", "!", "+", "-", "&gt;", "&lt;", "≥", "≤", "^", "¬", "*", "÷", "√", "∫", "∑", "=", "≠"];
 
 $(document).ready(function() {
 
