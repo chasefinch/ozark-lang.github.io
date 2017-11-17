@@ -150,9 +150,7 @@ method race track: RaceTrack, start: StartEvent
 											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>inheritance Color 
 		
 method rgbValue -&gt; rgbValue: implied Number, Number, Number
-	assign 0.0 to red
-	assign 0.0 to green
-	assign 0.7 to blue</pre></div>
+	assign 0.0, 0.0, 0.7 to rgbValue</pre></div>
 
 											<div class='code-sample-header'>Print.class.en.ozark</div>
 											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>

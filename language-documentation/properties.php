@@ -68,7 +68,7 @@ extension setup &amp; coordinates: Number, Number, name: String
 method update latitude: Number, longitude: Number
 	assign latitude, longitude to @coordinates
 
-	print "Update complete."</pre></div>
+	print "Update&nbsp;complete."</pre></div>
 											<a name="Optionals"><h2>Optionals</h2></a>
 
 											<p>Ozark uses <strong>optionals</strong> to denote variables that are allowed not to have a value. You can read more about that in <a href='objects#Optionals'>Optionals</a>. Properties can be declared as optionals with the question mark (<code>?</code>) symbol, they can be "unpacked" via <code>with</code>, and they can be emptied with <code>clear</code>.</p>

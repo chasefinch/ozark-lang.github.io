@@ -29,7 +29,7 @@
 								<div class='row'>
 									<div class='col-lg-10'>
 										<main>
-											<p>An <strong>object</strong> is an instance of a class. An object may be referenced by one or more pointers, which associate a name (such as <code>trainConductor</code> or <code>whiteRook</code>) with an object stored in memory. A <strong>value</strong> has a primitive type.</p>
+											<p>An <strong>object</strong> is an instance of a class. An object may be referenced by one or more pointers, which associate a name (such as <code>trainConductor</code> or <code>whiteRook</code>) with an object stored in memory. A <strong>value</strong> is like an object, but has a primitive type.</p>
 
 											<a name='Variables'><h2>Values are stored in variables</h2></a>
 

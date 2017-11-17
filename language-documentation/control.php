@@ -105,7 +105,7 @@ method printNames attendees: [Attendee]
 												<li><code>repeat until someCondition</code></li>
 											</ul>
 
-											<p>In the above examples, someCondition indicates an output of the statement, where X can represent any Integer or Integer variable.</p>
+											<p>In the above examples, someCondition indicates an output of the statement, and X can represent any Integer or Integer variable.</p>
 
 											<div class='code-sample-header'>RepeatExample.class.en.ozark</div>
 											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>inheritance Example

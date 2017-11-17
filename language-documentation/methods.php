@@ -99,6 +99,8 @@ method sail destination: WaterfrontLocation -&gt; duration: TimeInterval
 
 											<p>To extend a parent method, declare an <code>extension</code> instead. This is commonly used with the <code>setup</code> method. The body declared for the extension will execute after the code declared in the parent method. You can choose to add additional inputs and outputs to the extension.</p>
 
+											<p>Outside of extensions, methods with the same name but different named parameters are considered different methods.</p>
+
 											<div class='code-sample-header'>Flower.class.en.ozark</div>
 											<div class='code-sample' itemscope itemtype="http://schema.org/Code"><meta itemprop="language" content="Ozark" /><pre>inheritance Plant
 
@@ -139,7 +141,7 @@ method play string: GuitarString -&gt; note: implied Note
 
 											<p>Ozark includes a number of built-in, stateless functions that can operate on primitive values, collections of any type, and the memory addresses of pointers. These functions loosely represent the logic gates available to the host machine.</p>
 
-											<p>There are two types of functions: <em>prefix</em> and <em>infix</em>. Prefix functions have syntax like a method but with no subject. Infix functions can be chained together according to the basic mathematical order of operations to yield a single output.</p>
+											<p>There are two types of functions: <em>prefix</em> and <em>infix</em>. Prefix functions have syntax like a method but with no subject. Infix functions can be chained together according to the basic mathematical order of operations to yield a single output. Some infix functions can use special tuple matching nouns like <code>any</code> and <code>nil</code>, and operate on a variable or pointer of any kind.</p>
 
 											<p>In functions and methods alike, primitive inputs can often receive values of other primitive types. See <a href='objects#PrimitiveTypes'>Primitive Types</a> for more info.</p>
 
@@ -147,12 +149,40 @@ method play string: GuitarString -&gt; note: implied Note
 
 											<p><small><em><strong>Key For Tables Below</strong></em><br /><code>[]</code> An array<br /><code>{}</code> A tuple (note that using a single value is OK here)<br />When calling the methods, actual values are used in place of unnamed input types, and the function yields outputs of the unnamed types listed.</small></p>
 
-											<h4>Infix Functions</h4>
-
-
-											<h4>Prefix Functions</h4>
 											<table class='reference'>
-											<tr class='flag'><th colspan=2>Prefix Functions</th></tr>
+												<tr class='flag'><th colspan=2>Infix Functions</th></tr>
+												<tr><td><code>Number + Number -> Number</code></td><td>Add</td></tr>
+												<tr><td><code>Number - Number -> Number</code></td><td>Subtract</td></tr>
+												<tr><td><code>Number * Number -> Number</code></td><td>Multiply</td></tr>
+												<tr><td><code>Number / Number -> Number</code></td><td>Divide</td></tr>
+												<tr><td><code>Integer % Integer -> Integer</code></td><td>Modulus</td></tr>
+												<tr><td><code>Number ^ Number -> Number</code></td><td>Power</td></tr>
+												<tr><td><code>Boolean and Boolean -> Boolean</code></td><td>And</td></tr>
+												<tr><td><code>Boolean nand Boolean -> Boolean</code></td><td>Not and</td></tr>
+												<tr><td><code>Boolean or Boolean -> Boolean</code></td><td>Or</td></tr>
+												<tr><td><code>Boolean nor Boolean -> Boolean</code></td><td>Nor</td></tr>
+												<tr><td><code>Boolean xor Boolean -> Boolean</code></td><td>Exclusive or</td></tr>
+												<tr><td><code>Boolean xnor Boolean -> Boolean</code></td><td>Exclusive nor</td></tr>
+												<tr><td><code>Number << Integer -> Number</code></td><td>Left shift</td></tr>
+												<tr><td><code>Number >> Integer -> Number</code></td><td>Sign-propagating right shift</td></tr>
+												<tr><td><code>Number >>> Integer -> Number</code></td><td>Zero-fill right shift</td></tr>
+
+											</table>
+
+											<table class='reference'>
+												<tr class='flag'><th colspan=2>Boolean Infix Pattern Matching Functions</th></tr>
+												<tr><td><code>@Type is @Type</code></td><td>Equals / Object equivalence</td></tr>
+												<tr><td><code>@Type is not @Type</code></td><td>Not equals / Object non-equivalence</td></tr>
+												<tr><td><code>@Type in [@Type]</code></td><td>Containment</td></tr>
+												<tr><td><code>@Type not in [@Type]</code></td><td>Non-containment</td></tr>
+												<tr><td><code>Number > Number</code></td><td>Greater than</td></tr>
+												<tr><td><code>Number >= Number</code></td><td>Greater than or equal</td></tr>
+												<tr><td><code>Number < Number</code></td><td>Less than</td></tr>
+												<tr><td><code>Number <= Number</code></td><td>Less than or equal</td></tr>
+											</table>
+
+											<table class='reference'>
+												<tr class='flag'><th>Prefix Functions</th></tr>
 												<tr><td><code>flip Boolean -> Boolean</code></td></tr>
 												<tr><td><code>reverse [@Type] -> [@Type]</code></td></tr>
 												<tr><td><code>round Number -> Integer</code></td></tr>

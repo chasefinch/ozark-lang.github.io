@@ -52,13 +52,13 @@
 														<li><code>method</code></li>
 														<li><code>nil</code></li>
 														<li><code>not</code></li>
-														<li><code>of</code></li>
-														<li><code>property</code></li>
-														<li><code>public</code></li>
 													</ul>
 												</div>
 												<div class='col-sm-4'>
 													<ul>
+														<li><code>of</code></li>
+														<li><code>property</code></li>
+														<li><code>public</code></li>
 														<li><code>print</code></li>
 														<li><code>readable</code></li>
 														<li><code>repeat</code></li>
